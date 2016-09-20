@@ -19,7 +19,11 @@ namespace WGHelper
         public Form1()
         {
             InitializeComponent();
+            Control.CheckForIllegalCrossThreadCalls = false;
+            requestWoTOnline = new Thread(request);
         }
+
+        Thread requestWoTOnline;
 
         public class Wot
         {
@@ -43,8 +47,85 @@ namespace WGHelper
         public static string jsonAnswer;
         public static wotOnlineRootObject wotOnline;
 
+        public void request()
+        {
+            WebRequest requestServerOnline = WebRequest.Create(urlServerOnline + "?" + urlServerOnlineRequest);
+            WebResponse responseServerOnline = requestServerOnline.GetResponse();
+            Stream answerStream = responseServerOnline.GetResponseStream();
+            StreamReader srAnswer = new StreamReader(answerStream);
+            jsonAnswer = srAnswer.ReadToEnd();
+            wotOnlineRootObject wotOnline = JsonConvert.DeserializeObject<wotOnlineRootObject>(jsonAnswer);
+
+            for (int i = 0; i < wotOnline.data.wot.Count; i++)
+            {
+                switch (wotOnline.data.wot[i].server)
+                {
+                    case "RU1":
+                        {
+                            label_ru1Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                            break;
+                        }
+                    case "RU2":
+                        {
+                            label_ru2Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                            break;
+                        }
+                    case "RU3":
+                        {
+                            label_ru3Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                            break;
+                        }
+                    case "RU4":
+                        {
+                            label_ru4Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                            break;
+                        }
+                    case "RU5":
+                        {
+                            label_ru5Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                            break;
+                        }
+                    case "RU6":
+                        {
+                            label_ru6Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                            break;
+                        }
+                    case "RU7":
+                        {
+                            label_ru7Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                            break;
+                        }
+                    case "RU8":
+                        {
+                            label_ru8Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                            break;
+                        }
+                    case "RU9":
+                        {
+                            label_ru9Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                            break;
+                        }
+                    case "RU10":
+                        {
+                            label_ru10Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                            break;
+                        }
+                }
+            }
+
+            int wotTotalOnline = 0;
+            for (int i = 0; i < wotOnline.data.wot.Count; i++)
+            {
+                wotTotalOnline += Convert.ToInt32(wotOnline.data.wot[i].players_online);
+            }
+            label_totalOnline.BeginInvoke((MethodInvoker)(delegate { label_totalOnline.Text = wotTotalOnline.ToString(); }));
+
+        }
+
         private void button_GetWoTPlayersOnline_Click(object sender, EventArgs e)
         {
+            requestWoTOnline.Start();
+            /*
             WebRequest requestServerOnline = WebRequest.Create(urlServerOnline + "?" + urlServerOnlineRequest);
             WebResponse responseServerOnline =  requestServerOnline.GetResponse();
             Stream answerStream = responseServerOnline.GetResponseStream();
@@ -115,6 +196,7 @@ namespace WGHelper
                 wotTotalOnline += Convert.ToInt32(wotOnline.data.wot[i].players_online);
             }
             label_totalOnline.Text = wotTotalOnline.ToString();
+            */
         }
 
         private void Form1_Load(object sender, EventArgs e)
