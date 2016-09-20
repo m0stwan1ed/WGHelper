@@ -56,14 +56,17 @@
             this.tabPage_WoT = new System.Windows.Forms.TabPage();
             this.tabPage_WoWp = new System.Windows.Forms.TabPage();
             this.tabPage_WoWs = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_updatingInfo = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 9);
+            this.label1.Location = new System.Drawing.Point(118, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 13);
             this.label1.TabIndex = 0;
@@ -290,6 +293,8 @@
             // 
             // tabPage_WoT
             // 
+            this.tabPage_WoT.Controls.Add(this.label_updatingInfo);
+            this.tabPage_WoT.Controls.Add(this.pictureBox1);
             this.tabPage_WoT.Controls.Add(this.button_GetWoTPlayersOnline);
             this.tabPage_WoT.Controls.Add(this.label_ru10Online);
             this.tabPage_WoT.Controls.Add(this.label_totalOnline);
@@ -340,6 +345,24 @@
             this.tabPage_WoWs.Text = "World of Warships";
             this.tabPage_WoWs.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(20, 66);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label_updatingInfo
+            // 
+            this.label_updatingInfo.AutoSize = true;
+            this.label_updatingInfo.Location = new System.Drawing.Point(15, 117);
+            this.label_updatingInfo.Name = "label_updatingInfo";
+            this.label_updatingInfo.Size = new System.Drawing.Size(59, 13);
+            this.label_updatingInfo.TabIndex = 25;
+            this.label_updatingInfo.Text = "Updating...";
+            this.label_updatingInfo.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,6 +376,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage_WoT.ResumeLayout(false);
             this.tabPage_WoT.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,6 +412,8 @@
         private System.Windows.Forms.TabPage tabPage_WoWp;
         private System.Windows.Forms.TabPage tabPage_WoWs;
         private System.Windows.Forms.Label label_ru1Online;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label_updatingInfo;
     }
 }
 

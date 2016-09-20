@@ -119,11 +119,14 @@ namespace WGHelper
                 wotTotalOnline += Convert.ToInt32(wotOnline.data.wot[i].players_online);
             }
             label_totalOnline.BeginInvoke((MethodInvoker)(delegate { label_totalOnline.Text = wotTotalOnline.ToString(); }));
-
+            label_updatingInfo.Visible = false;
+            pictureBox1.Image = Properties.Resources.tick;
         }
 
         private void button_GetWoTPlayersOnline_Click(object sender, EventArgs e)
         {
+            label_updatingInfo.Visible = true;
+            pictureBox1.Image = Properties.Resources.loading_sh;
             requestWoTOnline.Start();
             /*
             WebRequest requestServerOnline = WebRequest.Create(urlServerOnline + "?" + urlServerOnlineRequest);
