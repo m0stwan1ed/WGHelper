@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.button_GetWoTPlayersOnline = new System.Windows.Forms.Button();
             this.label_totalOnline = new System.Windows.Forms.Label();
@@ -54,10 +55,9 @@
             this.label_ru10Online = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_WoT = new System.Windows.Forms.TabPage();
-            this.tabPage_WoWp = new System.Windows.Forms.TabPage();
-            this.tabPage_WoWs = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_updatingInfo = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -283,8 +283,6 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage_WoT);
-            this.tabControl1.Controls.Add(this.tabPage_WoWp);
-            this.tabControl1.Controls.Add(this.tabPage_WoWs);
             this.tabControl1.Location = new System.Drawing.Point(12, 36);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -326,33 +324,6 @@
             this.tabPage_WoT.Text = "World of Tanks";
             this.tabPage_WoT.UseVisualStyleBackColor = true;
             // 
-            // tabPage_WoWp
-            // 
-            this.tabPage_WoWp.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_WoWp.Name = "tabPage_WoWp";
-            this.tabPage_WoWp.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_WoWp.Size = new System.Drawing.Size(388, 273);
-            this.tabPage_WoWp.TabIndex = 1;
-            this.tabPage_WoWp.Text = "World of Warplanes";
-            this.tabPage_WoWp.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_WoWs
-            // 
-            this.tabPage_WoWs.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_WoWs.Name = "tabPage_WoWs";
-            this.tabPage_WoWs.Size = new System.Drawing.Size(388, 273);
-            this.tabPage_WoWs.TabIndex = 2;
-            this.tabPage_WoWs.Text = "World of Warships";
-            this.tabPage_WoWs.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(20, 66);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
             // label_updatingInfo
             // 
             this.label_updatingInfo.AutoSize = true;
@@ -362,6 +333,19 @@
             this.label_updatingInfo.TabIndex = 25;
             this.label_updatingInfo.Text = "Updating...";
             this.label_updatingInfo.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(20, 66);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -409,11 +393,10 @@
         private System.Windows.Forms.Label label_ru10Online;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage_WoT;
-        private System.Windows.Forms.TabPage tabPage_WoWp;
-        private System.Windows.Forms.TabPage tabPage_WoWs;
         private System.Windows.Forms.Label label_ru1Online;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label_updatingInfo;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
