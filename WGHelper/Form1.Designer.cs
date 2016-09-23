@@ -56,8 +56,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_WoT = new System.Windows.Forms.TabPage();
             this.label_updatingInfo = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -334,11 +334,6 @@
             this.label_updatingInfo.Text = "Updating...";
             this.label_updatingInfo.Visible = false;
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(20, 66);
@@ -347,6 +342,11 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,7 +354,9 @@
             this.ClientSize = new System.Drawing.Size(418, 350);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);

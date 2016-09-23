@@ -22,7 +22,7 @@ namespace WGHelper
             Control.CheckForIllegalCrossThreadCalls = false;    //Отключение отслеживания пересекания потоков
         }
 
-        bool requestWoTThreadState = false;
+        bool requestWoTThreadState = false;                     //Переменная-маркер для проверки активности потока
 
         public class wotOnlineRootObject                        //Основной класс для десериализации JSON-ответа от сервера
         {
@@ -48,9 +48,9 @@ namespace WGHelper
 
         public void request()                                                                               //Функция, что выполняет запрос в отдельном потоке
         {
-            try
+            try     //Отлавливаем System.Net.WebException(отсутствие соединения с сервером)
             {
-                requestWoTThreadState = true;
+                requestWoTThreadState = true;                                                                                   //Маркер выполнения потока(выполняется)
                 WebRequest requestServerOnline = WebRequest.Create(urlServerOnline + "?" + urlServerOnlineRequest);             //Инициализация запроса
                 WebResponse responseServerOnline = requestServerOnline.GetResponse();                                           //Выполнение запроса и получение ответа
                 Stream answerStream = responseServerOnline.GetResponseStream();                                                 //Конвертирование ответа в Stream
@@ -122,17 +122,17 @@ namespace WGHelper
                 }
                 label_totalOnline.BeginInvoke((MethodInvoker)(delegate { label_totalOnline.Text = wotTotalOnline.ToString(); }));   //Вывод общего онлайна в label
                 label_updatingInfo.Visible = false;                                                                                 //Информатор загрузки уходит в инвиз
-                pictureBox1.Image = Properties.Resources.tick;
-                requestWoTThreadState = false;
+                pictureBox1.Image = Properties.Resources.tick;                                                                      //Смена изображения-информатора
+                requestWoTThreadState = false;                                                                                      //Маркер выполнения потока(не выполняется)
             }
-            catch(System.Net.WebException)
+            catch(System.Net.WebException)          //Обрабатываем исключение System.Net.WebException
             {
-                requestWoTThreadState = false;
-                label_updatingInfo.Text = "No connection";
-                pictureBox1.Image = Properties.Resources.rsz_1no_icon;
-                MessageBox.Show("Unable to connect to servers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                requestWoTThreadState = false;                                                                                      //Маркер выполнения потока(не выполняется)
+                label_updatingInfo.Text = "No connection";                                                                          //Указываем отсутствие соединения
+                pictureBox1.Image = Properties.Resources.rsz_1no_icon;                                                              //Смена изображения-информатора
+                MessageBox.Show("Unable to connect to servers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);               //Вывод на экран сообщения об ошибке
             }
-                                                                                 //Смена изображения-информатора
+                                                                                 
         }
 
         private void button_GetWoTPlayersOnline_Click(object sender, EventArgs e)                                               //Функция кнопки
@@ -145,8 +145,7 @@ namespace WGHelper
             label_updatingInfo.Visible = true;                                                                                  //Отображение информатора загрузки
             pictureBox1.Image = Properties.Resources.loading_sh;                                                                //Смена изображения информатора
             requestWoTOnline.IsBackground = true;                                                                               //Поток после полного выполнения самоуничтожается
-            requestWoTOnline.Start();
-            //Запуск потока, реквест-респонс
+            requestWoTOnline.Start();                                                                                           //Запуск потока, реквест-респонс
         }
 
         private void Form1_Load(object sender, EventArgs e)
