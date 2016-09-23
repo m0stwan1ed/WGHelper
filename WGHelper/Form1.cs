@@ -20,6 +20,20 @@ namespace WGHelper
         {
             InitializeComponent();
             Control.CheckForIllegalCrossThreadCalls = false;    //Отключение отслеживания пересекания потоков
+            startUpdating();                                                                                           //Запуск потока, реквест-респонс
+        }
+
+        void startUpdating()
+        {
+            button_Retry.Visible = false;
+            updateWoTServersStats_timer.Start();                                     //Запуск таймера
+            Thread requestWoTOnline;                                                                                            //Инициализация потока
+            requestWoTOnline = new Thread(request);                                                                             //Привязка функции к потоку
+            label_updatingInfo.Text = "Updating...";
+            label_updatingInfo.Visible = true;                                                                                  //Отображение информатора загрузки
+            pictureBox1.Image = Properties.Resources.loading_sh;                                                                //Смена изображения информатора
+            requestWoTOnline.IsBackground = true;                                                                               //Поток после полного выполнения самоуничтожается
+            requestWoTOnline.Start();
         }
 
         bool requestWoTThreadState = false;                     //Переменная-маркер для проверки активности потока
@@ -209,6 +223,8 @@ namespace WGHelper
 
             catch(System.Net.WebException)          //Обрабатываем исключение System.Net.WebException
             {
+                button_Retry.Visible = true;                                                                                        //Вывод кнопки повторной попытки выполнения запроса
+
                 requestWoTThreadState = false;                                                                                      //Маркер выполнения потока(не выполняется)
                 label_updatingInfo.Text = "No connection";                                                                          //Указываем отсутствие соединения
                 pictureBox1.Image = Properties.Resources.rsz_1no_icon;                                                              //Смена изображения-информатора
@@ -236,26 +252,11 @@ namespace WGHelper
                 label_ru10Online.Text = "Unknown";
                 //--------------------------------------------------------------------------------------------------
 
-                MessageBox.Show("Unable to connect to servers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);               //Вывод на экран сообщения об ошибке
+                updateWoTServersStats_timer.Stop();                                                                                 //Остановка таймера из-за отсутствия соединения с сервером
+
+                MessageBox.Show("  Unable to connect to servers\nCheck your network connection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);               //Вывод на экран сообщения об ошибке
+
             }
-                                                                                 
-        }
-
-        private void button_GetWoTPlayersOnline_Click(object sender, EventArgs e)                                               //Функция кнопки
-        {
-            button_GetWoTPlayersOnline.Enabled = false;                                                                         //Временное отключение кнопки
-            timer1.Start();                                                                                                     //Запуск таймера на 5 секунд
-            Thread requestWoTOnline;                                                                                            //Инициализация потока
-            requestWoTOnline = new Thread(request);                                                                             //Привязка функции к потоку
-            label_updatingInfo.Text = "Updating...";
-            label_updatingInfo.Visible = true;                                                                                  //Отображение информатора загрузки
-            pictureBox1.Image = Properties.Resources.loading_sh;                                                                //Смена изображения информатора
-            requestWoTOnline.IsBackground = true;                                                                               //Поток после полного выполнения самоуничтожается
-            requestWoTOnline.Start();                                                                                           //Запуск потока, реквест-респонс
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
         }
 
@@ -263,9 +264,19 @@ namespace WGHelper
         {
             if (requestWoTThreadState == false)
             {
-                button_GetWoTPlayersOnline.Enabled = true;                                                                          //Включение кнопки
-                timer1.Stop();                                                                                                      //Остановка таймера
+                Thread requestWoTOnline;                                                                                            //Инициализация потока
+                requestWoTOnline = new Thread(request);                                                                             //Привязка функции к потоку
+                label_updatingInfo.Text = "Updating...";
+                label_updatingInfo.Visible = true;                                                                                  //Отображение информатора загрузки
+                pictureBox1.Image = Properties.Resources.loading_sh;                                                                //Смена изображения информатора
+                requestWoTOnline.IsBackground = true;                                                                               //Поток после полного выполнения самоуничтожается
+                requestWoTOnline.Start();                                                                                           //Запуск потока, реквест-респонс                                                                                     
             }
+        }
+
+        private void button_Retry_Click(object sender, EventArgs e)
+        {
+            startUpdating();
         }
     }
 }
