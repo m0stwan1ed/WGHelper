@@ -56,10 +56,30 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_WoT = new System.Windows.Forms.TabPage();
             this.label_updatingInfo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ru10_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru9_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru8_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru7_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru6_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru5_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru4_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru3_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru2_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru1_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ru10_status_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru9_status_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru8_status_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru7_status_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru6_status_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru5_status_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru4_status_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru3_status_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru2_status_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru1_status_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -291,6 +311,16 @@
             // 
             // tabPage_WoT
             // 
+            this.tabPage_WoT.Controls.Add(this.ru10_status_pictureBox);
+            this.tabPage_WoT.Controls.Add(this.ru9_status_pictureBox);
+            this.tabPage_WoT.Controls.Add(this.ru8_status_pictureBox);
+            this.tabPage_WoT.Controls.Add(this.ru7_status_pictureBox);
+            this.tabPage_WoT.Controls.Add(this.ru6_status_pictureBox);
+            this.tabPage_WoT.Controls.Add(this.ru5_status_pictureBox);
+            this.tabPage_WoT.Controls.Add(this.ru4_status_pictureBox);
+            this.tabPage_WoT.Controls.Add(this.ru3_status_pictureBox);
+            this.tabPage_WoT.Controls.Add(this.ru2_status_pictureBox);
+            this.tabPage_WoT.Controls.Add(this.ru1_status_pictureBox);
             this.tabPage_WoT.Controls.Add(this.label_updatingInfo);
             this.tabPage_WoT.Controls.Add(this.pictureBox1);
             this.tabPage_WoT.Controls.Add(this.button_GetWoTPlayersOnline);
@@ -332,7 +362,103 @@
             this.label_updatingInfo.Size = new System.Drawing.Size(59, 13);
             this.label_updatingInfo.TabIndex = 25;
             this.label_updatingInfo.Text = "Updating...";
+            this.label_updatingInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_updatingInfo.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // ru10_status_pictureBox
+            // 
+            this.ru10_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru10_status_pictureBox.Location = new System.Drawing.Point(93, 179);
+            this.ru10_status_pictureBox.Name = "ru10_status_pictureBox";
+            this.ru10_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru10_status_pictureBox.TabIndex = 35;
+            this.ru10_status_pictureBox.TabStop = false;
+            // 
+            // ru9_status_pictureBox
+            // 
+            this.ru9_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru9_status_pictureBox.Location = new System.Drawing.Point(93, 166);
+            this.ru9_status_pictureBox.Name = "ru9_status_pictureBox";
+            this.ru9_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru9_status_pictureBox.TabIndex = 34;
+            this.ru9_status_pictureBox.TabStop = false;
+            // 
+            // ru8_status_pictureBox
+            // 
+            this.ru8_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru8_status_pictureBox.Location = new System.Drawing.Point(93, 153);
+            this.ru8_status_pictureBox.Name = "ru8_status_pictureBox";
+            this.ru8_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru8_status_pictureBox.TabIndex = 33;
+            this.ru8_status_pictureBox.TabStop = false;
+            // 
+            // ru7_status_pictureBox
+            // 
+            this.ru7_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru7_status_pictureBox.Location = new System.Drawing.Point(93, 140);
+            this.ru7_status_pictureBox.Name = "ru7_status_pictureBox";
+            this.ru7_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru7_status_pictureBox.TabIndex = 32;
+            this.ru7_status_pictureBox.TabStop = false;
+            // 
+            // ru6_status_pictureBox
+            // 
+            this.ru6_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru6_status_pictureBox.Location = new System.Drawing.Point(93, 127);
+            this.ru6_status_pictureBox.Name = "ru6_status_pictureBox";
+            this.ru6_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru6_status_pictureBox.TabIndex = 31;
+            this.ru6_status_pictureBox.TabStop = false;
+            // 
+            // ru5_status_pictureBox
+            // 
+            this.ru5_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru5_status_pictureBox.Location = new System.Drawing.Point(93, 114);
+            this.ru5_status_pictureBox.Name = "ru5_status_pictureBox";
+            this.ru5_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru5_status_pictureBox.TabIndex = 30;
+            this.ru5_status_pictureBox.TabStop = false;
+            // 
+            // ru4_status_pictureBox
+            // 
+            this.ru4_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru4_status_pictureBox.Location = new System.Drawing.Point(93, 101);
+            this.ru4_status_pictureBox.Name = "ru4_status_pictureBox";
+            this.ru4_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru4_status_pictureBox.TabIndex = 29;
+            this.ru4_status_pictureBox.TabStop = false;
+            // 
+            // ru3_status_pictureBox
+            // 
+            this.ru3_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru3_status_pictureBox.Location = new System.Drawing.Point(93, 88);
+            this.ru3_status_pictureBox.Name = "ru3_status_pictureBox";
+            this.ru3_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru3_status_pictureBox.TabIndex = 28;
+            this.ru3_status_pictureBox.TabStop = false;
+            // 
+            // ru2_status_pictureBox
+            // 
+            this.ru2_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru2_status_pictureBox.Location = new System.Drawing.Point(93, 75);
+            this.ru2_status_pictureBox.Name = "ru2_status_pictureBox";
+            this.ru2_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru2_status_pictureBox.TabIndex = 27;
+            this.ru2_status_pictureBox.TabStop = false;
+            // 
+            // ru1_status_pictureBox
+            // 
+            this.ru1_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru1_status_pictureBox.Location = new System.Drawing.Point(93, 62);
+            this.ru1_status_pictureBox.Name = "ru1_status_pictureBox";
+            this.ru1_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru1_status_pictureBox.TabIndex = 26;
+            this.ru1_status_pictureBox.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -341,11 +467,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -362,6 +483,16 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage_WoT.ResumeLayout(false);
             this.tabPage_WoT.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ru10_status_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru9_status_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru8_status_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru7_status_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru6_status_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru5_status_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru4_status_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru3_status_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru2_status_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ru1_status_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -399,6 +530,16 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label_updatingInfo;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox ru4_status_pictureBox;
+        private System.Windows.Forms.PictureBox ru3_status_pictureBox;
+        private System.Windows.Forms.PictureBox ru2_status_pictureBox;
+        private System.Windows.Forms.PictureBox ru1_status_pictureBox;
+        private System.Windows.Forms.PictureBox ru10_status_pictureBox;
+        private System.Windows.Forms.PictureBox ru9_status_pictureBox;
+        private System.Windows.Forms.PictureBox ru8_status_pictureBox;
+        private System.Windows.Forms.PictureBox ru7_status_pictureBox;
+        private System.Windows.Forms.PictureBox ru6_status_pictureBox;
+        private System.Windows.Forms.PictureBox ru5_status_pictureBox;
     }
 }
 
