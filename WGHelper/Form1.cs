@@ -82,6 +82,21 @@ namespace WGHelper
                     serverStatusWoT[i] = false;
                 }
 
+                //----------Создание коллекции объектов типа Label----------
+                var labelsWoTOnline = new List<Label>();
+                //--------------Заполнение коллекции объектами--------------
+                labelsWoTOnline.Add(label_ru1Online);
+                labelsWoTOnline.Add(label_ru2Online);
+                labelsWoTOnline.Add(label_ru3Online);
+                labelsWoTOnline.Add(label_ru4Online);
+                labelsWoTOnline.Add(label_ru5Online);
+                labelsWoTOnline.Add(label_ru6Online);
+                labelsWoTOnline.Add(label_ru7Online);
+                labelsWoTOnline.Add(label_ru8Online);
+                labelsWoTOnline.Add(label_ru9Online);
+                labelsWoTOnline.Add(label_ru10Online);
+                //----------------------------------------------------------
+
                 //----------------Выведение данных в label по серверам и определение, есть ли сервер в сети
                 for (int i = 0; i < wotOnline.data.wot.Count; i++)                                                              
                 {                                                                                                               
@@ -151,69 +166,32 @@ namespace WGHelper
                 }
                 //--------------------------------------------------------------------------------------------------
 
-                //------------Если сервер в сети информатор станет зелёного цвета. Если не в сети - красным. Вместо онлайна будет написано, что сервер офлайн
-                if (serverStatusWoT[0] == true) ru1_status_pictureBox.Image = Properties.Resources.rsz_green_light;
-                else
+                //----------Создание коллекции объектов типа PictureBox----------
+                var WoTStatusPictureBox = new List<PictureBox>();
+                //--------------Заполнение коллекции объектами-------------------
+                WoTStatusPictureBox.Add(ru1_status_pictureBox);
+                WoTStatusPictureBox.Add(ru2_status_pictureBox);
+                WoTStatusPictureBox.Add(ru3_status_pictureBox);
+                WoTStatusPictureBox.Add(ru4_status_pictureBox);
+                WoTStatusPictureBox.Add(ru5_status_pictureBox);
+                WoTStatusPictureBox.Add(ru6_status_pictureBox);
+                WoTStatusPictureBox.Add(ru7_status_pictureBox);
+                WoTStatusPictureBox.Add(ru8_status_pictureBox);
+                WoTStatusPictureBox.Add(ru9_status_pictureBox);
+                WoTStatusPictureBox.Add(ru10_status_pictureBox);
+                //---------------------------------------------------------------
+
+                for (int i=0; i<10; i++)
                 {
-                    ru1_status_pictureBox.Image = Properties.Resources.rsz_red_light;
-                    label_ru1Online.Text = "Offline";
-                }
-                if (serverStatusWoT[1] == true) ru2_status_pictureBox.Image = Properties.Resources.rsz_green_light;
-                else
-                {
-                    ru2_status_pictureBox.Image = Properties.Resources.rsz_red_light;
-                    label_ru2Online.Text = "Offline";
-                }
-                if (serverStatusWoT[2] == true) ru3_status_pictureBox.Image = Properties.Resources.rsz_green_light;
-                else
-                {
-                    ru3_status_pictureBox.Image = Properties.Resources.rsz_red_light;
-                    label_ru3Online.Text = "Offline";
-                }
-                if (serverStatusWoT[3] == true) ru4_status_pictureBox.Image = Properties.Resources.rsz_green_light;
-                else
-                {
-                    ru4_status_pictureBox.Image = Properties.Resources.rsz_red_light;
-                    label_ru4Online.Text = "Offline";
-                }
-                if (serverStatusWoT[4] == true) ru5_status_pictureBox.Image = Properties.Resources.rsz_green_light;
-                else
-                {
-                    ru5_status_pictureBox.Image = Properties.Resources.rsz_red_light;
-                    label_ru5Online.Text = "Offline";
-                }
-                if (serverStatusWoT[5] == true) ru6_status_pictureBox.Image = Properties.Resources.rsz_green_light;
-                else
-                {
-                    ru6_status_pictureBox.Image = Properties.Resources.rsz_red_light;
-                    label_ru6Online.Text = "Offline";
-                }
-                if (serverStatusWoT[6] == true) ru7_status_pictureBox.Image = Properties.Resources.rsz_green_light;
-                else
-                {
-                    ru7_status_pictureBox.Image = Properties.Resources.rsz_red_light;
-                    label_ru7Online.Text = "Offline";
-                }
-                if (serverStatusWoT[7] == true) ru8_status_pictureBox.Image = Properties.Resources.rsz_green_light;
-                else
-                {
-                    ru8_status_pictureBox.Image = Properties.Resources.rsz_red_light;
-                    label_ru8Online.Text = "Offline";
-                }
-                if (serverStatusWoT[8] == true) ru9_status_pictureBox.Image = Properties.Resources.rsz_green_light;
-                else
-                {
-                    ru9_status_pictureBox.Image = Properties.Resources.rsz_red_light;
-                    label_ru9Online.Text = "Offline";
-                }
-                if (serverStatusWoT[9] == true) ru10_status_pictureBox.Image = Properties.Resources.rsz_green_light;
-                else
-                {
-                    ru10_status_pictureBox.Image = Properties.Resources.rsz_red_light;
-                    label_ru10Online.Text = "Offline";
+                    if (serverStatusWoT[i] == true) WoTStatusPictureBox[i].Image = Properties.Resources.rsz_green_light;
+                    else
+                    {
+                        WoTStatusPictureBox[i].Image = Properties.Resources.rsz_red_light;
+                        labelsWoTOnline[i].Text = "Offline";
+                    }
                 }
                 //--------------------------------------------------------------------------------------------------
-
+                
                 int wotTotalOnline = 0;                                                                     //Подсчет общего онлайна на серверах WoT
                 for (int i = 0; i < wotOnline.data.wot.Count; i++)
                 {
@@ -293,6 +271,21 @@ namespace WGHelper
 
         void function_pingWoTServers_Thread()
         {
+            //----------Создание коллекции объектов типа Label----------
+            var labelsWoTPing = new List<Label>();
+            //--------------Заполнение коллекции объектами--------------
+            labelsWoTPing.Add(label_ru1Ping);
+            labelsWoTPing.Add(label_ru2Ping);
+            labelsWoTPing.Add(label_ru3Ping);
+            labelsWoTPing.Add(label_ru4Ping);
+            labelsWoTPing.Add(label_ru5Ping);
+            labelsWoTPing.Add(label_ru6Ping);
+            labelsWoTPing.Add(label_ru7Ping);
+            labelsWoTPing.Add(label_ru8Ping);
+            labelsWoTPing.Add(label_ru9Ping);
+            labelsWoTPing.Add(label_ru10Ping);
+            //----------------------------------------------------------
+
             pingWoTThreadState = true;
             pictureBox2.Image = Properties.Resources.loading_sh;
             label_pingInfo.Visible = true;
@@ -301,16 +294,10 @@ namespace WGHelper
             PingReply[] WoTRu = new PingReply[10];                                  //Массив объектов класса PingReply для хранения параметров
             
             //-----------------Выполнение запросов на тест скорости доступа к серверам
-            WoTRu[0] = ping.Send("login.p1.worldoftanks.net");
-            WoTRu[1] = ping.Send("login.p2.worldoftanks.net");
-            WoTRu[2] = ping.Send("login.p3.worldoftanks.net");
-            WoTRu[3] = ping.Send("login.p4.worldoftanks.net");
-            WoTRu[4] = ping.Send("login.p5.worldoftanks.net");
-            WoTRu[5] = ping.Send("login.p6.worldoftanks.net");
-            WoTRu[6] = ping.Send("login.p7.worldoftanks.net");
-            WoTRu[7] = ping.Send("login.p8.worldoftanks.net");
-            WoTRu[8] = ping.Send("login.p9.worldoftanks.net");
-            WoTRu[9] = ping.Send("login.p10.worldoftanks.net");
+            for(int i=0; i<10; i++)
+            {
+                WoTRu[i] = ping.Send("login.p" + Convert.ToString(i + 1) + ".worldoftanks.net");
+            }
             //-------------------------------------------------------------------------
 
             byte indexOfServerWoT = 0;                  //Ячейка для запоминания сервера с найменьшей задержкой доступа
@@ -325,18 +312,20 @@ namespace WGHelper
             }
             
             //-----------Вывод результатов на экран------------------------
-            label_ru1Ping.Text = WoTRu[0].RoundtripTime.ToString() + " ms";
-            label_ru2Ping.Text = WoTRu[1].RoundtripTime.ToString() + " ms";
-            label_ru3Ping.Text = WoTRu[2].RoundtripTime.ToString() + " ms";
-            label_ru4Ping.Text = WoTRu[3].RoundtripTime.ToString() + " ms";
-            label_ru5Ping.Text = WoTRu[4].RoundtripTime.ToString() + " ms";
-            label_ru6Ping.Text = WoTRu[5].RoundtripTime.ToString() + " ms";
-            label_ru7Ping.Text = WoTRu[6].RoundtripTime.ToString() + " ms";
-            label_ru8Ping.Text = WoTRu[7].RoundtripTime.ToString() + " ms";
-            label_ru9Ping.Text = WoTRu[8].RoundtripTime.ToString() + " ms";
-            label_ru10Ping.Text = WoTRu[9].RoundtripTime.ToString() + " ms";
+            for(int i=0; i<10; i++)
+            {
+                labelsWoTPing[i].Text = WoTRu[i].RoundtripTime.ToString() + " ms";
+            }
             //--------------------------------------------------------------
 
+            //--------Окрашивание показателей задержки в разные цвета
+            for(int i=0; i<10; i++)
+            {
+                if (WoTRu[i].RoundtripTime <= 50) labelsWoTPing[i].ForeColor = Color.DarkGreen;
+                else if (WoTRu[i].RoundtripTime <= 150) labelsWoTPing[i].ForeColor = Color.Goldenrod;
+                else labelsWoTPing[i].ForeColor = Color.Red;
+            }
+            //-------------------------------------------------------
             label_WoT_Recommend.Text = "Recommend WoT RU" + Convert.ToString(indexOfServerWoT + 1);         //Вывод рекомендуемого сервера с найменьшей задержкой
             pingWoTThreadState = false;
             label_pingInfo.Visible = false;
