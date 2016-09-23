@@ -56,8 +56,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_WoT = new System.Windows.Forms.TabPage();
             this.label_updatingInfo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -334,6 +334,11 @@
             this.label_updatingInfo.Text = "Updating...";
             this.label_updatingInfo.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(20, 66);
@@ -341,11 +346,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
