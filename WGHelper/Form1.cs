@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Threading;                                         //Подключение многопоточности
 using System.Windows.Forms;
 using Newtonsoft.Json;                                          //Библиотека для работы с JSON
+using System.Net.NetworkInformation;
 
 namespace WGHelper
 {
@@ -20,23 +21,26 @@ namespace WGHelper
         {
             InitializeComponent();
             Control.CheckForIllegalCrossThreadCalls = false;    //Отключение отслеживания пересекания потоков
-            startUpdating();                                                                                           //Запуск потока, реквест-респонс
+            startUpdating();                                    //Запуск потока, реквест-респонс
+            pingTestWoT();
+            pingWoTServers_timer.Start();                       //Запуск таймера, который через промежутки времени проводит тест задержек доступа к серверам
         }
 
         void startUpdating()
         {
             button_Retry.Visible = false;
             updateWoTServersStats_timer.Start();                                     //Запуск таймера
-            Thread requestWoTOnline;                                                                                            //Инициализация потока
-            requestWoTOnline = new Thread(request);                                                                             //Привязка функции к потоку
+            Thread requestWoTOnline;                                                 //Инициализация потока
+            requestWoTOnline = new Thread(request);                                  //Привязка функции к потоку
             label_updatingInfo.Text = "Updating...";
-            label_updatingInfo.Visible = true;                                                                                  //Отображение информатора загрузки
-            pictureBox1.Image = Properties.Resources.loading_sh;                                                                //Смена изображения информатора
-            requestWoTOnline.IsBackground = true;                                                                               //Поток после полного выполнения самоуничтожается
+            label_updatingInfo.Visible = true;                                       //Отображение информатора загрузки
+            pictureBox1.Image = Properties.Resources.loading_sh;                     //Смена изображения информатора
+            requestWoTOnline.IsBackground = true;                                    //Поток после полного выполнения самоуничтожается
             requestWoTOnline.Start();
         }
 
         bool requestWoTThreadState = false;                     //Переменная-маркер для проверки активности потока
+        bool pingWoTThreadState = false;                        //Переменная-маркер для проверки потока Ping
 
         public class wotOnlineRootObject                        //Основной класс для десериализации JSON-ответа от сервера
         {
@@ -274,9 +278,74 @@ namespace WGHelper
             }
         }
 
-        private void button_Retry_Click(object sender, EventArgs e)
+        private void button_Retry_Click(object sender, EventArgs e)                 //Функция повторной попытки запроса к серверам
         {
             startUpdating();
+        }
+
+        void pingTestWoT()                                                          //Функция запуска потока ping
+        {
+            Thread pingWoTServers_Thread;                                           //Обьявление переменной 
+            pingWoTServers_Thread = new Thread(function_pingWoTServers_Thread);     //Привязка функции к потоку
+            pingWoTServers_Thread.IsBackground = true;                              //Закрытие потока после окончания
+            pingWoTServers_Thread.Start();                                          //Запуск потока
+        }
+
+        void function_pingWoTServers_Thread()
+        {
+            pingWoTThreadState = true;
+            pictureBox2.Image = Properties.Resources.loading_sh;
+            label_pingInfo.Visible = true;
+            Ping ping = new Ping();                                                 //Объект класса Ping для проверки скорости доступа к серверу
+
+            PingReply[] WoTRu = new PingReply[10];                                  //Массив объектов класса PingReply для хранения параметров
+            
+            //-----------------Выполнение запросов на тест скорости доступа к серверам
+            WoTRu[0] = ping.Send("login.p1.worldoftanks.net");
+            WoTRu[1] = ping.Send("login.p2.worldoftanks.net");
+            WoTRu[2] = ping.Send("login.p3.worldoftanks.net");
+            WoTRu[3] = ping.Send("login.p4.worldoftanks.net");
+            WoTRu[4] = ping.Send("login.p5.worldoftanks.net");
+            WoTRu[5] = ping.Send("login.p6.worldoftanks.net");
+            WoTRu[6] = ping.Send("login.p7.worldoftanks.net");
+            WoTRu[7] = ping.Send("login.p8.worldoftanks.net");
+            WoTRu[8] = ping.Send("login.p9.worldoftanks.net");
+            WoTRu[9] = ping.Send("login.p10.worldoftanks.net");
+            //-------------------------------------------------------------------------
+
+            byte indexOfServerWoT = 0;                  //Ячейка для запоминания сервера с найменьшей задержкой доступа
+            int pingMinimalWoT = 999999;                //Для проверки доступности серверов
+            for(int i=0; i<10; i++)                     //Вычисление сервера с найменьшей задержкой
+            {
+                if(WoTRu[i].RoundtripTime<pingMinimalWoT)
+                {
+                    pingMinimalWoT = Convert.ToInt32(WoTRu[i].RoundtripTime);       //Запоминание задержки
+                    indexOfServerWoT = Convert.ToByte(i);                           //Запоминание сервера
+                }  
+            }
+            
+            //-----------Вывод результатов на экран------------------------
+            label_ru1Ping.Text = WoTRu[0].RoundtripTime.ToString() + " ms";
+            label_ru2Ping.Text = WoTRu[1].RoundtripTime.ToString() + " ms";
+            label_ru3Ping.Text = WoTRu[2].RoundtripTime.ToString() + " ms";
+            label_ru4Ping.Text = WoTRu[3].RoundtripTime.ToString() + " ms";
+            label_ru5Ping.Text = WoTRu[4].RoundtripTime.ToString() + " ms";
+            label_ru6Ping.Text = WoTRu[5].RoundtripTime.ToString() + " ms";
+            label_ru7Ping.Text = WoTRu[6].RoundtripTime.ToString() + " ms";
+            label_ru8Ping.Text = WoTRu[7].RoundtripTime.ToString() + " ms";
+            label_ru9Ping.Text = WoTRu[8].RoundtripTime.ToString() + " ms";
+            label_ru10Ping.Text = WoTRu[9].RoundtripTime.ToString() + " ms";
+            //--------------------------------------------------------------
+
+            label_WoT_Recommend.Text = "Recommend WoT RU" + Convert.ToString(indexOfServerWoT + 1);         //Вывод рекомендуемого сервера с найменьшей задержкой
+            pingWoTThreadState = false;
+            label_pingInfo.Visible = false;
+            pictureBox2.Image = Properties.Resources.tick;
+        }
+
+        private void pingWoTServers_timer_Tick(object sender, EventArgs e)                                  //Функция, что выполняется при каждом шаге таймера
+        {
+            if(pingWoTThreadState == false) pingTestWoT();                                                  //Функция запуска потока ping
         }
     }
 }
