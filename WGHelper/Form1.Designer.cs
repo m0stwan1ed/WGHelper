@@ -54,6 +54,7 @@
             this.label_ru10Online = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_WoT = new System.Windows.Forms.TabPage();
+            this.button_Retry = new System.Windows.Forms.Button();
             this.ru10_status_pictureBox = new System.Windows.Forms.PictureBox();
             this.ru9_status_pictureBox = new System.Windows.Forms.PictureBox();
             this.ru8_status_pictureBox = new System.Windows.Forms.PictureBox();
@@ -67,7 +68,6 @@
             this.label_updatingInfo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.updateWoTServersStats_timer = new System.Windows.Forms.Timer(this.components);
-            this.button_Retry = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ru10_status_pictureBox)).BeginInit();
@@ -344,6 +344,17 @@
             this.tabPage_WoT.Text = "World of Tanks";
             this.tabPage_WoT.UseVisualStyleBackColor = true;
             // 
+            // button_Retry
+            // 
+            this.button_Retry.Location = new System.Drawing.Point(298, 77);
+            this.button_Retry.Name = "button_Retry";
+            this.button_Retry.Size = new System.Drawing.Size(84, 23);
+            this.button_Retry.TabIndex = 36;
+            this.button_Retry.Text = "button_Retry";
+            this.button_Retry.UseVisualStyleBackColor = true;
+            this.button_Retry.Visible = false;
+            this.button_Retry.Click += new System.EventHandler(this.button_Retry_Click);
+            // 
             // ru10_status_pictureBox
             // 
             this.ru10_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
@@ -454,19 +465,8 @@
             // 
             // updateWoTServersStats_timer
             // 
-            this.updateWoTServersStats_timer.Interval = 5000;
+            this.updateWoTServersStats_timer.Interval = 6000;
             this.updateWoTServersStats_timer.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // button_Retry
-            // 
-            this.button_Retry.Location = new System.Drawing.Point(298, 77);
-            this.button_Retry.Name = "button_Retry";
-            this.button_Retry.Size = new System.Drawing.Size(84, 23);
-            this.button_Retry.TabIndex = 36;
-            this.button_Retry.Text = "button_Retry";
-            this.button_Retry.UseVisualStyleBackColor = true;
-            this.button_Retry.Visible = false;
-            this.button_Retry.Click += new System.EventHandler(this.button_Retry_Click);
             // 
             // Form1
             // 
