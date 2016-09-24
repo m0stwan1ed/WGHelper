@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label_totalOnline = new System.Windows.Forms.Label();
             this.label_WoT_ru1 = new System.Windows.Forms.Label();
@@ -54,6 +55,9 @@
             this.label_ru10Online = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_WoT = new System.Windows.Forms.TabPage();
+            this.button_RunUpdater = new System.Windows.Forms.Button();
+            this.button_RunClient = new System.Windows.Forms.Button();
+            this.label_WoTClientVersion = new System.Windows.Forms.Label();
             this.label_pingInfo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label_WoT_Recommend = new System.Windows.Forms.Label();
@@ -85,6 +89,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.updateWoTServersStats_timer = new System.Windows.Forms.Timer(this.components);
             this.pingWoTServers_timer = new System.Windows.Forms.Timer(this.components);
+            this.button_Settings = new System.Windows.Forms.Button();
+            this.label_appVersion = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.checkRunningUpdaterWoT_timer = new System.Windows.Forms.Timer(this.components);
+            this.checkRunningWoT_timer = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -319,6 +328,9 @@
             // 
             // tabPage_WoT
             // 
+            this.tabPage_WoT.Controls.Add(this.button_RunUpdater);
+            this.tabPage_WoT.Controls.Add(this.button_RunClient);
+            this.tabPage_WoT.Controls.Add(this.label_WoTClientVersion);
             this.tabPage_WoT.Controls.Add(this.label_pingInfo);
             this.tabPage_WoT.Controls.Add(this.pictureBox2);
             this.tabPage_WoT.Controls.Add(this.label_WoT_Recommend);
@@ -377,6 +389,37 @@
             this.tabPage_WoT.TabIndex = 0;
             this.tabPage_WoT.Text = "World of Tanks";
             this.tabPage_WoT.UseVisualStyleBackColor = true;
+            // 
+            // button_RunUpdater
+            // 
+            this.button_RunUpdater.Location = new System.Drawing.Point(226, 206);
+            this.button_RunUpdater.Name = "button_RunUpdater";
+            this.button_RunUpdater.Size = new System.Drawing.Size(75, 43);
+            this.button_RunUpdater.TabIndex = 57;
+            this.button_RunUpdater.Text = "button_RunUpdater";
+            this.button_RunUpdater.UseVisualStyleBackColor = true;
+            this.button_RunUpdater.Visible = false;
+            this.button_RunUpdater.Click += new System.EventHandler(this.button_RunUpdater_Click);
+            // 
+            // button_RunClient
+            // 
+            this.button_RunClient.Location = new System.Drawing.Point(307, 206);
+            this.button_RunClient.Name = "button_RunClient";
+            this.button_RunClient.Size = new System.Drawing.Size(75, 43);
+            this.button_RunClient.TabIndex = 56;
+            this.button_RunClient.Text = "button_RunClient";
+            this.button_RunClient.UseVisualStyleBackColor = true;
+            this.button_RunClient.Visible = false;
+            this.button_RunClient.Click += new System.EventHandler(this.button_RunClient_Click);
+            // 
+            // label_WoTClientVersion
+            // 
+            this.label_WoTClientVersion.Location = new System.Drawing.Point(198, 252);
+            this.label_WoTClientVersion.Name = "label_WoTClientVersion";
+            this.label_WoTClientVersion.Size = new System.Drawing.Size(184, 18);
+            this.label_WoTClientVersion.TabIndex = 55;
+            this.label_WoTClientVersion.Text = "label_WoTClientVersion";
+            this.label_WoTClientVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_pingInfo
             // 
@@ -652,13 +695,51 @@
             this.pingWoTServers_timer.Interval = 5000;
             this.pingWoTServers_timer.Tick += new System.EventHandler(this.pingWoTServers_timer_Tick);
             // 
+            // button_Settings
+            // 
+            this.button_Settings.Location = new System.Drawing.Point(314, 12);
+            this.button_Settings.Name = "button_Settings";
+            this.button_Settings.Size = new System.Drawing.Size(90, 23);
+            this.button_Settings.TabIndex = 25;
+            this.button_Settings.Text = "button_Settings";
+            this.button_Settings.UseVisualStyleBackColor = true;
+            this.button_Settings.Click += new System.EventHandler(this.button_Settings_Click);
+            // 
+            // label_appVersion
+            // 
+            this.label_appVersion.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label_appVersion.Location = new System.Drawing.Point(211, 338);
+            this.label_appVersion.Name = "label_appVersion";
+            this.label_appVersion.Size = new System.Drawing.Size(203, 24);
+            this.label_appVersion.TabIndex = 26;
+            this.label_appVersion.Text = "label_appVersion0000000";
+            this.label_appVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // checkRunningUpdaterWoT_timer
+            // 
+            this.checkRunningUpdaterWoT_timer.Tick += new System.EventHandler(this.checkRunningUpdaterWoT_timer_Tick);
+            // 
+            // checkRunningWoT_timer
+            // 
+            this.checkRunningWoT_timer.Tick += new System.EventHandler(this.checkRunningWoT_timer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 350);
+            this.ClientSize = new System.Drawing.Size(418, 371);
+            this.Controls.Add(this.label_appVersion);
+            this.Controls.Add(this.button_Settings);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -741,6 +822,14 @@
         private System.Windows.Forms.Timer pingWoTServers_timer;
         private System.Windows.Forms.Label label_pingInfo;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button_Settings;
+        private System.Windows.Forms.Label label_WoTClientVersion;
+        private System.Windows.Forms.Label label_appVersion;
+        private System.Windows.Forms.Button button_RunUpdater;
+        private System.Windows.Forms.Button button_RunClient;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Timer checkRunningUpdaterWoT_timer;
+        private System.Windows.Forms.Timer checkRunningWoT_timer;
     }
 }
 

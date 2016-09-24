@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 using System.Threading;                                         //Подключение многопоточности
 using System.Windows.Forms;
 using Newtonsoft.Json;                                          //Библиотека для работы с JSON
-using System.Net.NetworkInformation;
+using System.Net.NetworkInformation;                            //Библиотека для работы функции проверки доступности серверов
+using System.Xml.Linq;                                          //Библиотека XML
+using System.Diagnostics;                                       //Библиотека для работы с процессами
 
 namespace WGHelper
 {
@@ -21,11 +23,15 @@ namespace WGHelper
         {
             InitializeComponent();
             Control.CheckForIllegalCrossThreadCalls = false;    //Отключение отслеживания пересекания потоков
+            updateWoTClientVersion();                           //Вывод данных о версии клиента игры и версии приложения
             startUpdating();                                    //Запуск потока, реквест-респонс
-            pingTestWoT();
+            pingTestWoT();                                      //Запуск потока проверки доступности серверов
             pingWoTServers_timer.Start();                       //Запуск таймера, который через промежутки времени проводит тест задержек доступа к серверам
         }
 
+        XDocument settings;                                     //Объект для хранения XML-файла
+
+        //----------------------Запуск потока, реквест-респонс--------------------------
         void startUpdating()
         {
             button_Retry.Visible = false;
@@ -38,6 +44,7 @@ namespace WGHelper
             requestWoTOnline.IsBackground = true;                                    //Поток после полного выполнения самоуничтожается
             requestWoTOnline.Start();
         }
+        //-------------------------------------------------------------------------------
 
         bool requestWoTThreadState = false;                     //Переменная-маркер для проверки активности потока
         bool pingWoTThreadState = false;                        //Переменная-маркер для проверки потока Ping
@@ -64,7 +71,8 @@ namespace WGHelper
         public static string jsonAnswer;                                                                    //Переменная ответа сервера
         public static wotOnlineRootObject wotOnline;                                                        //Объект класса для десериализации ответа сервера
 
-        public void request()                                                                               //Функция, что выполняет запрос в отдельном потоке
+        //---------------------------Функция, что выполняет запрос в отдельном потоке-------------------------------
+        public void request()                                                                               
         {
             try     //Отлавливаем System.Net.WebException(отсутствие соединения с сервером)
             {
@@ -241,6 +249,27 @@ namespace WGHelper
             }
 
         }
+        //----------------------------------------------------------------------------------------------------------
+
+        //-------------------Функция данных о версии клиента игры и версии приложения-------------------------------
+        void updateWoTClientVersion()
+        {
+            settings = XDocument.Load("settings.xml");                                                              //Загружаем файл настроек
+            label_appVersion.Text = settings.Element("settings").Attribute("version").Value;                        //Выводим текущую версию приложения
+            if (settings.Element("settings").Element("worldoftanks").Element("installed").Value == "no")            //Проверяем, задан ли путь к клиенту игры
+            {
+                label_WoTClientVersion.Text = "Client not installed";                                               //Выводим сообщение "Клиент не установлен"
+                button_RunClient.Visible = false;                                                                   //Убираем кнопки запуска игры и лаунчера
+                button_RunUpdater.Visible = false;
+            }
+            else
+            {
+                label_WoTClientVersion.Text = "Client version: " + settings.Element("settings").Element("worldoftanks").Element("client_version").Value;//Выводим версию клиента
+                button_RunClient.Visible = true;                                                                    //Отображаем кнопки запуска лаунчера и игры
+                button_RunUpdater.Visible = true;
+            }
+        }
+        //----------------------------------------------------------------------------------------------------------
 
         private void timer1_Tick(object sender, EventArgs e)                                                                    //Функция таймера
         {
@@ -269,6 +298,7 @@ namespace WGHelper
             pingWoTServers_Thread.Start();                                          //Запуск потока
         }
 
+        //----------------Функция, что выполняется в потоке для проверки доступности серверов----------------------
         void function_pingWoTServers_Thread()
         {
             //----------Создание коллекции объектов типа Label----------
@@ -331,10 +361,70 @@ namespace WGHelper
             label_pingInfo.Visible = false;
             pictureBox2.Image = Properties.Resources.tick;
         }
+        //---------------------------------------------------------------------------------------------------------
 
         private void pingWoTServers_timer_Tick(object sender, EventArgs e)                                  //Функция, что выполняется при каждом шаге таймера
         {
             if(pingWoTThreadState == false) pingTestWoT();                                                  //Функция запуска потока ping
+        }
+
+        private void button_Settings_Click(object sender, EventArgs e)                                      //Отображение окна настроек приложения
+        {
+            FormSettings settingsWindow = new FormSettings();                                               //Инициализация объекта окна настроек
+            AddOwnedForm(settingsWindow);                                                                   //Присвоение окна настроек главному окну
+            settingsWindow.ShowDialog();                                                                    //Отображение окна настроек как дочернее окно
+            updateWoTClientVersion();                                                                       //Обновление данных о версии клиента
+        }
+
+        private void button_RunUpdater_Click(object sender, EventArgs e)                                    //Нажатие на кнопку "Запустить апдейтер"
+        {
+            
+            this.ShowInTaskbar = false;                                                                     //Переносим приложение из панели задач
+            notifyIcon1.Visible = true;                                                                     //В системный трей
+            this.Visible = false;                                                                           //Убираем главное окно
+            Process.Start(settings.Element("settings").Element("worldoftanks").Element("client_path").Value + "\\WoTLauncher.exe");//Запускаем апдейтер
+            updateWoTServersStats_timer.Stop();                                                             //Останавливаем обновление информации о серверах
+            pingWoTServers_timer.Stop();                                                                    //Останавливаем обновление информации о задержках доступа к серверам
+            checkRunningUpdaterWoT_timer.Start();                                                           //Запускаем проверку окончания работы апдейтера
+        }
+
+        private void checkRunningUpdaterWoT_timer_Tick(object sender, EventArgs e)                          //Функция таймера проверки окончания работы апдейтера
+        {
+            Process[] localByName = Process.GetProcessesByName("WoTLauncher");                              //Поиск процесса апдейтера
+            if (localByName.Length == 0)                                                                    //Если его нет
+            {
+                this.ShowInTaskbar = true;                                                                  //Переносим приложение из системного трея
+                notifyIcon1.Visible = false;                                                                //В панель задач
+                this.Visible = true;                                                                        //Отображаем главное окно
+                checkRunningUpdaterWoT_timer.Stop();                                                        //Останавливаем проверку окончания работы апдейтера
+                pingWoTServers_timer.Start();                                                               //Запускаем проверку задержки доступа к серверам
+                updateWoTServersStats_timer.Start();                                                        //Запускаем проверку онлайна серверов
+            }
+        }
+
+        private void button_RunClient_Click(object sender, EventArgs e)                                     //Нажатие на кнопку "Запустить игру"
+        {
+            this.ShowInTaskbar = false;                                                                     //Переносим приложение из панели задач
+            notifyIcon1.Visible = true;                                                                     //В системный трей
+            this.Visible = false;                                                                           //Убираем главное окно
+            Process.Start(settings.Element("settings").Element("worldoftanks").Element("client_path").Value + "\\WorldOfTanks.exe");//Запускаем игру
+            updateWoTServersStats_timer.Stop();                                                             //Останавливаем обновление информации о серверах
+            pingWoTServers_timer.Stop();                                                                    //Останавливаем обновление информации о задержках доступа к серверам
+            checkRunningWoT_timer.Start();                                                                  //Запускаем проверку окончания работы апдейтера
+        }
+
+        private void checkRunningWoT_timer_Tick(object sender, EventArgs e)                                 //Функция таймера проверки окончания работы игры
+        {
+            Process[] localByName = Process.GetProcessesByName("WorldOfTanks");                             //Поиск процесса игры
+            if (localByName.Length == 0)                                                                    //Если его нет
+            {
+                this.ShowInTaskbar = true;                                                                  //Переносим приложение из системного трея
+                notifyIcon1.Visible = false;                                                                //В панель задач
+                this.Visible = true;                                                                        //Отображаем главное окно
+                checkRunningUpdaterWoT_timer.Stop();                                                        //Останавливаем проверку окончания работы апдейтера
+                pingWoTServers_timer.Start();                                                               //Запускаем проверку задержки доступа к серверам
+                updateWoTServersStats_timer.Start();                                                        //Запускаем проверку онлайна серверов
+            }
         }
     }
 }
