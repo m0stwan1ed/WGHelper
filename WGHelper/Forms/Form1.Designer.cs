@@ -94,6 +94,7 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.checkRunningUpdaterWoT_timer = new System.Windows.Forms.Timer(this.components);
             this.checkRunningWoT_timer = new System.Windows.Forms.Timer(this.components);
+            this.button_RetryPing = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -122,7 +123,7 @@
             // label_totalOnline
             // 
             this.label_totalOnline.AutoSize = true;
-            this.label_totalOnline.Location = new System.Drawing.Point(88, 171);
+            this.label_totalOnline.Location = new System.Drawing.Point(81, 171);
             this.label_totalOnline.Name = "label_totalOnline";
             this.label_totalOnline.Size = new System.Drawing.Size(85, 13);
             this.label_totalOnline.TabIndex = 2;
@@ -230,7 +231,7 @@
             // label_ru1Online
             // 
             this.label_ru1Online.AutoSize = true;
-            this.label_ru1Online.Location = new System.Drawing.Point(88, 26);
+            this.label_ru1Online.Location = new System.Drawing.Point(81, 26);
             this.label_ru1Online.Name = "label_ru1Online";
             this.label_ru1Online.Size = new System.Drawing.Size(80, 13);
             this.label_ru1Online.TabIndex = 14;
@@ -239,7 +240,7 @@
             // label_ru2Online
             // 
             this.label_ru2Online.AutoSize = true;
-            this.label_ru2Online.Location = new System.Drawing.Point(88, 39);
+            this.label_ru2Online.Location = new System.Drawing.Point(81, 39);
             this.label_ru2Online.Name = "label_ru2Online";
             this.label_ru2Online.Size = new System.Drawing.Size(80, 13);
             this.label_ru2Online.TabIndex = 15;
@@ -248,7 +249,7 @@
             // label_ru3Online
             // 
             this.label_ru3Online.AutoSize = true;
-            this.label_ru3Online.Location = new System.Drawing.Point(88, 52);
+            this.label_ru3Online.Location = new System.Drawing.Point(81, 52);
             this.label_ru3Online.Name = "label_ru3Online";
             this.label_ru3Online.Size = new System.Drawing.Size(80, 13);
             this.label_ru3Online.TabIndex = 16;
@@ -257,7 +258,7 @@
             // label_ru4Online
             // 
             this.label_ru4Online.AutoSize = true;
-            this.label_ru4Online.Location = new System.Drawing.Point(88, 65);
+            this.label_ru4Online.Location = new System.Drawing.Point(81, 65);
             this.label_ru4Online.Name = "label_ru4Online";
             this.label_ru4Online.Size = new System.Drawing.Size(80, 13);
             this.label_ru4Online.TabIndex = 17;
@@ -266,7 +267,7 @@
             // label_ru5Online
             // 
             this.label_ru5Online.AutoSize = true;
-            this.label_ru5Online.Location = new System.Drawing.Point(88, 78);
+            this.label_ru5Online.Location = new System.Drawing.Point(81, 78);
             this.label_ru5Online.Name = "label_ru5Online";
             this.label_ru5Online.Size = new System.Drawing.Size(80, 13);
             this.label_ru5Online.TabIndex = 18;
@@ -275,7 +276,7 @@
             // label_ru6Online
             // 
             this.label_ru6Online.AutoSize = true;
-            this.label_ru6Online.Location = new System.Drawing.Point(88, 91);
+            this.label_ru6Online.Location = new System.Drawing.Point(81, 91);
             this.label_ru6Online.Name = "label_ru6Online";
             this.label_ru6Online.Size = new System.Drawing.Size(80, 13);
             this.label_ru6Online.TabIndex = 19;
@@ -284,7 +285,7 @@
             // label_ru7Online
             // 
             this.label_ru7Online.AutoSize = true;
-            this.label_ru7Online.Location = new System.Drawing.Point(88, 104);
+            this.label_ru7Online.Location = new System.Drawing.Point(81, 104);
             this.label_ru7Online.Name = "label_ru7Online";
             this.label_ru7Online.Size = new System.Drawing.Size(80, 13);
             this.label_ru7Online.TabIndex = 20;
@@ -293,7 +294,7 @@
             // label_ru8Online
             // 
             this.label_ru8Online.AutoSize = true;
-            this.label_ru8Online.Location = new System.Drawing.Point(88, 117);
+            this.label_ru8Online.Location = new System.Drawing.Point(81, 117);
             this.label_ru8Online.Name = "label_ru8Online";
             this.label_ru8Online.Size = new System.Drawing.Size(80, 13);
             this.label_ru8Online.TabIndex = 21;
@@ -302,7 +303,7 @@
             // label_ru9Online
             // 
             this.label_ru9Online.AutoSize = true;
-            this.label_ru9Online.Location = new System.Drawing.Point(88, 130);
+            this.label_ru9Online.Location = new System.Drawing.Point(81, 130);
             this.label_ru9Online.Name = "label_ru9Online";
             this.label_ru9Online.Size = new System.Drawing.Size(80, 13);
             this.label_ru9Online.TabIndex = 22;
@@ -311,7 +312,7 @@
             // label_ru10Online
             // 
             this.label_ru10Online.AutoSize = true;
-            this.label_ru10Online.Location = new System.Drawing.Point(88, 143);
+            this.label_ru10Online.Location = new System.Drawing.Point(81, 143);
             this.label_ru10Online.Name = "label_ru10Online";
             this.label_ru10Online.Size = new System.Drawing.Size(86, 13);
             this.label_ru10Online.TabIndex = 23;
@@ -328,6 +329,7 @@
             // 
             // tabPage_WoT
             // 
+            this.tabPage_WoT.Controls.Add(this.button_RetryPing);
             this.tabPage_WoT.Controls.Add(this.button_RunUpdater);
             this.tabPage_WoT.Controls.Add(this.button_RunClient);
             this.tabPage_WoT.Controls.Add(this.label_WoTClientVersion);
@@ -423,12 +425,12 @@
             // 
             // label_pingInfo
             // 
-            this.label_pingInfo.AutoSize = true;
-            this.label_pingInfo.Location = new System.Drawing.Point(312, 157);
+            this.label_pingInfo.Location = new System.Drawing.Point(304, 157);
             this.label_pingInfo.Name = "label_pingInfo";
-            this.label_pingInfo.Size = new System.Drawing.Size(51, 13);
+            this.label_pingInfo.Size = new System.Drawing.Size(78, 13);
             this.label_pingInfo.TabIndex = 54;
             this.label_pingInfo.Text = "Pinging...";
+            this.label_pingInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_pingInfo.Visible = false;
             // 
             // pictureBox2
@@ -442,7 +444,7 @@
             // label_WoT_Recommend
             // 
             this.label_WoT_Recommend.AutoSize = true;
-            this.label_WoT_Recommend.Location = new System.Drawing.Point(195, 171);
+            this.label_WoT_Recommend.Location = new System.Drawing.Point(173, 169);
             this.label_WoT_Recommend.Name = "label_WoT_Recommend";
             this.label_WoT_Recommend.Size = new System.Drawing.Size(125, 13);
             this.label_WoT_Recommend.TabIndex = 52;
@@ -451,7 +453,7 @@
             // label_ru10Ping
             // 
             this.label_ru10Ping.AutoSize = true;
-            this.label_ru10Ping.Location = new System.Drawing.Point(195, 143);
+            this.label_ru10Ping.Location = new System.Drawing.Point(173, 141);
             this.label_ru10Ping.Name = "label_ru10Ping";
             this.label_ru10Ping.Size = new System.Drawing.Size(77, 13);
             this.label_ru10Ping.TabIndex = 50;
@@ -460,7 +462,7 @@
             // label_ru9Ping
             // 
             this.label_ru9Ping.AutoSize = true;
-            this.label_ru9Ping.Location = new System.Drawing.Point(195, 130);
+            this.label_ru9Ping.Location = new System.Drawing.Point(173, 128);
             this.label_ru9Ping.Name = "label_ru9Ping";
             this.label_ru9Ping.Size = new System.Drawing.Size(71, 13);
             this.label_ru9Ping.TabIndex = 49;
@@ -469,7 +471,7 @@
             // label_ru8Ping
             // 
             this.label_ru8Ping.AutoSize = true;
-            this.label_ru8Ping.Location = new System.Drawing.Point(195, 117);
+            this.label_ru8Ping.Location = new System.Drawing.Point(173, 115);
             this.label_ru8Ping.Name = "label_ru8Ping";
             this.label_ru8Ping.Size = new System.Drawing.Size(71, 13);
             this.label_ru8Ping.TabIndex = 48;
@@ -478,7 +480,7 @@
             // label_ru7Ping
             // 
             this.label_ru7Ping.AutoSize = true;
-            this.label_ru7Ping.Location = new System.Drawing.Point(195, 104);
+            this.label_ru7Ping.Location = new System.Drawing.Point(173, 102);
             this.label_ru7Ping.Name = "label_ru7Ping";
             this.label_ru7Ping.Size = new System.Drawing.Size(71, 13);
             this.label_ru7Ping.TabIndex = 47;
@@ -487,7 +489,7 @@
             // label_ru6Ping
             // 
             this.label_ru6Ping.AutoSize = true;
-            this.label_ru6Ping.Location = new System.Drawing.Point(195, 91);
+            this.label_ru6Ping.Location = new System.Drawing.Point(173, 89);
             this.label_ru6Ping.Name = "label_ru6Ping";
             this.label_ru6Ping.Size = new System.Drawing.Size(71, 13);
             this.label_ru6Ping.TabIndex = 46;
@@ -496,7 +498,7 @@
             // label_ru5Ping
             // 
             this.label_ru5Ping.AutoSize = true;
-            this.label_ru5Ping.Location = new System.Drawing.Point(195, 78);
+            this.label_ru5Ping.Location = new System.Drawing.Point(173, 76);
             this.label_ru5Ping.Name = "label_ru5Ping";
             this.label_ru5Ping.Size = new System.Drawing.Size(71, 13);
             this.label_ru5Ping.TabIndex = 45;
@@ -505,7 +507,7 @@
             // label_ru4Ping
             // 
             this.label_ru4Ping.AutoSize = true;
-            this.label_ru4Ping.Location = new System.Drawing.Point(195, 65);
+            this.label_ru4Ping.Location = new System.Drawing.Point(173, 63);
             this.label_ru4Ping.Name = "label_ru4Ping";
             this.label_ru4Ping.Size = new System.Drawing.Size(71, 13);
             this.label_ru4Ping.TabIndex = 44;
@@ -514,7 +516,7 @@
             // label_ru3Ping
             // 
             this.label_ru3Ping.AutoSize = true;
-            this.label_ru3Ping.Location = new System.Drawing.Point(195, 52);
+            this.label_ru3Ping.Location = new System.Drawing.Point(173, 50);
             this.label_ru3Ping.Name = "label_ru3Ping";
             this.label_ru3Ping.Size = new System.Drawing.Size(71, 13);
             this.label_ru3Ping.TabIndex = 42;
@@ -523,7 +525,7 @@
             // label_ru2Ping
             // 
             this.label_ru2Ping.AutoSize = true;
-            this.label_ru2Ping.Location = new System.Drawing.Point(195, 39);
+            this.label_ru2Ping.Location = new System.Drawing.Point(173, 37);
             this.label_ru2Ping.Name = "label_ru2Ping";
             this.label_ru2Ping.Size = new System.Drawing.Size(71, 13);
             this.label_ru2Ping.TabIndex = 41;
@@ -533,7 +535,7 @@
             // 
             this.label_ru1Ping.AutoSize = true;
             this.label_ru1Ping.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_ru1Ping.Location = new System.Drawing.Point(195, 26);
+            this.label_ru1Ping.Location = new System.Drawing.Point(173, 24);
             this.label_ru1Ping.Name = "label_ru1Ping";
             this.label_ru1Ping.Size = new System.Drawing.Size(71, 13);
             this.label_ru1Ping.TabIndex = 40;
@@ -542,7 +544,7 @@
             // label_Ping
             // 
             this.label_Ping.AutoSize = true;
-            this.label_Ping.Location = new System.Drawing.Point(195, 8);
+            this.label_Ping.Location = new System.Drawing.Point(173, 6);
             this.label_Ping.Name = "label_Ping";
             this.label_Ping.Size = new System.Drawing.Size(28, 13);
             this.label_Ping.TabIndex = 39;
@@ -551,7 +553,7 @@
             // label_Online
             // 
             this.label_Online.AutoSize = true;
-            this.label_Online.Location = new System.Drawing.Point(88, 8);
+            this.label_Online.Location = new System.Drawing.Point(81, 8);
             this.label_Online.Name = "label_Online";
             this.label_Online.Size = new System.Drawing.Size(37, 13);
             this.label_Online.TabIndex = 38;
@@ -574,7 +576,6 @@
             this.button_Retry.TabIndex = 36;
             this.button_Retry.Text = "button_Retry";
             this.button_Retry.UseVisualStyleBackColor = true;
-            this.button_Retry.Visible = false;
             this.button_Retry.Click += new System.EventHandler(this.button_Retry_Click);
             // 
             // ru10_status_pictureBox
@@ -712,14 +713,13 @@
             this.label_appVersion.Name = "label_appVersion";
             this.label_appVersion.Size = new System.Drawing.Size(203, 24);
             this.label_appVersion.TabIndex = 26;
-            this.label_appVersion.Text = "label_appVersion0000000";
+            this.label_appVersion.Text = "label_appVersion";
             this.label_appVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
             // 
             // checkRunningUpdaterWoT_timer
             // 
@@ -728,6 +728,16 @@
             // checkRunningWoT_timer
             // 
             this.checkRunningWoT_timer.Tick += new System.EventHandler(this.checkRunningWoT_timer_Tick);
+            // 
+            // button_RetryPing
+            // 
+            this.button_RetryPing.Location = new System.Drawing.Point(298, 171);
+            this.button_RetryPing.Name = "button_RetryPing";
+            this.button_RetryPing.Size = new System.Drawing.Size(84, 23);
+            this.button_RetryPing.TabIndex = 58;
+            this.button_RetryPing.Text = "button_RetryPing";
+            this.button_RetryPing.UseVisualStyleBackColor = true;
+            this.button_RetryPing.Click += new System.EventHandler(this.button_RetryPing_Click);
             // 
             // Form1
             // 
@@ -830,6 +840,7 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Timer checkRunningUpdaterWoT_timer;
         private System.Windows.Forms.Timer checkRunningWoT_timer;
+        private System.Windows.Forms.Button button_RetryPing;
     }
 }
 

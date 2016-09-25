@@ -38,7 +38,7 @@
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(12, 258);
+            this.buttonBack.Location = new System.Drawing.Point(12, 87);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 0;
@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 293);
+            this.ClientSize = new System.Drawing.Size(446, 122);
             this.ControlBox = false;
             this.Controls.Add(this.label_clients_paths);
             this.Controls.Add(this.buttonSetWoTFolder);

@@ -244,8 +244,7 @@ namespace WGHelper
 
                 updateWoTServersStats_timer.Stop();                                                                                 //Остановка таймера из-за отсутствия соединения с сервером
 
-                MessageBox.Show("  Unable to connect to servers\nCheck your network connection", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);               //Вывод на экран сообщения об ошибке
-
+                MessageBox.Show("  Unable to connect to servers\nCheck your network connection", "Request error", MessageBoxButtons.OK, MessageBoxIcon.Error);               //Вывод на экран сообщения об ошибке
             }
 
         }
@@ -301,65 +300,79 @@ namespace WGHelper
         //----------------Функция, что выполняется в потоке для проверки доступности серверов----------------------
         void function_pingWoTServers_Thread()
         {
-            //----------Создание коллекции объектов типа Label----------
-            var labelsWoTPing = new List<Label>();
-            //--------------Заполнение коллекции объектами--------------
-            labelsWoTPing.Add(label_ru1Ping);
-            labelsWoTPing.Add(label_ru2Ping);
-            labelsWoTPing.Add(label_ru3Ping);
-            labelsWoTPing.Add(label_ru4Ping);
-            labelsWoTPing.Add(label_ru5Ping);
-            labelsWoTPing.Add(label_ru6Ping);
-            labelsWoTPing.Add(label_ru7Ping);
-            labelsWoTPing.Add(label_ru8Ping);
-            labelsWoTPing.Add(label_ru9Ping);
-            labelsWoTPing.Add(label_ru10Ping);
-            //----------------------------------------------------------
-
-            pingWoTThreadState = true;
-            pictureBox2.Image = Properties.Resources.loading_sh;
-            label_pingInfo.Visible = true;
-            Ping ping = new Ping();                                                 //Объект класса Ping для проверки скорости доступа к серверу
-
-            PingReply[] WoTRu = new PingReply[10];                                  //Массив объектов класса PingReply для хранения параметров
-            
-            //-----------------Выполнение запросов на тест скорости доступа к серверам
-            for(int i=0; i<10; i++)
+            try
             {
-                WoTRu[i] = ping.Send("login.p" + Convert.ToString(i + 1) + ".worldoftanks.net");
-            }
-            //-------------------------------------------------------------------------
+                label_pingInfo.Text = "Pinging...";
+                button_RetryPing.Visible = false;
+                //----------Создание коллекции объектов типа Label----------
+                var labelsWoTPing = new List<Label>();
+                //--------------Заполнение коллекции объектами--------------
+                labelsWoTPing.Add(label_ru1Ping);
+                labelsWoTPing.Add(label_ru2Ping);
+                labelsWoTPing.Add(label_ru3Ping);
+                labelsWoTPing.Add(label_ru4Ping);
+                labelsWoTPing.Add(label_ru5Ping);
+                labelsWoTPing.Add(label_ru6Ping);
+                labelsWoTPing.Add(label_ru7Ping);
+                labelsWoTPing.Add(label_ru8Ping);
+                labelsWoTPing.Add(label_ru9Ping);
+                labelsWoTPing.Add(label_ru10Ping);
+                //----------------------------------------------------------
 
-            byte indexOfServerWoT = 0;                  //Ячейка для запоминания сервера с найменьшей задержкой доступа
-            int pingMinimalWoT = 999999;                //Для проверки доступности серверов
-            for(int i=0; i<10; i++)                     //Вычисление сервера с найменьшей задержкой
-            {
-                if(WoTRu[i].RoundtripTime<pingMinimalWoT)
+                pingWoTThreadState = true;
+                pictureBox2.Image = Properties.Resources.loading_sh;
+                label_pingInfo.Visible = true;
+                Ping ping = new Ping();                                                 //Объект класса Ping для проверки скорости доступа к серверу
+
+                PingReply[] WoTRu = new PingReply[10];                                  //Массив объектов класса PingReply для хранения параметров
+
+                //-----------------Выполнение запросов на тест скорости доступа к серверам
+                for (int i = 0; i < 10; i++)
                 {
-                    pingMinimalWoT = Convert.ToInt32(WoTRu[i].RoundtripTime);       //Запоминание задержки
-                    indexOfServerWoT = Convert.ToByte(i);                           //Запоминание сервера
-                }  
+                    WoTRu[i] = ping.Send("login.p" + Convert.ToString(i + 1) + ".worldoftanks.net");
+                }
+                //-------------------------------------------------------------------------
+
+                byte indexOfServerWoT = 0;                  //Ячейка для запоминания сервера с найменьшей задержкой доступа
+                int pingMinimalWoT = 999999;                //Для проверки доступности серверов
+                for (int i = 0; i < 10; i++)                     //Вычисление сервера с найменьшей задержкой
+                {
+                    if (WoTRu[i].RoundtripTime < pingMinimalWoT)
+                    {
+                        pingMinimalWoT = Convert.ToInt32(WoTRu[i].RoundtripTime);       //Запоминание задержки
+                        indexOfServerWoT = Convert.ToByte(i);                           //Запоминание сервера
+                    }
+                }
+
+                //-----------Вывод результатов на экран------------------------
+                for (int i = 0; i < 10; i++)
+                {
+                    labelsWoTPing[i].Text = WoTRu[i].RoundtripTime.ToString() + " ms";
+                }
+                //--------------------------------------------------------------
+
+                //--------Окрашивание показателей задержки в разные цвета
+                for (int i = 0; i < 10; i++)
+                {
+                    if (WoTRu[i].RoundtripTime <= 50) labelsWoTPing[i].ForeColor = Color.DarkGreen;
+                    else if (WoTRu[i].RoundtripTime <= 150) labelsWoTPing[i].ForeColor = Color.Goldenrod;
+                    else labelsWoTPing[i].ForeColor = Color.Red;
+                }
+                //-------------------------------------------------------
+                label_WoT_Recommend.Text = "Recommend WoT RU" + Convert.ToString(indexOfServerWoT + 1);         //Вывод рекомендуемого сервера с найменьшей задержкой
+                pingWoTThreadState = false;
+                label_pingInfo.Visible = false;
+                pictureBox2.Image = Properties.Resources.tick;
+            }
+            catch(System.Net.NetworkInformation.PingException)
+            {
+                label_pingInfo.Text = "No connection";
+                pictureBox2.Image = Properties.Resources.rsz_1no_icon;
+                button_RetryPing.Visible = true;
+                pingWoTServers_timer.Stop();
+                MessageBox.Show("  Unable to connect to servers\nCheck your network connection", "Ping error", MessageBoxButtons.OK, MessageBoxIcon.Error);               //Вывод на экран сообщения об ошибке
             }
             
-            //-----------Вывод результатов на экран------------------------
-            for(int i=0; i<10; i++)
-            {
-                labelsWoTPing[i].Text = WoTRu[i].RoundtripTime.ToString() + " ms";
-            }
-            //--------------------------------------------------------------
-
-            //--------Окрашивание показателей задержки в разные цвета
-            for(int i=0; i<10; i++)
-            {
-                if (WoTRu[i].RoundtripTime <= 50) labelsWoTPing[i].ForeColor = Color.DarkGreen;
-                else if (WoTRu[i].RoundtripTime <= 150) labelsWoTPing[i].ForeColor = Color.Goldenrod;
-                else labelsWoTPing[i].ForeColor = Color.Red;
-            }
-            //-------------------------------------------------------
-            label_WoT_Recommend.Text = "Recommend WoT RU" + Convert.ToString(indexOfServerWoT + 1);         //Вывод рекомендуемого сервера с найменьшей задержкой
-            pingWoTThreadState = false;
-            label_pingInfo.Visible = false;
-            pictureBox2.Image = Properties.Resources.tick;
         }
         //---------------------------------------------------------------------------------------------------------
 
@@ -425,6 +438,11 @@ namespace WGHelper
                 pingWoTServers_timer.Start();                                                               //Запускаем проверку задержки доступа к серверам
                 updateWoTServersStats_timer.Start();                                                        //Запускаем проверку онлайна серверов
             }
+        }
+
+        private void button_RetryPing_Click(object sender, EventArgs e)
+        {
+            pingTestWoT();
         }
     }
 }
