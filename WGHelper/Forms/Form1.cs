@@ -21,23 +21,25 @@ namespace WGHelper
     {
         public Form1()
         {
-            InitializeComponent();                      //Инициализация компонентов формы. Должна быть первой всегда
+            InitializeComponent();                              //Инициализация компонентов формы. Должна быть первой всегда
             //------------------------------------------------------------------------------------------------
             checkAuthorization();
+            loadSettings();                                     //Загрузка настроек приложения
             Control.CheckForIllegalCrossThreadCalls = false;    //Отключение отслеживания пересекания потоков
-            updateWoTClientVersion();                           //Вывод данных о версии клиента игры и версии приложения
-            startUpdating();                                    //Запуск потока, реквест-респонс
+            UpdateWoTOnline();                                    //Запуск потока, реквест-респонс
             pingTestWoT();                                      //Запуск потока проверки доступности серверов
             pingWoTServers_timer.Start();                       //Запуск таймера, который через промежутки времени проводит тест задержек доступа к серверам
+            updateWoTServersStats_timer.Start();                                     //Запуск таймера
         }
 
         XDocument settings;                                     //Объект для хранения XML-файла
 
         //----------------------Запуск потока, реквест-респонс--------------------------
-        void startUpdating()
+        void UpdateWoTOnline()
         {
+            onlineToolStripMenuItem.Enabled = false;
+            updateWoTServersStats_timer.Start();
             button_Retry.Visible = false;
-            updateWoTServersStats_timer.Start();                                     //Запуск таймера
             Thread requestWoTOnline;                                                 //Инициализация потока
             requestWoTOnline = new Thread(request);                                  //Привязка функции к потоку
             label_updatingInfo.Text = "Updating...";
@@ -80,6 +82,36 @@ namespace WGHelper
             }
         }
 
+        void loadSettings()
+        {
+            settings = XDocument.Load("settings.xml");
+            updateToolStripMenuItem.Visible = false;
+            pingToolStripMenuItem.Enabled = false;
+            onlineToolStripMenuItem.Enabled = false;
+            label_appVersion.Text = settings.Element("settings").Attribute("version").Value;                        //Выводим текущую версию приложения
+            if (settings.Element("settings").Element("worldoftanks").Element("installed").Value == "no")            //Проверяем, задан ли путь к клиенту игры
+            {
+                label_WoTClientVersion.Text = "Client not installed";                                               //Выводим сообщение "Клиент не установлен"
+                button_RunClient.Visible = false;                                                                   //Убираем кнопки запуска игры и лаунчера
+                button_RunUpdater.Visible = false;
+            }
+            else
+            {
+                label_WoTClientVersion.Text = "Client version: " + settings.Element("settings").Element("worldoftanks").Element("client_version").Value;//Выводим версию клиента
+                button_RunClient.Visible = true;                                                                    //Отображаем кнопки запуска лаунчера и игры
+                button_RunUpdater.Visible = true;
+            }
+            bool ping, online;
+            ping = Convert.ToBoolean(settings.Element("settings").Element("autoping").Value);
+            online = Convert.ToBoolean(settings.Element("settings").Element("autoupdate_servers_online").Value);
+            if ((ping == false) || (online == false))
+            {
+                updateToolStripMenuItem.Visible = true;
+                if (ping == false) pingToolStripMenuItem.Enabled = true;
+                if (online == false) onlineToolStripMenuItem.Enabled = true;
+            }
+                
+        }
         bool requestWoTThreadState = false;                     //Переменная-маркер для проверки активности потока
         bool pingWoTThreadState = false;                        //Переменная-маркер для проверки потока Ping
 
@@ -284,47 +316,29 @@ namespace WGHelper
         }
         //----------------------------------------------------------------------------------------------------------
 
-        //-------------------Функция данных о версии клиента игры и версии приложения-------------------------------
-        void updateWoTClientVersion()
-        {
-            settings = XDocument.Load("settings.xml");                                                              //Загружаем файл настроек
-            label_appVersion.Text = settings.Element("settings").Attribute("version").Value;                        //Выводим текущую версию приложения
-            if (settings.Element("settings").Element("worldoftanks").Element("installed").Value == "no")            //Проверяем, задан ли путь к клиенту игры
-            {
-                label_WoTClientVersion.Text = "Client not installed";                                               //Выводим сообщение "Клиент не установлен"
-                button_RunClient.Visible = false;                                                                   //Убираем кнопки запуска игры и лаунчера
-                button_RunUpdater.Visible = false;
-            }
-            else
-            {
-                label_WoTClientVersion.Text = "Client version: " + settings.Element("settings").Element("worldoftanks").Element("client_version").Value;//Выводим версию клиента
-                button_RunClient.Visible = true;                                                                    //Отображаем кнопки запуска лаунчера и игры
-                button_RunUpdater.Visible = true;
-            }
-        }
-        //----------------------------------------------------------------------------------------------------------
-
         private void timer1_Tick(object sender, EventArgs e)                                                                    //Функция таймера
         {
             if (requestWoTThreadState == false)
             {
-                Thread requestWoTOnline;                                                                                            //Инициализация потока
-                requestWoTOnline = new Thread(request);                                                                             //Привязка функции к потоку
-                label_updatingInfo.Text = "Updating...";
-                label_updatingInfo.Visible = true;                                                                                  //Отображение информатора загрузки
-                pictureBox1.Image = Properties.Resources.loading_sh;                                                                //Смена изображения информатора
-                requestWoTOnline.IsBackground = true;                                                                               //Поток после полного выполнения самоуничтожается
-                requestWoTOnline.Start();                                                                                           //Запуск потока, реквест-респонс                                                                                     
+                UpdateWoTOnline();
+                if (settings.Element("settings").Element("autoupdate_servers_online").Value == "false")
+                {
+                    onlineToolStripMenuItem.Enabled = true;
+                    updateWoTServersStats_timer.Stop();
+                }
             }
         }
 
         private void button_Retry_Click(object sender, EventArgs e)                 //Функция повторной попытки запроса к серверам
         {
-            startUpdating();
+            UpdateWoTOnline();
+            updateWoTServersStats_timer.Start();
         }
 
         void pingTestWoT()                                                          //Функция запуска потока ping
         {
+            pingToolStripMenuItem.Enabled = false;
+            pingWoTServers_timer.Start();
             Thread pingWoTServers_Thread;                                           //Обьявление переменной 
             pingWoTServers_Thread = new Thread(function_pingWoTServers_Thread);     //Привязка функции к потоку
             pingWoTServers_Thread.IsBackground = true;                              //Закрытие потока после окончания
@@ -412,7 +426,15 @@ namespace WGHelper
 
         private void pingWoTServers_timer_Tick(object sender, EventArgs e)                                  //Функция, что выполняется при каждом шаге таймера
         {
-            if(pingWoTThreadState == false) pingTestWoT();                                                  //Функция запуска потока ping
+            if (pingWoTThreadState == false)
+            {
+                pingTestWoT();                                                  //Функция запуска потока ping
+                if (settings.Element("settings").Element("autoping").Value == "false")
+                {
+                    pingWoTServers_timer.Stop();
+                    pingToolStripMenuItem.Enabled = true;
+                }
+            }
         }
 
         private void button_RunUpdater_Click(object sender, EventArgs e)                                    //Нажатие на кнопку "Запустить апдейтер"
@@ -476,14 +498,6 @@ namespace WGHelper
             this.Dispose();
         }
 
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormSettings settingsWindow = new FormSettings();                                               //Инициализация объекта окна настроек
-            AddOwnedForm(settingsWindow);                                                                   //Присвоение окна настроек главному окну
-            settingsWindow.ShowDialog();                                                                    //Отображение окна настроек как дочернее окно
-            updateWoTClientVersion();                                                                       //Обновление данных о версии клиента
-        }
-
         private void authorizationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Forms.AuthForm autherizationForm = new Forms.AuthForm();
@@ -503,6 +517,26 @@ namespace WGHelper
             settings.Element("settings").Element("wg_open_id").Element("authorized").Value = "no";
             settings.Save("settings.xml");
             checkAuthorization();
+        }
+
+        private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormSettings settingsWindow = new FormSettings();                                               //Инициализация объекта окна настроек
+            AddOwnedForm(settingsWindow);                                                                   //Присвоение окна настроек главному окну
+            settingsWindow.ShowDialog();                                                                    //Отображение окна настроек как дочернее окно
+            loadSettings();                                                                                 //Обновление данных о версии клиента
+            if ((updateWoTServersStats_timer.Enabled == false)&&(settings.Element("settings").Element("autoupdate_servers_online").Value == "true")) UpdateWoTOnline();
+            if ((pingWoTServers_timer.Enabled == false)&&(settings.Element("settings").Element("autoping").Value == "true")) pingTestWoT();
+        }
+
+        private void onlineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateWoTOnline();                                    //Запуск потока, реквест-респонс
+        }
+
+        private void pingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pingTestWoT();                                      //Запуск потока проверки доступности серверов
         }
     }
 }

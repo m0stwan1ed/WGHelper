@@ -21,6 +21,12 @@ namespace WGHelper
             settings = XDocument.Load("settings.xml");//Загрузка файла настроек
             InitializeComponent();
             WoTPath_textBox.Text = settings.Element("settings").Element("worldoftanks").Element("client_path").Value;//Вывод текущего пути к клиенту игры
+            if (settings.Element("settings").Element("autoupdate_servers_online").Value == "true") checkBox_autoUpdateServersOnline.Checked = true;
+            else
+                checkBox_autoUpdateServersOnline.Checked = false;
+            if (settings.Element("settings").Element("autoping").Value == "true") checkBox_autoping.Checked = true;
+            else
+                checkBox_autoping.Checked = false;
         }
 
         private void buttonSetWoTFolder_Click(object sender, EventArgs e)//Нажатие на кнопку"Указать путь к клиенту"
@@ -43,6 +49,22 @@ namespace WGHelper
         private void buttonBack_Click(object sender, EventArgs e)//Нажатие на кнопку "Назад"
         {
             this.Dispose();//Закрыть текущее окно и уничтожить все ресурсы в памяти, что использовались в данном окне
+        }
+
+        private void checkBox_autoUpdateServersOnline_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_autoUpdateServersOnline.Checked == true) settings.Element("settings").Element("autoupdate_servers_online").Value = "true";
+            else
+                settings.Element("settings").Element("autoupdate_servers_online").Value = "false";
+            settings.Save("settings.xml");
+        }
+
+        private void checkBox_autoping_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_autoping.Checked == true) settings.Element("settings").Element("autoping").Value = "true";
+            else
+                settings.Element("settings").Element("autoping").Value = "false";
+            settings.Save("settings.xml");
         }
     }
 }

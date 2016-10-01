@@ -100,8 +100,11 @@
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.authorizationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.onlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -133,9 +136,9 @@
             this.label_totalOnline.AutoSize = true;
             this.label_totalOnline.Location = new System.Drawing.Point(81, 171);
             this.label_totalOnline.Name = "label_totalOnline";
-            this.label_totalOnline.Size = new System.Drawing.Size(85, 13);
+            this.label_totalOnline.Size = new System.Drawing.Size(16, 13);
             this.label_totalOnline.TabIndex = 2;
-            this.label_totalOnline.Text = "label_totalOnline";
+            this.label_totalOnline.Text = "---";
             // 
             // label_WoT_ru1
             // 
@@ -241,90 +244,90 @@
             this.label_ru1Online.AutoSize = true;
             this.label_ru1Online.Location = new System.Drawing.Point(81, 26);
             this.label_ru1Online.Name = "label_ru1Online";
-            this.label_ru1Online.Size = new System.Drawing.Size(80, 13);
+            this.label_ru1Online.Size = new System.Drawing.Size(16, 13);
             this.label_ru1Online.TabIndex = 14;
-            this.label_ru1Online.Text = "label_ru1Online";
+            this.label_ru1Online.Text = "---";
             // 
             // label_ru2Online
             // 
             this.label_ru2Online.AutoSize = true;
             this.label_ru2Online.Location = new System.Drawing.Point(81, 39);
             this.label_ru2Online.Name = "label_ru2Online";
-            this.label_ru2Online.Size = new System.Drawing.Size(80, 13);
+            this.label_ru2Online.Size = new System.Drawing.Size(16, 13);
             this.label_ru2Online.TabIndex = 15;
-            this.label_ru2Online.Text = "label_ru2Online";
+            this.label_ru2Online.Text = "---";
             // 
             // label_ru3Online
             // 
             this.label_ru3Online.AutoSize = true;
             this.label_ru3Online.Location = new System.Drawing.Point(81, 52);
             this.label_ru3Online.Name = "label_ru3Online";
-            this.label_ru3Online.Size = new System.Drawing.Size(80, 13);
+            this.label_ru3Online.Size = new System.Drawing.Size(16, 13);
             this.label_ru3Online.TabIndex = 16;
-            this.label_ru3Online.Text = "label_ru3Online";
+            this.label_ru3Online.Text = "---";
             // 
             // label_ru4Online
             // 
             this.label_ru4Online.AutoSize = true;
             this.label_ru4Online.Location = new System.Drawing.Point(81, 65);
             this.label_ru4Online.Name = "label_ru4Online";
-            this.label_ru4Online.Size = new System.Drawing.Size(80, 13);
+            this.label_ru4Online.Size = new System.Drawing.Size(16, 13);
             this.label_ru4Online.TabIndex = 17;
-            this.label_ru4Online.Text = "label_ru4Online";
+            this.label_ru4Online.Text = "---";
             // 
             // label_ru5Online
             // 
             this.label_ru5Online.AutoSize = true;
             this.label_ru5Online.Location = new System.Drawing.Point(81, 78);
             this.label_ru5Online.Name = "label_ru5Online";
-            this.label_ru5Online.Size = new System.Drawing.Size(80, 13);
+            this.label_ru5Online.Size = new System.Drawing.Size(16, 13);
             this.label_ru5Online.TabIndex = 18;
-            this.label_ru5Online.Text = "label_ru5Online";
+            this.label_ru5Online.Text = "---";
             // 
             // label_ru6Online
             // 
             this.label_ru6Online.AutoSize = true;
             this.label_ru6Online.Location = new System.Drawing.Point(81, 91);
             this.label_ru6Online.Name = "label_ru6Online";
-            this.label_ru6Online.Size = new System.Drawing.Size(80, 13);
+            this.label_ru6Online.Size = new System.Drawing.Size(16, 13);
             this.label_ru6Online.TabIndex = 19;
-            this.label_ru6Online.Text = "label_ru6Online";
+            this.label_ru6Online.Text = "---";
             // 
             // label_ru7Online
             // 
             this.label_ru7Online.AutoSize = true;
             this.label_ru7Online.Location = new System.Drawing.Point(81, 104);
             this.label_ru7Online.Name = "label_ru7Online";
-            this.label_ru7Online.Size = new System.Drawing.Size(80, 13);
+            this.label_ru7Online.Size = new System.Drawing.Size(16, 13);
             this.label_ru7Online.TabIndex = 20;
-            this.label_ru7Online.Text = "label_ru7Online";
+            this.label_ru7Online.Text = "---";
             // 
             // label_ru8Online
             // 
             this.label_ru8Online.AutoSize = true;
             this.label_ru8Online.Location = new System.Drawing.Point(81, 117);
             this.label_ru8Online.Name = "label_ru8Online";
-            this.label_ru8Online.Size = new System.Drawing.Size(80, 13);
+            this.label_ru8Online.Size = new System.Drawing.Size(16, 13);
             this.label_ru8Online.TabIndex = 21;
-            this.label_ru8Online.Text = "label_ru8Online";
+            this.label_ru8Online.Text = "---";
             // 
             // label_ru9Online
             // 
             this.label_ru9Online.AutoSize = true;
             this.label_ru9Online.Location = new System.Drawing.Point(81, 130);
             this.label_ru9Online.Name = "label_ru9Online";
-            this.label_ru9Online.Size = new System.Drawing.Size(80, 13);
+            this.label_ru9Online.Size = new System.Drawing.Size(16, 13);
             this.label_ru9Online.TabIndex = 22;
-            this.label_ru9Online.Text = "label_ru9Online";
+            this.label_ru9Online.Text = "---";
             // 
             // label_ru10Online
             // 
             this.label_ru10Online.AutoSize = true;
             this.label_ru10Online.Location = new System.Drawing.Point(81, 143);
             this.label_ru10Online.Name = "label_ru10Online";
-            this.label_ru10Online.Size = new System.Drawing.Size(86, 13);
+            this.label_ru10Online.Size = new System.Drawing.Size(16, 13);
             this.label_ru10Online.TabIndex = 23;
-            this.label_ru10Online.Text = "label_ru10Online";
+            this.label_ru10Online.Text = "---";
             // 
             // tabControl1
             // 
@@ -462,107 +465,107 @@
             // label_WoT_Recommend
             // 
             this.label_WoT_Recommend.AutoSize = true;
-            this.label_WoT_Recommend.Location = new System.Drawing.Point(173, 169);
+            this.label_WoT_Recommend.Location = new System.Drawing.Point(130, 171);
             this.label_WoT_Recommend.Name = "label_WoT_Recommend";
-            this.label_WoT_Recommend.Size = new System.Drawing.Size(125, 13);
+            this.label_WoT_Recommend.Size = new System.Drawing.Size(49, 13);
             this.label_WoT_Recommend.TabIndex = 52;
-            this.label_WoT_Recommend.Text = "label_WoT_Recommend";
+            this.label_WoT_Recommend.Text = "--------------";
             // 
             // label_ru10Ping
             // 
             this.label_ru10Ping.AutoSize = true;
-            this.label_ru10Ping.Location = new System.Drawing.Point(173, 141);
+            this.label_ru10Ping.Location = new System.Drawing.Point(130, 143);
             this.label_ru10Ping.Name = "label_ru10Ping";
-            this.label_ru10Ping.Size = new System.Drawing.Size(77, 13);
+            this.label_ru10Ping.Size = new System.Drawing.Size(16, 13);
             this.label_ru10Ping.TabIndex = 50;
-            this.label_ru10Ping.Text = "label_ru10Ping";
+            this.label_ru10Ping.Text = "---";
             // 
             // label_ru9Ping
             // 
             this.label_ru9Ping.AutoSize = true;
-            this.label_ru9Ping.Location = new System.Drawing.Point(173, 128);
+            this.label_ru9Ping.Location = new System.Drawing.Point(130, 130);
             this.label_ru9Ping.Name = "label_ru9Ping";
-            this.label_ru9Ping.Size = new System.Drawing.Size(71, 13);
+            this.label_ru9Ping.Size = new System.Drawing.Size(16, 13);
             this.label_ru9Ping.TabIndex = 49;
-            this.label_ru9Ping.Text = "label_ru9Ping";
+            this.label_ru9Ping.Text = "---";
             // 
             // label_ru8Ping
             // 
             this.label_ru8Ping.AutoSize = true;
-            this.label_ru8Ping.Location = new System.Drawing.Point(173, 115);
+            this.label_ru8Ping.Location = new System.Drawing.Point(130, 117);
             this.label_ru8Ping.Name = "label_ru8Ping";
-            this.label_ru8Ping.Size = new System.Drawing.Size(71, 13);
+            this.label_ru8Ping.Size = new System.Drawing.Size(16, 13);
             this.label_ru8Ping.TabIndex = 48;
-            this.label_ru8Ping.Text = "label_ru8Ping";
+            this.label_ru8Ping.Text = "---";
             // 
             // label_ru7Ping
             // 
             this.label_ru7Ping.AutoSize = true;
-            this.label_ru7Ping.Location = new System.Drawing.Point(173, 102);
+            this.label_ru7Ping.Location = new System.Drawing.Point(130, 104);
             this.label_ru7Ping.Name = "label_ru7Ping";
-            this.label_ru7Ping.Size = new System.Drawing.Size(71, 13);
+            this.label_ru7Ping.Size = new System.Drawing.Size(16, 13);
             this.label_ru7Ping.TabIndex = 47;
-            this.label_ru7Ping.Text = "label_ru7Ping";
+            this.label_ru7Ping.Text = "---";
             // 
             // label_ru6Ping
             // 
             this.label_ru6Ping.AutoSize = true;
-            this.label_ru6Ping.Location = new System.Drawing.Point(173, 89);
+            this.label_ru6Ping.Location = new System.Drawing.Point(130, 91);
             this.label_ru6Ping.Name = "label_ru6Ping";
-            this.label_ru6Ping.Size = new System.Drawing.Size(71, 13);
+            this.label_ru6Ping.Size = new System.Drawing.Size(16, 13);
             this.label_ru6Ping.TabIndex = 46;
-            this.label_ru6Ping.Text = "label_ru6Ping";
+            this.label_ru6Ping.Text = "---";
             // 
             // label_ru5Ping
             // 
             this.label_ru5Ping.AutoSize = true;
-            this.label_ru5Ping.Location = new System.Drawing.Point(173, 76);
+            this.label_ru5Ping.Location = new System.Drawing.Point(130, 78);
             this.label_ru5Ping.Name = "label_ru5Ping";
-            this.label_ru5Ping.Size = new System.Drawing.Size(71, 13);
+            this.label_ru5Ping.Size = new System.Drawing.Size(16, 13);
             this.label_ru5Ping.TabIndex = 45;
-            this.label_ru5Ping.Text = "label_ru5Ping";
+            this.label_ru5Ping.Text = "---";
             // 
             // label_ru4Ping
             // 
             this.label_ru4Ping.AutoSize = true;
-            this.label_ru4Ping.Location = new System.Drawing.Point(173, 63);
+            this.label_ru4Ping.Location = new System.Drawing.Point(130, 65);
             this.label_ru4Ping.Name = "label_ru4Ping";
-            this.label_ru4Ping.Size = new System.Drawing.Size(71, 13);
+            this.label_ru4Ping.Size = new System.Drawing.Size(16, 13);
             this.label_ru4Ping.TabIndex = 44;
-            this.label_ru4Ping.Text = "label_ru4Ping";
+            this.label_ru4Ping.Text = "---";
             // 
             // label_ru3Ping
             // 
             this.label_ru3Ping.AutoSize = true;
-            this.label_ru3Ping.Location = new System.Drawing.Point(173, 50);
+            this.label_ru3Ping.Location = new System.Drawing.Point(130, 52);
             this.label_ru3Ping.Name = "label_ru3Ping";
-            this.label_ru3Ping.Size = new System.Drawing.Size(71, 13);
+            this.label_ru3Ping.Size = new System.Drawing.Size(16, 13);
             this.label_ru3Ping.TabIndex = 42;
-            this.label_ru3Ping.Text = "label_ru3Ping";
+            this.label_ru3Ping.Text = "---";
             // 
             // label_ru2Ping
             // 
             this.label_ru2Ping.AutoSize = true;
-            this.label_ru2Ping.Location = new System.Drawing.Point(173, 37);
+            this.label_ru2Ping.Location = new System.Drawing.Point(130, 39);
             this.label_ru2Ping.Name = "label_ru2Ping";
-            this.label_ru2Ping.Size = new System.Drawing.Size(71, 13);
+            this.label_ru2Ping.Size = new System.Drawing.Size(16, 13);
             this.label_ru2Ping.TabIndex = 41;
-            this.label_ru2Ping.Text = "label_ru2Ping";
+            this.label_ru2Ping.Text = "---";
             // 
             // label_ru1Ping
             // 
             this.label_ru1Ping.AutoSize = true;
             this.label_ru1Ping.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_ru1Ping.Location = new System.Drawing.Point(173, 24);
+            this.label_ru1Ping.Location = new System.Drawing.Point(130, 26);
             this.label_ru1Ping.Name = "label_ru1Ping";
-            this.label_ru1Ping.Size = new System.Drawing.Size(71, 13);
+            this.label_ru1Ping.Size = new System.Drawing.Size(16, 13);
             this.label_ru1Ping.TabIndex = 40;
-            this.label_ru1Ping.Text = "label_ru1Ping";
+            this.label_ru1Ping.Text = "---";
             // 
             // label_Ping
             // 
             this.label_Ping.AutoSize = true;
-            this.label_Ping.Location = new System.Drawing.Point(173, 6);
+            this.label_Ping.Location = new System.Drawing.Point(130, 8);
             this.label_Ping.Name = "label_Ping";
             this.label_Ping.Size = new System.Drawing.Size(28, 13);
             this.label_Ping.TabIndex = 39;
@@ -741,8 +744,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.updateToolStripMenuItem,
             this.accountToolStripMenuItem,
-            this.settingsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -753,6 +756,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem1,
             this.aboutToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -789,19 +793,42 @@
             this.logoutToolStripMenuItem.Text = "Log-out";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.onlineToolStripMenuItem,
+            this.pingToolStripMenuItem});
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.updateToolStripMenuItem.Text = "Update";
+            // 
+            // settingsToolStripMenuItem1
+            // 
+            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem1.Text = "Settings";
+            this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
+            // 
+            // onlineToolStripMenuItem
+            // 
+            this.onlineToolStripMenuItem.Name = "onlineToolStripMenuItem";
+            this.onlineToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onlineToolStripMenuItem.Text = "Online";
+            this.onlineToolStripMenuItem.Click += new System.EventHandler(this.onlineToolStripMenuItem_Click);
+            // 
+            // pingToolStripMenuItem
+            // 
+            this.pingToolStripMenuItem.Name = "pingToolStripMenuItem";
+            this.pingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pingToolStripMenuItem.Text = "Ping";
+            this.pingToolStripMenuItem.Click += new System.EventHandler(this.pingToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -909,12 +936,15 @@
         private System.Windows.Forms.Button button_RetryPing;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem authorizationToolStripMenuItem;
         public System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem onlineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pingToolStripMenuItem;
     }
 }
 

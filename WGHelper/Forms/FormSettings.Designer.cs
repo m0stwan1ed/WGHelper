@@ -34,11 +34,13 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.buttonSetWoTFolder = new System.Windows.Forms.Button();
             this.label_clients_paths = new System.Windows.Forms.Label();
+            this.checkBox_autoUpdateServersOnline = new System.Windows.Forms.CheckBox();
+            this.checkBox_autoping = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(12, 87);
+            this.buttonBack.Location = new System.Drawing.Point(12, 184);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 0;
@@ -86,12 +88,36 @@
             this.label_clients_paths.TabIndex = 4;
             this.label_clients_paths.Text = "Paths to game clients";
             // 
+            // checkBox_autoUpdateServersOnline
+            // 
+            this.checkBox_autoUpdateServersOnline.AutoSize = true;
+            this.checkBox_autoUpdateServersOnline.Location = new System.Drawing.Point(15, 87);
+            this.checkBox_autoUpdateServersOnline.Name = "checkBox_autoUpdateServersOnline";
+            this.checkBox_autoUpdateServersOnline.Size = new System.Drawing.Size(192, 17);
+            this.checkBox_autoUpdateServersOnline.TabIndex = 5;
+            this.checkBox_autoUpdateServersOnline.Text = "Automatically update servers online";
+            this.checkBox_autoUpdateServersOnline.UseVisualStyleBackColor = true;
+            this.checkBox_autoUpdateServersOnline.CheckedChanged += new System.EventHandler(this.checkBox_autoUpdateServersOnline_CheckedChanged);
+            // 
+            // checkBox_autoping
+            // 
+            this.checkBox_autoping.AutoSize = true;
+            this.checkBox_autoping.Location = new System.Drawing.Point(15, 110);
+            this.checkBox_autoping.Name = "checkBox_autoping";
+            this.checkBox_autoping.Size = new System.Drawing.Size(158, 17);
+            this.checkBox_autoping.TabIndex = 6;
+            this.checkBox_autoping.Text = "Automatically check latency";
+            this.checkBox_autoping.UseVisualStyleBackColor = true;
+            this.checkBox_autoping.CheckedChanged += new System.EventHandler(this.checkBox_autoping_CheckedChanged);
+            // 
             // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 122);
+            this.ClientSize = new System.Drawing.Size(446, 219);
             this.ControlBox = false;
+            this.Controls.Add(this.checkBox_autoping);
+            this.Controls.Add(this.checkBox_autoUpdateServersOnline);
             this.Controls.Add(this.label_clients_paths);
             this.Controls.Add(this.buttonSetWoTFolder);
             this.Controls.Add(this.WoTPath_textBox);
@@ -114,5 +140,7 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button buttonSetWoTFolder;
         private System.Windows.Forms.Label label_clients_paths;
+        private System.Windows.Forms.CheckBox checkBox_autoUpdateServersOnline;
+        private System.Windows.Forms.CheckBox checkBox_autoping;
     }
 }
