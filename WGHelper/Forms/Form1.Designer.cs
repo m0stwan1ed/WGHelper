@@ -55,6 +55,7 @@
             this.label_ru10Online = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_WoT = new System.Windows.Forms.TabPage();
+            this.button_RetryPing = new System.Windows.Forms.Button();
             this.button_RunUpdater = new System.Windows.Forms.Button();
             this.button_RunClient = new System.Windows.Forms.Button();
             this.label_WoTClientVersion = new System.Windows.Forms.Label();
@@ -89,12 +90,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.updateWoTServersStats_timer = new System.Windows.Forms.Timer(this.components);
             this.pingWoTServers_timer = new System.Windows.Forms.Timer(this.components);
-            this.button_Settings = new System.Windows.Forms.Button();
             this.label_appVersion = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.checkRunningUpdaterWoT_timer = new System.Windows.Forms.Timer(this.components);
             this.checkRunningWoT_timer = new System.Windows.Forms.Timer(this.components);
-            this.button_RetryPing = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.authorizationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -109,12 +116,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.ru2_status_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ru1_status_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 9);
+            this.label1.Location = new System.Drawing.Point(114, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 13);
             this.label1.TabIndex = 0;
@@ -321,7 +329,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage_WoT);
-            this.tabControl1.Location = new System.Drawing.Point(12, 36);
+            this.tabControl1.Location = new System.Drawing.Point(11, 51);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(396, 299);
@@ -392,9 +400,19 @@
             this.tabPage_WoT.Text = "World of Tanks";
             this.tabPage_WoT.UseVisualStyleBackColor = true;
             // 
+            // button_RetryPing
+            // 
+            this.button_RetryPing.Location = new System.Drawing.Point(298, 171);
+            this.button_RetryPing.Name = "button_RetryPing";
+            this.button_RetryPing.Size = new System.Drawing.Size(84, 23);
+            this.button_RetryPing.TabIndex = 58;
+            this.button_RetryPing.Text = "button_RetryPing";
+            this.button_RetryPing.UseVisualStyleBackColor = true;
+            this.button_RetryPing.Click += new System.EventHandler(this.button_RetryPing_Click);
+            // 
             // button_RunUpdater
             // 
-            this.button_RunUpdater.Location = new System.Drawing.Point(226, 206);
+            this.button_RunUpdater.Location = new System.Drawing.Point(226, 218);
             this.button_RunUpdater.Name = "button_RunUpdater";
             this.button_RunUpdater.Size = new System.Drawing.Size(75, 43);
             this.button_RunUpdater.TabIndex = 57;
@@ -405,7 +423,7 @@
             // 
             // button_RunClient
             // 
-            this.button_RunClient.Location = new System.Drawing.Point(307, 206);
+            this.button_RunClient.Location = new System.Drawing.Point(307, 218);
             this.button_RunClient.Name = "button_RunClient";
             this.button_RunClient.Size = new System.Drawing.Size(75, 43);
             this.button_RunClient.TabIndex = 56;
@@ -416,7 +434,7 @@
             // 
             // label_WoTClientVersion
             // 
-            this.label_WoTClientVersion.Location = new System.Drawing.Point(198, 252);
+            this.label_WoTClientVersion.Location = new System.Drawing.Point(198, 197);
             this.label_WoTClientVersion.Name = "label_WoTClientVersion";
             this.label_WoTClientVersion.Size = new System.Drawing.Size(184, 18);
             this.label_WoTClientVersion.TabIndex = 55;
@@ -696,20 +714,10 @@
             this.pingWoTServers_timer.Interval = 5000;
             this.pingWoTServers_timer.Tick += new System.EventHandler(this.pingWoTServers_timer_Tick);
             // 
-            // button_Settings
-            // 
-            this.button_Settings.Location = new System.Drawing.Point(314, 12);
-            this.button_Settings.Name = "button_Settings";
-            this.button_Settings.Size = new System.Drawing.Size(90, 23);
-            this.button_Settings.TabIndex = 25;
-            this.button_Settings.Text = "button_Settings";
-            this.button_Settings.UseVisualStyleBackColor = true;
-            this.button_Settings.Click += new System.EventHandler(this.button_Settings_Click);
-            // 
             // label_appVersion
             // 
             this.label_appVersion.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label_appVersion.Location = new System.Drawing.Point(211, 338);
+            this.label_appVersion.Location = new System.Drawing.Point(210, 353);
             this.label_appVersion.Name = "label_appVersion";
             this.label_appVersion.Size = new System.Drawing.Size(203, 24);
             this.label_appVersion.TabIndex = 26;
@@ -729,27 +737,84 @@
             // 
             this.checkRunningWoT_timer.Tick += new System.EventHandler(this.checkRunningWoT_timer_Tick);
             // 
-            // button_RetryPing
+            // menuStrip1
             // 
-            this.button_RetryPing.Location = new System.Drawing.Point(298, 171);
-            this.button_RetryPing.Name = "button_RetryPing";
-            this.button_RetryPing.Size = new System.Drawing.Size(84, 23);
-            this.button_RetryPing.TabIndex = 58;
-            this.button_RetryPing.Text = "button_RetryPing";
-            this.button_RetryPing.UseVisualStyleBackColor = true;
-            this.button_RetryPing.Click += new System.EventHandler(this.button_RetryPing_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.accountToolStripMenuItem,
+            this.settingsToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(418, 24);
+            this.menuStrip1.TabIndex = 27;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // accountToolStripMenuItem
+            // 
+            this.accountToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.authorizationToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.accountToolStripMenuItem.Text = "Account";
+            // 
+            // authorizationToolStripMenuItem
+            // 
+            this.authorizationToolStripMenuItem.Enabled = false;
+            this.authorizationToolStripMenuItem.Name = "authorizationToolStripMenuItem";
+            this.authorizationToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.authorizationToolStripMenuItem.Text = "Authorization";
+            this.authorizationToolStripMenuItem.Click += new System.EventHandler(this.authorizationToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Enabled = false;
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.logoutToolStripMenuItem.Text = "Log-out";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 371);
+            this.ClientSize = new System.Drawing.Size(418, 389);
             this.Controls.Add(this.label_appVersion);
-            this.Controls.Add(this.button_Settings);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -769,6 +834,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ru2_status_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ru1_status_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -832,7 +899,6 @@
         private System.Windows.Forms.Timer pingWoTServers_timer;
         private System.Windows.Forms.Label label_pingInfo;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button_Settings;
         private System.Windows.Forms.Label label_WoTClientVersion;
         private System.Windows.Forms.Label label_appVersion;
         private System.Windows.Forms.Button button_RunUpdater;
@@ -841,6 +907,14 @@
         private System.Windows.Forms.Timer checkRunningUpdaterWoT_timer;
         private System.Windows.Forms.Timer checkRunningWoT_timer;
         private System.Windows.Forms.Button button_RetryPing;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem authorizationToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 

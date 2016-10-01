@@ -21,7 +21,9 @@ namespace WGHelper
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();                      //Инициализация компонентов формы. Должна быть первой всегда
+            //------------------------------------------------------------------------------------------------
+            checkAuthorization();
             Control.CheckForIllegalCrossThreadCalls = false;    //Отключение отслеживания пересекания потоков
             updateWoTClientVersion();                           //Вывод данных о версии клиента игры и версии приложения
             startUpdating();                                    //Запуск потока, реквест-респонс
@@ -45,6 +47,38 @@ namespace WGHelper
             requestWoTOnline.Start();
         }
         //-------------------------------------------------------------------------------
+
+        void checkAuthorization()
+        {
+            settings = XDocument.Load("settings.xml");
+            if (settings.Element("settings").Element("wg_open_id").Element("authorized").Value == "no")
+            {
+                authorizationToolStripMenuItem.Enabled = true;
+                logoutToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                int unixTime = (int)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds;
+                label1.Text = unixTime.ToString();
+                if (unixTime > Convert.ToInt32( settings.Element("settings").Element("wg_open_id").Element("experies_at").Value))
+                {
+                    WebRequest logoutRequest = WebRequest.Create("https://api.worldoftanks.ru/wot/auth/logout/?application_id=146bc6b8d619f5030ed02cdb5ce759b4&access_token=" + settings.Element("settings").Element("wg_open_id").Element("access_token").Value);
+                    WebResponse logoutResponse = logoutRequest.GetResponse();
+                    settings.Element("settings").Element("wg_open_id").Element("access_token").Value = "";
+                    settings.Element("settings").Element("wg_open_id").Element("nickname").Value = "";
+                    settings.Element("settings").Element("wg_open_id").Element("account_id").Value = "";
+                    settings.Element("settings").Element("wg_open_id").Element("experies_at").Value = "";
+                    settings.Element("settings").Element("wg_open_id").Element("authorized").Value = "no";
+                    settings.Save("settings.xml");
+                    checkAuthorization();
+                }
+                else
+                {
+                    authorizationToolStripMenuItem.Enabled = false;
+                    logoutToolStripMenuItem.Enabled = true;
+                }
+            }
+        }
 
         bool requestWoTThreadState = false;                     //Переменная-маркер для проверки активности потока
         bool pingWoTThreadState = false;                        //Переменная-маркер для проверки потока Ping
@@ -381,14 +415,6 @@ namespace WGHelper
             if(pingWoTThreadState == false) pingTestWoT();                                                  //Функция запуска потока ping
         }
 
-        private void button_Settings_Click(object sender, EventArgs e)                                      //Отображение окна настроек приложения
-        {
-            FormSettings settingsWindow = new FormSettings();                                               //Инициализация объекта окна настроек
-            AddOwnedForm(settingsWindow);                                                                   //Присвоение окна настроек главному окну
-            settingsWindow.ShowDialog();                                                                    //Отображение окна настроек как дочернее окно
-            updateWoTClientVersion();                                                                       //Обновление данных о версии клиента
-        }
-
         private void button_RunUpdater_Click(object sender, EventArgs e)                                    //Нажатие на кнопку "Запустить апдейтер"
         {
             
@@ -443,6 +469,40 @@ namespace WGHelper
         private void button_RetryPing_Click(object sender, EventArgs e)
         {
             pingTestWoT();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSettings settingsWindow = new FormSettings();                                               //Инициализация объекта окна настроек
+            AddOwnedForm(settingsWindow);                                                                   //Присвоение окна настроек главному окну
+            settingsWindow.ShowDialog();                                                                    //Отображение окна настроек как дочернее окно
+            updateWoTClientVersion();                                                                       //Обновление данных о версии клиента
+        }
+
+        private void authorizationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.AuthForm autherizationForm = new Forms.AuthForm();
+            AddOwnedForm(autherizationForm);
+            autherizationForm.ShowDialog();
+            checkAuthorization();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WebRequest logoutRequest = WebRequest.Create("https://api.worldoftanks.ru/wot/auth/logout/?application_id=146bc6b8d619f5030ed02cdb5ce759b4&access_token=" + settings.Element("settings").Element("wg_open_id").Element("access_token").Value);
+            WebResponse logoutResponse = logoutRequest.GetResponse();
+            settings.Element("settings").Element("wg_open_id").Element("access_token").Value = "";
+            settings.Element("settings").Element("wg_open_id").Element("nickname").Value = "";
+            settings.Element("settings").Element("wg_open_id").Element("account_id").Value = "";
+            settings.Element("settings").Element("wg_open_id").Element("experies_at").Value = "";
+            settings.Element("settings").Element("wg_open_id").Element("authorized").Value = "no";
+            settings.Save("settings.xml");
+            checkAuthorization();
         }
     }
 }
