@@ -63,6 +63,26 @@ namespace WGHelper.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Experience_ico {
+            get {
+                object obj = ResourceManager.GetObject("Experience_ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gold_icon {
+            get {
+                object obj = ResourceManager.GetObject("Gold_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loading_sh {
             get {
                 object obj = ResourceManager.GetObject("loading_sh", resourceCulture);
@@ -76,6 +96,16 @@ namespace WGHelper.Properties {
         internal static System.Drawing.Bitmap NFFFFFF_0 {
             get {
                 object obj = ResourceManager.GetObject("NFFFFFF-0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap premium_icon {
+            get {
+                object obj = ResourceManager.GetObject("premium_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +146,26 @@ namespace WGHelper.Properties {
         internal static System.Drawing.Bitmap rsz_red_light {
             get {
                 object obj = ResourceManager.GetObject("rsz_red-light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Silver_icon {
+            get {
+                object obj = ResourceManager.GetObject("Silver_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap standard_icon {
+            get {
+                object obj = ResourceManager.GetObject("standard_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

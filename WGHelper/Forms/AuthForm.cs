@@ -34,7 +34,6 @@ namespace WGHelper.Forms
         {
             settings = XDocument.Load("settings.xml");
             string url = webBrowser1.Url.ToString();
-            textBox1.Text = url;
             if (url.Contains("status=ok") == true)
             {
                 url = url.Replace("https://api.worldoftanks.ru/wot/blank/?&status=ok&", "");

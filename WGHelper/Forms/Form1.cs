@@ -54,8 +54,9 @@ namespace WGHelper
             public string server { get; set; }                  //Номер сервера "RU-"
         }
 
+        static string WGApiAppID = "146bc6b8d619f5030ed02cdb5ce759b4";
         public static string urlServerOnline = "https://api.worldoftanks.ru/wgn/servers/info/";             //URI запроса
-        public static string urlServerOnlineRequest = "application_id=demo&game=wot";                       //Запрос к серверу
+        public static string urlServerOnlineRequest = "application_id=" + WGApiAppID + "&game=wot";                       //Запрос к серверу
         public static string jsonAnswer;                                                                    //Переменная ответа сервера
         public static wotOnlineRootObject wotOnline;                                                        //Объект класса для десериализации ответа сервера
 
@@ -74,6 +75,66 @@ namespace WGHelper
             requestWoTOnline.Start();
         }
         //-------------------------------------------------------------------------------
+
+        //-------------------------------------------------------------------------------
+        class Meta
+        {
+            public int count { get; set; }
+        }
+
+        class Private
+        {
+            public int credits { get; set; }
+            public int free_xp { get; set; }
+            public int gold { get; set; }
+            public bool is_premium { get; set; }
+        }
+
+        class Player
+        {
+            public Private @private { get; set; }
+        }
+
+        class DataPlayerStats
+        {
+            public Player player { get; set; }
+        }
+
+        class playerStats
+        {
+            public string status { get; set; }
+            public Meta meta { get; set; }
+            public DataPlayerStats data { get; set; }
+        }
+        //-------------------------------------------------------------------------------
+
+        void getAuthPlayerInfo()
+        {
+
+            label_nickname.Text = settings.Element("settings").Element("wg_open_id").Element("nickname").Value;
+            label_gold.Text = "loading";
+            label_silver.Text = "loading";
+            label_free_XP.Text = "loading";
+
+            string requestUrl = "https://api.worldoftanks.ru/wot/account/info/";
+            string appID = "application_id=" + WGApiAppID;
+            string accountID = "account_id=" + settings.Element("settings").Element("wg_open_id").Element("account_id").Value;
+            string accessToken = "access_token=" + settings.Element("settings").Element("wg_open_id").Element("access_token").Value;
+            string fields = "fields=private.gold%2C+private.credits%2C+private.free_xp%2C+private.is_premium";
+            WebRequest requestAuthPlayerInfo = WebRequest.Create(requestUrl + "?" + appID + "&" + accountID + "&" + accessToken + "&" + fields);
+            WebResponse responseAuthPlayerInfo = requestAuthPlayerInfo.GetResponse();
+            Stream answerStream = responseAuthPlayerInfo.GetResponseStream();
+            StreamReader srAnswer = new StreamReader(answerStream);
+            string jsonAnswer = srAnswer.ReadToEnd();
+            jsonAnswer = jsonAnswer.Replace("\"" + settings.Element("settings").Element("wg_open_id").Element("account_id").Value + "\"", "\"player\"");
+            playerStats authPlayerStats = JsonConvert.DeserializeObject<playerStats>(jsonAnswer);
+
+            label_gold.Text = authPlayerStats.data.player.@private.gold.ToString();
+            label_silver.Text = authPlayerStats.data.player.@private.credits.ToString();
+            label_free_XP.Text = authPlayerStats.data.player.@private.free_xp.ToString();
+            if (authPlayerStats.data.player.@private.is_premium == true) pictureBox_Premium.Image = Properties.Resources.premium_icon;
+            else pictureBox_Premium.Image = Properties.Resources.standard_icon;
+        }
 
         //-------Функция, что проверяет, была ли ранее выполнена авторизация-------------
         void checkAuthorization()
@@ -98,6 +159,13 @@ namespace WGHelper
                     settings.Element("settings").Element("wg_open_id").Element("experies_at").Value = "";
                     settings.Element("settings").Element("wg_open_id").Element("authorized").Value = "no";
                     //----------------------------------------------------------------------------------------------
+
+                    label_nickname.Text = "Not authorized";
+                    label_gold.Text = "---";
+                    label_silver.Text = "---";
+                    label_free_XP.Text = "---";
+                    pictureBox_Premium.Image = null;
+
                     settings.Save("settings.xml");                                      //Сохраняем файл настроек
                     checkAuthorization();                                               //Проверяем авторизацию
                 }
@@ -105,6 +173,11 @@ namespace WGHelper
                 {
                     authorizationToolStripMenuItem.Enabled = false;                 //Деактивируем кнопку авторизации
                     logoutToolStripMenuItem.Enabled = true;                         //Активируем кнопку деавторизации
+                    Thread.Sleep(500);
+                    Thread authPlayerInfo;
+                    authPlayerInfo = new Thread(getAuthPlayerInfo);
+                    authPlayerInfo.IsBackground = true;
+                    authPlayerInfo.Start();
                 }
             }
         }
@@ -527,6 +600,13 @@ namespace WGHelper
             settings.Element("settings").Element("wg_open_id").Element("experies_at").Value = "";
             settings.Element("settings").Element("wg_open_id").Element("authorized").Value = "no";
             //------------------------------------------
+
+            label_nickname.Text = "Not authorized";
+            label_gold.Text = "---";
+            label_silver.Text = "---";
+            label_free_XP.Text = "---";
+            pictureBox_Premium.Image = null;
+
             settings.Save("settings.xml");//Сохранение файла настроек
             checkAuthorization();//Проверка авторизации
         }

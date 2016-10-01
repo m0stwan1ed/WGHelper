@@ -161,6 +161,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gear.ico" />
+    <None Include="Resources\standard_icon.png" />
+    <None Include="Resources\premium_icon.png" />
+    <None Include="Resources\Experience_ico.png" />
+    <None Include="Resources\Silver_icon.png" />
+    <None Include="Resources\Gold_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
