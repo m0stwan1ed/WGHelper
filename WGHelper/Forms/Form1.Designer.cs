@@ -936,7 +936,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "WGHelper";
             this.tabControl1.ResumeLayout(false);
             this.tabPage_WoT.ResumeLayout(false);
             this.tabPage_WoT.PerformLayout();

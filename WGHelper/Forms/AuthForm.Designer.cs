@@ -64,7 +64,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AuthForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "AuthForm";
+            this.Text = "Authorization form";
             this.ResumeLayout(false);
 
         }
