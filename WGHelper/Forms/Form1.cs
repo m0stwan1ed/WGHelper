@@ -19,99 +19,21 @@ namespace WGHelper
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1()                                          //Конструктор формы
         {
             InitializeComponent();                              //Инициализация компонентов формы. Должна быть первой всегда
             //------------------------------------------------------------------------------------------------
             checkAuthorization();
             loadSettings();                                     //Загрузка настроек приложения
             Control.CheckForIllegalCrossThreadCalls = false;    //Отключение отслеживания пересекания потоков
-            UpdateWoTOnline();                                    //Запуск потока, реквест-респонс
+            UpdateWoTOnline();                                  //Запуск потока, реквест-респонс
             pingTestWoT();                                      //Запуск потока проверки доступности серверов
             pingWoTServers_timer.Start();                       //Запуск таймера, который через промежутки времени проводит тест задержек доступа к серверам
-            updateWoTServersStats_timer.Start();                                     //Запуск таймера
+            updateWoTServersStats_timer.Start();                //Запуск таймера, который через промежутки времени выполняет запросы об онлайне серверов
         }
 
         XDocument settings;                                     //Объект для хранения XML-файла
 
-        //----------------------Запуск потока, реквест-респонс--------------------------
-        void UpdateWoTOnline()
-        {
-            onlineToolStripMenuItem.Enabled = false;
-            updateWoTServersStats_timer.Start();
-            button_Retry.Visible = false;
-            Thread requestWoTOnline;                                                 //Инициализация потока
-            requestWoTOnline = new Thread(request);                                  //Привязка функции к потоку
-            label_updatingInfo.Text = "Updating...";
-            label_updatingInfo.Visible = true;                                       //Отображение информатора загрузки
-            pictureBox1.Image = Properties.Resources.loading_sh;                     //Смена изображения информатора
-            requestWoTOnline.IsBackground = true;                                    //Поток после полного выполнения самоуничтожается
-            requestWoTOnline.Start();
-        }
-        //-------------------------------------------------------------------------------
-
-        void checkAuthorization()
-        {
-            settings = XDocument.Load("settings.xml");
-            if (settings.Element("settings").Element("wg_open_id").Element("authorized").Value == "no")
-            {
-                authorizationToolStripMenuItem.Enabled = true;
-                logoutToolStripMenuItem.Enabled = false;
-            }
-            else
-            {
-                int unixTime = (int)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds;
-                label1.Text = unixTime.ToString();
-                if (unixTime > Convert.ToInt32( settings.Element("settings").Element("wg_open_id").Element("experies_at").Value))
-                {
-                    WebRequest logoutRequest = WebRequest.Create("https://api.worldoftanks.ru/wot/auth/logout/?application_id=146bc6b8d619f5030ed02cdb5ce759b4&access_token=" + settings.Element("settings").Element("wg_open_id").Element("access_token").Value);
-                    WebResponse logoutResponse = logoutRequest.GetResponse();
-                    settings.Element("settings").Element("wg_open_id").Element("access_token").Value = "";
-                    settings.Element("settings").Element("wg_open_id").Element("nickname").Value = "";
-                    settings.Element("settings").Element("wg_open_id").Element("account_id").Value = "";
-                    settings.Element("settings").Element("wg_open_id").Element("experies_at").Value = "";
-                    settings.Element("settings").Element("wg_open_id").Element("authorized").Value = "no";
-                    settings.Save("settings.xml");
-                    checkAuthorization();
-                }
-                else
-                {
-                    authorizationToolStripMenuItem.Enabled = false;
-                    logoutToolStripMenuItem.Enabled = true;
-                }
-            }
-        }
-
-        void loadSettings()
-        {
-            settings = XDocument.Load("settings.xml");
-            updateToolStripMenuItem.Visible = false;
-            pingToolStripMenuItem.Enabled = false;
-            onlineToolStripMenuItem.Enabled = false;
-            label_appVersion.Text = settings.Element("settings").Attribute("version").Value;                        //Выводим текущую версию приложения
-            if (settings.Element("settings").Element("worldoftanks").Element("installed").Value == "no")            //Проверяем, задан ли путь к клиенту игры
-            {
-                label_WoTClientVersion.Text = "Client not installed";                                               //Выводим сообщение "Клиент не установлен"
-                button_RunClient.Visible = false;                                                                   //Убираем кнопки запуска игры и лаунчера
-                button_RunUpdater.Visible = false;
-            }
-            else
-            {
-                label_WoTClientVersion.Text = "Client version: " + settings.Element("settings").Element("worldoftanks").Element("client_version").Value;//Выводим версию клиента
-                button_RunClient.Visible = true;                                                                    //Отображаем кнопки запуска лаунчера и игры
-                button_RunUpdater.Visible = true;
-            }
-            bool ping, online;
-            ping = Convert.ToBoolean(settings.Element("settings").Element("autoping").Value);
-            online = Convert.ToBoolean(settings.Element("settings").Element("autoupdate_servers_online").Value);
-            if ((ping == false) || (online == false))
-            {
-                updateToolStripMenuItem.Visible = true;
-                if (ping == false) pingToolStripMenuItem.Enabled = true;
-                if (online == false) onlineToolStripMenuItem.Enabled = true;
-            }
-                
-        }
         bool requestWoTThreadState = false;                     //Переменная-маркер для проверки активности потока
         bool pingWoTThreadState = false;                        //Переменная-маркер для проверки потока Ping
 
@@ -137,6 +59,92 @@ namespace WGHelper
         public static string jsonAnswer;                                                                    //Переменная ответа сервера
         public static wotOnlineRootObject wotOnline;                                                        //Объект класса для десериализации ответа сервера
 
+        //----------------------Запуск потока, реквест-респонс---------------------------
+        void UpdateWoTOnline()
+        {
+            onlineToolStripMenuItem.Enabled = false;                                    //Отключаем кнопку меню для ручной проверки онлайна
+            updateWoTServersStats_timer.Start();                                        //Запуск таймера, который через промежутки времени выполняет запросы об онлайне серверов
+            button_Retry.Visible = false;                                               //Убираем кнопку "Попробовать ещё раз"
+            Thread requestWoTOnline;                                                    //Инициализация потока
+            requestWoTOnline = new Thread(request);                                     //Привязка функции к потоку
+            label_updatingInfo.Text = "Updating...";
+            label_updatingInfo.Visible = true;                                          //Отображение информатора загрузки
+            pictureBox1.Image = Properties.Resources.loading_sh;                        //Смена изображения информатора
+            requestWoTOnline.IsBackground = true;                                       //Поток после полного выполнения самоуничтожается
+            requestWoTOnline.Start();
+        }
+        //-------------------------------------------------------------------------------
+
+        //-------Функция, что проверяет, была ли ранее выполнена авторизация-------------
+        void checkAuthorization()
+        {
+            settings = XDocument.Load("settings.xml");                                  //Загружаем файл настроек
+            if (settings.Element("settings").Element("wg_open_id").Element("authorized").Value == "no")//Если авторизация не выполнялась
+            {
+                authorizationToolStripMenuItem.Enabled = true;                          //Активируем кнопку авторизации
+                logoutToolStripMenuItem.Enabled = false;                                
+            }
+            else                                                                        //Проверяем, истек ли сеанс авторизации
+            {
+                int unixTime = (int)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds;//Получаем текущее время в виде UNIX
+                if (unixTime > Convert.ToInt32( settings.Element("settings").Element("wg_open_id").Element("experies_at").Value))//Если текущее время больше чем время действия
+                {
+                    WebRequest logoutRequest = WebRequest.Create("https://api.worldoftanks.ru/wot/auth/logout/?application_id=146bc6b8d619f5030ed02cdb5ce759b4&access_token=" + settings.Element("settings").Element("wg_open_id").Element("access_token").Value);
+                    WebResponse logoutResponse = logoutRequest.GetResponse();//Запрос на уничтожение токена авторизации
+                    //----------------------------------------------------------------------------------------------
+                    settings.Element("settings").Element("wg_open_id").Element("access_token").Value = "";
+                    settings.Element("settings").Element("wg_open_id").Element("nickname").Value = "";
+                    settings.Element("settings").Element("wg_open_id").Element("account_id").Value = "";                //Удаляем информацию о авторизации
+                    settings.Element("settings").Element("wg_open_id").Element("experies_at").Value = "";
+                    settings.Element("settings").Element("wg_open_id").Element("authorized").Value = "no";
+                    //----------------------------------------------------------------------------------------------
+                    settings.Save("settings.xml");                                      //Сохраняем файл настроек
+                    checkAuthorization();                                               //Проверяем авторизацию
+                }
+                else
+                {
+                    authorizationToolStripMenuItem.Enabled = false;                 //Деактивируем кнопку авторизации
+                    logoutToolStripMenuItem.Enabled = true;                         //Активируем кнопку деавторизации
+                }
+            }
+        }
+        //-----------------------------------------------------------------
+
+        //-------Функция, что выполняет первоначальную загрузку настроек---
+        void loadSettings()
+        {
+            settings = XDocument.Load("settings.xml");                          //Загружаем файл настроек
+            updateToolStripMenuItem.Visible = false;                            //Отключаем кнопки ручного обновления
+            pingToolStripMenuItem.Enabled = false;
+            onlineToolStripMenuItem.Enabled = false;
+            label_appVersion.Text = settings.Element("settings").Attribute("version").Value;                        //Выводим текущую версию приложения
+
+            if (settings.Element("settings").Element("worldoftanks").Element("installed").Value == "no")            //Проверяем, задан ли путь к клиенту игры
+            {
+                label_WoTClientVersion.Text = "Client not installed";                                               //Выводим сообщение "Клиент не установлен"
+                button_RunClient.Visible = false;                                                                   //Убираем кнопки запуска игры и лаунчера
+                button_RunUpdater.Visible = false;
+            }
+            else
+            {
+                label_WoTClientVersion.Text = "Client version: " + settings.Element("settings").Element("worldoftanks").Element("client_version").Value;//Выводим версию клиента
+                button_RunClient.Visible = true;                                                                    //Отображаем кнопки запуска лаунчера и игры
+                button_RunUpdater.Visible = true;
+            }
+
+            bool ping, online;                                              //Переменные, в которых хранится настройка автообновлений и автозапросов
+            ping = Convert.ToBoolean(settings.Element("settings").Element("autoping").Value);
+            online = Convert.ToBoolean(settings.Element("settings").Element("autoupdate_servers_online").Value);
+            if ((ping == false) || (online == false))                       //Если хоть один из запросов не автоматический
+            {
+                updateToolStripMenuItem.Visible = true;                     //Отобразить пункт меню Обновления
+                if (ping == false) pingToolStripMenuItem.Enabled = true;    //Если проверка задержки доступа не автоматическая - включить эту кнопку
+                if (online == false) onlineToolStripMenuItem.Enabled = true;//Если проверка онлайна сервера не автоматическая - включить эту кнопку
+            }
+                
+        }
+
+        
         //---------------------------Функция, что выполняет запрос в отдельном потоке-------------------------------
         public void request()                                                                               
         {
@@ -316,6 +324,7 @@ namespace WGHelper
         }
         //----------------------------------------------------------------------------------------------------------
 
+        //-------Функция таймера проверки онлайна сервера-------
         private void timer1_Tick(object sender, EventArgs e)                                                                    //Функция таймера
         {
             if (requestWoTThreadState == false)
@@ -328,6 +337,7 @@ namespace WGHelper
                 }
             }
         }
+        //------------------------------------------------------
 
         private void button_Retry_Click(object sender, EventArgs e)                 //Функция повторной попытки запроса к серверам
         {
@@ -337,8 +347,8 @@ namespace WGHelper
 
         void pingTestWoT()                                                          //Функция запуска потока ping
         {
-            pingToolStripMenuItem.Enabled = false;
-            pingWoTServers_timer.Start();
+            pingToolStripMenuItem.Enabled = false;                                  //Отключение кнопки ручной проверки задержки доступа
+            pingWoTServers_timer.Start();                                           //Запуск таймера проверки задержки доступа
             Thread pingWoTServers_Thread;                                           //Обьявление переменной 
             pingWoTServers_Thread = new Thread(function_pingWoTServers_Thread);     //Привязка функции к потоку
             pingWoTServers_Thread.IsBackground = true;                              //Закрытие потока после окончания
@@ -426,13 +436,13 @@ namespace WGHelper
 
         private void pingWoTServers_timer_Tick(object sender, EventArgs e)                                  //Функция, что выполняется при каждом шаге таймера
         {
-            if (pingWoTThreadState == false)
+            if (pingWoTThreadState == false)                                    //Если поток не завершен
             {
                 pingTestWoT();                                                  //Функция запуска потока ping
-                if (settings.Element("settings").Element("autoping").Value == "false")
+                if (settings.Element("settings").Element("autoping").Value == "false")//Если автопроверка отключена
                 {
-                    pingWoTServers_timer.Stop();
-                    pingToolStripMenuItem.Enabled = true;
+                    pingWoTServers_timer.Stop();                                //Остановка таймера
+                    pingToolStripMenuItem.Enabled = true;                       //Включение кнопки ручной проверки
                 }
             }
         }
@@ -488,53 +498,55 @@ namespace WGHelper
             }
         }
 
-        private void button_RetryPing_Click(object sender, EventArgs e)
+        private void button_RetryPing_Click(object sender, EventArgs e)                                     //Повторная проверка выполнить запрос
         {
             pingTestWoT();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)                                //Выход из приложения
         {
             this.Dispose();
         }
 
-        private void authorizationToolStripMenuItem_Click(object sender, EventArgs e)
+        private void authorizationToolStripMenuItem_Click(object sender, EventArgs e)                       //Кнопка авторизации
         {
-            Forms.AuthForm autherizationForm = new Forms.AuthForm();
-            AddOwnedForm(autherizationForm);
-            autherizationForm.ShowDialog();
-            checkAuthorization();
+            Forms.AuthForm autherizationForm = new Forms.AuthForm();                                        //Инициализация формы авторизации
+            AddOwnedForm(autherizationForm);                                                                //Присвоение дочерней формы
+            autherizationForm.ShowDialog();                                                                 //Отобразить как диалоговое окно
+            checkAuthorization();                                                                           //Проверить авторизацию
         }
 
-        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)                              //Кнопка деавторизации
         {
-            WebRequest logoutRequest = WebRequest.Create("https://api.worldoftanks.ru/wot/auth/logout/?application_id=146bc6b8d619f5030ed02cdb5ce759b4&access_token=" + settings.Element("settings").Element("wg_open_id").Element("access_token").Value);
-            WebResponse logoutResponse = logoutRequest.GetResponse();
+            WebRequest logoutRequest = WebRequest.Create("https://api.worldoftanks.ru/wot/auth/logout/?application_id=146bc6b8d619f5030ed02cdb5ce759b4&access_token=" + settings.Element("settings").Element("wg_open_id").Element("access_token").Value);//Запрос деавторизации
+            WebResponse logoutResponse = logoutRequest.GetResponse();//Выполнение запроса деавторизации и уничтожение токена доступа
+            //-----Удаление всех данных авторизации-----
             settings.Element("settings").Element("wg_open_id").Element("access_token").Value = "";
             settings.Element("settings").Element("wg_open_id").Element("nickname").Value = "";
             settings.Element("settings").Element("wg_open_id").Element("account_id").Value = "";
             settings.Element("settings").Element("wg_open_id").Element("experies_at").Value = "";
             settings.Element("settings").Element("wg_open_id").Element("authorized").Value = "no";
-            settings.Save("settings.xml");
-            checkAuthorization();
+            //------------------------------------------
+            settings.Save("settings.xml");//Сохранение файла настроек
+            checkAuthorization();//Проверка авторизации
         }
 
-        private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)                           //Кнопка открытия окна настроек
         {
             FormSettings settingsWindow = new FormSettings();                                               //Инициализация объекта окна настроек
             AddOwnedForm(settingsWindow);                                                                   //Присвоение окна настроек главному окну
             settingsWindow.ShowDialog();                                                                    //Отображение окна настроек как дочернее окно
             loadSettings();                                                                                 //Обновление данных о версии клиента
-            if ((updateWoTServersStats_timer.Enabled == false)&&(settings.Element("settings").Element("autoupdate_servers_online").Value == "true")) UpdateWoTOnline();
-            if ((pingWoTServers_timer.Enabled == false)&&(settings.Element("settings").Element("autoping").Value == "true")) pingTestWoT();
+            if ((updateWoTServersStats_timer.Enabled == false)&&(settings.Element("settings").Element("autoupdate_servers_online").Value == "true")) UpdateWoTOnline();//Если автообновление включено, а таймер откючен то включить таймен
+            if ((pingWoTServers_timer.Enabled == false)&&(settings.Element("settings").Element("autoping").Value == "true")) pingTestWoT();//Если автопроверка включена, а таймер откючен то включить таймен
         }
 
-        private void onlineToolStripMenuItem_Click(object sender, EventArgs e)
+        private void onlineToolStripMenuItem_Click(object sender, EventArgs e)                              //Кнопка ручной проверки онлайна серверов
         {
             UpdateWoTOnline();                                    //Запуск потока, реквест-респонс
         }
 
-        private void pingToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pingToolStripMenuItem_Click(object sender, EventArgs e)                                //Кнопка автоматической проверки задержки доступа к серверам
         {
             pingTestWoT();                                      //Запуск потока проверки доступности серверов
         }
