@@ -526,6 +526,12 @@ namespace WGHelper
             this.ShowInTaskbar = false;                                                                     //Переносим приложение из панели задач
             notifyIcon1.Visible = true;                                                                     //В системный трей
             this.Visible = false;                                                                           //Убираем главное окно
+
+            var wotUpdareInfo = new ProcessStartInfo();
+            wotUpdareInfo.WorkingDirectory = settings.Element("settings").Element("worldoftanks").Element("client_path").Value;
+            wotUpdareInfo.FileName = settings.Element("settings").Element("worldoftanks").Element("client_path").Value + "\\WoTLauncher.exe";
+            Process.Start(wotUpdareInfo);
+
             Process.Start(settings.Element("settings").Element("worldoftanks").Element("client_path").Value + "\\WoTLauncher.exe");//Запускаем апдейтер
             updateWoTServersStats_timer.Stop();                                                             //Останавливаем обновление информации о серверах
             pingWoTServers_timer.Stop();                                                                    //Останавливаем обновление информации о задержках доступа к серверам
@@ -551,7 +557,12 @@ namespace WGHelper
             this.ShowInTaskbar = false;                                                                     //Переносим приложение из панели задач
             notifyIcon1.Visible = true;                                                                     //В системный трей
             this.Visible = false;                                                                           //Убираем главное окно
-            Process.Start(settings.Element("settings").Element("worldoftanks").Element("client_path").Value + "\\WorldOfTanks.exe");//Запускаем игру
+            
+            var wotGameInfo = new ProcessStartInfo();
+            wotGameInfo.WorkingDirectory = settings.Element("settings").Element("worldoftanks").Element("client_path").Value;
+            wotGameInfo.FileName = settings.Element("settings").Element("worldoftanks").Element("client_path").Value + "\\WorldOfTanks.exe";
+            Process.Start(wotGameInfo);
+
             updateWoTServersStats_timer.Stop();                                                             //Останавливаем обновление информации о серверах
             pingWoTServers_timer.Stop();                                                                    //Останавливаем обновление информации о задержках доступа к серверам
             checkRunningWoT_timer.Start();                                                                  //Запускаем проверку окончания работы апдейтера
