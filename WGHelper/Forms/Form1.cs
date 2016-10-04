@@ -63,7 +63,7 @@ namespace WGHelper
         //----------------------Запуск потока, реквест-респонс---------------------------
         void UpdateWoTOnline()
         {
-            onlineToolStripMenuItem.Enabled = false;                                    //Отключаем кнопку меню для ручной проверки онлайна
+            //onlineToolStripMenuItem.Enabled = false;                                    //Отключаем кнопку меню для ручной проверки онлайна
             updateWoTServersStats_timer.Start();                                        //Запуск таймера, который через промежутки времени выполняет запросы об онлайне серверов
             button_Retry.Visible = false;                                               //Убираем кнопку "Попробовать ещё раз"
             Thread requestWoTOnline;                                                    //Инициализация потока
@@ -412,11 +412,15 @@ namespace WGHelper
         {
             if (requestWoTThreadState == false)
             {
-                UpdateWoTOnline();
+                
                 if (settings.Element("settings").Element("autoupdate_servers_online").Value == "false")
                 {
                     onlineToolStripMenuItem.Enabled = true;
                     updateWoTServersStats_timer.Stop();
+                }
+                else
+                {
+                    UpdateWoTOnline();
                 }
             }
         }
@@ -430,7 +434,6 @@ namespace WGHelper
 
         void pingTestWoT()                                                          //Функция запуска потока ping
         {
-            pingToolStripMenuItem.Enabled = false;                                  //Отключение кнопки ручной проверки задержки доступа
             pingWoTServers_timer.Start();                                           //Запуск таймера проверки задержки доступа
             Thread pingWoTServers_Thread;                                           //Обьявление переменной 
             pingWoTServers_Thread = new Thread(function_pingWoTServers_Thread);     //Привязка функции к потоку
@@ -521,11 +524,14 @@ namespace WGHelper
         {
             if (pingWoTThreadState == false)                                    //Если поток не завершен
             {
-                pingTestWoT();                                                  //Функция запуска потока ping
                 if (settings.Element("settings").Element("autoping").Value == "false")//Если автопроверка отключена
                 {
                     pingWoTServers_timer.Stop();                                //Остановка таймера
                     pingToolStripMenuItem.Enabled = true;                       //Включение кнопки ручной проверки
+                }
+                else
+                {
+                    pingTestWoT();                                                  //Функция запуска потока ping
                 }
             }
         }
@@ -644,12 +650,28 @@ namespace WGHelper
 
         private void onlineToolStripMenuItem_Click(object sender, EventArgs e)                              //Кнопка ручной проверки онлайна серверов
         {
+            onlineToolStripMenuItem.Enabled = false;
             UpdateWoTOnline();                                    //Запуск потока, реквест-респонс
+            manualUpdateWoTOnlineCooldown_timer.Start();
         }
 
         private void pingToolStripMenuItem_Click(object sender, EventArgs e)                                //Кнопка автоматической проверки задержки доступа к серверам
         {
+            pingToolStripMenuItem.Enabled = false;
             pingTestWoT();                                      //Запуск потока проверки доступности серверов
+            manualUpdateWoTPingCooldown_timer.Start();
+        }
+
+        private void manualUpdateWoTOnlineCooldown_timer_Tick(object sender, EventArgs e)
+        {
+            onlineToolStripMenuItem.Enabled = true;
+            manualUpdateWoTOnlineCooldown_timer.Stop();
+        }
+
+        private void manualUpdateWoTPingCooldown_timer_Tick(object sender, EventArgs e)
+        {
+            pingToolStripMenuItem.Enabled = true;
+            manualUpdateWoTPingCooldown_timer.Stop();
         }
     }
 }

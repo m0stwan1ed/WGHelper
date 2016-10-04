@@ -113,6 +113,8 @@
             this.authorizationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualUpdateWoTOnlineCooldown_timer = new System.Windows.Forms.Timer(this.components);
+            this.manualUpdateWoTPingCooldown_timer = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Premium)).BeginInit();
@@ -878,14 +880,14 @@
             // onlineToolStripMenuItem
             // 
             this.onlineToolStripMenuItem.Name = "onlineToolStripMenuItem";
-            this.onlineToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.onlineToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.onlineToolStripMenuItem.Text = "Online";
             this.onlineToolStripMenuItem.Click += new System.EventHandler(this.onlineToolStripMenuItem_Click);
             // 
             // pingToolStripMenuItem
             // 
             this.pingToolStripMenuItem.Name = "pingToolStripMenuItem";
-            this.pingToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.pingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pingToolStripMenuItem.Text = "Ping";
             this.pingToolStripMenuItem.Click += new System.EventHandler(this.pingToolStripMenuItem_Click);
             // 
@@ -920,6 +922,16 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // manualUpdateWoTOnlineCooldown_timer
+            // 
+            this.manualUpdateWoTOnlineCooldown_timer.Interval = 5100;
+            this.manualUpdateWoTOnlineCooldown_timer.Tick += new System.EventHandler(this.manualUpdateWoTOnlineCooldown_timer_Tick);
+            // 
+            // manualUpdateWoTPingCooldown_timer
+            // 
+            this.manualUpdateWoTPingCooldown_timer.Interval = 5100;
+            this.manualUpdateWoTPingCooldown_timer.Tick += new System.EventHandler(this.manualUpdateWoTPingCooldown_timer_Tick);
             // 
             // Form1
             // 
@@ -1048,6 +1060,8 @@
         private System.Windows.Forms.Label label_gold;
         private System.Windows.Forms.Label label_nickname;
         private System.Windows.Forms.PictureBox pictureBox_Premium;
+        private System.Windows.Forms.Timer manualUpdateWoTOnlineCooldown_timer;
+        private System.Windows.Forms.Timer manualUpdateWoTPingCooldown_timer;
     }
 }
 
