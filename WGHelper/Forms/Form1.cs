@@ -110,30 +110,40 @@ namespace WGHelper
 
         void getAuthPlayerInfo()
         {
+            try
+            {
 
-            label_nickname.Text = settings.Element("settings").Element("wg_open_id").Element("nickname").Value;
-            label_gold.Text = "loading";
-            label_silver.Text = "loading";
-            label_free_XP.Text = "loading";
+                label_nickname.Text = settings.Element("settings").Element("wg_open_id").Element("nickname").Value;
+                label_gold.Text = "loading";
+                label_silver.Text = "loading";
+                label_free_XP.Text = "loading";
 
-            string requestUrl = "https://api.worldoftanks.ru/wot/account/info/";
-            string appID = "application_id=" + WGApiAppID;
-            string accountID = "account_id=" + settings.Element("settings").Element("wg_open_id").Element("account_id").Value;
-            string accessToken = "access_token=" + settings.Element("settings").Element("wg_open_id").Element("access_token").Value;
-            string fields = "fields=private.gold%2C+private.credits%2C+private.free_xp%2C+private.is_premium";
-            WebRequest requestAuthPlayerInfo = WebRequest.Create(requestUrl + "?" + appID + "&" + accountID + "&" + accessToken + "&" + fields);
-            WebResponse responseAuthPlayerInfo = requestAuthPlayerInfo.GetResponse();
-            Stream answerStream = responseAuthPlayerInfo.GetResponseStream();
-            StreamReader srAnswer = new StreamReader(answerStream);
-            string jsonAnswer = srAnswer.ReadToEnd();
-            jsonAnswer = jsonAnswer.Replace("\"" + settings.Element("settings").Element("wg_open_id").Element("account_id").Value + "\"", "\"player\"");
-            playerStats authPlayerStats = JsonConvert.DeserializeObject<playerStats>(jsonAnswer);
+                string requestUrl = "https://api.worldoftanks.ru/wot/account/info/";
+                string appID = "application_id=" + WGApiAppID;
+                string accountID = "account_id=" + settings.Element("settings").Element("wg_open_id").Element("account_id").Value;
+                string accessToken = "access_token=" + settings.Element("settings").Element("wg_open_id").Element("access_token").Value;
+                string fields = "fields=private.gold%2C+private.credits%2C+private.free_xp%2C+private.is_premium";
+                WebRequest requestAuthPlayerInfo = WebRequest.Create(requestUrl + "?" + appID + "&" + accountID + "&" + accessToken + "&" + fields);
+                WebResponse responseAuthPlayerInfo = requestAuthPlayerInfo.GetResponse();
+                Stream answerStream = responseAuthPlayerInfo.GetResponseStream();
+                StreamReader srAnswer = new StreamReader(answerStream);
+                string jsonAnswer = srAnswer.ReadToEnd();
+                jsonAnswer = jsonAnswer.Replace("\"" + settings.Element("settings").Element("wg_open_id").Element("account_id").Value + "\"", "\"player\"");
+                playerStats authPlayerStats = JsonConvert.DeserializeObject<playerStats>(jsonAnswer);
 
-            label_gold.Text = authPlayerStats.data.player.@private.gold.ToString();
-            label_silver.Text = authPlayerStats.data.player.@private.credits.ToString();
-            label_free_XP.Text = authPlayerStats.data.player.@private.free_xp.ToString();
-            if (authPlayerStats.data.player.@private.is_premium == true) pictureBox_Premium.Image = Properties.Resources.premium_icon;
-            else pictureBox_Premium.Image = Properties.Resources.standard_icon;
+                label_gold.Text = authPlayerStats.data.player.@private.gold.ToString();
+                label_silver.Text = authPlayerStats.data.player.@private.credits.ToString();
+                label_free_XP.Text = authPlayerStats.data.player.@private.free_xp.ToString();
+                if (authPlayerStats.data.player.@private.is_premium == true) pictureBox_Premium.Image = Properties.Resources.premium_icon;
+                else pictureBox_Premium.Image = Properties.Resources.standard_icon;
+            }
+            catch(System.Net.WebException)
+            {
+                label_nickname.Text = "No connection";
+                label_gold.Text = "---";
+                label_silver.Text = "---";
+                label_free_XP.Text = "---";
+            }
         }
 
         //-------Функция, что проверяет, была ли ранее выполнена авторизация-------------
