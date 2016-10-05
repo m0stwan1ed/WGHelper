@@ -30,10 +30,10 @@ namespace WGHelper.Forms
             this.Dispose();
         }
 
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        private void Awesomium_Windows_Forms_WebControl_AddressChanged(object sender, Awesomium.Core.UrlEventArgs e)
         {
             settings = XDocument.Load("settings.xml");
-            string url = webBrowser1.Url.ToString();
+            string url = webControl1.Source.ToString();
             if (url.Contains("status=ok") == true)
             {
                 url = url.Replace("https://api.worldoftanks.ru/wot/blank/?&status=ok&", "");
@@ -41,7 +41,7 @@ namespace WGHelper.Forms
                 {
                     if (url[i] == '&')
                     {
-                        access_token = url.Substring(0, i+1);
+                        access_token = url.Substring(0, i + 1);
                         url = url.Replace(access_token, "");
                         access_token = access_token.Replace("&", "");
                         access_token = access_token.Replace("access_token=", "");
@@ -49,11 +49,11 @@ namespace WGHelper.Forms
                         break;
                     }
                 }
-                for (int i=0; i<url.Length; i++)
+                for (int i = 0; i < url.Length; i++)
                 {
                     if (url[i] == '&')
                     {
-                        nickname = url.Substring(0, i+1);
+                        nickname = url.Substring(0, i + 1);
                         url = url.Replace(nickname, "");
                         nickname = nickname.Replace("&", "");
                         nickname = nickname.Replace("nickname=", "");
@@ -61,11 +61,11 @@ namespace WGHelper.Forms
                         break;
                     }
                 }
-                for (int i=0; i<url.Length; i++)
+                for (int i = 0; i < url.Length; i++)
                 {
                     if (url[i] == '&')
                     {
-                        account_id = url.Substring(0, i+1);
+                        account_id = url.Substring(0, i + 1);
                         url = url.Replace(account_id, "");
                         account_id = account_id.Replace("&", "");
                         account_id = account_id.Replace("account_id=", "");
