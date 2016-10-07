@@ -123,6 +123,26 @@ namespace WGHelper.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rsz_button_wotstart {
+            get {
+                object obj = ResourceManager.GetObject("rsz_button_wotstart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rsz_button_wotupdate {
+            get {
+                object obj = ResourceManager.GetObject("rsz_button_wotupdate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rsz_gray_light {
             get {
                 object obj = ResourceManager.GetObject("rsz_gray-light", resourceCulture);

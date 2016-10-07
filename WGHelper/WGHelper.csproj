@@ -163,6 +163,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gear.ico" />
+    <None Include="Resources\rsz_button_wotupdate.png" />
+    <None Include="Resources\rsz_button_wotstart.png" />
     <None Include="Resources\standard_icon.png" />
     <None Include="Resources\premium_icon.png" />
     <None Include="Resources\Experience_ico.png" />

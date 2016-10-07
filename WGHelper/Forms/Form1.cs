@@ -30,6 +30,7 @@ namespace WGHelper
             pingTestWoT();                                      //Запуск потока проверки доступности серверов
             pingWoTServers_timer.Start();                       //Запуск таймера, который через промежутки времени проводит тест задержек доступа к серверам
             updateWoTServersStats_timer.Start();                //Запуск таймера, который через промежутки времени выполняет запросы об онлайне серверов
+            setHints();
         }
 
         XDocument settings;                                     //Объект для хранения XML-файла
@@ -227,7 +228,13 @@ namespace WGHelper
                 
         }
 
-        
+        void setHints()
+        {
+            ToolTip hint = new ToolTip();
+            hint.SetToolTip(button_RunClient, "Запустить клиент ");
+            hint.SetToolTip(button_RunUpdater, "Запустить апдейтер");
+        }
+
         //---------------------------Функция, что выполняет запрос в отдельном потоке-------------------------------
         public void request()                                                                               
         {

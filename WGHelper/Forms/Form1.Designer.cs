@@ -55,20 +55,13 @@
             this.label_ru10Online = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_WoT = new System.Windows.Forms.TabPage();
-            this.pictureBox_Premium = new System.Windows.Forms.PictureBox();
-            this.pictureBox_free_XP = new System.Windows.Forms.PictureBox();
-            this.pictureBox_silver = new System.Windows.Forms.PictureBox();
-            this.pictureBox_gold = new System.Windows.Forms.PictureBox();
             this.label_free_XP = new System.Windows.Forms.Label();
             this.label_silver = new System.Windows.Forms.Label();
             this.label_gold = new System.Windows.Forms.Label();
             this.label_nickname = new System.Windows.Forms.Label();
             this.button_RetryPing = new System.Windows.Forms.Button();
-            this.button_RunUpdater = new System.Windows.Forms.Button();
-            this.button_RunClient = new System.Windows.Forms.Button();
             this.label_WoTClientVersion = new System.Windows.Forms.Label();
             this.label_pingInfo = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label_WoT_Recommend = new System.Windows.Forms.Label();
             this.label_ru10Ping = new System.Windows.Forms.Label();
             this.label_ru9Ping = new System.Windows.Forms.Label();
@@ -84,18 +77,7 @@
             this.label_Online = new System.Windows.Forms.Label();
             this.label_Servers = new System.Windows.Forms.Label();
             this.button_Retry = new System.Windows.Forms.Button();
-            this.ru10_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru9_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru8_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru7_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru6_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru5_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru4_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru3_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru2_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru1_status_pictureBox = new System.Windows.Forms.PictureBox();
             this.label_updatingInfo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.updateWoTServersStats_timer = new System.Windows.Forms.Timer(this.components);
             this.pingWoTServers_timer = new System.Windows.Forms.Timer(this.components);
             this.label_appVersion = new System.Windows.Forms.Label();
@@ -115,8 +97,28 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualUpdateWoTOnlineCooldown_timer = new System.Windows.Forms.Timer(this.components);
             this.manualUpdateWoTPingCooldown_timer = new System.Windows.Forms.Timer(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox_Premium = new System.Windows.Forms.PictureBox();
+            this.pictureBox_free_XP = new System.Windows.Forms.PictureBox();
+            this.pictureBox_silver = new System.Windows.Forms.PictureBox();
+            this.pictureBox_gold = new System.Windows.Forms.PictureBox();
+            this.button_RunUpdater = new System.Windows.Forms.Button();
+            this.button_RunClient = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ru10_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru9_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru8_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru7_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru6_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru5_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru4_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru3_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru2_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru1_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Premium)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_free_XP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_silver)).BeginInit();
@@ -133,17 +135,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.ru2_status_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ru1_status_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(114, 35);
+            this.label1.Location = new System.Drawing.Point(12, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 13);
+            this.label1.Size = new System.Drawing.Size(476, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Helper for Wargaming.net Games";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_totalOnline
             // 
@@ -345,11 +346,14 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControl1.Controls.Add(this.tabPage_WoT);
+            this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.Location = new System.Drawing.Point(11, 51);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(396, 299);
+            this.tabControl1.Size = new System.Drawing.Size(477, 278);
             this.tabControl1.TabIndex = 24;
             // 
             // tabPage_WoT
@@ -417,48 +421,13 @@
             this.tabPage_WoT.Controls.Add(this.label_WoT_ru9);
             this.tabPage_WoT.Controls.Add(this.label_total);
             this.tabPage_WoT.Controls.Add(this.label_WoT_ru10);
-            this.tabPage_WoT.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_WoT.ImageIndex = 0;
+            this.tabPage_WoT.Location = new System.Drawing.Point(82, 4);
             this.tabPage_WoT.Name = "tabPage_WoT";
             this.tabPage_WoT.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_WoT.Size = new System.Drawing.Size(388, 273);
+            this.tabPage_WoT.Size = new System.Drawing.Size(391, 270);
             this.tabPage_WoT.TabIndex = 0;
-            this.tabPage_WoT.Text = "World of Tanks";
             this.tabPage_WoT.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox_Premium
-            // 
-            this.pictureBox_Premium.Location = new System.Drawing.Point(16, 200);
-            this.pictureBox_Premium.Name = "pictureBox_Premium";
-            this.pictureBox_Premium.Size = new System.Drawing.Size(13, 13);
-            this.pictureBox_Premium.TabIndex = 66;
-            this.pictureBox_Premium.TabStop = false;
-            // 
-            // pictureBox_free_XP
-            // 
-            this.pictureBox_free_XP.Image = global::WGHelper.Properties.Resources.Experience_ico;
-            this.pictureBox_free_XP.Location = new System.Drawing.Point(16, 239);
-            this.pictureBox_free_XP.Name = "pictureBox_free_XP";
-            this.pictureBox_free_XP.Size = new System.Drawing.Size(13, 13);
-            this.pictureBox_free_XP.TabIndex = 65;
-            this.pictureBox_free_XP.TabStop = false;
-            // 
-            // pictureBox_silver
-            // 
-            this.pictureBox_silver.Image = global::WGHelper.Properties.Resources.Silver_icon;
-            this.pictureBox_silver.Location = new System.Drawing.Point(16, 226);
-            this.pictureBox_silver.Name = "pictureBox_silver";
-            this.pictureBox_silver.Size = new System.Drawing.Size(13, 13);
-            this.pictureBox_silver.TabIndex = 64;
-            this.pictureBox_silver.TabStop = false;
-            // 
-            // pictureBox_gold
-            // 
-            this.pictureBox_gold.Image = global::WGHelper.Properties.Resources.Gold_icon;
-            this.pictureBox_gold.Location = new System.Drawing.Point(16, 213);
-            this.pictureBox_gold.Name = "pictureBox_gold";
-            this.pictureBox_gold.Size = new System.Drawing.Size(13, 13);
-            this.pictureBox_gold.TabIndex = 63;
-            this.pictureBox_gold.TabStop = false;
             // 
             // label_free_XP
             // 
@@ -506,28 +475,6 @@
             this.button_RetryPing.UseVisualStyleBackColor = true;
             this.button_RetryPing.Click += new System.EventHandler(this.button_RetryPing_Click);
             // 
-            // button_RunUpdater
-            // 
-            this.button_RunUpdater.Location = new System.Drawing.Point(226, 218);
-            this.button_RunUpdater.Name = "button_RunUpdater";
-            this.button_RunUpdater.Size = new System.Drawing.Size(75, 43);
-            this.button_RunUpdater.TabIndex = 57;
-            this.button_RunUpdater.Text = "button_RunUpdater";
-            this.button_RunUpdater.UseVisualStyleBackColor = true;
-            this.button_RunUpdater.Visible = false;
-            this.button_RunUpdater.Click += new System.EventHandler(this.button_RunUpdater_Click);
-            // 
-            // button_RunClient
-            // 
-            this.button_RunClient.Location = new System.Drawing.Point(307, 218);
-            this.button_RunClient.Name = "button_RunClient";
-            this.button_RunClient.Size = new System.Drawing.Size(75, 43);
-            this.button_RunClient.TabIndex = 56;
-            this.button_RunClient.Text = "button_RunClient";
-            this.button_RunClient.UseVisualStyleBackColor = true;
-            this.button_RunClient.Visible = false;
-            this.button_RunClient.Click += new System.EventHandler(this.button_RunClient_Click);
-            // 
             // label_WoTClientVersion
             // 
             this.label_WoTClientVersion.Location = new System.Drawing.Point(198, 197);
@@ -546,14 +493,6 @@
             this.label_pingInfo.Text = "Pinging...";
             this.label_pingInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_pingInfo.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(315, 106);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.TabIndex = 53;
-            this.pictureBox2.TabStop = false;
             // 
             // label_WoT_Recommend
             // 
@@ -692,6 +631,220 @@
             this.button_Retry.UseVisualStyleBackColor = true;
             this.button_Retry.Click += new System.EventHandler(this.button_Retry_Click);
             // 
+            // label_updatingInfo
+            // 
+            this.label_updatingInfo.Location = new System.Drawing.Point(301, 59);
+            this.label_updatingInfo.Name = "label_updatingInfo";
+            this.label_updatingInfo.Size = new System.Drawing.Size(81, 13);
+            this.label_updatingInfo.TabIndex = 25;
+            this.label_updatingInfo.Text = "Updating...";
+            this.label_updatingInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_updatingInfo.Visible = false;
+            // 
+            // updateWoTServersStats_timer
+            // 
+            this.updateWoTServersStats_timer.Interval = 6000;
+            this.updateWoTServersStats_timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pingWoTServers_timer
+            // 
+            this.pingWoTServers_timer.Interval = 5000;
+            this.pingWoTServers_timer.Tick += new System.EventHandler(this.pingWoTServers_timer_Tick);
+            // 
+            // label_appVersion
+            // 
+            this.label_appVersion.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label_appVersion.Location = new System.Drawing.Point(285, 332);
+            this.label_appVersion.Name = "label_appVersion";
+            this.label_appVersion.Size = new System.Drawing.Size(203, 24);
+            this.label_appVersion.TabIndex = 26;
+            this.label_appVersion.Text = "label_appVersion";
+            this.label_appVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            // 
+            // checkRunningUpdaterWoT_timer
+            // 
+            this.checkRunningUpdaterWoT_timer.Tick += new System.EventHandler(this.checkRunningUpdaterWoT_timer_Tick);
+            // 
+            // checkRunningWoT_timer
+            // 
+            this.checkRunningWoT_timer.Tick += new System.EventHandler(this.checkRunningWoT_timer_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.updateToolStripMenuItem,
+            this.accountToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(500, 24);
+            this.menuStrip1.TabIndex = 27;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem1,
+            this.aboutToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // settingsToolStripMenuItem1
+            // 
+            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.settingsToolStripMenuItem1.Text = "Settings";
+            this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.onlineToolStripMenuItem,
+            this.pingToolStripMenuItem});
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.updateToolStripMenuItem.Text = "Update";
+            // 
+            // onlineToolStripMenuItem
+            // 
+            this.onlineToolStripMenuItem.Name = "onlineToolStripMenuItem";
+            this.onlineToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.onlineToolStripMenuItem.Text = "Online";
+            this.onlineToolStripMenuItem.Click += new System.EventHandler(this.onlineToolStripMenuItem_Click);
+            // 
+            // pingToolStripMenuItem
+            // 
+            this.pingToolStripMenuItem.Name = "pingToolStripMenuItem";
+            this.pingToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.pingToolStripMenuItem.Text = "Ping";
+            this.pingToolStripMenuItem.Click += new System.EventHandler(this.pingToolStripMenuItem_Click);
+            // 
+            // accountToolStripMenuItem
+            // 
+            this.accountToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.authorizationToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.accountToolStripMenuItem.Text = "Account";
+            // 
+            // authorizationToolStripMenuItem
+            // 
+            this.authorizationToolStripMenuItem.Enabled = false;
+            this.authorizationToolStripMenuItem.Name = "authorizationToolStripMenuItem";
+            this.authorizationToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.authorizationToolStripMenuItem.Text = "Authorization";
+            this.authorizationToolStripMenuItem.Click += new System.EventHandler(this.authorizationToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Enabled = false;
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.logoutToolStripMenuItem.Text = "Log-out";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // manualUpdateWoTOnlineCooldown_timer
+            // 
+            this.manualUpdateWoTOnlineCooldown_timer.Interval = 5100;
+            this.manualUpdateWoTOnlineCooldown_timer.Tick += new System.EventHandler(this.manualUpdateWoTOnlineCooldown_timer_Tick);
+            // 
+            // manualUpdateWoTPingCooldown_timer
+            // 
+            this.manualUpdateWoTPingCooldown_timer.Interval = 5100;
+            this.manualUpdateWoTPingCooldown_timer.Tick += new System.EventHandler(this.manualUpdateWoTPingCooldown_timer_Tick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "rsz_1wot007.png");
+            // 
+            // pictureBox_Premium
+            // 
+            this.pictureBox_Premium.Location = new System.Drawing.Point(16, 200);
+            this.pictureBox_Premium.Name = "pictureBox_Premium";
+            this.pictureBox_Premium.Size = new System.Drawing.Size(13, 13);
+            this.pictureBox_Premium.TabIndex = 66;
+            this.pictureBox_Premium.TabStop = false;
+            // 
+            // pictureBox_free_XP
+            // 
+            this.pictureBox_free_XP.Image = global::WGHelper.Properties.Resources.Experience_ico;
+            this.pictureBox_free_XP.Location = new System.Drawing.Point(16, 239);
+            this.pictureBox_free_XP.Name = "pictureBox_free_XP";
+            this.pictureBox_free_XP.Size = new System.Drawing.Size(13, 13);
+            this.pictureBox_free_XP.TabIndex = 65;
+            this.pictureBox_free_XP.TabStop = false;
+            // 
+            // pictureBox_silver
+            // 
+            this.pictureBox_silver.Image = global::WGHelper.Properties.Resources.Silver_icon;
+            this.pictureBox_silver.Location = new System.Drawing.Point(16, 226);
+            this.pictureBox_silver.Name = "pictureBox_silver";
+            this.pictureBox_silver.Size = new System.Drawing.Size(13, 13);
+            this.pictureBox_silver.TabIndex = 64;
+            this.pictureBox_silver.TabStop = false;
+            // 
+            // pictureBox_gold
+            // 
+            this.pictureBox_gold.Image = global::WGHelper.Properties.Resources.Gold_icon;
+            this.pictureBox_gold.Location = new System.Drawing.Point(16, 213);
+            this.pictureBox_gold.Name = "pictureBox_gold";
+            this.pictureBox_gold.Size = new System.Drawing.Size(13, 13);
+            this.pictureBox_gold.TabIndex = 63;
+            this.pictureBox_gold.TabStop = false;
+            // 
+            // button_RunUpdater
+            // 
+            this.button_RunUpdater.Image = global::WGHelper.Properties.Resources.rsz_button_wotupdate;
+            this.button_RunUpdater.Location = new System.Drawing.Point(226, 218);
+            this.button_RunUpdater.Name = "button_RunUpdater";
+            this.button_RunUpdater.Size = new System.Drawing.Size(75, 43);
+            this.button_RunUpdater.TabIndex = 57;
+            this.button_RunUpdater.UseVisualStyleBackColor = true;
+            this.button_RunUpdater.Visible = false;
+            this.button_RunUpdater.Click += new System.EventHandler(this.button_RunUpdater_Click);
+            // 
+            // button_RunClient
+            // 
+            this.button_RunClient.Image = global::WGHelper.Properties.Resources.rsz_button_wotstart;
+            this.button_RunClient.Location = new System.Drawing.Point(307, 218);
+            this.button_RunClient.Name = "button_RunClient";
+            this.button_RunClient.Size = new System.Drawing.Size(75, 43);
+            this.button_RunClient.TabIndex = 56;
+            this.button_RunClient.UseVisualStyleBackColor = true;
+            this.button_RunClient.Visible = false;
+            this.button_RunClient.Click += new System.EventHandler(this.button_RunClient_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(315, 106);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.TabIndex = 53;
+            this.pictureBox2.TabStop = false;
+            // 
             // ru10_status_pictureBox
             // 
             this.ru10_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
@@ -782,16 +935,6 @@
             this.ru1_status_pictureBox.TabIndex = 26;
             this.ru1_status_pictureBox.TabStop = false;
             // 
-            // label_updatingInfo
-            // 
-            this.label_updatingInfo.Location = new System.Drawing.Point(301, 59);
-            this.label_updatingInfo.Name = "label_updatingInfo";
-            this.label_updatingInfo.Size = new System.Drawing.Size(81, 13);
-            this.label_updatingInfo.TabIndex = 25;
-            this.label_updatingInfo.Text = "Updating...";
-            this.label_updatingInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_updatingInfo.Visible = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(315, 8);
@@ -800,144 +943,11 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // updateWoTServersStats_timer
-            // 
-            this.updateWoTServersStats_timer.Interval = 6000;
-            this.updateWoTServersStats_timer.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pingWoTServers_timer
-            // 
-            this.pingWoTServers_timer.Interval = 5000;
-            this.pingWoTServers_timer.Tick += new System.EventHandler(this.pingWoTServers_timer_Tick);
-            // 
-            // label_appVersion
-            // 
-            this.label_appVersion.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label_appVersion.Location = new System.Drawing.Point(210, 353);
-            this.label_appVersion.Name = "label_appVersion";
-            this.label_appVersion.Size = new System.Drawing.Size(203, 24);
-            this.label_appVersion.TabIndex = 26;
-            this.label_appVersion.Text = "label_appVersion";
-            this.label_appVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
-            // 
-            // checkRunningUpdaterWoT_timer
-            // 
-            this.checkRunningUpdaterWoT_timer.Tick += new System.EventHandler(this.checkRunningUpdaterWoT_timer_Tick);
-            // 
-            // checkRunningWoT_timer
-            // 
-            this.checkRunningWoT_timer.Tick += new System.EventHandler(this.checkRunningWoT_timer_Tick);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.updateToolStripMenuItem,
-            this.accountToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(418, 24);
-            this.menuStrip1.TabIndex = 27;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsToolStripMenuItem1,
-            this.aboutToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // settingsToolStripMenuItem1
-            // 
-            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
-            this.settingsToolStripMenuItem1.Text = "Settings";
-            this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.onlineToolStripMenuItem,
-            this.pingToolStripMenuItem});
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.updateToolStripMenuItem.Text = "Update";
-            // 
-            // onlineToolStripMenuItem
-            // 
-            this.onlineToolStripMenuItem.Name = "onlineToolStripMenuItem";
-            this.onlineToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.onlineToolStripMenuItem.Text = "Online";
-            this.onlineToolStripMenuItem.Click += new System.EventHandler(this.onlineToolStripMenuItem_Click);
-            // 
-            // pingToolStripMenuItem
-            // 
-            this.pingToolStripMenuItem.Name = "pingToolStripMenuItem";
-            this.pingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pingToolStripMenuItem.Text = "Ping";
-            this.pingToolStripMenuItem.Click += new System.EventHandler(this.pingToolStripMenuItem_Click);
-            // 
-            // accountToolStripMenuItem
-            // 
-            this.accountToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.authorizationToolStripMenuItem,
-            this.logoutToolStripMenuItem});
-            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.accountToolStripMenuItem.Text = "Account";
-            // 
-            // authorizationToolStripMenuItem
-            // 
-            this.authorizationToolStripMenuItem.Enabled = false;
-            this.authorizationToolStripMenuItem.Name = "authorizationToolStripMenuItem";
-            this.authorizationToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.authorizationToolStripMenuItem.Text = "Authorization";
-            this.authorizationToolStripMenuItem.Click += new System.EventHandler(this.authorizationToolStripMenuItem_Click);
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Enabled = false;
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.logoutToolStripMenuItem.Text = "Log-out";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // manualUpdateWoTOnlineCooldown_timer
-            // 
-            this.manualUpdateWoTOnlineCooldown_timer.Interval = 5100;
-            this.manualUpdateWoTOnlineCooldown_timer.Tick += new System.EventHandler(this.manualUpdateWoTOnlineCooldown_timer_Tick);
-            // 
-            // manualUpdateWoTPingCooldown_timer
-            // 
-            this.manualUpdateWoTPingCooldown_timer.Interval = 5100;
-            this.manualUpdateWoTPingCooldown_timer.Tick += new System.EventHandler(this.manualUpdateWoTPingCooldown_timer_Tick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 389);
+            this.ClientSize = new System.Drawing.Size(500, 365);
             this.Controls.Add(this.label_appVersion);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
@@ -952,6 +962,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage_WoT.ResumeLayout(false);
             this.tabPage_WoT.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Premium)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_free_XP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_silver)).EndInit();
@@ -968,8 +980,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ru2_status_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ru1_status_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1062,6 +1072,7 @@
         private System.Windows.Forms.PictureBox pictureBox_Premium;
         private System.Windows.Forms.Timer manualUpdateWoTOnlineCooldown_timer;
         private System.Windows.Forms.Timer manualUpdateWoTPingCooldown_timer;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
