@@ -682,5 +682,12 @@ namespace WGHelper
             pingToolStripMenuItem.Enabled = true;
             manualUpdateWoTPingCooldown_timer.Stop();
         }
+
+        private void worldOfTanksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.wotPlayerStats wotPlayerStatistics = new Forms.wotPlayerStats();
+            AddOwnedForm(wotPlayerStatistics);
+            wotPlayerStatistics.ShowDialog();
+        }
     }
 }

@@ -959,6 +959,7 @@
             this.worldOfTanksToolStripMenuItem.Name = "worldOfTanksToolStripMenuItem";
             this.worldOfTanksToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.worldOfTanksToolStripMenuItem.Text = "World of Tanks";
+            this.worldOfTanksToolStripMenuItem.Click += new System.EventHandler(this.worldOfTanksToolStripMenuItem_Click);
             // 
             // Form1
             // 
