@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Threading;                                         //Подключение многопоточности
 using Newtonsoft.Json;                                          //Библиотека для работы с JSON
 using System.Xml.Linq;                                          //Библиотека XML
-using System.Diagnostics;                                       //Библиотека для работы с процессами
 using System.Net;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -23,7 +22,10 @@ namespace WGHelper.Forms
         {
             InitializeComponent();
             settings = XDocument.Load("settings.xml");
-            getPlayersStats();
+            Thread getPlayersStatsThread;
+            getPlayersStatsThread = new Thread(getPlayersStats);
+            getPlayersStatsThread.IsBackground = true;
+            getPlayersStatsThread.Start();
         }
 
         public static string getBetween(string strSource, string strStart, string strEnd)
@@ -457,9 +459,14 @@ namespace WGHelper.Forms
 
             //-------------------------------------------------
 
-            PlayerStatsRootObject playerStats = JsonConvert.DeserializeObject<PlayerStatsRootObject>(answer); 
+            PlayerStatsRootObject playerStats = JsonConvert.DeserializeObject<PlayerStatsRootObject>(answer);
 
-            richTextBox1.Text = answer;
+            labelNickname.Text = playerStats.data.player.nickname;
+            labelClientLanguage.Text = playerStats.data.player.client_language;
+            labelCreatedAt.Text = playerStats.data.player.created_at.ToString();
+            labelGlobalRating.Text = playerStats.data.player.global_rating.ToString();
+            labelLogoutAt.Text = playerStats.data.player.logout_at.ToString();
+            labelUpdatedAt.Text = playerStats.data.player.updated_at.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
