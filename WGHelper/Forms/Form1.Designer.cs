@@ -55,13 +55,20 @@
             this.label_ru10Online = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_WoT = new System.Windows.Forms.TabPage();
+            this.pictureBox_Premium = new System.Windows.Forms.PictureBox();
+            this.pictureBox_free_XP = new System.Windows.Forms.PictureBox();
+            this.pictureBox_silver = new System.Windows.Forms.PictureBox();
+            this.pictureBox_gold = new System.Windows.Forms.PictureBox();
             this.label_free_XP = new System.Windows.Forms.Label();
             this.label_silver = new System.Windows.Forms.Label();
             this.label_gold = new System.Windows.Forms.Label();
             this.label_nickname = new System.Windows.Forms.Label();
             this.button_RetryPing = new System.Windows.Forms.Button();
+            this.button_RunUpdater = new System.Windows.Forms.Button();
+            this.button_RunClient = new System.Windows.Forms.Button();
             this.label_WoTClientVersion = new System.Windows.Forms.Label();
             this.label_pingInfo = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label_WoT_Recommend = new System.Windows.Forms.Label();
             this.label_ru10Ping = new System.Windows.Forms.Label();
             this.label_ru9Ping = new System.Windows.Forms.Label();
@@ -77,7 +84,19 @@
             this.label_Online = new System.Windows.Forms.Label();
             this.label_Servers = new System.Windows.Forms.Label();
             this.button_Retry = new System.Windows.Forms.Button();
+            this.ru10_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru9_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru8_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru7_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru6_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru5_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru4_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru3_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru2_status_pictureBox = new System.Windows.Forms.PictureBox();
+            this.ru1_status_pictureBox = new System.Windows.Forms.PictureBox();
             this.label_updatingInfo = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.updateWoTServersStats_timer = new System.Windows.Forms.Timer(this.components);
             this.pingWoTServers_timer = new System.Windows.Forms.Timer(this.components);
             this.label_appVersion = new System.Windows.Forms.Label();
@@ -97,28 +116,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualUpdateWoTOnlineCooldown_timer = new System.Windows.Forms.Timer(this.components);
             this.manualUpdateWoTPingCooldown_timer = new System.Windows.Forms.Timer(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox_Premium = new System.Windows.Forms.PictureBox();
-            this.pictureBox_free_XP = new System.Windows.Forms.PictureBox();
-            this.pictureBox_silver = new System.Windows.Forms.PictureBox();
-            this.pictureBox_gold = new System.Windows.Forms.PictureBox();
-            this.button_RunUpdater = new System.Windows.Forms.Button();
-            this.button_RunClient = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ru10_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru9_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru8_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru7_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru6_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru5_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru4_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru3_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru2_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.ru1_status_pictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.worldOfTanksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Premium)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_free_XP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_silver)).BeginInit();
@@ -135,6 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ru2_status_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ru1_status_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -429,6 +431,41 @@
             this.tabPage_WoT.TabIndex = 0;
             this.tabPage_WoT.UseVisualStyleBackColor = true;
             // 
+            // pictureBox_Premium
+            // 
+            this.pictureBox_Premium.Location = new System.Drawing.Point(16, 200);
+            this.pictureBox_Premium.Name = "pictureBox_Premium";
+            this.pictureBox_Premium.Size = new System.Drawing.Size(13, 13);
+            this.pictureBox_Premium.TabIndex = 66;
+            this.pictureBox_Premium.TabStop = false;
+            // 
+            // pictureBox_free_XP
+            // 
+            this.pictureBox_free_XP.Image = global::WGHelper.Properties.Resources.Experience_ico;
+            this.pictureBox_free_XP.Location = new System.Drawing.Point(16, 239);
+            this.pictureBox_free_XP.Name = "pictureBox_free_XP";
+            this.pictureBox_free_XP.Size = new System.Drawing.Size(13, 13);
+            this.pictureBox_free_XP.TabIndex = 65;
+            this.pictureBox_free_XP.TabStop = false;
+            // 
+            // pictureBox_silver
+            // 
+            this.pictureBox_silver.Image = global::WGHelper.Properties.Resources.Silver_icon;
+            this.pictureBox_silver.Location = new System.Drawing.Point(16, 226);
+            this.pictureBox_silver.Name = "pictureBox_silver";
+            this.pictureBox_silver.Size = new System.Drawing.Size(13, 13);
+            this.pictureBox_silver.TabIndex = 64;
+            this.pictureBox_silver.TabStop = false;
+            // 
+            // pictureBox_gold
+            // 
+            this.pictureBox_gold.Image = global::WGHelper.Properties.Resources.Gold_icon;
+            this.pictureBox_gold.Location = new System.Drawing.Point(16, 213);
+            this.pictureBox_gold.Name = "pictureBox_gold";
+            this.pictureBox_gold.Size = new System.Drawing.Size(13, 13);
+            this.pictureBox_gold.TabIndex = 63;
+            this.pictureBox_gold.TabStop = false;
+            // 
             // label_free_XP
             // 
             this.label_free_XP.AutoSize = true;
@@ -475,6 +512,28 @@
             this.button_RetryPing.UseVisualStyleBackColor = true;
             this.button_RetryPing.Click += new System.EventHandler(this.button_RetryPing_Click);
             // 
+            // button_RunUpdater
+            // 
+            this.button_RunUpdater.Image = global::WGHelper.Properties.Resources.rsz_button_wotupdate;
+            this.button_RunUpdater.Location = new System.Drawing.Point(226, 218);
+            this.button_RunUpdater.Name = "button_RunUpdater";
+            this.button_RunUpdater.Size = new System.Drawing.Size(75, 43);
+            this.button_RunUpdater.TabIndex = 57;
+            this.button_RunUpdater.UseVisualStyleBackColor = true;
+            this.button_RunUpdater.Visible = false;
+            this.button_RunUpdater.Click += new System.EventHandler(this.button_RunUpdater_Click);
+            // 
+            // button_RunClient
+            // 
+            this.button_RunClient.Image = global::WGHelper.Properties.Resources.rsz_button_wotstart;
+            this.button_RunClient.Location = new System.Drawing.Point(307, 218);
+            this.button_RunClient.Name = "button_RunClient";
+            this.button_RunClient.Size = new System.Drawing.Size(75, 43);
+            this.button_RunClient.TabIndex = 56;
+            this.button_RunClient.UseVisualStyleBackColor = true;
+            this.button_RunClient.Visible = false;
+            this.button_RunClient.Click += new System.EventHandler(this.button_RunClient_Click);
+            // 
             // label_WoTClientVersion
             // 
             this.label_WoTClientVersion.Location = new System.Drawing.Point(198, 197);
@@ -493,6 +552,14 @@
             this.label_pingInfo.Text = "Pinging...";
             this.label_pingInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_pingInfo.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(315, 106);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.TabIndex = 53;
+            this.pictureBox2.TabStop = false;
             // 
             // label_WoT_Recommend
             // 
@@ -631,6 +698,96 @@
             this.button_Retry.UseVisualStyleBackColor = true;
             this.button_Retry.Click += new System.EventHandler(this.button_Retry_Click);
             // 
+            // ru10_status_pictureBox
+            // 
+            this.ru10_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru10_status_pictureBox.Location = new System.Drawing.Point(16, 143);
+            this.ru10_status_pictureBox.Name = "ru10_status_pictureBox";
+            this.ru10_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru10_status_pictureBox.TabIndex = 35;
+            this.ru10_status_pictureBox.TabStop = false;
+            // 
+            // ru9_status_pictureBox
+            // 
+            this.ru9_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru9_status_pictureBox.Location = new System.Drawing.Point(16, 130);
+            this.ru9_status_pictureBox.Name = "ru9_status_pictureBox";
+            this.ru9_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru9_status_pictureBox.TabIndex = 34;
+            this.ru9_status_pictureBox.TabStop = false;
+            // 
+            // ru8_status_pictureBox
+            // 
+            this.ru8_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru8_status_pictureBox.Location = new System.Drawing.Point(16, 117);
+            this.ru8_status_pictureBox.Name = "ru8_status_pictureBox";
+            this.ru8_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru8_status_pictureBox.TabIndex = 33;
+            this.ru8_status_pictureBox.TabStop = false;
+            // 
+            // ru7_status_pictureBox
+            // 
+            this.ru7_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru7_status_pictureBox.Location = new System.Drawing.Point(16, 104);
+            this.ru7_status_pictureBox.Name = "ru7_status_pictureBox";
+            this.ru7_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru7_status_pictureBox.TabIndex = 32;
+            this.ru7_status_pictureBox.TabStop = false;
+            // 
+            // ru6_status_pictureBox
+            // 
+            this.ru6_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru6_status_pictureBox.Location = new System.Drawing.Point(16, 91);
+            this.ru6_status_pictureBox.Name = "ru6_status_pictureBox";
+            this.ru6_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru6_status_pictureBox.TabIndex = 31;
+            this.ru6_status_pictureBox.TabStop = false;
+            // 
+            // ru5_status_pictureBox
+            // 
+            this.ru5_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru5_status_pictureBox.Location = new System.Drawing.Point(16, 78);
+            this.ru5_status_pictureBox.Name = "ru5_status_pictureBox";
+            this.ru5_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru5_status_pictureBox.TabIndex = 30;
+            this.ru5_status_pictureBox.TabStop = false;
+            // 
+            // ru4_status_pictureBox
+            // 
+            this.ru4_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru4_status_pictureBox.Location = new System.Drawing.Point(16, 65);
+            this.ru4_status_pictureBox.Name = "ru4_status_pictureBox";
+            this.ru4_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru4_status_pictureBox.TabIndex = 29;
+            this.ru4_status_pictureBox.TabStop = false;
+            // 
+            // ru3_status_pictureBox
+            // 
+            this.ru3_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru3_status_pictureBox.Location = new System.Drawing.Point(16, 52);
+            this.ru3_status_pictureBox.Name = "ru3_status_pictureBox";
+            this.ru3_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru3_status_pictureBox.TabIndex = 28;
+            this.ru3_status_pictureBox.TabStop = false;
+            // 
+            // ru2_status_pictureBox
+            // 
+            this.ru2_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru2_status_pictureBox.Location = new System.Drawing.Point(16, 39);
+            this.ru2_status_pictureBox.Name = "ru2_status_pictureBox";
+            this.ru2_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru2_status_pictureBox.TabIndex = 27;
+            this.ru2_status_pictureBox.TabStop = false;
+            // 
+            // ru1_status_pictureBox
+            // 
+            this.ru1_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
+            this.ru1_status_pictureBox.Location = new System.Drawing.Point(16, 26);
+            this.ru1_status_pictureBox.Name = "ru1_status_pictureBox";
+            this.ru1_status_pictureBox.Size = new System.Drawing.Size(13, 13);
+            this.ru1_status_pictureBox.TabIndex = 26;
+            this.ru1_status_pictureBox.TabStop = false;
+            // 
             // label_updatingInfo
             // 
             this.label_updatingInfo.Location = new System.Drawing.Point(301, 59);
@@ -640,6 +797,20 @@
             this.label_updatingInfo.Text = "Updating...";
             this.label_updatingInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_updatingInfo.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(315, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "rsz_1wot007.png");
             // 
             // updateWoTServersStats_timer
             // 
@@ -680,6 +851,7 @@
             this.fileToolStripMenuItem,
             this.updateToolStripMenuItem,
             this.accountToolStripMenuItem,
+            this.statisticsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -774,174 +946,19 @@
             this.manualUpdateWoTPingCooldown_timer.Interval = 5100;
             this.manualUpdateWoTPingCooldown_timer.Tick += new System.EventHandler(this.manualUpdateWoTPingCooldown_timer_Tick);
             // 
-            // imageList1
+            // statisticsToolStripMenuItem
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "rsz_1wot007.png");
+            this.statisticsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.worldOfTanksToolStripMenuItem});
+            this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
+            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.statisticsToolStripMenuItem.Text = "Statistics";
             // 
-            // pictureBox_Premium
+            // worldOfTanksToolStripMenuItem
             // 
-            this.pictureBox_Premium.Location = new System.Drawing.Point(16, 200);
-            this.pictureBox_Premium.Name = "pictureBox_Premium";
-            this.pictureBox_Premium.Size = new System.Drawing.Size(13, 13);
-            this.pictureBox_Premium.TabIndex = 66;
-            this.pictureBox_Premium.TabStop = false;
-            // 
-            // pictureBox_free_XP
-            // 
-            this.pictureBox_free_XP.Image = global::WGHelper.Properties.Resources.Experience_ico;
-            this.pictureBox_free_XP.Location = new System.Drawing.Point(16, 239);
-            this.pictureBox_free_XP.Name = "pictureBox_free_XP";
-            this.pictureBox_free_XP.Size = new System.Drawing.Size(13, 13);
-            this.pictureBox_free_XP.TabIndex = 65;
-            this.pictureBox_free_XP.TabStop = false;
-            // 
-            // pictureBox_silver
-            // 
-            this.pictureBox_silver.Image = global::WGHelper.Properties.Resources.Silver_icon;
-            this.pictureBox_silver.Location = new System.Drawing.Point(16, 226);
-            this.pictureBox_silver.Name = "pictureBox_silver";
-            this.pictureBox_silver.Size = new System.Drawing.Size(13, 13);
-            this.pictureBox_silver.TabIndex = 64;
-            this.pictureBox_silver.TabStop = false;
-            // 
-            // pictureBox_gold
-            // 
-            this.pictureBox_gold.Image = global::WGHelper.Properties.Resources.Gold_icon;
-            this.pictureBox_gold.Location = new System.Drawing.Point(16, 213);
-            this.pictureBox_gold.Name = "pictureBox_gold";
-            this.pictureBox_gold.Size = new System.Drawing.Size(13, 13);
-            this.pictureBox_gold.TabIndex = 63;
-            this.pictureBox_gold.TabStop = false;
-            // 
-            // button_RunUpdater
-            // 
-            this.button_RunUpdater.Image = global::WGHelper.Properties.Resources.rsz_button_wotupdate;
-            this.button_RunUpdater.Location = new System.Drawing.Point(226, 218);
-            this.button_RunUpdater.Name = "button_RunUpdater";
-            this.button_RunUpdater.Size = new System.Drawing.Size(75, 43);
-            this.button_RunUpdater.TabIndex = 57;
-            this.button_RunUpdater.UseVisualStyleBackColor = true;
-            this.button_RunUpdater.Visible = false;
-            this.button_RunUpdater.Click += new System.EventHandler(this.button_RunUpdater_Click);
-            // 
-            // button_RunClient
-            // 
-            this.button_RunClient.Image = global::WGHelper.Properties.Resources.rsz_button_wotstart;
-            this.button_RunClient.Location = new System.Drawing.Point(307, 218);
-            this.button_RunClient.Name = "button_RunClient";
-            this.button_RunClient.Size = new System.Drawing.Size(75, 43);
-            this.button_RunClient.TabIndex = 56;
-            this.button_RunClient.UseVisualStyleBackColor = true;
-            this.button_RunClient.Visible = false;
-            this.button_RunClient.Click += new System.EventHandler(this.button_RunClient_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(315, 106);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.TabIndex = 53;
-            this.pictureBox2.TabStop = false;
-            // 
-            // ru10_status_pictureBox
-            // 
-            this.ru10_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
-            this.ru10_status_pictureBox.Location = new System.Drawing.Point(16, 143);
-            this.ru10_status_pictureBox.Name = "ru10_status_pictureBox";
-            this.ru10_status_pictureBox.Size = new System.Drawing.Size(13, 13);
-            this.ru10_status_pictureBox.TabIndex = 35;
-            this.ru10_status_pictureBox.TabStop = false;
-            // 
-            // ru9_status_pictureBox
-            // 
-            this.ru9_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
-            this.ru9_status_pictureBox.Location = new System.Drawing.Point(16, 130);
-            this.ru9_status_pictureBox.Name = "ru9_status_pictureBox";
-            this.ru9_status_pictureBox.Size = new System.Drawing.Size(13, 13);
-            this.ru9_status_pictureBox.TabIndex = 34;
-            this.ru9_status_pictureBox.TabStop = false;
-            // 
-            // ru8_status_pictureBox
-            // 
-            this.ru8_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
-            this.ru8_status_pictureBox.Location = new System.Drawing.Point(16, 117);
-            this.ru8_status_pictureBox.Name = "ru8_status_pictureBox";
-            this.ru8_status_pictureBox.Size = new System.Drawing.Size(13, 13);
-            this.ru8_status_pictureBox.TabIndex = 33;
-            this.ru8_status_pictureBox.TabStop = false;
-            // 
-            // ru7_status_pictureBox
-            // 
-            this.ru7_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
-            this.ru7_status_pictureBox.Location = new System.Drawing.Point(16, 104);
-            this.ru7_status_pictureBox.Name = "ru7_status_pictureBox";
-            this.ru7_status_pictureBox.Size = new System.Drawing.Size(13, 13);
-            this.ru7_status_pictureBox.TabIndex = 32;
-            this.ru7_status_pictureBox.TabStop = false;
-            // 
-            // ru6_status_pictureBox
-            // 
-            this.ru6_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
-            this.ru6_status_pictureBox.Location = new System.Drawing.Point(16, 91);
-            this.ru6_status_pictureBox.Name = "ru6_status_pictureBox";
-            this.ru6_status_pictureBox.Size = new System.Drawing.Size(13, 13);
-            this.ru6_status_pictureBox.TabIndex = 31;
-            this.ru6_status_pictureBox.TabStop = false;
-            // 
-            // ru5_status_pictureBox
-            // 
-            this.ru5_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
-            this.ru5_status_pictureBox.Location = new System.Drawing.Point(16, 78);
-            this.ru5_status_pictureBox.Name = "ru5_status_pictureBox";
-            this.ru5_status_pictureBox.Size = new System.Drawing.Size(13, 13);
-            this.ru5_status_pictureBox.TabIndex = 30;
-            this.ru5_status_pictureBox.TabStop = false;
-            // 
-            // ru4_status_pictureBox
-            // 
-            this.ru4_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
-            this.ru4_status_pictureBox.Location = new System.Drawing.Point(16, 65);
-            this.ru4_status_pictureBox.Name = "ru4_status_pictureBox";
-            this.ru4_status_pictureBox.Size = new System.Drawing.Size(13, 13);
-            this.ru4_status_pictureBox.TabIndex = 29;
-            this.ru4_status_pictureBox.TabStop = false;
-            // 
-            // ru3_status_pictureBox
-            // 
-            this.ru3_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
-            this.ru3_status_pictureBox.Location = new System.Drawing.Point(16, 52);
-            this.ru3_status_pictureBox.Name = "ru3_status_pictureBox";
-            this.ru3_status_pictureBox.Size = new System.Drawing.Size(13, 13);
-            this.ru3_status_pictureBox.TabIndex = 28;
-            this.ru3_status_pictureBox.TabStop = false;
-            // 
-            // ru2_status_pictureBox
-            // 
-            this.ru2_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
-            this.ru2_status_pictureBox.Location = new System.Drawing.Point(16, 39);
-            this.ru2_status_pictureBox.Name = "ru2_status_pictureBox";
-            this.ru2_status_pictureBox.Size = new System.Drawing.Size(13, 13);
-            this.ru2_status_pictureBox.TabIndex = 27;
-            this.ru2_status_pictureBox.TabStop = false;
-            // 
-            // ru1_status_pictureBox
-            // 
-            this.ru1_status_pictureBox.Image = global::WGHelper.Properties.Resources.rsz_gray_light;
-            this.ru1_status_pictureBox.Location = new System.Drawing.Point(16, 26);
-            this.ru1_status_pictureBox.Name = "ru1_status_pictureBox";
-            this.ru1_status_pictureBox.Size = new System.Drawing.Size(13, 13);
-            this.ru1_status_pictureBox.TabIndex = 26;
-            this.ru1_status_pictureBox.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(315, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
+            this.worldOfTanksToolStripMenuItem.Name = "worldOfTanksToolStripMenuItem";
+            this.worldOfTanksToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.worldOfTanksToolStripMenuItem.Text = "World of Tanks";
             // 
             // Form1
             // 
@@ -962,8 +979,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage_WoT.ResumeLayout(false);
             this.tabPage_WoT.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Premium)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_free_XP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_silver)).EndInit();
@@ -980,6 +995,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ru2_status_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ru1_status_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1073,6 +1090,8 @@
         private System.Windows.Forms.Timer manualUpdateWoTOnlineCooldown_timer;
         private System.Windows.Forms.Timer manualUpdateWoTPingCooldown_timer;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ToolStripMenuItem statisticsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem worldOfTanksToolStripMenuItem;
     }
 }
 

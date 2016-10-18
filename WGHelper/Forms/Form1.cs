@@ -154,7 +154,8 @@ namespace WGHelper
             if (settings.Element("settings").Element("wg_open_id").Element("authorized").Value == "no")//Если авторизация не выполнялась
             {
                 authorizationToolStripMenuItem.Enabled = true;                          //Активируем кнопку авторизации
-                logoutToolStripMenuItem.Enabled = false;                                
+                logoutToolStripMenuItem.Enabled = false;
+                statisticsToolStripMenuItem.Enabled = false;
             }
             else                                                                        //Проверяем, истек ли сеанс авторизации
             {
@@ -184,6 +185,7 @@ namespace WGHelper
                 {
                     authorizationToolStripMenuItem.Enabled = false;                 //Деактивируем кнопку авторизации
                     logoutToolStripMenuItem.Enabled = true;                         //Активируем кнопку деавторизации
+                    statisticsToolStripMenuItem.Enabled = true;
                     Thread.Sleep(500);
                     Thread authPlayerInfo;
                     authPlayerInfo = new Thread(getAuthPlayerInfo);
