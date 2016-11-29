@@ -192,6 +192,53 @@ namespace WGHelper.Forms
             public double tanking_factor { get; set; }
         }
 
+        public class Fallout
+        {
+            public int spotted { get; set; }
+            public double avg_damage_assisted_track { get; set; }
+            public int max_xp { get; set; }
+            public double avg_damage_blocked { get; set; }
+            public int direct_hits_received { get; set; }
+            public int explosion_hits { get; set; }
+            public int piercings_received { get; set; }
+            public int flag_capture_solo { get; set; }
+            public int piercings { get; set; }
+            public object max_damage_tank_id { get; set; }
+            public int xp { get; set; }
+            public int survived_battles { get; set; }
+            public int dropped_capture_points { get; set; }
+            public int max_frags_with_avatar { get; set; }
+            public int hits_percents { get; set; }
+            public int draws { get; set; }
+            public int death_count { get; set; }
+            public object max_xp_tank_id { get; set; }
+            public int battles { get; set; }
+            public int damage_received { get; set; }
+            public double avg_damage_assisted { get; set; }
+            public object max_frags_tank_id { get; set; }
+            public int frags { get; set; }
+            public double avg_damage_assisted_radio { get; set; }
+            public int capture_points { get; set; }
+            public int max_win_points { get; set; }
+            public int avatar_frags { get; set; }
+            public int max_damage { get; set; }
+            public int resource_absorbed { get; set; }
+            public int hits { get; set; }
+            public int battle_avg_xp { get; set; }
+            public int wins { get; set; }
+            public int losses { get; set; }
+            public int damage_dealt { get; set; }
+            public int avatar_damage_dealt { get; set; }
+            public int win_points { get; set; }
+            public int no_damage_direct_hits_received { get; set; }
+            public int max_frags { get; set; }
+            public int shots { get; set; }
+            public int explosion_hits_received { get; set; }
+            public int flag_capture { get; set; }
+            public double tanking_factor { get; set; }
+            public int max_damage_with_avatar { get; set; }
+        }
+
         public class Company
         {
             public int spotted { get; set; }
@@ -374,6 +421,7 @@ namespace WGHelper.Forms
             public Clan clan { get; set; }
             public All all { get; set; }
             public RegularTeam regular_team { get; set; }
+            public Fallout fallout { get; set; }
             public int trees_cut { get; set; }
             public Company company { get; set; }
             public StrongholdSkirmish stronghold_skirmish { get; set; }
@@ -436,7 +484,7 @@ namespace WGHelper.Forms
             string accountID = settings.Element("settings").Element("wg_open_id").Element("account_id").Value;
             string accessToken = settings.Element("settings").Element("wg_open_id").Element("access_token").Value;
 
-            WebRequest requestPlayersStats = WebRequest.Create(urlRequestPlayersStats + "application_id=" + applicationID + "&account_id=" + accountID + "&access_token=" + accessToken);
+            WebRequest requestPlayersStats = WebRequest.Create(urlRequestPlayersStats + "application_id=" + applicationID + "&account_id=" + accountID + "&access_token=" + accessToken + "&extra=statistics.fallout");
             WebResponse responsePlayersStats = requestPlayersStats.GetResponse();
             answerStream = responsePlayersStats.GetResponseStream();
             srAnswer = new StreamReader(answerStream);
@@ -479,7 +527,7 @@ namespace WGHelper.Forms
             //**************************************************
             //labelRestrictionsChatBanTime.Text = playerStats.data.player.@private.restrictions.chat_ban_time.ToString();
             //labelRestrictionsClanTime.Text = playerStats.data.player.@private.restrictions.clan_time.ToString();
-            labelStatisticsFrags.Text = "Frags: " + playerStats.data.player.statistics.frags.ToString();
+            labelStatisticsFrags.Text = "Frags: " + playerStats.data.player.statistics.frags.Count.ToString();
             labelStatisticsTreesCut.Text = "Trees cut: " + playerStats.data.player.statistics.trees_cut.ToString();
             //**************************************************
             labelStatisticsAllAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.all.avg_damage_assisted.ToString();
@@ -571,6 +619,48 @@ namespace WGHelper.Forms
             labelStatisticsCompanyTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.company.tanking_factor.ToString();
             labelStatisticsCompanyWins.Text = "Wins: " + playerStats.data.player.statistics.company.wins.ToString();
             labelStatisticsCompanyXp.Text = "XP: " + playerStats.data.player.statistics.company.xp.ToString();
+            //****************************************
+            labelStatisticsFalloutAvatarDamageDealt.Text = playerStats.data.player.statistics.fallout.avatar_damage_dealt.ToString();
+            labelStatisticsFalloutAvatarFrags.Text = playerStats.data.player.statistics.fallout.avatar_frags.ToString();
+            labelStatisticsFalloutAvgDamageAssisted.Text = playerStats.data.player.statistics.fallout.avg_damage_assisted.ToString();
+            labelStatisticsFalloutAvgDamageAssistedRadio.Text = playerStats.data.player.statistics.fallout.avg_damage_assisted_radio.ToString();
+            labelStatisticsFalloutAvgDamageAssistedTrack.Text = playerStats.data.player.statistics.fallout.avg_damage_assisted_track.ToString();
+            labelStatisticsFalloutAvgDamageBlocked.Text = playerStats.data.player.statistics.fallout.avg_damage_blocked.ToString();
+            labelStatisticsFalloutAvgXP.Text = playerStats.data.player.statistics.fallout.battle_avg_xp.ToString();
+            labelStatisticsFalloutBattles.Text = playerStats.data.player.statistics.fallout.battles.ToString();
+            labelStatisticsFalloutCapturePoints.Text = playerStats.data.player.statistics.fallout.capture_points.ToString();
+            labelStatisticsFalloutDamageDealt.Text = playerStats.data.player.statistics.fallout.damage_dealt.ToString();
+            labelStatisticsFalloutDamageReceived.Text = playerStats.data.player.statistics.fallout.damage_received.ToString();
+            labelStatisticsFalloutDeathCount.Text = playerStats.data.player.statistics.fallout.death_count.ToString();
+            labelStatisticsFalloutDirectHitsReceived.Text = playerStats.data.player.statistics.fallout.direct_hits_received.ToString();
+            labelStatisticsFalloutDraws.Text = playerStats.data.player.statistics.fallout.draws.ToString();
+            labelStatisticsFalloutDroppedCapturePoints.Text = playerStats.data.player.statistics.fallout.dropped_capture_points.ToString();
+            labelStatisticsFalloutExplosionHits.Text = playerStats.data.player.statistics.fallout.explosion_hits.ToString();
+            labelStatisticsFalloutExplosionHitsReceived.Text = playerStats.data.player.statistics.fallout.explosion_hits_received.ToString();
+            labelStatisticsFalloutFlagCapture.Text = playerStats.data.player.statistics.fallout.flag_capture.ToString();
+            labelStatisticsFalloutFlagCaptureSolo.Text = playerStats.data.player.statistics.fallout.flag_capture_solo.ToString();
+            labelStatisticsFalloutFrags.Text = playerStats.data.player.statistics.fallout.frags.ToString();
+            labelStatisticsFalloutHits.Text = playerStats.data.player.statistics.fallout.hits.ToString();
+            labelStatisticsFalloutHitsPercents.Text = playerStats.data.player.statistics.fallout.hits_percents.ToString();
+            labelStatisticsFalloutLosses.Text = playerStats.data.player.statistics.fallout.losses.ToString();
+            labelStatisticsFalloutMaxDamage.Text = playerStats.data.player.statistics.fallout.max_damage.ToString();
+            //labelStatisticsFalloutMaxDamageTankId.Text = playerStats.data.player.statistics.fallout.max_damage_tank_id.ToString();
+            labelStatisticsFalloutMaxDamageWithAvatar.Text = playerStats.data.player.statistics.fallout.max_damage_with_avatar.ToString();
+            labelStatisticsFalloutMaxFrags.Text = playerStats.data.player.statistics.fallout.max_frags.ToString();
+            labelStatisticsFalloutMaxWinPoints.Text = playerStats.data.player.statistics.fallout.max_win_points.ToString();
+            labelStatisticsFalloutMaxXp.Text = playerStats.data.player.statistics.fallout.max_xp.ToString();
+            //labelStatisticsFalloutMaxXpTankId.Text = playerStats.data.player.statistics.fallout.max_xp_tank_id.ToString();
+            labelStatisticsFalloutNoDamageDirectHitsReceived.Text = playerStats.data.player.statistics.fallout.no_damage_direct_hits_received.ToString();
+            labelStatisticsFalloutPiercing.Text = playerStats.data.player.statistics.fallout.piercings.ToString();
+            labelStatisticsFalloutPiercingReceived.Text = playerStats.data.player.statistics.fallout.piercings.ToString();
+            labelStatisticsFalloutResourceAbsorbed.Text = playerStats.data.player.statistics.fallout.resource_absorbed.ToString();
+            labelStatisticsFalloutShots.Text = playerStats.data.player.statistics.fallout.shots.ToString();
+            labelStatisticsFalloutSpotted.Text = playerStats.data.player.statistics.fallout.spotted.ToString();
+            labelStatisticsFalloutSurvivedBattles.Text = playerStats.data.player.statistics.fallout.survived_battles.ToString();
+            labelStatisticsFalloutTankingFactor.Text = playerStats.data.player.statistics.fallout.tanking_factor.ToString();
+            labelStatisticsFalloutWinPoints.Text = playerStats.data.player.statistics.fallout.win_points.ToString();
+            labelStatisticsFalloutWins.Text = playerStats.data.player.statistics.fallout.wins.ToString();
+            labelStatisticsFalloutXp.Text = playerStats.data.player.statistics.fallout.xp.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

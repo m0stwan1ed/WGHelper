@@ -137,10 +137,53 @@
             this.labelStatisticsAllHitsPercents = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.labelStatisticsFalloutAvatarDamageDealt = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutAvatarFrags = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutAvgDamageAssisted = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutAvgDamageAssistedRadio = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutAvgDamageAssistedTrack = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutAvgDamageBlocked = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutAvgXP = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutBattles = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutCapturePoints = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutDamageDealt = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutDamageReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutDeathCount = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutDirectHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutDraws = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutDroppedCapturePoints = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutExplosionHits = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutExplosionHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutFlagCapture = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutFlagCaptureSolo = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutFrags = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutHits = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutHitsPercents = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutLosses = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutMaxDamage = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutMaxDamageTankId = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutMaxDamageWithAvatar = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutMaxFrags = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutMaxWinPoints = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutMaxXp = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutMaxXpTankId = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutNoDamageDirectHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutPiercing = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutPiercingReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutResourceAbsorbed = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutShots = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutSpotted = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutSurvivedBattles = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutTankingFactor = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutWinPoints = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutWins = new System.Windows.Forms.Label();
+            this.labelStatisticsFalloutXp = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageStatisticsa.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -293,6 +336,7 @@
             this.tabControl1.Controls.Add(this.tabPageStatisticsa);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(213, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1218,6 +1262,427 @@
             this.tabPage2.Text = "CompanyStatistics";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.AutoScroll = true;
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutXp);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutWins);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutWinPoints);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutTankingFactor);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutSurvivedBattles);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutSpotted);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutShots);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutResourceAbsorbed);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutPiercingReceived);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutPiercing);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutNoDamageDirectHitsReceived);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutMaxXpTankId);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutMaxXp);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutMaxWinPoints);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutMaxFrags);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutMaxDamageWithAvatar);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutMaxDamageTankId);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutMaxDamage);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutLosses);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutHitsPercents);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutHits);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutFrags);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutFlagCaptureSolo);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutFlagCapture);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutExplosionHitsReceived);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutExplosionHits);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutDroppedCapturePoints);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutDraws);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutDirectHitsReceived);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutDeathCount);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutDamageReceived);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutDamageDealt);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutCapturePoints);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutBattles);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutAvgXP);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutAvgDamageBlocked);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutAvgDamageAssistedTrack);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutAvgDamageAssistedRadio);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutAvgDamageAssisted);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutAvatarFrags);
+            this.tabPage3.Controls.Add(this.labelStatisticsFalloutAvatarDamageDealt);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(355, 401);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "FalloutStatistics";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // labelStatisticsFalloutAvatarDamageDealt
+            // 
+            this.labelStatisticsFalloutAvatarDamageDealt.AutoSize = true;
+            this.labelStatisticsFalloutAvatarDamageDealt.Location = new System.Drawing.Point(6, 3);
+            this.labelStatisticsFalloutAvatarDamageDealt.Name = "labelStatisticsFalloutAvatarDamageDealt";
+            this.labelStatisticsFalloutAvatarDamageDealt.Size = new System.Drawing.Size(134, 13);
+            this.labelStatisticsFalloutAvatarDamageDealt.TabIndex = 1;
+            this.labelStatisticsFalloutAvatarDamageDealt.Text = "FalloutAvatarDamageDealt";
+            // 
+            // labelStatisticsFalloutAvatarFrags
+            // 
+            this.labelStatisticsFalloutAvatarFrags.AutoSize = true;
+            this.labelStatisticsFalloutAvatarFrags.Location = new System.Drawing.Point(6, 16);
+            this.labelStatisticsFalloutAvatarFrags.Name = "labelStatisticsFalloutAvatarFrags";
+            this.labelStatisticsFalloutAvatarFrags.Size = new System.Drawing.Size(95, 13);
+            this.labelStatisticsFalloutAvatarFrags.TabIndex = 2;
+            this.labelStatisticsFalloutAvatarFrags.Text = "FalloutAvatarFrags";
+            // 
+            // labelStatisticsFalloutAvgDamageAssisted
+            // 
+            this.labelStatisticsFalloutAvgDamageAssisted.AutoSize = true;
+            this.labelStatisticsFalloutAvgDamageAssisted.Location = new System.Drawing.Point(6, 29);
+            this.labelStatisticsFalloutAvgDamageAssisted.Name = "labelStatisticsFalloutAvgDamageAssisted";
+            this.labelStatisticsFalloutAvgDamageAssisted.Size = new System.Drawing.Size(136, 13);
+            this.labelStatisticsFalloutAvgDamageAssisted.TabIndex = 3;
+            this.labelStatisticsFalloutAvgDamageAssisted.Text = "FalloutAvgDamageAssisted";
+            // 
+            // labelStatisticsFalloutAvgDamageAssistedRadio
+            // 
+            this.labelStatisticsFalloutAvgDamageAssistedRadio.AutoSize = true;
+            this.labelStatisticsFalloutAvgDamageAssistedRadio.Location = new System.Drawing.Point(6, 42);
+            this.labelStatisticsFalloutAvgDamageAssistedRadio.Name = "labelStatisticsFalloutAvgDamageAssistedRadio";
+            this.labelStatisticsFalloutAvgDamageAssistedRadio.Size = new System.Drawing.Size(164, 13);
+            this.labelStatisticsFalloutAvgDamageAssistedRadio.TabIndex = 4;
+            this.labelStatisticsFalloutAvgDamageAssistedRadio.Text = "FalloutAvgDamageAssistedRadio";
+            // 
+            // labelStatisticsFalloutAvgDamageAssistedTrack
+            // 
+            this.labelStatisticsFalloutAvgDamageAssistedTrack.AutoSize = true;
+            this.labelStatisticsFalloutAvgDamageAssistedTrack.Location = new System.Drawing.Point(6, 55);
+            this.labelStatisticsFalloutAvgDamageAssistedTrack.Name = "labelStatisticsFalloutAvgDamageAssistedTrack";
+            this.labelStatisticsFalloutAvgDamageAssistedTrack.Size = new System.Drawing.Size(164, 13);
+            this.labelStatisticsFalloutAvgDamageAssistedTrack.TabIndex = 5;
+            this.labelStatisticsFalloutAvgDamageAssistedTrack.Text = "FalloutAvgDamageAssistedTrack";
+            // 
+            // labelStatisticsFalloutAvgDamageBlocked
+            // 
+            this.labelStatisticsFalloutAvgDamageBlocked.AutoSize = true;
+            this.labelStatisticsFalloutAvgDamageBlocked.Location = new System.Drawing.Point(6, 68);
+            this.labelStatisticsFalloutAvgDamageBlocked.Name = "labelStatisticsFalloutAvgDamageBlocked";
+            this.labelStatisticsFalloutAvgDamageBlocked.Size = new System.Drawing.Size(136, 13);
+            this.labelStatisticsFalloutAvgDamageBlocked.TabIndex = 6;
+            this.labelStatisticsFalloutAvgDamageBlocked.Text = "FalloutAvgDamageBlocked";
+            // 
+            // labelStatisticsFalloutAvgXP
+            // 
+            this.labelStatisticsFalloutAvgXP.AutoSize = true;
+            this.labelStatisticsFalloutAvgXP.Location = new System.Drawing.Point(6, 81);
+            this.labelStatisticsFalloutAvgXP.Name = "labelStatisticsFalloutAvgXP";
+            this.labelStatisticsFalloutAvgXP.Size = new System.Drawing.Size(71, 13);
+            this.labelStatisticsFalloutAvgXP.TabIndex = 7;
+            this.labelStatisticsFalloutAvgXP.Text = "FalloutAvgXP";
+            // 
+            // labelStatisticsFalloutBattles
+            // 
+            this.labelStatisticsFalloutBattles.AutoSize = true;
+            this.labelStatisticsFalloutBattles.Location = new System.Drawing.Point(6, 94);
+            this.labelStatisticsFalloutBattles.Name = "labelStatisticsFalloutBattles";
+            this.labelStatisticsFalloutBattles.Size = new System.Drawing.Size(70, 13);
+            this.labelStatisticsFalloutBattles.TabIndex = 8;
+            this.labelStatisticsFalloutBattles.Text = "FalloutBattles";
+            // 
+            // labelStatisticsFalloutCapturePoints
+            // 
+            this.labelStatisticsFalloutCapturePoints.AutoSize = true;
+            this.labelStatisticsFalloutCapturePoints.Location = new System.Drawing.Point(6, 107);
+            this.labelStatisticsFalloutCapturePoints.Name = "labelStatisticsFalloutCapturePoints";
+            this.labelStatisticsFalloutCapturePoints.Size = new System.Drawing.Size(104, 13);
+            this.labelStatisticsFalloutCapturePoints.TabIndex = 9;
+            this.labelStatisticsFalloutCapturePoints.Text = "FalloutCapturePoints";
+            // 
+            // labelStatisticsFalloutDamageDealt
+            // 
+            this.labelStatisticsFalloutDamageDealt.AutoSize = true;
+            this.labelStatisticsFalloutDamageDealt.Location = new System.Drawing.Point(6, 120);
+            this.labelStatisticsFalloutDamageDealt.Name = "labelStatisticsFalloutDamageDealt";
+            this.labelStatisticsFalloutDamageDealt.Size = new System.Drawing.Size(103, 13);
+            this.labelStatisticsFalloutDamageDealt.TabIndex = 10;
+            this.labelStatisticsFalloutDamageDealt.Text = "FalloutDamageDealt";
+            // 
+            // labelStatisticsFalloutDamageReceived
+            // 
+            this.labelStatisticsFalloutDamageReceived.AutoSize = true;
+            this.labelStatisticsFalloutDamageReceived.Location = new System.Drawing.Point(6, 133);
+            this.labelStatisticsFalloutDamageReceived.Name = "labelStatisticsFalloutDamageReceived";
+            this.labelStatisticsFalloutDamageReceived.Size = new System.Drawing.Size(124, 13);
+            this.labelStatisticsFalloutDamageReceived.TabIndex = 11;
+            this.labelStatisticsFalloutDamageReceived.Text = "FalloutDamageReceived";
+            // 
+            // labelStatisticsFalloutDeathCount
+            // 
+            this.labelStatisticsFalloutDeathCount.AutoSize = true;
+            this.labelStatisticsFalloutDeathCount.Location = new System.Drawing.Point(6, 146);
+            this.labelStatisticsFalloutDeathCount.Name = "labelStatisticsFalloutDeathCount";
+            this.labelStatisticsFalloutDeathCount.Size = new System.Drawing.Size(95, 13);
+            this.labelStatisticsFalloutDeathCount.TabIndex = 12;
+            this.labelStatisticsFalloutDeathCount.Text = "FalloutDeathCount";
+            // 
+            // labelStatisticsFalloutDirectHitsReceived
+            // 
+            this.labelStatisticsFalloutDirectHitsReceived.AutoSize = true;
+            this.labelStatisticsFalloutDirectHitsReceived.Location = new System.Drawing.Point(6, 159);
+            this.labelStatisticsFalloutDirectHitsReceived.Name = "labelStatisticsFalloutDirectHitsReceived";
+            this.labelStatisticsFalloutDirectHitsReceived.Size = new System.Drawing.Size(130, 13);
+            this.labelStatisticsFalloutDirectHitsReceived.TabIndex = 13;
+            this.labelStatisticsFalloutDirectHitsReceived.Text = "FalloutDirectHitsReceived";
+            // 
+            // labelStatisticsFalloutDraws
+            // 
+            this.labelStatisticsFalloutDraws.AutoSize = true;
+            this.labelStatisticsFalloutDraws.Location = new System.Drawing.Point(6, 172);
+            this.labelStatisticsFalloutDraws.Name = "labelStatisticsFalloutDraws";
+            this.labelStatisticsFalloutDraws.Size = new System.Drawing.Size(68, 13);
+            this.labelStatisticsFalloutDraws.TabIndex = 14;
+            this.labelStatisticsFalloutDraws.Text = "FalloutDraws";
+            // 
+            // labelStatisticsFalloutDroppedCapturePoints
+            // 
+            this.labelStatisticsFalloutDroppedCapturePoints.AutoSize = true;
+            this.labelStatisticsFalloutDroppedCapturePoints.Location = new System.Drawing.Point(6, 185);
+            this.labelStatisticsFalloutDroppedCapturePoints.Name = "labelStatisticsFalloutDroppedCapturePoints";
+            this.labelStatisticsFalloutDroppedCapturePoints.Size = new System.Drawing.Size(145, 13);
+            this.labelStatisticsFalloutDroppedCapturePoints.TabIndex = 15;
+            this.labelStatisticsFalloutDroppedCapturePoints.Text = "FalloutDroppedCapturePoints";
+            // 
+            // labelStatisticsFalloutExplosionHits
+            // 
+            this.labelStatisticsFalloutExplosionHits.AutoSize = true;
+            this.labelStatisticsFalloutExplosionHits.Location = new System.Drawing.Point(6, 198);
+            this.labelStatisticsFalloutExplosionHits.Name = "labelStatisticsFalloutExplosionHits";
+            this.labelStatisticsFalloutExplosionHits.Size = new System.Drawing.Size(101, 13);
+            this.labelStatisticsFalloutExplosionHits.TabIndex = 16;
+            this.labelStatisticsFalloutExplosionHits.Text = "FalloutExplosionHits";
+            // 
+            // labelStatisticsFalloutExplosionHitsReceived
+            // 
+            this.labelStatisticsFalloutExplosionHitsReceived.AutoSize = true;
+            this.labelStatisticsFalloutExplosionHitsReceived.Location = new System.Drawing.Point(6, 211);
+            this.labelStatisticsFalloutExplosionHitsReceived.Name = "labelStatisticsFalloutExplosionHitsReceived";
+            this.labelStatisticsFalloutExplosionHitsReceived.Size = new System.Drawing.Size(147, 13);
+            this.labelStatisticsFalloutExplosionHitsReceived.TabIndex = 17;
+            this.labelStatisticsFalloutExplosionHitsReceived.Text = "FalloutExplosionHitsReceived";
+            // 
+            // labelStatisticsFalloutFlagCapture
+            // 
+            this.labelStatisticsFalloutFlagCapture.AutoSize = true;
+            this.labelStatisticsFalloutFlagCapture.Location = new System.Drawing.Point(6, 224);
+            this.labelStatisticsFalloutFlagCapture.Name = "labelStatisticsFalloutFlagCapture";
+            this.labelStatisticsFalloutFlagCapture.Size = new System.Drawing.Size(95, 13);
+            this.labelStatisticsFalloutFlagCapture.TabIndex = 18;
+            this.labelStatisticsFalloutFlagCapture.Text = "FalloutFlagCapture";
+            // 
+            // labelStatisticsFalloutFlagCaptureSolo
+            // 
+            this.labelStatisticsFalloutFlagCaptureSolo.AutoSize = true;
+            this.labelStatisticsFalloutFlagCaptureSolo.Location = new System.Drawing.Point(6, 237);
+            this.labelStatisticsFalloutFlagCaptureSolo.Name = "labelStatisticsFalloutFlagCaptureSolo";
+            this.labelStatisticsFalloutFlagCaptureSolo.Size = new System.Drawing.Size(116, 13);
+            this.labelStatisticsFalloutFlagCaptureSolo.TabIndex = 19;
+            this.labelStatisticsFalloutFlagCaptureSolo.Text = "FalloutFlagCaptureSolo";
+            // 
+            // labelStatisticsFalloutFrags
+            // 
+            this.labelStatisticsFalloutFrags.AutoSize = true;
+            this.labelStatisticsFalloutFrags.Location = new System.Drawing.Point(6, 250);
+            this.labelStatisticsFalloutFrags.Name = "labelStatisticsFalloutFrags";
+            this.labelStatisticsFalloutFrags.Size = new System.Drawing.Size(64, 13);
+            this.labelStatisticsFalloutFrags.TabIndex = 20;
+            this.labelStatisticsFalloutFrags.Text = "FalloutFrags";
+            // 
+            // labelStatisticsFalloutHits
+            // 
+            this.labelStatisticsFalloutHits.AutoSize = true;
+            this.labelStatisticsFalloutHits.Location = new System.Drawing.Point(6, 263);
+            this.labelStatisticsFalloutHits.Name = "labelStatisticsFalloutHits";
+            this.labelStatisticsFalloutHits.Size = new System.Drawing.Size(56, 13);
+            this.labelStatisticsFalloutHits.TabIndex = 21;
+            this.labelStatisticsFalloutHits.Text = "FalloutHits";
+            // 
+            // labelStatisticsFalloutHitsPercents
+            // 
+            this.labelStatisticsFalloutHitsPercents.AutoSize = true;
+            this.labelStatisticsFalloutHitsPercents.Location = new System.Drawing.Point(6, 276);
+            this.labelStatisticsFalloutHitsPercents.Name = "labelStatisticsFalloutHitsPercents";
+            this.labelStatisticsFalloutHitsPercents.Size = new System.Drawing.Size(98, 13);
+            this.labelStatisticsFalloutHitsPercents.TabIndex = 22;
+            this.labelStatisticsFalloutHitsPercents.Text = "FalloutHitsPercents";
+            // 
+            // labelStatisticsFalloutLosses
+            // 
+            this.labelStatisticsFalloutLosses.AutoSize = true;
+            this.labelStatisticsFalloutLosses.Location = new System.Drawing.Point(6, 289);
+            this.labelStatisticsFalloutLosses.Name = "labelStatisticsFalloutLosses";
+            this.labelStatisticsFalloutLosses.Size = new System.Drawing.Size(71, 13);
+            this.labelStatisticsFalloutLosses.TabIndex = 23;
+            this.labelStatisticsFalloutLosses.Text = "FalloutLosses";
+            // 
+            // labelStatisticsFalloutMaxDamage
+            // 
+            this.labelStatisticsFalloutMaxDamage.AutoSize = true;
+            this.labelStatisticsFalloutMaxDamage.Location = new System.Drawing.Point(6, 302);
+            this.labelStatisticsFalloutMaxDamage.Name = "labelStatisticsFalloutMaxDamage";
+            this.labelStatisticsFalloutMaxDamage.Size = new System.Drawing.Size(98, 13);
+            this.labelStatisticsFalloutMaxDamage.TabIndex = 25;
+            this.labelStatisticsFalloutMaxDamage.Text = "FalloutMaxDamage";
+            // 
+            // labelStatisticsFalloutMaxDamageTankId
+            // 
+            this.labelStatisticsFalloutMaxDamageTankId.AutoSize = true;
+            this.labelStatisticsFalloutMaxDamageTankId.Location = new System.Drawing.Point(6, 315);
+            this.labelStatisticsFalloutMaxDamageTankId.Name = "labelStatisticsFalloutMaxDamageTankId";
+            this.labelStatisticsFalloutMaxDamageTankId.Size = new System.Drawing.Size(132, 13);
+            this.labelStatisticsFalloutMaxDamageTankId.TabIndex = 26;
+            this.labelStatisticsFalloutMaxDamageTankId.Text = "FalloutMaxDamageTankId";
+            // 
+            // labelStatisticsFalloutMaxDamageWithAvatar
+            // 
+            this.labelStatisticsFalloutMaxDamageWithAvatar.AutoSize = true;
+            this.labelStatisticsFalloutMaxDamageWithAvatar.Location = new System.Drawing.Point(6, 328);
+            this.labelStatisticsFalloutMaxDamageWithAvatar.Name = "labelStatisticsFalloutMaxDamageWithAvatar";
+            this.labelStatisticsFalloutMaxDamageWithAvatar.Size = new System.Drawing.Size(151, 13);
+            this.labelStatisticsFalloutMaxDamageWithAvatar.TabIndex = 27;
+            this.labelStatisticsFalloutMaxDamageWithAvatar.Text = "FalloutMaxDamageWithAvatar";
+            // 
+            // labelStatisticsFalloutMaxFrags
+            // 
+            this.labelStatisticsFalloutMaxFrags.AutoSize = true;
+            this.labelStatisticsFalloutMaxFrags.Location = new System.Drawing.Point(6, 341);
+            this.labelStatisticsFalloutMaxFrags.Name = "labelStatisticsFalloutMaxFrags";
+            this.labelStatisticsFalloutMaxFrags.Size = new System.Drawing.Size(84, 13);
+            this.labelStatisticsFalloutMaxFrags.TabIndex = 28;
+            this.labelStatisticsFalloutMaxFrags.Text = "FalloutMaxFrags";
+            // 
+            // labelStatisticsFalloutMaxWinPoints
+            // 
+            this.labelStatisticsFalloutMaxWinPoints.AutoSize = true;
+            this.labelStatisticsFalloutMaxWinPoints.Location = new System.Drawing.Point(6, 354);
+            this.labelStatisticsFalloutMaxWinPoints.Name = "labelStatisticsFalloutMaxWinPoints";
+            this.labelStatisticsFalloutMaxWinPoints.Size = new System.Drawing.Size(106, 13);
+            this.labelStatisticsFalloutMaxWinPoints.TabIndex = 29;
+            this.labelStatisticsFalloutMaxWinPoints.Text = "FalloutMaxWinPoints";
+            // 
+            // labelStatisticsFalloutMaxXp
+            // 
+            this.labelStatisticsFalloutMaxXp.AutoSize = true;
+            this.labelStatisticsFalloutMaxXp.Location = new System.Drawing.Point(6, 367);
+            this.labelStatisticsFalloutMaxXp.Name = "labelStatisticsFalloutMaxXp";
+            this.labelStatisticsFalloutMaxXp.Size = new System.Drawing.Size(71, 13);
+            this.labelStatisticsFalloutMaxXp.TabIndex = 30;
+            this.labelStatisticsFalloutMaxXp.Text = "FalloutMaxXp";
+            // 
+            // labelStatisticsFalloutMaxXpTankId
+            // 
+            this.labelStatisticsFalloutMaxXpTankId.AutoSize = true;
+            this.labelStatisticsFalloutMaxXpTankId.Location = new System.Drawing.Point(6, 380);
+            this.labelStatisticsFalloutMaxXpTankId.Name = "labelStatisticsFalloutMaxXpTankId";
+            this.labelStatisticsFalloutMaxXpTankId.Size = new System.Drawing.Size(105, 13);
+            this.labelStatisticsFalloutMaxXpTankId.TabIndex = 31;
+            this.labelStatisticsFalloutMaxXpTankId.Text = "FalloutMaxXpTankId";
+            // 
+            // labelStatisticsFalloutNoDamageDirectHitsReceived
+            // 
+            this.labelStatisticsFalloutNoDamageDirectHitsReceived.AutoSize = true;
+            this.labelStatisticsFalloutNoDamageDirectHitsReceived.Location = new System.Drawing.Point(6, 394);
+            this.labelStatisticsFalloutNoDamageDirectHitsReceived.Name = "labelStatisticsFalloutNoDamageDirectHitsReceived";
+            this.labelStatisticsFalloutNoDamageDirectHitsReceived.Size = new System.Drawing.Size(184, 13);
+            this.labelStatisticsFalloutNoDamageDirectHitsReceived.TabIndex = 32;
+            this.labelStatisticsFalloutNoDamageDirectHitsReceived.Text = "FalloutNoDamageDirectHitsReceived";
+            // 
+            // labelStatisticsFalloutPiercing
+            // 
+            this.labelStatisticsFalloutPiercing.AutoSize = true;
+            this.labelStatisticsFalloutPiercing.Location = new System.Drawing.Point(6, 407);
+            this.labelStatisticsFalloutPiercing.Name = "labelStatisticsFalloutPiercing";
+            this.labelStatisticsFalloutPiercing.Size = new System.Drawing.Size(76, 13);
+            this.labelStatisticsFalloutPiercing.TabIndex = 33;
+            this.labelStatisticsFalloutPiercing.Text = "FalloutPiercing";
+            // 
+            // labelStatisticsFalloutPiercingReceived
+            // 
+            this.labelStatisticsFalloutPiercingReceived.AutoSize = true;
+            this.labelStatisticsFalloutPiercingReceived.Location = new System.Drawing.Point(6, 420);
+            this.labelStatisticsFalloutPiercingReceived.Name = "labelStatisticsFalloutPiercingReceived";
+            this.labelStatisticsFalloutPiercingReceived.Size = new System.Drawing.Size(122, 13);
+            this.labelStatisticsFalloutPiercingReceived.TabIndex = 34;
+            this.labelStatisticsFalloutPiercingReceived.Text = "FalloutPiercingReceived";
+            // 
+            // labelStatisticsFalloutResourceAbsorbed
+            // 
+            this.labelStatisticsFalloutResourceAbsorbed.AutoSize = true;
+            this.labelStatisticsFalloutResourceAbsorbed.Location = new System.Drawing.Point(6, 433);
+            this.labelStatisticsFalloutResourceAbsorbed.Name = "labelStatisticsFalloutResourceAbsorbed";
+            this.labelStatisticsFalloutResourceAbsorbed.Size = new System.Drawing.Size(129, 13);
+            this.labelStatisticsFalloutResourceAbsorbed.TabIndex = 35;
+            this.labelStatisticsFalloutResourceAbsorbed.Text = "FalloutResourceAbsorbed";
+            // 
+            // labelStatisticsFalloutShots
+            // 
+            this.labelStatisticsFalloutShots.AutoSize = true;
+            this.labelStatisticsFalloutShots.Location = new System.Drawing.Point(6, 446);
+            this.labelStatisticsFalloutShots.Name = "labelStatisticsFalloutShots";
+            this.labelStatisticsFalloutShots.Size = new System.Drawing.Size(65, 13);
+            this.labelStatisticsFalloutShots.TabIndex = 36;
+            this.labelStatisticsFalloutShots.Text = "FalloutShots";
+            // 
+            // labelStatisticsFalloutSpotted
+            // 
+            this.labelStatisticsFalloutSpotted.AutoSize = true;
+            this.labelStatisticsFalloutSpotted.Location = new System.Drawing.Point(6, 459);
+            this.labelStatisticsFalloutSpotted.Name = "labelStatisticsFalloutSpotted";
+            this.labelStatisticsFalloutSpotted.Size = new System.Drawing.Size(75, 13);
+            this.labelStatisticsFalloutSpotted.TabIndex = 37;
+            this.labelStatisticsFalloutSpotted.Text = "FalloutSpotted";
+            // 
+            // labelStatisticsFalloutSurvivedBattles
+            // 
+            this.labelStatisticsFalloutSurvivedBattles.AutoSize = true;
+            this.labelStatisticsFalloutSurvivedBattles.Location = new System.Drawing.Point(6, 472);
+            this.labelStatisticsFalloutSurvivedBattles.Name = "labelStatisticsFalloutSurvivedBattles";
+            this.labelStatisticsFalloutSurvivedBattles.Size = new System.Drawing.Size(112, 13);
+            this.labelStatisticsFalloutSurvivedBattles.TabIndex = 38;
+            this.labelStatisticsFalloutSurvivedBattles.Text = "FalloutSurvivedBattles";
+            // 
+            // labelStatisticsFalloutTankingFactor
+            // 
+            this.labelStatisticsFalloutTankingFactor.AutoSize = true;
+            this.labelStatisticsFalloutTankingFactor.Location = new System.Drawing.Point(6, 485);
+            this.labelStatisticsFalloutTankingFactor.Name = "labelStatisticsFalloutTankingFactor";
+            this.labelStatisticsFalloutTankingFactor.Size = new System.Drawing.Size(107, 13);
+            this.labelStatisticsFalloutTankingFactor.TabIndex = 39;
+            this.labelStatisticsFalloutTankingFactor.Text = "FalloutTankingFactor";
+            // 
+            // labelStatisticsFalloutWinPoints
+            // 
+            this.labelStatisticsFalloutWinPoints.AutoSize = true;
+            this.labelStatisticsFalloutWinPoints.Location = new System.Drawing.Point(6, 498);
+            this.labelStatisticsFalloutWinPoints.Name = "labelStatisticsFalloutWinPoints";
+            this.labelStatisticsFalloutWinPoints.Size = new System.Drawing.Size(86, 13);
+            this.labelStatisticsFalloutWinPoints.TabIndex = 40;
+            this.labelStatisticsFalloutWinPoints.Text = "FalloutWinPoints";
+            // 
+            // labelStatisticsFalloutWins
+            // 
+            this.labelStatisticsFalloutWins.AutoSize = true;
+            this.labelStatisticsFalloutWins.Location = new System.Drawing.Point(6, 512);
+            this.labelStatisticsFalloutWins.Name = "labelStatisticsFalloutWins";
+            this.labelStatisticsFalloutWins.Size = new System.Drawing.Size(62, 13);
+            this.labelStatisticsFalloutWins.TabIndex = 41;
+            this.labelStatisticsFalloutWins.Text = "FalloutWins";
+            // 
+            // labelStatisticsFalloutXp
+            // 
+            this.labelStatisticsFalloutXp.AutoSize = true;
+            this.labelStatisticsFalloutXp.Location = new System.Drawing.Point(6, 525);
+            this.labelStatisticsFalloutXp.Name = "labelStatisticsFalloutXp";
+            this.labelStatisticsFalloutXp.Size = new System.Drawing.Size(51, 13);
+            this.labelStatisticsFalloutXp.TabIndex = 42;
+            this.labelStatisticsFalloutXp.Text = "FalloutXp";
+            // 
             // wotPlayerStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1256,6 +1721,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1372,5 +1839,47 @@
         private System.Windows.Forms.Label labelStatisticsAllHitsPercents;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label labelStatisticsFalloutDamageReceived;
+        private System.Windows.Forms.Label labelStatisticsFalloutDamageDealt;
+        private System.Windows.Forms.Label labelStatisticsFalloutCapturePoints;
+        private System.Windows.Forms.Label labelStatisticsFalloutBattles;
+        private System.Windows.Forms.Label labelStatisticsFalloutAvgXP;
+        private System.Windows.Forms.Label labelStatisticsFalloutAvgDamageBlocked;
+        private System.Windows.Forms.Label labelStatisticsFalloutAvgDamageAssistedTrack;
+        private System.Windows.Forms.Label labelStatisticsFalloutAvgDamageAssistedRadio;
+        private System.Windows.Forms.Label labelStatisticsFalloutAvgDamageAssisted;
+        private System.Windows.Forms.Label labelStatisticsFalloutAvatarFrags;
+        private System.Windows.Forms.Label labelStatisticsFalloutAvatarDamageDealt;
+        private System.Windows.Forms.Label labelStatisticsFalloutPiercing;
+        private System.Windows.Forms.Label labelStatisticsFalloutNoDamageDirectHitsReceived;
+        private System.Windows.Forms.Label labelStatisticsFalloutMaxXpTankId;
+        private System.Windows.Forms.Label labelStatisticsFalloutMaxXp;
+        private System.Windows.Forms.Label labelStatisticsFalloutMaxWinPoints;
+        private System.Windows.Forms.Label labelStatisticsFalloutMaxFrags;
+        private System.Windows.Forms.Label labelStatisticsFalloutMaxDamageWithAvatar;
+        private System.Windows.Forms.Label labelStatisticsFalloutMaxDamageTankId;
+        private System.Windows.Forms.Label labelStatisticsFalloutMaxDamage;
+        private System.Windows.Forms.Label labelStatisticsFalloutLosses;
+        private System.Windows.Forms.Label labelStatisticsFalloutHitsPercents;
+        private System.Windows.Forms.Label labelStatisticsFalloutHits;
+        private System.Windows.Forms.Label labelStatisticsFalloutFrags;
+        private System.Windows.Forms.Label labelStatisticsFalloutFlagCaptureSolo;
+        private System.Windows.Forms.Label labelStatisticsFalloutFlagCapture;
+        private System.Windows.Forms.Label labelStatisticsFalloutExplosionHitsReceived;
+        private System.Windows.Forms.Label labelStatisticsFalloutExplosionHits;
+        private System.Windows.Forms.Label labelStatisticsFalloutDroppedCapturePoints;
+        private System.Windows.Forms.Label labelStatisticsFalloutDraws;
+        private System.Windows.Forms.Label labelStatisticsFalloutDirectHitsReceived;
+        private System.Windows.Forms.Label labelStatisticsFalloutDeathCount;
+        private System.Windows.Forms.Label labelStatisticsFalloutXp;
+        private System.Windows.Forms.Label labelStatisticsFalloutWins;
+        private System.Windows.Forms.Label labelStatisticsFalloutWinPoints;
+        private System.Windows.Forms.Label labelStatisticsFalloutTankingFactor;
+        private System.Windows.Forms.Label labelStatisticsFalloutSurvivedBattles;
+        private System.Windows.Forms.Label labelStatisticsFalloutSpotted;
+        private System.Windows.Forms.Label labelStatisticsFalloutShots;
+        private System.Windows.Forms.Label labelStatisticsFalloutResourceAbsorbed;
+        private System.Windows.Forms.Label labelStatisticsFalloutPiercingReceived;
     }
 }
