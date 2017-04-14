@@ -603,8 +603,10 @@ namespace WGHelper.Forms
             answer = answer.Replace("\"frags\":{", "\"frags\":[");
             answer = answer.Replace("}},\"g", "}],\"g");
 
+            answer = Regex.Replace(answer, "\"57377\":[0-9]*,", ""); //Костыль до патча 9.18 (26.04)
+
             //-------------------------------------------------
-            
+
             PlayerStatsRootObject playerStats = JsonConvert.DeserializeObject<PlayerStatsRootObject>(answer);
 
             labelNickname.Text = "Nickname: "+playerStats.data.player.nickname;
