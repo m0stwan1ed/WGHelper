@@ -270,6 +270,37 @@ namespace WGHelper.Forms
             public double tanking_factor { get; set; }
         }
 
+        public class Random
+        {
+            public int spotted { get; set; }
+            public double avg_damage_assisted_track { get; set; }
+            public double avg_damage_blocked { get; set; }
+            public int direct_hits_received { get; set; }
+            public int explosion_hits { get; set; }
+            public int piercings_received { get; set; }
+            public int piercings { get; set; }
+            public int xp { get; set; }
+            public int survived_battles { get; set; }
+            public int dropped_capture_points { get; set; }
+            public int hits_percents { get; set; }
+            public int draws { get; set; }
+            public int battles { get; set; }
+            public int damage_received { get; set; }
+            public double avg_damage_assisted { get; set; }
+            public int frags { get; set; }
+            public double avg_damage_assisted_radio { get; set; }
+            public int capture_points { get; set; }
+            public int hits { get; set; }
+            public int battle_avg_xp { get; set; }
+            public int wins { get; set; }
+            public int losses { get; set; }
+            public int damage_dealt { get; set; }
+            public int no_damage_direct_hits_received { get; set; }
+            public int shots { get; set; }
+            public int explosion_hits_received { get; set; }
+            public double tanking_factor { get; set; }
+        }
+
         public class GlobalmapChampion
         {
             public int spotted { get; set; }
@@ -514,17 +545,18 @@ namespace WGHelper.Forms
             public Clan clan { get; set; }
             public All all { get; set; }
             public RegularTeam regular_team { get; set; }
-            public Fallout fallout { get; set; }
+            public Historical historical { get; set; }
             public int trees_cut { get; set; }
             public Company company { get; set; }
-            public GlobalmapChampion globalmap_champion { get; set; }
+            public Random random { get; set; }
             public StrongholdSkirmish stronghold_skirmish { get; set; }
             public GlobalmapMiddle globalmap_middle { get; set; }
             public StrongholdDefense stronghold_defense { get; set; }
-            public Historical historical { get; set; }
+            public Fallout fallout { get; set; }
             public Team team { get; set; }
             public List<Frag> frags { get; set; }
             public GlobalmapAbsolute globalmap_absolute { get; set; }
+            public GlobalmapChampion globalmap_champion { get; set; }
         }
 
         public class Player
@@ -556,6 +588,8 @@ namespace WGHelper.Forms
             public Data data { get; set; }
         }
 
+        //-----------------------------------------------
+
         string urlRequestPlayersStats = "https://api.worldoftanks.ru/wot/account/info/?";
         string applicationID = "146bc6b8d619f5030ed02cdb5ce759b4";
 
@@ -579,7 +613,7 @@ namespace WGHelper.Forms
 
             string accountID = settings.Element("settings").Element("wg_open_id").Element("account_id").Value;
             string accessToken = settings.Element("settings").Element("wg_open_id").Element("access_token").Value;
-            string parameters = "&extra=statistics.globalmap_absolute%2Cstatistics.globalmap_champion%2Cstatistics.globalmap_middle%2Cstatistics.fallout";
+            string parameters = "&extra=statistics.globalmap_absolute%2Cstatistics.globalmap_champion%2Cstatistics.globalmap_middle%2Cstatistics.fallout%2Cstatistics.random";
 
             WebRequest requestPlayersStats = WebRequest.Create(urlRequestPlayersStats + "application_id=" + applicationID + "&account_id=" + accountID + "&access_token=" + accessToken + parameters);
             WebResponse responsePlayersStats = requestPlayersStats.GetResponse();
@@ -605,8 +639,8 @@ namespace WGHelper.Forms
 
             answer = Regex.Replace(answer, "\"57377\":[0-9]*,", ""); //Костыль до патча 9.18 (26.04)
 
-            //-------------------------------------------------
-
+            //------------------------------------------------- 
+            
             PlayerStatsRootObject playerStats = JsonConvert.DeserializeObject<PlayerStatsRootObject>(answer);
 
             labelNickname.Text = "Nickname: "+playerStats.data.player.nickname;
@@ -844,6 +878,68 @@ namespace WGHelper.Forms
             labelStatisticsGMiddleTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.globalmap_middle.tanking_factor.ToString();
             labelStatisticsGMiddleWins.Text = "Wins: " + playerStats.data.player.statistics.globalmap_middle.wins.ToString();
             labelStatisticsGMiddleXp.Text = "XP: " + playerStats.data.player.statistics.globalmap_middle.xp.ToString();
+            //****************************************
+            labelStatisticsHAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.historical.avg_damage_assisted.ToString();
+            labelStatisticsHAvgDamageAssistedRadio.Text = "Average damage assisted radio: " + playerStats.data.player.statistics.historical.avg_damage_assisted_radio.ToString();
+            labelStatisticsHAvgDamageAssistedTrack.Text = "Average damage assisted track: " + playerStats.data.player.statistics.historical.avg_damage_assisted_track.ToString();
+            labelStatisticsHAvgDamageBlocked.Text = "Average damage blocked: " + playerStats.data.player.statistics.historical.avg_damage_blocked.ToString();
+            labelStatisticsHBattleAverageXp.Text = "Average Xp: " + playerStats.data.player.statistics.historical.battle_avg_xp.ToString();
+            labelStatisticsHBattles.Text = "Battles: " + playerStats.data.player.statistics.historical.battles.ToString();
+            labelStatisticsHCapturePoints.Text = "Capture points: " + playerStats.data.player.statistics.historical.capture_points.ToString();
+            labelStatisticsHDamageDealt.Text = "Damage dealt: " + playerStats.data.player.statistics.historical.damage_dealt.ToString();
+            labelStatisticsHDamageReceived.Text = "Damage received: " + playerStats.data.player.statistics.historical.damage_received.ToString();
+            labelStatisticsHDirectHitsReceived.Text = "Direct hits received: " + playerStats.data.player.statistics.historical.direct_hits_received.ToString();
+            labelStatisticsHDraws.Text = "Draws: " + playerStats.data.player.statistics.historical.draws.ToString();
+            labelStatisticsHDroppedCapturePoints.Text = "Dropped capture points: " + playerStats.data.player.statistics.historical.dropped_capture_points.ToString();
+            labelStatisticsHExplosionHits.Text = "Explosion hits: " + playerStats.data.player.statistics.historical.explosion_hits.ToString();
+            labelStatisticsHExplosionHitsReceived.Text = "Explosion hits received: " + playerStats.data.player.statistics.historical.explosion_hits_received.ToString();
+            labelStatisticsHFrags.Text = "Frags: " + playerStats.data.player.statistics.historical.frags.ToString();
+            labelStatisticsHHits.Text = "Hits: " + playerStats.data.player.statistics.historical.hits.ToString();
+            labelStatisticsHHitsPercents.Text = "Hits percents: " + playerStats.data.player.statistics.historical.hits_percents.ToString();
+            labelStatisticsHLosses.Text = "Losses: " + playerStats.data.player.statistics.historical.losses.ToString();
+            labelStatisticsHMaxDamage.Text = "Max damage: " + playerStats.data.player.statistics.historical.max_damage.ToString();
+            //labelStatisticsHMaxDamageTankId.Text = "Max damage tank id: " + playerStats.data.player.statistics.historical.max_damage_tank_id.ToString();
+            labelStatisticsHMaxFrags.Text = "Max frags: " + playerStats.data.player.statistics.historical.max_frags.ToString();
+            //labelStatisticsHMaxFragsTankId.Text = "Max frags: " + playerStats.data.player.statistics.historical.max_frags_tank_id.ToString();
+            labelStatisticsHMaxXp.Text = "Max Xp: " + playerStats.data.player.statistics.historical.max_xp.ToString();
+            //labelStatisticsHMaxXpTankId.Text = "Max Xp tank id: " + playerStats.data.player.statistics.historical.max_xp_tank_id.ToString();
+            labelStatisticsHNoDamageDirectReceived.Text = "No damage direct received: " + playerStats.data.player.statistics.historical.no_damage_direct_hits_received.ToString();
+            labelStatisticsHPiercings.Text = "Piercings: " + playerStats.data.player.statistics.historical.piercings.ToString();
+            labelStatisticsHShots.Text = "Shots: " + playerStats.data.player.statistics.historical.shots.ToString();
+            labelStatisticsHSpotted.Text = "Spotted: " + playerStats.data.player.statistics.historical.spotted.ToString();
+            labelStatisticsHSurvivedBattles.Text = "Survived battles: " + playerStats.data.player.statistics.historical.survived_battles.ToString();
+            labelStatisticsHTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.historical.tanking_factor.ToString();
+            labelStatisticsHWins.Text = "Wins: " + playerStats.data.player.statistics.historical.wins.ToString();
+            labelStatisticsHXp.Text = "Xp: " + playerStats.data.player.statistics.historical.xp.ToString();
+            //****************************************
+            labelStatisticsRAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.random.avg_damage_assisted.ToString();
+            labelStatisticsRAvgDamageAssistedRadio.Text = "Average damage assisted radio: " + playerStats.data.player.statistics.random.avg_damage_assisted_radio.ToString();
+            labelStatisticsRAvgDamageAssistedTrack.Text = "Average damage assisted track: " + playerStats.data.player.statistics.random.avg_damage_assisted_track.ToString();
+            labelStatisticsRAvgDamageBlocked.Text = "Average damage blocked: " + playerStats.data.player.statistics.random.avg_damage_blocked.ToString();
+            labelStatisticsRBattleAvgXp.Text = "Battle average xp: " + playerStats.data.player.statistics.random.battle_avg_xp.ToString();
+            labelStatisticsRBattles.Text = "Battles: " + playerStats.data.player.statistics.random.battles.ToString();
+            labelStatisticsRCapturePoints.Text = "Capture points: " + playerStats.data.player.statistics.random.capture_points.ToString();
+            labelStatisticsRDamageDealt.Text = "Damage dealt: " + playerStats.data.player.statistics.random.damage_dealt.ToString();
+            labelStatisticsRDamageReceived.Text = "Damage received: " + playerStats.data.player.statistics.random.damage_received.ToString();
+            labelStatisticsRDirectHitsReceived.Text = "Direct hits received: " + playerStats.data.player.statistics.random.direct_hits_received.ToString();
+            labelStatisticsRDraws.Text = "Draws: " + playerStats.data.player.statistics.random.draws.ToString();
+            labelStatisticsRDroppedCapturePoints.Text = "Dropped capture points: " + playerStats.data.player.statistics.random.dropped_capture_points.ToString();
+            labelStatisticsRExplosionHits.Text = "Explosion hits: " + playerStats.data.player.statistics.random.explosion_hits.ToString();
+            labelStatisticsRExplosionHitsReceived.Text = "Explosion hits received: " + playerStats.data.player.statistics.random.explosion_hits_received.ToString();
+            labelStatisticsRFrags.Text = "Frags: " + playerStats.data.player.statistics.random.frags.ToString();
+            labelStatisticsRHits.Text = "Hits: " + playerStats.data.player.statistics.random.hits.ToString();
+            labelStatisticsRHitsPercents.Text = "Hits percents: " + playerStats.data.player.statistics.random.hits_percents.ToString();
+            labelStatisticsRLosses.Text = "Losses: " + playerStats.data.player.statistics.random.losses.ToString();
+            labelStatisticsRNoDamageDirectHitsReceived.Text = "No damage direct hits received: " + playerStats.data.player.statistics.random.no_damage_direct_hits_received.ToString();
+            labelStatisticsRPiercings.Text = "Piercings: " + playerStats.data.player.statistics.random.piercings.ToString();
+            labelStatisticsRPiercingsReceived.Text = "Piercings received: " + playerStats.data.player.statistics.random.piercings_received.ToString();
+            labelStatisticsRShots.Text = "Shots: " + playerStats.data.player.statistics.random.shots.ToString();
+            labelStatisticsRSpotted.Text = "Spotted: " + playerStats.data.player.statistics.random.spotted.ToString();
+            labelStatisticsRSurvivedBattles.Text = "Survived battles: " + playerStats.data.player.statistics.random.survived_battles.ToString();
+            labelStatisticsRTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.random.tanking_factor.ToString();
+            labelStatisticsRWins.Text = "Wins: " + playerStats.data.player.statistics.random.wins.ToString();
+            labelStatisticsRXp.Text = "Xp: " + playerStats.data.player.statistics.random.xp.ToString();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

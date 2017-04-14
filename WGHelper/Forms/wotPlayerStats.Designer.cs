@@ -177,39 +177,37 @@
             this.labelStatisticsFalloutAvgDamageAssisted = new System.Windows.Forms.Label();
             this.labelStatisticsFalloutAvatarFrags = new System.Windows.Forms.Label();
             this.labelStatisticsFalloutAvatarDamageDealt = new System.Windows.Forms.Label();
-            this.labelStatisticsFrags = new System.Windows.Forms.Label();
-            this.labelStatisticsTreesCut = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.labelStatisticsGAbsoluteAvgDamageAssisted = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteAvgDamageBlocked = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteBattleAvgXp = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteBattles = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteCapturePoints = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteDamageDealt = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteDamageReceived = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteDirectHitsReceived = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteDraws = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteDroppedCapturePoints = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteFrags = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteHits = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteHitsPercents = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteLosses = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteNoDamageHitsReceived = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsolutePiercing = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsolutePiercingReceived = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteShots = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteSpotted = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteSurvivedBattles = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteTankingFactor = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteWins = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteXp = new System.Windows.Forms.Label();
-            this.labelStatisticsGAbsoluteExplosionHits = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.labelStatisticsGAbsoluteExplosionHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteExplosionHits = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteXp = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteWins = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteTankingFactor = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteSurvivedBattles = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteSpotted = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteShots = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsolutePiercingReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsolutePiercing = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteNoDamageHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteLosses = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteHitsPercents = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteHits = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteFrags = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteDroppedCapturePoints = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteDraws = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteDirectHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteDamageReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteDamageDealt = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteCapturePoints = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteBattles = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteBattleAvgXp = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteAvgDamageBlocked = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio = new System.Windows.Forms.Label();
+            this.labelStatisticsGAbsoluteAvgDamageAssisted = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.labelStatisticsGChampionExplosionHitsReceived = new System.Windows.Forms.Label();
             this.labelStatisticsGChampionExplosionHits = new System.Windows.Forms.Label();
             this.labelStatisticsGChampionXp = new System.Windows.Forms.Label();
@@ -265,16 +263,81 @@
             this.labelStatisticsGMiddleAvgDamageAssistedTrack = new System.Windows.Forms.Label();
             this.labelStatisticsGMiddleAvgDamageAssistedRadio = new System.Windows.Forms.Label();
             this.labelStatisticsGMiddleAvgDamageAssisted = new System.Windows.Forms.Label();
+            this.labelStatisticsFrags = new System.Windows.Forms.Label();
+            this.labelStatisticsTreesCut = new System.Windows.Forms.Label();
+            this.tabPageRandomStatistics = new System.Windows.Forms.TabPage();
+            this.labelStatisticsHAvgDamageAssisted = new System.Windows.Forms.Label();
+            this.labelStatisticsHAvgDamageAssistedRadio = new System.Windows.Forms.Label();
+            this.labelStatisticsHAvgDamageAssistedTrack = new System.Windows.Forms.Label();
+            this.labelStatisticsHAvgDamageBlocked = new System.Windows.Forms.Label();
+            this.labelStatisticsHBattleAverageXp = new System.Windows.Forms.Label();
+            this.labelStatisticsHBattles = new System.Windows.Forms.Label();
+            this.labelStatisticsHCapturePoints = new System.Windows.Forms.Label();
+            this.labelStatisticsHDamageDealt = new System.Windows.Forms.Label();
+            this.labelStatisticsHDamageReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsHDirectHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsHDraws = new System.Windows.Forms.Label();
+            this.labelStatisticsHDroppedCapturePoints = new System.Windows.Forms.Label();
+            this.labelStatisticsHExplosionHits = new System.Windows.Forms.Label();
+            this.labelStatisticsHExplosionHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsHFrags = new System.Windows.Forms.Label();
+            this.labelStatisticsHHits = new System.Windows.Forms.Label();
+            this.labelStatisticsHHitsPercents = new System.Windows.Forms.Label();
+            this.labelStatisticsHLosses = new System.Windows.Forms.Label();
+            this.labelStatisticsHMaxDamage = new System.Windows.Forms.Label();
+            this.labelStatisticsHMaxDamageTankId = new System.Windows.Forms.Label();
+            this.labelStatisticsHMaxFrags = new System.Windows.Forms.Label();
+            this.labelStatisticsHMaxFragsTankId = new System.Windows.Forms.Label();
+            this.labelStatisticsHMaxXp = new System.Windows.Forms.Label();
+            this.labelStatisticsHMaxXpTankId = new System.Windows.Forms.Label();
+            this.labelStatisticsHNoDamageDirectReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsHPiercings = new System.Windows.Forms.Label();
+            this.labelStatisticsHShots = new System.Windows.Forms.Label();
+            this.labelStatisticsHSpotted = new System.Windows.Forms.Label();
+            this.labelStatisticsHSurvivedBattles = new System.Windows.Forms.Label();
+            this.labelStatisticsHTankingFactor = new System.Windows.Forms.Label();
+            this.labelStatisticsHWins = new System.Windows.Forms.Label();
+            this.labelStatisticsHXp = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.labelStatisticsRAvgDamageAssisted = new System.Windows.Forms.Label();
+            this.labelStatisticsRAvgDamageAssistedRadio = new System.Windows.Forms.Label();
+            this.labelStatisticsRAvgDamageAssistedTrack = new System.Windows.Forms.Label();
+            this.labelStatisticsRAvgDamageBlocked = new System.Windows.Forms.Label();
+            this.labelStatisticsRBattleAvgXp = new System.Windows.Forms.Label();
+            this.labelStatisticsRBattles = new System.Windows.Forms.Label();
+            this.labelStatisticsRCapturePoints = new System.Windows.Forms.Label();
+            this.labelStatisticsRDamageDealt = new System.Windows.Forms.Label();
+            this.labelStatisticsRDamageReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsRDirectHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsRDraws = new System.Windows.Forms.Label();
+            this.labelStatisticsRDroppedCapturePoints = new System.Windows.Forms.Label();
+            this.labelStatisticsRExplosionHits = new System.Windows.Forms.Label();
+            this.labelStatisticsRExplosionHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsRFrags = new System.Windows.Forms.Label();
+            this.labelStatisticsRHits = new System.Windows.Forms.Label();
+            this.labelStatisticsRHitsPercents = new System.Windows.Forms.Label();
+            this.labelStatisticsRLosses = new System.Windows.Forms.Label();
+            this.labelStatisticsRNoDamageDirectHitsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsRPiercings = new System.Windows.Forms.Label();
+            this.labelStatisticsRPiercingsReceived = new System.Windows.Forms.Label();
+            this.labelStatisticsRShots = new System.Windows.Forms.Label();
+            this.labelStatisticsRSpotted = new System.Windows.Forms.Label();
+            this.labelStatisticsRSurvivedBattles = new System.Windows.Forms.Label();
+            this.labelStatisticsRTankingFactor = new System.Windows.Forms.Label();
+            this.labelStatisticsRWins = new System.Windows.Forms.Label();
+            this.labelStatisticsRXp = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageStatisticsa.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            this.tabPageRandomStatistics.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -429,6 +492,8 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPageRandomStatistics);
+            this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Location = new System.Drawing.Point(213, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -474,7 +539,7 @@
             this.tabPageStatisticsa.Location = new System.Drawing.Point(4, 22);
             this.tabPageStatisticsa.Name = "tabPageStatisticsa";
             this.tabPageStatisticsa.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStatisticsa.Size = new System.Drawing.Size(355, 401);
+            this.tabPageStatisticsa.Size = new System.Drawing.Size(501, 502);
             this.tabPageStatisticsa.TabIndex = 0;
             this.tabPageStatisticsa.Text = "AllStatistics";
             this.tabPageStatisticsa.UseVisualStyleBackColor = true;
@@ -808,7 +873,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(355, 401);
+            this.tabPage1.Size = new System.Drawing.Size(501, 502);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "ClanStatistics";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1088,7 +1153,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(355, 401);
+            this.tabPage2.Size = new System.Drawing.Size(501, 502);
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "CompanyStatistics";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1383,7 +1448,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(355, 401);
+            this.tabPage3.Size = new System.Drawing.Size(501, 502);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "FalloutStatistics";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1757,24 +1822,6 @@
             this.labelStatisticsFalloutAvatarDamageDealt.TabIndex = 1;
             this.labelStatisticsFalloutAvatarDamageDealt.Text = "FalloutAvatarDamageDealt";
             // 
-            // labelStatisticsFrags
-            // 
-            this.labelStatisticsFrags.AutoSize = true;
-            this.labelStatisticsFrags.Location = new System.Drawing.Point(12, 273);
-            this.labelStatisticsFrags.Name = "labelStatisticsFrags";
-            this.labelStatisticsFrags.Size = new System.Drawing.Size(97, 13);
-            this.labelStatisticsFrags.TabIndex = 0;
-            this.labelStatisticsFrags.Text = "labelStatisticsFrags";
-            // 
-            // labelStatisticsTreesCut
-            // 
-            this.labelStatisticsTreesCut.AutoSize = true;
-            this.labelStatisticsTreesCut.Location = new System.Drawing.Point(12, 286);
-            this.labelStatisticsTreesCut.Name = "labelStatisticsTreesCut";
-            this.labelStatisticsTreesCut.Size = new System.Drawing.Size(114, 13);
-            this.labelStatisticsTreesCut.TabIndex = 1;
-            this.labelStatisticsTreesCut.Text = "labelStatisticsTreesCut";
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.tabControl2);
@@ -1786,42 +1833,16 @@
             this.tabPage4.Text = "GlobalMapStatistics";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
+            // tabControl2
             // 
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionExplosionHitsReceived);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionExplosionHits);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionXp);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionWins);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionTankingFactor);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionSurvivedBattles);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionSpotted);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionShots);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionPiercingReceived);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionPiercing);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionNoDamageHitsReceived);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionLosses);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionHitsPercents);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionHits);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionFrags);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionDroppedCapturePoints);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionDraws);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionDirectHitsReceived);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionDamageReceived);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionDamageDealt);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionCapturePoints);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionBattles);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionBattleAvgXp);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionAvgDamageBlocked);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionAvgDamageAssistedTrack);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionAvgDamageAssistedRadio);
-            this.tabPage6.Controls.Add(this.labelStatisticsGChampionAvgDamageAssisted);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(481, 467);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "GlobalmapChampion";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.tabControl2.Controls.Add(this.tabPage5);
+            this.tabControl2.Controls.Add(this.tabPage6);
+            this.tabControl2.Controls.Add(this.tabPage7);
+            this.tabControl2.Location = new System.Drawing.Point(6, 3);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(489, 493);
+            this.tabControl2.TabIndex = 0;
             // 
             // tabPage5
             // 
@@ -1860,241 +1881,14 @@
             this.tabPage5.Text = "GlobalmapAbsolute";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // tabControl2
+            // labelStatisticsGAbsoluteExplosionHitsReceived
             // 
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Controls.Add(this.tabPage7);
-            this.tabControl2.Location = new System.Drawing.Point(6, 3);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(489, 493);
-            this.tabControl2.TabIndex = 0;
-            // 
-            // labelStatisticsGAbsoluteAvgDamageAssisted
-            // 
-            this.labelStatisticsGAbsoluteAvgDamageAssisted.AutoSize = true;
-            this.labelStatisticsGAbsoluteAvgDamageAssisted.Location = new System.Drawing.Point(6, 3);
-            this.labelStatisticsGAbsoluteAvgDamageAssisted.Name = "labelStatisticsGAbsoluteAvgDamageAssisted";
-            this.labelStatisticsGAbsoluteAvgDamageAssisted.Size = new System.Drawing.Size(154, 13);
-            this.labelStatisticsGAbsoluteAvgDamageAssisted.TabIndex = 0;
-            this.labelStatisticsGAbsoluteAvgDamageAssisted.Text = "GAbsoluteAvgDamageAssisted";
-            // 
-            // labelStatisticsGAbsoluteAvgDamageAssistedRadio
-            // 
-            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.AutoSize = true;
-            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.Location = new System.Drawing.Point(6, 16);
-            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.Name = "labelStatisticsGAbsoluteAvgDamageAssistedRadio";
-            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.Size = new System.Drawing.Size(182, 13);
-            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.TabIndex = 1;
-            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.Text = "GAbsoluteAvgDamageAssistedRadio";
-            // 
-            // labelStatisticsGAbsoluteAvgDamageAssistedTrack
-            // 
-            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.AutoSize = true;
-            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.Location = new System.Drawing.Point(6, 29);
-            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.Name = "labelStatisticsGAbsoluteAvgDamageAssistedTrack";
-            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.Size = new System.Drawing.Size(182, 13);
-            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.TabIndex = 2;
-            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.Text = "GAbsoluteAvgDamageAssistedTrack";
-            // 
-            // labelStatisticsGAbsoluteAvgDamageBlocked
-            // 
-            this.labelStatisticsGAbsoluteAvgDamageBlocked.AutoSize = true;
-            this.labelStatisticsGAbsoluteAvgDamageBlocked.Location = new System.Drawing.Point(6, 42);
-            this.labelStatisticsGAbsoluteAvgDamageBlocked.Name = "labelStatisticsGAbsoluteAvgDamageBlocked";
-            this.labelStatisticsGAbsoluteAvgDamageBlocked.Size = new System.Drawing.Size(154, 13);
-            this.labelStatisticsGAbsoluteAvgDamageBlocked.TabIndex = 3;
-            this.labelStatisticsGAbsoluteAvgDamageBlocked.Text = "GAbsoluteAvgDamageBlocked";
-            // 
-            // labelStatisticsGAbsoluteBattleAvgXp
-            // 
-            this.labelStatisticsGAbsoluteBattleAvgXp.AutoSize = true;
-            this.labelStatisticsGAbsoluteBattleAvgXp.Location = new System.Drawing.Point(6, 55);
-            this.labelStatisticsGAbsoluteBattleAvgXp.Name = "labelStatisticsGAbsoluteBattleAvgXp";
-            this.labelStatisticsGAbsoluteBattleAvgXp.Size = new System.Drawing.Size(115, 13);
-            this.labelStatisticsGAbsoluteBattleAvgXp.TabIndex = 4;
-            this.labelStatisticsGAbsoluteBattleAvgXp.Text = "GAbsoluteBattleAvgXp";
-            // 
-            // labelStatisticsGAbsoluteBattles
-            // 
-            this.labelStatisticsGAbsoluteBattles.AutoSize = true;
-            this.labelStatisticsGAbsoluteBattles.Location = new System.Drawing.Point(6, 68);
-            this.labelStatisticsGAbsoluteBattles.Name = "labelStatisticsGAbsoluteBattles";
-            this.labelStatisticsGAbsoluteBattles.Size = new System.Drawing.Size(88, 13);
-            this.labelStatisticsGAbsoluteBattles.TabIndex = 5;
-            this.labelStatisticsGAbsoluteBattles.Text = "GAbsoluteBattles";
-            // 
-            // labelStatisticsGAbsoluteCapturePoints
-            // 
-            this.labelStatisticsGAbsoluteCapturePoints.AutoSize = true;
-            this.labelStatisticsGAbsoluteCapturePoints.Location = new System.Drawing.Point(6, 81);
-            this.labelStatisticsGAbsoluteCapturePoints.Name = "labelStatisticsGAbsoluteCapturePoints";
-            this.labelStatisticsGAbsoluteCapturePoints.Size = new System.Drawing.Size(122, 13);
-            this.labelStatisticsGAbsoluteCapturePoints.TabIndex = 6;
-            this.labelStatisticsGAbsoluteCapturePoints.Text = "GAbsoluteCapturePoints";
-            // 
-            // labelStatisticsGAbsoluteDamageDealt
-            // 
-            this.labelStatisticsGAbsoluteDamageDealt.AutoSize = true;
-            this.labelStatisticsGAbsoluteDamageDealt.Location = new System.Drawing.Point(6, 94);
-            this.labelStatisticsGAbsoluteDamageDealt.Name = "labelStatisticsGAbsoluteDamageDealt";
-            this.labelStatisticsGAbsoluteDamageDealt.Size = new System.Drawing.Size(121, 13);
-            this.labelStatisticsGAbsoluteDamageDealt.TabIndex = 7;
-            this.labelStatisticsGAbsoluteDamageDealt.Text = "GAbsoluteDamageDealt";
-            // 
-            // labelStatisticsGAbsoluteDamageReceived
-            // 
-            this.labelStatisticsGAbsoluteDamageReceived.AutoSize = true;
-            this.labelStatisticsGAbsoluteDamageReceived.Location = new System.Drawing.Point(6, 107);
-            this.labelStatisticsGAbsoluteDamageReceived.Name = "labelStatisticsGAbsoluteDamageReceived";
-            this.labelStatisticsGAbsoluteDamageReceived.Size = new System.Drawing.Size(142, 13);
-            this.labelStatisticsGAbsoluteDamageReceived.TabIndex = 8;
-            this.labelStatisticsGAbsoluteDamageReceived.Text = "GAbsoluteDamageReceived";
-            // 
-            // labelStatisticsGAbsoluteDirectHitsReceived
-            // 
-            this.labelStatisticsGAbsoluteDirectHitsReceived.AutoSize = true;
-            this.labelStatisticsGAbsoluteDirectHitsReceived.Location = new System.Drawing.Point(6, 120);
-            this.labelStatisticsGAbsoluteDirectHitsReceived.Name = "labelStatisticsGAbsoluteDirectHitsReceived";
-            this.labelStatisticsGAbsoluteDirectHitsReceived.Size = new System.Drawing.Size(148, 13);
-            this.labelStatisticsGAbsoluteDirectHitsReceived.TabIndex = 9;
-            this.labelStatisticsGAbsoluteDirectHitsReceived.Text = "GAbsoluteDirectHitsReceived";
-            // 
-            // labelStatisticsGAbsoluteDraws
-            // 
-            this.labelStatisticsGAbsoluteDraws.AutoSize = true;
-            this.labelStatisticsGAbsoluteDraws.Location = new System.Drawing.Point(6, 133);
-            this.labelStatisticsGAbsoluteDraws.Name = "labelStatisticsGAbsoluteDraws";
-            this.labelStatisticsGAbsoluteDraws.Size = new System.Drawing.Size(86, 13);
-            this.labelStatisticsGAbsoluteDraws.TabIndex = 10;
-            this.labelStatisticsGAbsoluteDraws.Text = "GAbsoluteDraws";
-            // 
-            // labelStatisticsGAbsoluteDroppedCapturePoints
-            // 
-            this.labelStatisticsGAbsoluteDroppedCapturePoints.AutoSize = true;
-            this.labelStatisticsGAbsoluteDroppedCapturePoints.Location = new System.Drawing.Point(6, 146);
-            this.labelStatisticsGAbsoluteDroppedCapturePoints.Name = "labelStatisticsGAbsoluteDroppedCapturePoints";
-            this.labelStatisticsGAbsoluteDroppedCapturePoints.Size = new System.Drawing.Size(163, 13);
-            this.labelStatisticsGAbsoluteDroppedCapturePoints.TabIndex = 11;
-            this.labelStatisticsGAbsoluteDroppedCapturePoints.Text = "GAbsoluteDroppedCapturePoints";
-            // 
-            // labelStatisticsGAbsoluteFrags
-            // 
-            this.labelStatisticsGAbsoluteFrags.AutoSize = true;
-            this.labelStatisticsGAbsoluteFrags.Location = new System.Drawing.Point(6, 185);
-            this.labelStatisticsGAbsoluteFrags.Name = "labelStatisticsGAbsoluteFrags";
-            this.labelStatisticsGAbsoluteFrags.Size = new System.Drawing.Size(82, 13);
-            this.labelStatisticsGAbsoluteFrags.TabIndex = 12;
-            this.labelStatisticsGAbsoluteFrags.Text = "GAbsoluteFrags";
-            // 
-            // labelStatisticsGAbsoluteHits
-            // 
-            this.labelStatisticsGAbsoluteHits.AutoSize = true;
-            this.labelStatisticsGAbsoluteHits.Location = new System.Drawing.Point(6, 198);
-            this.labelStatisticsGAbsoluteHits.Name = "labelStatisticsGAbsoluteHits";
-            this.labelStatisticsGAbsoluteHits.Size = new System.Drawing.Size(74, 13);
-            this.labelStatisticsGAbsoluteHits.TabIndex = 13;
-            this.labelStatisticsGAbsoluteHits.Text = "GAbsoluteHits";
-            // 
-            // labelStatisticsGAbsoluteHitsPercents
-            // 
-            this.labelStatisticsGAbsoluteHitsPercents.AutoSize = true;
-            this.labelStatisticsGAbsoluteHitsPercents.Location = new System.Drawing.Point(6, 211);
-            this.labelStatisticsGAbsoluteHitsPercents.Name = "labelStatisticsGAbsoluteHitsPercents";
-            this.labelStatisticsGAbsoluteHitsPercents.Size = new System.Drawing.Size(116, 13);
-            this.labelStatisticsGAbsoluteHitsPercents.TabIndex = 14;
-            this.labelStatisticsGAbsoluteHitsPercents.Text = "GAbsoluteHitsPercents";
-            // 
-            // labelStatisticsGAbsoluteLosses
-            // 
-            this.labelStatisticsGAbsoluteLosses.AutoSize = true;
-            this.labelStatisticsGAbsoluteLosses.Location = new System.Drawing.Point(6, 224);
-            this.labelStatisticsGAbsoluteLosses.Name = "labelStatisticsGAbsoluteLosses";
-            this.labelStatisticsGAbsoluteLosses.Size = new System.Drawing.Size(89, 13);
-            this.labelStatisticsGAbsoluteLosses.TabIndex = 15;
-            this.labelStatisticsGAbsoluteLosses.Text = "GAbsoluteLosses";
-            // 
-            // labelStatisticsGAbsoluteNoDamageHitsReceived
-            // 
-            this.labelStatisticsGAbsoluteNoDamageHitsReceived.AutoSize = true;
-            this.labelStatisticsGAbsoluteNoDamageHitsReceived.Location = new System.Drawing.Point(6, 237);
-            this.labelStatisticsGAbsoluteNoDamageHitsReceived.Name = "labelStatisticsGAbsoluteNoDamageHitsReceived";
-            this.labelStatisticsGAbsoluteNoDamageHitsReceived.Size = new System.Drawing.Size(174, 13);
-            this.labelStatisticsGAbsoluteNoDamageHitsReceived.TabIndex = 16;
-            this.labelStatisticsGAbsoluteNoDamageHitsReceived.Text = "GAbsoluteNoDamageHitsReceived";
-            // 
-            // labelStatisticsGAbsolutePiercing
-            // 
-            this.labelStatisticsGAbsolutePiercing.AutoSize = true;
-            this.labelStatisticsGAbsolutePiercing.Location = new System.Drawing.Point(6, 250);
-            this.labelStatisticsGAbsolutePiercing.Name = "labelStatisticsGAbsolutePiercing";
-            this.labelStatisticsGAbsolutePiercing.Size = new System.Drawing.Size(94, 13);
-            this.labelStatisticsGAbsolutePiercing.TabIndex = 17;
-            this.labelStatisticsGAbsolutePiercing.Text = "GAbsolutePiercing";
-            // 
-            // labelStatisticsGAbsolutePiercingReceived
-            // 
-            this.labelStatisticsGAbsolutePiercingReceived.AutoSize = true;
-            this.labelStatisticsGAbsolutePiercingReceived.Location = new System.Drawing.Point(6, 263);
-            this.labelStatisticsGAbsolutePiercingReceived.Name = "labelStatisticsGAbsolutePiercingReceived";
-            this.labelStatisticsGAbsolutePiercingReceived.Size = new System.Drawing.Size(140, 13);
-            this.labelStatisticsGAbsolutePiercingReceived.TabIndex = 18;
-            this.labelStatisticsGAbsolutePiercingReceived.Text = "GAbsolutePiercingReceived";
-            // 
-            // labelStatisticsGAbsoluteShots
-            // 
-            this.labelStatisticsGAbsoluteShots.AutoSize = true;
-            this.labelStatisticsGAbsoluteShots.Location = new System.Drawing.Point(6, 276);
-            this.labelStatisticsGAbsoluteShots.Name = "labelStatisticsGAbsoluteShots";
-            this.labelStatisticsGAbsoluteShots.Size = new System.Drawing.Size(83, 13);
-            this.labelStatisticsGAbsoluteShots.TabIndex = 19;
-            this.labelStatisticsGAbsoluteShots.Text = "GAbsoluteShots";
-            // 
-            // labelStatisticsGAbsoluteSpotted
-            // 
-            this.labelStatisticsGAbsoluteSpotted.AutoSize = true;
-            this.labelStatisticsGAbsoluteSpotted.Location = new System.Drawing.Point(6, 289);
-            this.labelStatisticsGAbsoluteSpotted.Name = "labelStatisticsGAbsoluteSpotted";
-            this.labelStatisticsGAbsoluteSpotted.Size = new System.Drawing.Size(93, 13);
-            this.labelStatisticsGAbsoluteSpotted.TabIndex = 20;
-            this.labelStatisticsGAbsoluteSpotted.Text = "GAbsoluteSpotted";
-            // 
-            // labelStatisticsGAbsoluteSurvivedBattles
-            // 
-            this.labelStatisticsGAbsoluteSurvivedBattles.AutoSize = true;
-            this.labelStatisticsGAbsoluteSurvivedBattles.Location = new System.Drawing.Point(6, 302);
-            this.labelStatisticsGAbsoluteSurvivedBattles.Name = "labelStatisticsGAbsoluteSurvivedBattles";
-            this.labelStatisticsGAbsoluteSurvivedBattles.Size = new System.Drawing.Size(130, 13);
-            this.labelStatisticsGAbsoluteSurvivedBattles.TabIndex = 21;
-            this.labelStatisticsGAbsoluteSurvivedBattles.Text = "GAbsoluteSurvivedBattles";
-            // 
-            // labelStatisticsGAbsoluteTankingFactor
-            // 
-            this.labelStatisticsGAbsoluteTankingFactor.AutoSize = true;
-            this.labelStatisticsGAbsoluteTankingFactor.Location = new System.Drawing.Point(6, 315);
-            this.labelStatisticsGAbsoluteTankingFactor.Name = "labelStatisticsGAbsoluteTankingFactor";
-            this.labelStatisticsGAbsoluteTankingFactor.Size = new System.Drawing.Size(125, 13);
-            this.labelStatisticsGAbsoluteTankingFactor.TabIndex = 22;
-            this.labelStatisticsGAbsoluteTankingFactor.Text = "GAbsoluteTankingFactor";
-            // 
-            // labelStatisticsGAbsoluteWins
-            // 
-            this.labelStatisticsGAbsoluteWins.AutoSize = true;
-            this.labelStatisticsGAbsoluteWins.Location = new System.Drawing.Point(6, 328);
-            this.labelStatisticsGAbsoluteWins.Name = "labelStatisticsGAbsoluteWins";
-            this.labelStatisticsGAbsoluteWins.Size = new System.Drawing.Size(80, 13);
-            this.labelStatisticsGAbsoluteWins.TabIndex = 23;
-            this.labelStatisticsGAbsoluteWins.Text = "GAbsoluteWins";
-            // 
-            // labelStatisticsGAbsoluteXp
-            // 
-            this.labelStatisticsGAbsoluteXp.AutoSize = true;
-            this.labelStatisticsGAbsoluteXp.Location = new System.Drawing.Point(6, 341);
-            this.labelStatisticsGAbsoluteXp.Name = "labelStatisticsGAbsoluteXp";
-            this.labelStatisticsGAbsoluteXp.Size = new System.Drawing.Size(69, 13);
-            this.labelStatisticsGAbsoluteXp.TabIndex = 24;
-            this.labelStatisticsGAbsoluteXp.Text = "GAbsoluteXp";
+            this.labelStatisticsGAbsoluteExplosionHitsReceived.AutoSize = true;
+            this.labelStatisticsGAbsoluteExplosionHitsReceived.Location = new System.Drawing.Point(6, 172);
+            this.labelStatisticsGAbsoluteExplosionHitsReceived.Name = "labelStatisticsGAbsoluteExplosionHitsReceived";
+            this.labelStatisticsGAbsoluteExplosionHitsReceived.Size = new System.Drawing.Size(165, 13);
+            this.labelStatisticsGAbsoluteExplosionHitsReceived.TabIndex = 26;
+            this.labelStatisticsGAbsoluteExplosionHitsReceived.Text = "GAbsoluteExplosionHitsReceived";
             // 
             // labelStatisticsGAbsoluteExplosionHits
             // 
@@ -2105,14 +1899,267 @@
             this.labelStatisticsGAbsoluteExplosionHits.TabIndex = 25;
             this.labelStatisticsGAbsoluteExplosionHits.Text = "GAbsoluteExplosionHits";
             // 
-            // labelStatisticsGAbsoluteExplosionHitsReceived
+            // labelStatisticsGAbsoluteXp
             // 
-            this.labelStatisticsGAbsoluteExplosionHitsReceived.AutoSize = true;
-            this.labelStatisticsGAbsoluteExplosionHitsReceived.Location = new System.Drawing.Point(6, 172);
-            this.labelStatisticsGAbsoluteExplosionHitsReceived.Name = "labelStatisticsGAbsoluteExplosionHitsReceived";
-            this.labelStatisticsGAbsoluteExplosionHitsReceived.Size = new System.Drawing.Size(165, 13);
-            this.labelStatisticsGAbsoluteExplosionHitsReceived.TabIndex = 26;
-            this.labelStatisticsGAbsoluteExplosionHitsReceived.Text = "GAbsoluteExplosionHitsReceived";
+            this.labelStatisticsGAbsoluteXp.AutoSize = true;
+            this.labelStatisticsGAbsoluteXp.Location = new System.Drawing.Point(6, 341);
+            this.labelStatisticsGAbsoluteXp.Name = "labelStatisticsGAbsoluteXp";
+            this.labelStatisticsGAbsoluteXp.Size = new System.Drawing.Size(69, 13);
+            this.labelStatisticsGAbsoluteXp.TabIndex = 24;
+            this.labelStatisticsGAbsoluteXp.Text = "GAbsoluteXp";
+            // 
+            // labelStatisticsGAbsoluteWins
+            // 
+            this.labelStatisticsGAbsoluteWins.AutoSize = true;
+            this.labelStatisticsGAbsoluteWins.Location = new System.Drawing.Point(6, 328);
+            this.labelStatisticsGAbsoluteWins.Name = "labelStatisticsGAbsoluteWins";
+            this.labelStatisticsGAbsoluteWins.Size = new System.Drawing.Size(80, 13);
+            this.labelStatisticsGAbsoluteWins.TabIndex = 23;
+            this.labelStatisticsGAbsoluteWins.Text = "GAbsoluteWins";
+            // 
+            // labelStatisticsGAbsoluteTankingFactor
+            // 
+            this.labelStatisticsGAbsoluteTankingFactor.AutoSize = true;
+            this.labelStatisticsGAbsoluteTankingFactor.Location = new System.Drawing.Point(6, 315);
+            this.labelStatisticsGAbsoluteTankingFactor.Name = "labelStatisticsGAbsoluteTankingFactor";
+            this.labelStatisticsGAbsoluteTankingFactor.Size = new System.Drawing.Size(125, 13);
+            this.labelStatisticsGAbsoluteTankingFactor.TabIndex = 22;
+            this.labelStatisticsGAbsoluteTankingFactor.Text = "GAbsoluteTankingFactor";
+            // 
+            // labelStatisticsGAbsoluteSurvivedBattles
+            // 
+            this.labelStatisticsGAbsoluteSurvivedBattles.AutoSize = true;
+            this.labelStatisticsGAbsoluteSurvivedBattles.Location = new System.Drawing.Point(6, 302);
+            this.labelStatisticsGAbsoluteSurvivedBattles.Name = "labelStatisticsGAbsoluteSurvivedBattles";
+            this.labelStatisticsGAbsoluteSurvivedBattles.Size = new System.Drawing.Size(130, 13);
+            this.labelStatisticsGAbsoluteSurvivedBattles.TabIndex = 21;
+            this.labelStatisticsGAbsoluteSurvivedBattles.Text = "GAbsoluteSurvivedBattles";
+            // 
+            // labelStatisticsGAbsoluteSpotted
+            // 
+            this.labelStatisticsGAbsoluteSpotted.AutoSize = true;
+            this.labelStatisticsGAbsoluteSpotted.Location = new System.Drawing.Point(6, 289);
+            this.labelStatisticsGAbsoluteSpotted.Name = "labelStatisticsGAbsoluteSpotted";
+            this.labelStatisticsGAbsoluteSpotted.Size = new System.Drawing.Size(93, 13);
+            this.labelStatisticsGAbsoluteSpotted.TabIndex = 20;
+            this.labelStatisticsGAbsoluteSpotted.Text = "GAbsoluteSpotted";
+            // 
+            // labelStatisticsGAbsoluteShots
+            // 
+            this.labelStatisticsGAbsoluteShots.AutoSize = true;
+            this.labelStatisticsGAbsoluteShots.Location = new System.Drawing.Point(6, 276);
+            this.labelStatisticsGAbsoluteShots.Name = "labelStatisticsGAbsoluteShots";
+            this.labelStatisticsGAbsoluteShots.Size = new System.Drawing.Size(83, 13);
+            this.labelStatisticsGAbsoluteShots.TabIndex = 19;
+            this.labelStatisticsGAbsoluteShots.Text = "GAbsoluteShots";
+            // 
+            // labelStatisticsGAbsolutePiercingReceived
+            // 
+            this.labelStatisticsGAbsolutePiercingReceived.AutoSize = true;
+            this.labelStatisticsGAbsolutePiercingReceived.Location = new System.Drawing.Point(6, 263);
+            this.labelStatisticsGAbsolutePiercingReceived.Name = "labelStatisticsGAbsolutePiercingReceived";
+            this.labelStatisticsGAbsolutePiercingReceived.Size = new System.Drawing.Size(140, 13);
+            this.labelStatisticsGAbsolutePiercingReceived.TabIndex = 18;
+            this.labelStatisticsGAbsolutePiercingReceived.Text = "GAbsolutePiercingReceived";
+            // 
+            // labelStatisticsGAbsolutePiercing
+            // 
+            this.labelStatisticsGAbsolutePiercing.AutoSize = true;
+            this.labelStatisticsGAbsolutePiercing.Location = new System.Drawing.Point(6, 250);
+            this.labelStatisticsGAbsolutePiercing.Name = "labelStatisticsGAbsolutePiercing";
+            this.labelStatisticsGAbsolutePiercing.Size = new System.Drawing.Size(94, 13);
+            this.labelStatisticsGAbsolutePiercing.TabIndex = 17;
+            this.labelStatisticsGAbsolutePiercing.Text = "GAbsolutePiercing";
+            // 
+            // labelStatisticsGAbsoluteNoDamageHitsReceived
+            // 
+            this.labelStatisticsGAbsoluteNoDamageHitsReceived.AutoSize = true;
+            this.labelStatisticsGAbsoluteNoDamageHitsReceived.Location = new System.Drawing.Point(6, 237);
+            this.labelStatisticsGAbsoluteNoDamageHitsReceived.Name = "labelStatisticsGAbsoluteNoDamageHitsReceived";
+            this.labelStatisticsGAbsoluteNoDamageHitsReceived.Size = new System.Drawing.Size(174, 13);
+            this.labelStatisticsGAbsoluteNoDamageHitsReceived.TabIndex = 16;
+            this.labelStatisticsGAbsoluteNoDamageHitsReceived.Text = "GAbsoluteNoDamageHitsReceived";
+            // 
+            // labelStatisticsGAbsoluteLosses
+            // 
+            this.labelStatisticsGAbsoluteLosses.AutoSize = true;
+            this.labelStatisticsGAbsoluteLosses.Location = new System.Drawing.Point(6, 224);
+            this.labelStatisticsGAbsoluteLosses.Name = "labelStatisticsGAbsoluteLosses";
+            this.labelStatisticsGAbsoluteLosses.Size = new System.Drawing.Size(89, 13);
+            this.labelStatisticsGAbsoluteLosses.TabIndex = 15;
+            this.labelStatisticsGAbsoluteLosses.Text = "GAbsoluteLosses";
+            // 
+            // labelStatisticsGAbsoluteHitsPercents
+            // 
+            this.labelStatisticsGAbsoluteHitsPercents.AutoSize = true;
+            this.labelStatisticsGAbsoluteHitsPercents.Location = new System.Drawing.Point(6, 211);
+            this.labelStatisticsGAbsoluteHitsPercents.Name = "labelStatisticsGAbsoluteHitsPercents";
+            this.labelStatisticsGAbsoluteHitsPercents.Size = new System.Drawing.Size(116, 13);
+            this.labelStatisticsGAbsoluteHitsPercents.TabIndex = 14;
+            this.labelStatisticsGAbsoluteHitsPercents.Text = "GAbsoluteHitsPercents";
+            // 
+            // labelStatisticsGAbsoluteHits
+            // 
+            this.labelStatisticsGAbsoluteHits.AutoSize = true;
+            this.labelStatisticsGAbsoluteHits.Location = new System.Drawing.Point(6, 198);
+            this.labelStatisticsGAbsoluteHits.Name = "labelStatisticsGAbsoluteHits";
+            this.labelStatisticsGAbsoluteHits.Size = new System.Drawing.Size(74, 13);
+            this.labelStatisticsGAbsoluteHits.TabIndex = 13;
+            this.labelStatisticsGAbsoluteHits.Text = "GAbsoluteHits";
+            // 
+            // labelStatisticsGAbsoluteFrags
+            // 
+            this.labelStatisticsGAbsoluteFrags.AutoSize = true;
+            this.labelStatisticsGAbsoluteFrags.Location = new System.Drawing.Point(6, 185);
+            this.labelStatisticsGAbsoluteFrags.Name = "labelStatisticsGAbsoluteFrags";
+            this.labelStatisticsGAbsoluteFrags.Size = new System.Drawing.Size(82, 13);
+            this.labelStatisticsGAbsoluteFrags.TabIndex = 12;
+            this.labelStatisticsGAbsoluteFrags.Text = "GAbsoluteFrags";
+            // 
+            // labelStatisticsGAbsoluteDroppedCapturePoints
+            // 
+            this.labelStatisticsGAbsoluteDroppedCapturePoints.AutoSize = true;
+            this.labelStatisticsGAbsoluteDroppedCapturePoints.Location = new System.Drawing.Point(6, 146);
+            this.labelStatisticsGAbsoluteDroppedCapturePoints.Name = "labelStatisticsGAbsoluteDroppedCapturePoints";
+            this.labelStatisticsGAbsoluteDroppedCapturePoints.Size = new System.Drawing.Size(163, 13);
+            this.labelStatisticsGAbsoluteDroppedCapturePoints.TabIndex = 11;
+            this.labelStatisticsGAbsoluteDroppedCapturePoints.Text = "GAbsoluteDroppedCapturePoints";
+            // 
+            // labelStatisticsGAbsoluteDraws
+            // 
+            this.labelStatisticsGAbsoluteDraws.AutoSize = true;
+            this.labelStatisticsGAbsoluteDraws.Location = new System.Drawing.Point(6, 133);
+            this.labelStatisticsGAbsoluteDraws.Name = "labelStatisticsGAbsoluteDraws";
+            this.labelStatisticsGAbsoluteDraws.Size = new System.Drawing.Size(86, 13);
+            this.labelStatisticsGAbsoluteDraws.TabIndex = 10;
+            this.labelStatisticsGAbsoluteDraws.Text = "GAbsoluteDraws";
+            // 
+            // labelStatisticsGAbsoluteDirectHitsReceived
+            // 
+            this.labelStatisticsGAbsoluteDirectHitsReceived.AutoSize = true;
+            this.labelStatisticsGAbsoluteDirectHitsReceived.Location = new System.Drawing.Point(6, 120);
+            this.labelStatisticsGAbsoluteDirectHitsReceived.Name = "labelStatisticsGAbsoluteDirectHitsReceived";
+            this.labelStatisticsGAbsoluteDirectHitsReceived.Size = new System.Drawing.Size(148, 13);
+            this.labelStatisticsGAbsoluteDirectHitsReceived.TabIndex = 9;
+            this.labelStatisticsGAbsoluteDirectHitsReceived.Text = "GAbsoluteDirectHitsReceived";
+            // 
+            // labelStatisticsGAbsoluteDamageReceived
+            // 
+            this.labelStatisticsGAbsoluteDamageReceived.AutoSize = true;
+            this.labelStatisticsGAbsoluteDamageReceived.Location = new System.Drawing.Point(6, 107);
+            this.labelStatisticsGAbsoluteDamageReceived.Name = "labelStatisticsGAbsoluteDamageReceived";
+            this.labelStatisticsGAbsoluteDamageReceived.Size = new System.Drawing.Size(142, 13);
+            this.labelStatisticsGAbsoluteDamageReceived.TabIndex = 8;
+            this.labelStatisticsGAbsoluteDamageReceived.Text = "GAbsoluteDamageReceived";
+            // 
+            // labelStatisticsGAbsoluteDamageDealt
+            // 
+            this.labelStatisticsGAbsoluteDamageDealt.AutoSize = true;
+            this.labelStatisticsGAbsoluteDamageDealt.Location = new System.Drawing.Point(6, 94);
+            this.labelStatisticsGAbsoluteDamageDealt.Name = "labelStatisticsGAbsoluteDamageDealt";
+            this.labelStatisticsGAbsoluteDamageDealt.Size = new System.Drawing.Size(121, 13);
+            this.labelStatisticsGAbsoluteDamageDealt.TabIndex = 7;
+            this.labelStatisticsGAbsoluteDamageDealt.Text = "GAbsoluteDamageDealt";
+            // 
+            // labelStatisticsGAbsoluteCapturePoints
+            // 
+            this.labelStatisticsGAbsoluteCapturePoints.AutoSize = true;
+            this.labelStatisticsGAbsoluteCapturePoints.Location = new System.Drawing.Point(6, 81);
+            this.labelStatisticsGAbsoluteCapturePoints.Name = "labelStatisticsGAbsoluteCapturePoints";
+            this.labelStatisticsGAbsoluteCapturePoints.Size = new System.Drawing.Size(122, 13);
+            this.labelStatisticsGAbsoluteCapturePoints.TabIndex = 6;
+            this.labelStatisticsGAbsoluteCapturePoints.Text = "GAbsoluteCapturePoints";
+            // 
+            // labelStatisticsGAbsoluteBattles
+            // 
+            this.labelStatisticsGAbsoluteBattles.AutoSize = true;
+            this.labelStatisticsGAbsoluteBattles.Location = new System.Drawing.Point(6, 68);
+            this.labelStatisticsGAbsoluteBattles.Name = "labelStatisticsGAbsoluteBattles";
+            this.labelStatisticsGAbsoluteBattles.Size = new System.Drawing.Size(88, 13);
+            this.labelStatisticsGAbsoluteBattles.TabIndex = 5;
+            this.labelStatisticsGAbsoluteBattles.Text = "GAbsoluteBattles";
+            // 
+            // labelStatisticsGAbsoluteBattleAvgXp
+            // 
+            this.labelStatisticsGAbsoluteBattleAvgXp.AutoSize = true;
+            this.labelStatisticsGAbsoluteBattleAvgXp.Location = new System.Drawing.Point(6, 55);
+            this.labelStatisticsGAbsoluteBattleAvgXp.Name = "labelStatisticsGAbsoluteBattleAvgXp";
+            this.labelStatisticsGAbsoluteBattleAvgXp.Size = new System.Drawing.Size(115, 13);
+            this.labelStatisticsGAbsoluteBattleAvgXp.TabIndex = 4;
+            this.labelStatisticsGAbsoluteBattleAvgXp.Text = "GAbsoluteBattleAvgXp";
+            // 
+            // labelStatisticsGAbsoluteAvgDamageBlocked
+            // 
+            this.labelStatisticsGAbsoluteAvgDamageBlocked.AutoSize = true;
+            this.labelStatisticsGAbsoluteAvgDamageBlocked.Location = new System.Drawing.Point(6, 42);
+            this.labelStatisticsGAbsoluteAvgDamageBlocked.Name = "labelStatisticsGAbsoluteAvgDamageBlocked";
+            this.labelStatisticsGAbsoluteAvgDamageBlocked.Size = new System.Drawing.Size(154, 13);
+            this.labelStatisticsGAbsoluteAvgDamageBlocked.TabIndex = 3;
+            this.labelStatisticsGAbsoluteAvgDamageBlocked.Text = "GAbsoluteAvgDamageBlocked";
+            // 
+            // labelStatisticsGAbsoluteAvgDamageAssistedTrack
+            // 
+            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.AutoSize = true;
+            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.Location = new System.Drawing.Point(6, 29);
+            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.Name = "labelStatisticsGAbsoluteAvgDamageAssistedTrack";
+            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.Size = new System.Drawing.Size(182, 13);
+            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.TabIndex = 2;
+            this.labelStatisticsGAbsoluteAvgDamageAssistedTrack.Text = "GAbsoluteAvgDamageAssistedTrack";
+            // 
+            // labelStatisticsGAbsoluteAvgDamageAssistedRadio
+            // 
+            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.AutoSize = true;
+            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.Location = new System.Drawing.Point(6, 16);
+            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.Name = "labelStatisticsGAbsoluteAvgDamageAssistedRadio";
+            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.Size = new System.Drawing.Size(182, 13);
+            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.TabIndex = 1;
+            this.labelStatisticsGAbsoluteAvgDamageAssistedRadio.Text = "GAbsoluteAvgDamageAssistedRadio";
+            // 
+            // labelStatisticsGAbsoluteAvgDamageAssisted
+            // 
+            this.labelStatisticsGAbsoluteAvgDamageAssisted.AutoSize = true;
+            this.labelStatisticsGAbsoluteAvgDamageAssisted.Location = new System.Drawing.Point(6, 3);
+            this.labelStatisticsGAbsoluteAvgDamageAssisted.Name = "labelStatisticsGAbsoluteAvgDamageAssisted";
+            this.labelStatisticsGAbsoluteAvgDamageAssisted.Size = new System.Drawing.Size(154, 13);
+            this.labelStatisticsGAbsoluteAvgDamageAssisted.TabIndex = 0;
+            this.labelStatisticsGAbsoluteAvgDamageAssisted.Text = "GAbsoluteAvgDamageAssisted";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionExplosionHitsReceived);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionExplosionHits);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionXp);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionWins);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionTankingFactor);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionSurvivedBattles);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionSpotted);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionShots);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionPiercingReceived);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionPiercing);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionNoDamageHitsReceived);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionLosses);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionHitsPercents);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionHits);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionFrags);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionDroppedCapturePoints);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionDraws);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionDirectHitsReceived);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionDamageReceived);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionDamageDealt);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionCapturePoints);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionBattles);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionBattleAvgXp);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionAvgDamageBlocked);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionAvgDamageAssistedTrack);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionAvgDamageAssistedRadio);
+            this.tabPage6.Controls.Add(this.labelStatisticsGChampionAvgDamageAssisted);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(481, 467);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "GlobalmapChampion";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // labelStatisticsGChampionExplosionHitsReceived
             // 
@@ -2637,6 +2684,634 @@
             this.labelStatisticsGMiddleAvgDamageAssisted.TabIndex = 54;
             this.labelStatisticsGMiddleAvgDamageAssisted.Text = "GMiddleAvgDamageAssisted";
             // 
+            // labelStatisticsFrags
+            // 
+            this.labelStatisticsFrags.AutoSize = true;
+            this.labelStatisticsFrags.Location = new System.Drawing.Point(12, 273);
+            this.labelStatisticsFrags.Name = "labelStatisticsFrags";
+            this.labelStatisticsFrags.Size = new System.Drawing.Size(97, 13);
+            this.labelStatisticsFrags.TabIndex = 0;
+            this.labelStatisticsFrags.Text = "labelStatisticsFrags";
+            // 
+            // labelStatisticsTreesCut
+            // 
+            this.labelStatisticsTreesCut.AutoSize = true;
+            this.labelStatisticsTreesCut.Location = new System.Drawing.Point(12, 286);
+            this.labelStatisticsTreesCut.Name = "labelStatisticsTreesCut";
+            this.labelStatisticsTreesCut.Size = new System.Drawing.Size(114, 13);
+            this.labelStatisticsTreesCut.TabIndex = 1;
+            this.labelStatisticsTreesCut.Text = "labelStatisticsTreesCut";
+            // 
+            // tabPageRandomStatistics
+            // 
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHXp);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHWins);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHTankingFactor);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHSurvivedBattles);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHSpotted);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHShots);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHPiercings);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHNoDamageDirectReceived);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHMaxXpTankId);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHMaxXp);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHMaxFragsTankId);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHMaxFrags);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHMaxDamageTankId);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHMaxDamage);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHLosses);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHHitsPercents);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHHits);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHFrags);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHExplosionHitsReceived);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHExplosionHits);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHDroppedCapturePoints);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHDraws);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHDirectHitsReceived);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHDamageReceived);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHDamageDealt);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHCapturePoints);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHBattles);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHBattleAverageXp);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHAvgDamageBlocked);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHAvgDamageAssistedTrack);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHAvgDamageAssistedRadio);
+            this.tabPageRandomStatistics.Controls.Add(this.labelStatisticsHAvgDamageAssisted);
+            this.tabPageRandomStatistics.Location = new System.Drawing.Point(4, 22);
+            this.tabPageRandomStatistics.Name = "tabPageRandomStatistics";
+            this.tabPageRandomStatistics.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageRandomStatistics.Size = new System.Drawing.Size(501, 502);
+            this.tabPageRandomStatistics.TabIndex = 5;
+            this.tabPageRandomStatistics.Text = "HistoricalStatistics";
+            this.tabPageRandomStatistics.UseVisualStyleBackColor = true;
+            // 
+            // labelStatisticsHAvgDamageAssisted
+            // 
+            this.labelStatisticsHAvgDamageAssisted.AutoSize = true;
+            this.labelStatisticsHAvgDamageAssisted.Location = new System.Drawing.Point(6, 3);
+            this.labelStatisticsHAvgDamageAssisted.Name = "labelStatisticsHAvgDamageAssisted";
+            this.labelStatisticsHAvgDamageAssisted.Size = new System.Drawing.Size(113, 13);
+            this.labelStatisticsHAvgDamageAssisted.TabIndex = 0;
+            this.labelStatisticsHAvgDamageAssisted.Text = "HAvgDamageAssisted";
+            // 
+            // labelStatisticsHAvgDamageAssistedRadio
+            // 
+            this.labelStatisticsHAvgDamageAssistedRadio.AutoSize = true;
+            this.labelStatisticsHAvgDamageAssistedRadio.Location = new System.Drawing.Point(6, 16);
+            this.labelStatisticsHAvgDamageAssistedRadio.Name = "labelStatisticsHAvgDamageAssistedRadio";
+            this.labelStatisticsHAvgDamageAssistedRadio.Size = new System.Drawing.Size(141, 13);
+            this.labelStatisticsHAvgDamageAssistedRadio.TabIndex = 1;
+            this.labelStatisticsHAvgDamageAssistedRadio.Text = "HAvgDamageAssistedRadio";
+            // 
+            // labelStatisticsHAvgDamageAssistedTrack
+            // 
+            this.labelStatisticsHAvgDamageAssistedTrack.AutoSize = true;
+            this.labelStatisticsHAvgDamageAssistedTrack.Location = new System.Drawing.Point(6, 29);
+            this.labelStatisticsHAvgDamageAssistedTrack.Name = "labelStatisticsHAvgDamageAssistedTrack";
+            this.labelStatisticsHAvgDamageAssistedTrack.Size = new System.Drawing.Size(141, 13);
+            this.labelStatisticsHAvgDamageAssistedTrack.TabIndex = 2;
+            this.labelStatisticsHAvgDamageAssistedTrack.Text = "HAvgDamageAssistedTrack";
+            // 
+            // labelStatisticsHAvgDamageBlocked
+            // 
+            this.labelStatisticsHAvgDamageBlocked.AutoSize = true;
+            this.labelStatisticsHAvgDamageBlocked.Location = new System.Drawing.Point(6, 42);
+            this.labelStatisticsHAvgDamageBlocked.Name = "labelStatisticsHAvgDamageBlocked";
+            this.labelStatisticsHAvgDamageBlocked.Size = new System.Drawing.Size(113, 13);
+            this.labelStatisticsHAvgDamageBlocked.TabIndex = 3;
+            this.labelStatisticsHAvgDamageBlocked.Text = "HAvgDamageBlocked";
+            // 
+            // labelStatisticsHBattleAverageXp
+            // 
+            this.labelStatisticsHBattleAverageXp.AutoSize = true;
+            this.labelStatisticsHBattleAverageXp.Location = new System.Drawing.Point(6, 55);
+            this.labelStatisticsHBattleAverageXp.Name = "labelStatisticsHBattleAverageXp";
+            this.labelStatisticsHBattleAverageXp.Size = new System.Drawing.Size(95, 13);
+            this.labelStatisticsHBattleAverageXp.TabIndex = 4;
+            this.labelStatisticsHBattleAverageXp.Text = "HBattleAverageXp";
+            // 
+            // labelStatisticsHBattles
+            // 
+            this.labelStatisticsHBattles.AutoSize = true;
+            this.labelStatisticsHBattles.Location = new System.Drawing.Point(6, 68);
+            this.labelStatisticsHBattles.Name = "labelStatisticsHBattles";
+            this.labelStatisticsHBattles.Size = new System.Drawing.Size(47, 13);
+            this.labelStatisticsHBattles.TabIndex = 5;
+            this.labelStatisticsHBattles.Text = "HBattles";
+            // 
+            // labelStatisticsHCapturePoints
+            // 
+            this.labelStatisticsHCapturePoints.AutoSize = true;
+            this.labelStatisticsHCapturePoints.Location = new System.Drawing.Point(6, 81);
+            this.labelStatisticsHCapturePoints.Name = "labelStatisticsHCapturePoints";
+            this.labelStatisticsHCapturePoints.Size = new System.Drawing.Size(81, 13);
+            this.labelStatisticsHCapturePoints.TabIndex = 6;
+            this.labelStatisticsHCapturePoints.Text = "HCapturePoints";
+            // 
+            // labelStatisticsHDamageDealt
+            // 
+            this.labelStatisticsHDamageDealt.AutoSize = true;
+            this.labelStatisticsHDamageDealt.Location = new System.Drawing.Point(6, 94);
+            this.labelStatisticsHDamageDealt.Name = "labelStatisticsHDamageDealt";
+            this.labelStatisticsHDamageDealt.Size = new System.Drawing.Size(80, 13);
+            this.labelStatisticsHDamageDealt.TabIndex = 7;
+            this.labelStatisticsHDamageDealt.Text = "HDamageDealt";
+            // 
+            // labelStatisticsHDamageReceived
+            // 
+            this.labelStatisticsHDamageReceived.AutoSize = true;
+            this.labelStatisticsHDamageReceived.Location = new System.Drawing.Point(6, 107);
+            this.labelStatisticsHDamageReceived.Name = "labelStatisticsHDamageReceived";
+            this.labelStatisticsHDamageReceived.Size = new System.Drawing.Size(101, 13);
+            this.labelStatisticsHDamageReceived.TabIndex = 8;
+            this.labelStatisticsHDamageReceived.Text = "HDamageReceived";
+            // 
+            // labelStatisticsHDirectHitsReceived
+            // 
+            this.labelStatisticsHDirectHitsReceived.AutoSize = true;
+            this.labelStatisticsHDirectHitsReceived.Location = new System.Drawing.Point(6, 120);
+            this.labelStatisticsHDirectHitsReceived.Name = "labelStatisticsHDirectHitsReceived";
+            this.labelStatisticsHDirectHitsReceived.Size = new System.Drawing.Size(107, 13);
+            this.labelStatisticsHDirectHitsReceived.TabIndex = 9;
+            this.labelStatisticsHDirectHitsReceived.Text = "HDirectHitsReceived";
+            // 
+            // labelStatisticsHDraws
+            // 
+            this.labelStatisticsHDraws.AutoSize = true;
+            this.labelStatisticsHDraws.Location = new System.Drawing.Point(6, 133);
+            this.labelStatisticsHDraws.Name = "labelStatisticsHDraws";
+            this.labelStatisticsHDraws.Size = new System.Drawing.Size(45, 13);
+            this.labelStatisticsHDraws.TabIndex = 10;
+            this.labelStatisticsHDraws.Text = "HDraws";
+            // 
+            // labelStatisticsHDroppedCapturePoints
+            // 
+            this.labelStatisticsHDroppedCapturePoints.AutoSize = true;
+            this.labelStatisticsHDroppedCapturePoints.Location = new System.Drawing.Point(6, 146);
+            this.labelStatisticsHDroppedCapturePoints.Name = "labelStatisticsHDroppedCapturePoints";
+            this.labelStatisticsHDroppedCapturePoints.Size = new System.Drawing.Size(122, 13);
+            this.labelStatisticsHDroppedCapturePoints.TabIndex = 11;
+            this.labelStatisticsHDroppedCapturePoints.Text = "HDroppedCapturePoints";
+            // 
+            // labelStatisticsHExplosionHits
+            // 
+            this.labelStatisticsHExplosionHits.AutoSize = true;
+            this.labelStatisticsHExplosionHits.Location = new System.Drawing.Point(6, 159);
+            this.labelStatisticsHExplosionHits.Name = "labelStatisticsHExplosionHits";
+            this.labelStatisticsHExplosionHits.Size = new System.Drawing.Size(78, 13);
+            this.labelStatisticsHExplosionHits.TabIndex = 12;
+            this.labelStatisticsHExplosionHits.Text = "HExplosionHits";
+            // 
+            // labelStatisticsHExplosionHitsReceived
+            // 
+            this.labelStatisticsHExplosionHitsReceived.AutoSize = true;
+            this.labelStatisticsHExplosionHitsReceived.Location = new System.Drawing.Point(6, 172);
+            this.labelStatisticsHExplosionHitsReceived.Name = "labelStatisticsHExplosionHitsReceived";
+            this.labelStatisticsHExplosionHitsReceived.Size = new System.Drawing.Size(124, 13);
+            this.labelStatisticsHExplosionHitsReceived.TabIndex = 13;
+            this.labelStatisticsHExplosionHitsReceived.Text = "HExplosionHitsReceived";
+            // 
+            // labelStatisticsHFrags
+            // 
+            this.labelStatisticsHFrags.AutoSize = true;
+            this.labelStatisticsHFrags.Location = new System.Drawing.Point(6, 185);
+            this.labelStatisticsHFrags.Name = "labelStatisticsHFrags";
+            this.labelStatisticsHFrags.Size = new System.Drawing.Size(41, 13);
+            this.labelStatisticsHFrags.TabIndex = 14;
+            this.labelStatisticsHFrags.Text = "HFrags";
+            // 
+            // labelStatisticsHHits
+            // 
+            this.labelStatisticsHHits.AutoSize = true;
+            this.labelStatisticsHHits.Location = new System.Drawing.Point(6, 198);
+            this.labelStatisticsHHits.Name = "labelStatisticsHHits";
+            this.labelStatisticsHHits.Size = new System.Drawing.Size(33, 13);
+            this.labelStatisticsHHits.TabIndex = 15;
+            this.labelStatisticsHHits.Text = "HHits";
+            // 
+            // labelStatisticsHHitsPercents
+            // 
+            this.labelStatisticsHHitsPercents.AutoSize = true;
+            this.labelStatisticsHHitsPercents.Location = new System.Drawing.Point(6, 211);
+            this.labelStatisticsHHitsPercents.Name = "labelStatisticsHHitsPercents";
+            this.labelStatisticsHHitsPercents.Size = new System.Drawing.Size(75, 13);
+            this.labelStatisticsHHitsPercents.TabIndex = 16;
+            this.labelStatisticsHHitsPercents.Text = "HHitsPercents";
+            // 
+            // labelStatisticsHLosses
+            // 
+            this.labelStatisticsHLosses.AutoSize = true;
+            this.labelStatisticsHLosses.Location = new System.Drawing.Point(6, 224);
+            this.labelStatisticsHLosses.Name = "labelStatisticsHLosses";
+            this.labelStatisticsHLosses.Size = new System.Drawing.Size(48, 13);
+            this.labelStatisticsHLosses.TabIndex = 17;
+            this.labelStatisticsHLosses.Text = "HLosses";
+            // 
+            // labelStatisticsHMaxDamage
+            // 
+            this.labelStatisticsHMaxDamage.AutoSize = true;
+            this.labelStatisticsHMaxDamage.Location = new System.Drawing.Point(6, 239);
+            this.labelStatisticsHMaxDamage.Name = "labelStatisticsHMaxDamage";
+            this.labelStatisticsHMaxDamage.Size = new System.Drawing.Size(75, 13);
+            this.labelStatisticsHMaxDamage.TabIndex = 18;
+            this.labelStatisticsHMaxDamage.Text = "HMaxDamage";
+            // 
+            // labelStatisticsHMaxDamageTankId
+            // 
+            this.labelStatisticsHMaxDamageTankId.AutoSize = true;
+            this.labelStatisticsHMaxDamageTankId.Location = new System.Drawing.Point(6, 252);
+            this.labelStatisticsHMaxDamageTankId.Name = "labelStatisticsHMaxDamageTankId";
+            this.labelStatisticsHMaxDamageTankId.Size = new System.Drawing.Size(109, 13);
+            this.labelStatisticsHMaxDamageTankId.TabIndex = 19;
+            this.labelStatisticsHMaxDamageTankId.Text = "HMaxDamageTankId";
+            // 
+            // labelStatisticsHMaxFrags
+            // 
+            this.labelStatisticsHMaxFrags.AutoSize = true;
+            this.labelStatisticsHMaxFrags.Location = new System.Drawing.Point(6, 265);
+            this.labelStatisticsHMaxFrags.Name = "labelStatisticsHMaxFrags";
+            this.labelStatisticsHMaxFrags.Size = new System.Drawing.Size(61, 13);
+            this.labelStatisticsHMaxFrags.TabIndex = 20;
+            this.labelStatisticsHMaxFrags.Text = "HMaxFrags";
+            // 
+            // labelStatisticsHMaxFragsTankId
+            // 
+            this.labelStatisticsHMaxFragsTankId.AutoSize = true;
+            this.labelStatisticsHMaxFragsTankId.Location = new System.Drawing.Point(6, 278);
+            this.labelStatisticsHMaxFragsTankId.Name = "labelStatisticsHMaxFragsTankId";
+            this.labelStatisticsHMaxFragsTankId.Size = new System.Drawing.Size(95, 13);
+            this.labelStatisticsHMaxFragsTankId.TabIndex = 21;
+            this.labelStatisticsHMaxFragsTankId.Text = "HMaxFragsTankId";
+            // 
+            // labelStatisticsHMaxXp
+            // 
+            this.labelStatisticsHMaxXp.AutoSize = true;
+            this.labelStatisticsHMaxXp.Location = new System.Drawing.Point(6, 291);
+            this.labelStatisticsHMaxXp.Name = "labelStatisticsHMaxXp";
+            this.labelStatisticsHMaxXp.Size = new System.Drawing.Size(48, 13);
+            this.labelStatisticsHMaxXp.TabIndex = 22;
+            this.labelStatisticsHMaxXp.Text = "HMaxXp";
+            // 
+            // labelStatisticsHMaxXpTankId
+            // 
+            this.labelStatisticsHMaxXpTankId.AutoSize = true;
+            this.labelStatisticsHMaxXpTankId.Location = new System.Drawing.Point(6, 304);
+            this.labelStatisticsHMaxXpTankId.Name = "labelStatisticsHMaxXpTankId";
+            this.labelStatisticsHMaxXpTankId.Size = new System.Drawing.Size(82, 13);
+            this.labelStatisticsHMaxXpTankId.TabIndex = 23;
+            this.labelStatisticsHMaxXpTankId.Text = "HMaxXpTankId";
+            // 
+            // labelStatisticsHNoDamageDirectReceived
+            // 
+            this.labelStatisticsHNoDamageDirectReceived.AutoSize = true;
+            this.labelStatisticsHNoDamageDirectReceived.Location = new System.Drawing.Point(6, 317);
+            this.labelStatisticsHNoDamageDirectReceived.Name = "labelStatisticsHNoDamageDirectReceived";
+            this.labelStatisticsHNoDamageDirectReceived.Size = new System.Drawing.Size(143, 13);
+            this.labelStatisticsHNoDamageDirectReceived.TabIndex = 24;
+            this.labelStatisticsHNoDamageDirectReceived.Text = "HNoDamageDirectReceived";
+            // 
+            // labelStatisticsHPiercings
+            // 
+            this.labelStatisticsHPiercings.AutoSize = true;
+            this.labelStatisticsHPiercings.Location = new System.Drawing.Point(6, 330);
+            this.labelStatisticsHPiercings.Name = "labelStatisticsHPiercings";
+            this.labelStatisticsHPiercings.Size = new System.Drawing.Size(58, 13);
+            this.labelStatisticsHPiercings.TabIndex = 25;
+            this.labelStatisticsHPiercings.Text = "HPiercings";
+            // 
+            // labelStatisticsHShots
+            // 
+            this.labelStatisticsHShots.AutoSize = true;
+            this.labelStatisticsHShots.Location = new System.Drawing.Point(6, 343);
+            this.labelStatisticsHShots.Name = "labelStatisticsHShots";
+            this.labelStatisticsHShots.Size = new System.Drawing.Size(42, 13);
+            this.labelStatisticsHShots.TabIndex = 26;
+            this.labelStatisticsHShots.Text = "HShots";
+            // 
+            // labelStatisticsHSpotted
+            // 
+            this.labelStatisticsHSpotted.AutoSize = true;
+            this.labelStatisticsHSpotted.Location = new System.Drawing.Point(6, 356);
+            this.labelStatisticsHSpotted.Name = "labelStatisticsHSpotted";
+            this.labelStatisticsHSpotted.Size = new System.Drawing.Size(52, 13);
+            this.labelStatisticsHSpotted.TabIndex = 27;
+            this.labelStatisticsHSpotted.Text = "HSpotted";
+            // 
+            // labelStatisticsHSurvivedBattles
+            // 
+            this.labelStatisticsHSurvivedBattles.AutoSize = true;
+            this.labelStatisticsHSurvivedBattles.Location = new System.Drawing.Point(6, 369);
+            this.labelStatisticsHSurvivedBattles.Name = "labelStatisticsHSurvivedBattles";
+            this.labelStatisticsHSurvivedBattles.Size = new System.Drawing.Size(89, 13);
+            this.labelStatisticsHSurvivedBattles.TabIndex = 28;
+            this.labelStatisticsHSurvivedBattles.Text = "HSurvivedBattles";
+            // 
+            // labelStatisticsHTankingFactor
+            // 
+            this.labelStatisticsHTankingFactor.AutoSize = true;
+            this.labelStatisticsHTankingFactor.Location = new System.Drawing.Point(6, 382);
+            this.labelStatisticsHTankingFactor.Name = "labelStatisticsHTankingFactor";
+            this.labelStatisticsHTankingFactor.Size = new System.Drawing.Size(84, 13);
+            this.labelStatisticsHTankingFactor.TabIndex = 29;
+            this.labelStatisticsHTankingFactor.Text = "HTankingFactor";
+            // 
+            // labelStatisticsHWins
+            // 
+            this.labelStatisticsHWins.AutoSize = true;
+            this.labelStatisticsHWins.Location = new System.Drawing.Point(6, 395);
+            this.labelStatisticsHWins.Name = "labelStatisticsHWins";
+            this.labelStatisticsHWins.Size = new System.Drawing.Size(39, 13);
+            this.labelStatisticsHWins.TabIndex = 30;
+            this.labelStatisticsHWins.Text = "HWins";
+            // 
+            // labelStatisticsHXp
+            // 
+            this.labelStatisticsHXp.AutoSize = true;
+            this.labelStatisticsHXp.Location = new System.Drawing.Point(6, 408);
+            this.labelStatisticsHXp.Name = "labelStatisticsHXp";
+            this.labelStatisticsHXp.Size = new System.Drawing.Size(28, 13);
+            this.labelStatisticsHXp.TabIndex = 31;
+            this.labelStatisticsHXp.Text = "HXp";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.labelStatisticsRXp);
+            this.tabPage8.Controls.Add(this.labelStatisticsRWins);
+            this.tabPage8.Controls.Add(this.labelStatisticsRTankingFactor);
+            this.tabPage8.Controls.Add(this.labelStatisticsRSurvivedBattles);
+            this.tabPage8.Controls.Add(this.labelStatisticsRSpotted);
+            this.tabPage8.Controls.Add(this.labelStatisticsRShots);
+            this.tabPage8.Controls.Add(this.labelStatisticsRPiercingsReceived);
+            this.tabPage8.Controls.Add(this.labelStatisticsRPiercings);
+            this.tabPage8.Controls.Add(this.labelStatisticsRNoDamageDirectHitsReceived);
+            this.tabPage8.Controls.Add(this.labelStatisticsRLosses);
+            this.tabPage8.Controls.Add(this.labelStatisticsRHitsPercents);
+            this.tabPage8.Controls.Add(this.labelStatisticsRHits);
+            this.tabPage8.Controls.Add(this.labelStatisticsRFrags);
+            this.tabPage8.Controls.Add(this.labelStatisticsRExplosionHitsReceived);
+            this.tabPage8.Controls.Add(this.labelStatisticsRExplosionHits);
+            this.tabPage8.Controls.Add(this.labelStatisticsRDroppedCapturePoints);
+            this.tabPage8.Controls.Add(this.labelStatisticsRDraws);
+            this.tabPage8.Controls.Add(this.labelStatisticsRDirectHitsReceived);
+            this.tabPage8.Controls.Add(this.labelStatisticsRDamageReceived);
+            this.tabPage8.Controls.Add(this.labelStatisticsRDamageDealt);
+            this.tabPage8.Controls.Add(this.labelStatisticsRCapturePoints);
+            this.tabPage8.Controls.Add(this.labelStatisticsRBattles);
+            this.tabPage8.Controls.Add(this.labelStatisticsRBattleAvgXp);
+            this.tabPage8.Controls.Add(this.labelStatisticsRAvgDamageBlocked);
+            this.tabPage8.Controls.Add(this.labelStatisticsRAvgDamageAssistedTrack);
+            this.tabPage8.Controls.Add(this.labelStatisticsRAvgDamageAssistedRadio);
+            this.tabPage8.Controls.Add(this.labelStatisticsRAvgDamageAssisted);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(501, 502);
+            this.tabPage8.TabIndex = 6;
+            this.tabPage8.Text = "RandomStatistics";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // labelStatisticsRAvgDamageAssisted
+            // 
+            this.labelStatisticsRAvgDamageAssisted.AutoSize = true;
+            this.labelStatisticsRAvgDamageAssisted.Location = new System.Drawing.Point(6, 3);
+            this.labelStatisticsRAvgDamageAssisted.Name = "labelStatisticsRAvgDamageAssisted";
+            this.labelStatisticsRAvgDamageAssisted.Size = new System.Drawing.Size(113, 13);
+            this.labelStatisticsRAvgDamageAssisted.TabIndex = 0;
+            this.labelStatisticsRAvgDamageAssisted.Text = "RAvgDamageAssisted";
+            // 
+            // labelStatisticsRAvgDamageAssistedRadio
+            // 
+            this.labelStatisticsRAvgDamageAssistedRadio.AutoSize = true;
+            this.labelStatisticsRAvgDamageAssistedRadio.Location = new System.Drawing.Point(6, 16);
+            this.labelStatisticsRAvgDamageAssistedRadio.Name = "labelStatisticsRAvgDamageAssistedRadio";
+            this.labelStatisticsRAvgDamageAssistedRadio.Size = new System.Drawing.Size(141, 13);
+            this.labelStatisticsRAvgDamageAssistedRadio.TabIndex = 1;
+            this.labelStatisticsRAvgDamageAssistedRadio.Text = "RAvgDamageAssistedRadio";
+            // 
+            // labelStatisticsRAvgDamageAssistedTrack
+            // 
+            this.labelStatisticsRAvgDamageAssistedTrack.AutoSize = true;
+            this.labelStatisticsRAvgDamageAssistedTrack.Location = new System.Drawing.Point(6, 29);
+            this.labelStatisticsRAvgDamageAssistedTrack.Name = "labelStatisticsRAvgDamageAssistedTrack";
+            this.labelStatisticsRAvgDamageAssistedTrack.Size = new System.Drawing.Size(141, 13);
+            this.labelStatisticsRAvgDamageAssistedTrack.TabIndex = 2;
+            this.labelStatisticsRAvgDamageAssistedTrack.Text = "RAvgDamageAssistedTrack";
+            // 
+            // labelStatisticsRAvgDamageBlocked
+            // 
+            this.labelStatisticsRAvgDamageBlocked.AutoSize = true;
+            this.labelStatisticsRAvgDamageBlocked.Location = new System.Drawing.Point(6, 42);
+            this.labelStatisticsRAvgDamageBlocked.Name = "labelStatisticsRAvgDamageBlocked";
+            this.labelStatisticsRAvgDamageBlocked.Size = new System.Drawing.Size(113, 13);
+            this.labelStatisticsRAvgDamageBlocked.TabIndex = 3;
+            this.labelStatisticsRAvgDamageBlocked.Text = "RAvgDamageBlocked";
+            // 
+            // labelStatisticsRBattleAvgXp
+            // 
+            this.labelStatisticsRBattleAvgXp.AutoSize = true;
+            this.labelStatisticsRBattleAvgXp.Location = new System.Drawing.Point(6, 55);
+            this.labelStatisticsRBattleAvgXp.Name = "labelStatisticsRBattleAvgXp";
+            this.labelStatisticsRBattleAvgXp.Size = new System.Drawing.Size(74, 13);
+            this.labelStatisticsRBattleAvgXp.TabIndex = 4;
+            this.labelStatisticsRBattleAvgXp.Text = "RBattleAvgXp";
+            // 
+            // labelStatisticsRBattles
+            // 
+            this.labelStatisticsRBattles.AutoSize = true;
+            this.labelStatisticsRBattles.Location = new System.Drawing.Point(6, 68);
+            this.labelStatisticsRBattles.Name = "labelStatisticsRBattles";
+            this.labelStatisticsRBattles.Size = new System.Drawing.Size(47, 13);
+            this.labelStatisticsRBattles.TabIndex = 5;
+            this.labelStatisticsRBattles.Text = "RBattles";
+            // 
+            // labelStatisticsRCapturePoints
+            // 
+            this.labelStatisticsRCapturePoints.AutoSize = true;
+            this.labelStatisticsRCapturePoints.Location = new System.Drawing.Point(6, 81);
+            this.labelStatisticsRCapturePoints.Name = "labelStatisticsRCapturePoints";
+            this.labelStatisticsRCapturePoints.Size = new System.Drawing.Size(81, 13);
+            this.labelStatisticsRCapturePoints.TabIndex = 6;
+            this.labelStatisticsRCapturePoints.Text = "RCapturePoints";
+            // 
+            // labelStatisticsRDamageDealt
+            // 
+            this.labelStatisticsRDamageDealt.AutoSize = true;
+            this.labelStatisticsRDamageDealt.Location = new System.Drawing.Point(6, 94);
+            this.labelStatisticsRDamageDealt.Name = "labelStatisticsRDamageDealt";
+            this.labelStatisticsRDamageDealt.Size = new System.Drawing.Size(80, 13);
+            this.labelStatisticsRDamageDealt.TabIndex = 7;
+            this.labelStatisticsRDamageDealt.Text = "RDamageDealt";
+            // 
+            // labelStatisticsRDamageReceived
+            // 
+            this.labelStatisticsRDamageReceived.AutoSize = true;
+            this.labelStatisticsRDamageReceived.Location = new System.Drawing.Point(6, 107);
+            this.labelStatisticsRDamageReceived.Name = "labelStatisticsRDamageReceived";
+            this.labelStatisticsRDamageReceived.Size = new System.Drawing.Size(101, 13);
+            this.labelStatisticsRDamageReceived.TabIndex = 8;
+            this.labelStatisticsRDamageReceived.Text = "RDamageReceived";
+            // 
+            // labelStatisticsRDirectHitsReceived
+            // 
+            this.labelStatisticsRDirectHitsReceived.AutoSize = true;
+            this.labelStatisticsRDirectHitsReceived.Location = new System.Drawing.Point(6, 120);
+            this.labelStatisticsRDirectHitsReceived.Name = "labelStatisticsRDirectHitsReceived";
+            this.labelStatisticsRDirectHitsReceived.Size = new System.Drawing.Size(107, 13);
+            this.labelStatisticsRDirectHitsReceived.TabIndex = 9;
+            this.labelStatisticsRDirectHitsReceived.Text = "RDirectHitsReceived";
+            // 
+            // labelStatisticsRDraws
+            // 
+            this.labelStatisticsRDraws.AutoSize = true;
+            this.labelStatisticsRDraws.Location = new System.Drawing.Point(6, 133);
+            this.labelStatisticsRDraws.Name = "labelStatisticsRDraws";
+            this.labelStatisticsRDraws.Size = new System.Drawing.Size(45, 13);
+            this.labelStatisticsRDraws.TabIndex = 10;
+            this.labelStatisticsRDraws.Text = "RDraws";
+            // 
+            // labelStatisticsRDroppedCapturePoints
+            // 
+            this.labelStatisticsRDroppedCapturePoints.AutoSize = true;
+            this.labelStatisticsRDroppedCapturePoints.Location = new System.Drawing.Point(6, 146);
+            this.labelStatisticsRDroppedCapturePoints.Name = "labelStatisticsRDroppedCapturePoints";
+            this.labelStatisticsRDroppedCapturePoints.Size = new System.Drawing.Size(122, 13);
+            this.labelStatisticsRDroppedCapturePoints.TabIndex = 11;
+            this.labelStatisticsRDroppedCapturePoints.Text = "RDroppedCapturePoints";
+            // 
+            // labelStatisticsRExplosionHits
+            // 
+            this.labelStatisticsRExplosionHits.AutoSize = true;
+            this.labelStatisticsRExplosionHits.Location = new System.Drawing.Point(6, 159);
+            this.labelStatisticsRExplosionHits.Name = "labelStatisticsRExplosionHits";
+            this.labelStatisticsRExplosionHits.Size = new System.Drawing.Size(78, 13);
+            this.labelStatisticsRExplosionHits.TabIndex = 12;
+            this.labelStatisticsRExplosionHits.Text = "RExplosionHits";
+            // 
+            // labelStatisticsRExplosionHitsReceived
+            // 
+            this.labelStatisticsRExplosionHitsReceived.AutoSize = true;
+            this.labelStatisticsRExplosionHitsReceived.Location = new System.Drawing.Point(6, 172);
+            this.labelStatisticsRExplosionHitsReceived.Name = "labelStatisticsRExplosionHitsReceived";
+            this.labelStatisticsRExplosionHitsReceived.Size = new System.Drawing.Size(124, 13);
+            this.labelStatisticsRExplosionHitsReceived.TabIndex = 13;
+            this.labelStatisticsRExplosionHitsReceived.Text = "RExplosionHitsReceived";
+            // 
+            // labelStatisticsRFrags
+            // 
+            this.labelStatisticsRFrags.AutoSize = true;
+            this.labelStatisticsRFrags.Location = new System.Drawing.Point(6, 185);
+            this.labelStatisticsRFrags.Name = "labelStatisticsRFrags";
+            this.labelStatisticsRFrags.Size = new System.Drawing.Size(41, 13);
+            this.labelStatisticsRFrags.TabIndex = 14;
+            this.labelStatisticsRFrags.Text = "RFrags";
+            // 
+            // labelStatisticsRHits
+            // 
+            this.labelStatisticsRHits.AutoSize = true;
+            this.labelStatisticsRHits.Location = new System.Drawing.Point(6, 198);
+            this.labelStatisticsRHits.Name = "labelStatisticsRHits";
+            this.labelStatisticsRHits.Size = new System.Drawing.Size(33, 13);
+            this.labelStatisticsRHits.TabIndex = 15;
+            this.labelStatisticsRHits.Text = "RHits";
+            // 
+            // labelStatisticsRHitsPercents
+            // 
+            this.labelStatisticsRHitsPercents.AutoSize = true;
+            this.labelStatisticsRHitsPercents.Location = new System.Drawing.Point(6, 211);
+            this.labelStatisticsRHitsPercents.Name = "labelStatisticsRHitsPercents";
+            this.labelStatisticsRHitsPercents.Size = new System.Drawing.Size(75, 13);
+            this.labelStatisticsRHitsPercents.TabIndex = 16;
+            this.labelStatisticsRHitsPercents.Text = "RHitsPercents";
+            // 
+            // labelStatisticsRLosses
+            // 
+            this.labelStatisticsRLosses.AutoSize = true;
+            this.labelStatisticsRLosses.Location = new System.Drawing.Point(6, 224);
+            this.labelStatisticsRLosses.Name = "labelStatisticsRLosses";
+            this.labelStatisticsRLosses.Size = new System.Drawing.Size(48, 13);
+            this.labelStatisticsRLosses.TabIndex = 17;
+            this.labelStatisticsRLosses.Text = "RLosses";
+            // 
+            // labelStatisticsRNoDamageDirectHitsReceived
+            // 
+            this.labelStatisticsRNoDamageDirectHitsReceived.AutoSize = true;
+            this.labelStatisticsRNoDamageDirectHitsReceived.Location = new System.Drawing.Point(6, 237);
+            this.labelStatisticsRNoDamageDirectHitsReceived.Name = "labelStatisticsRNoDamageDirectHitsReceived";
+            this.labelStatisticsRNoDamageDirectHitsReceived.Size = new System.Drawing.Size(161, 13);
+            this.labelStatisticsRNoDamageDirectHitsReceived.TabIndex = 18;
+            this.labelStatisticsRNoDamageDirectHitsReceived.Text = "RNoDamageDirectHitsReceived";
+            // 
+            // labelStatisticsRPiercings
+            // 
+            this.labelStatisticsRPiercings.AutoSize = true;
+            this.labelStatisticsRPiercings.Location = new System.Drawing.Point(6, 250);
+            this.labelStatisticsRPiercings.Name = "labelStatisticsRPiercings";
+            this.labelStatisticsRPiercings.Size = new System.Drawing.Size(58, 13);
+            this.labelStatisticsRPiercings.TabIndex = 19;
+            this.labelStatisticsRPiercings.Text = "RPiercings";
+            // 
+            // labelStatisticsRPiercingsReceived
+            // 
+            this.labelStatisticsRPiercingsReceived.AutoSize = true;
+            this.labelStatisticsRPiercingsReceived.Location = new System.Drawing.Point(6, 263);
+            this.labelStatisticsRPiercingsReceived.Name = "labelStatisticsRPiercingsReceived";
+            this.labelStatisticsRPiercingsReceived.Size = new System.Drawing.Size(104, 13);
+            this.labelStatisticsRPiercingsReceived.TabIndex = 20;
+            this.labelStatisticsRPiercingsReceived.Text = "RPiercingsReceived";
+            // 
+            // labelStatisticsRShots
+            // 
+            this.labelStatisticsRShots.AutoSize = true;
+            this.labelStatisticsRShots.Location = new System.Drawing.Point(6, 276);
+            this.labelStatisticsRShots.Name = "labelStatisticsRShots";
+            this.labelStatisticsRShots.Size = new System.Drawing.Size(42, 13);
+            this.labelStatisticsRShots.TabIndex = 21;
+            this.labelStatisticsRShots.Text = "RShots";
+            // 
+            // labelStatisticsRSpotted
+            // 
+            this.labelStatisticsRSpotted.AutoSize = true;
+            this.labelStatisticsRSpotted.Location = new System.Drawing.Point(6, 289);
+            this.labelStatisticsRSpotted.Name = "labelStatisticsRSpotted";
+            this.labelStatisticsRSpotted.Size = new System.Drawing.Size(52, 13);
+            this.labelStatisticsRSpotted.TabIndex = 22;
+            this.labelStatisticsRSpotted.Text = "RSpotted";
+            // 
+            // labelStatisticsRSurvivedBattles
+            // 
+            this.labelStatisticsRSurvivedBattles.AutoSize = true;
+            this.labelStatisticsRSurvivedBattles.Location = new System.Drawing.Point(6, 302);
+            this.labelStatisticsRSurvivedBattles.Name = "labelStatisticsRSurvivedBattles";
+            this.labelStatisticsRSurvivedBattles.Size = new System.Drawing.Size(89, 13);
+            this.labelStatisticsRSurvivedBattles.TabIndex = 23;
+            this.labelStatisticsRSurvivedBattles.Text = "RSurvivedBattles";
+            // 
+            // labelStatisticsRTankingFactor
+            // 
+            this.labelStatisticsRTankingFactor.AutoSize = true;
+            this.labelStatisticsRTankingFactor.Location = new System.Drawing.Point(6, 315);
+            this.labelStatisticsRTankingFactor.Name = "labelStatisticsRTankingFactor";
+            this.labelStatisticsRTankingFactor.Size = new System.Drawing.Size(84, 13);
+            this.labelStatisticsRTankingFactor.TabIndex = 24;
+            this.labelStatisticsRTankingFactor.Text = "RTankingFactor";
+            // 
+            // labelStatisticsRWins
+            // 
+            this.labelStatisticsRWins.AutoSize = true;
+            this.labelStatisticsRWins.Location = new System.Drawing.Point(6, 328);
+            this.labelStatisticsRWins.Name = "labelStatisticsRWins";
+            this.labelStatisticsRWins.Size = new System.Drawing.Size(39, 13);
+            this.labelStatisticsRWins.TabIndex = 25;
+            this.labelStatisticsRWins.Text = "RWins";
+            // 
+            // labelStatisticsRXp
+            // 
+            this.labelStatisticsRXp.AutoSize = true;
+            this.labelStatisticsRXp.Location = new System.Drawing.Point(6, 341);
+            this.labelStatisticsRXp.Name = "labelStatisticsRXp";
+            this.labelStatisticsRXp.Size = new System.Drawing.Size(28, 13);
+            this.labelStatisticsRXp.TabIndex = 26;
+            this.labelStatisticsRXp.Text = "RXp";
+            // 
             // wotPlayerStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2678,13 +3353,17 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            this.tabPageRandomStatistics.ResumeLayout(false);
+            this.tabPageRandomStatistics.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2929,5 +3608,66 @@
         private System.Windows.Forms.Label labelStatisticsGMiddleAvgDamageAssistedTrack;
         private System.Windows.Forms.Label labelStatisticsGMiddleAvgDamageAssistedRadio;
         private System.Windows.Forms.Label labelStatisticsGMiddleAvgDamageAssisted;
+        private System.Windows.Forms.TabPage tabPageRandomStatistics;
+        private System.Windows.Forms.Label labelStatisticsHXp;
+        private System.Windows.Forms.Label labelStatisticsHWins;
+        private System.Windows.Forms.Label labelStatisticsHTankingFactor;
+        private System.Windows.Forms.Label labelStatisticsHSurvivedBattles;
+        private System.Windows.Forms.Label labelStatisticsHSpotted;
+        private System.Windows.Forms.Label labelStatisticsHShots;
+        private System.Windows.Forms.Label labelStatisticsHPiercings;
+        private System.Windows.Forms.Label labelStatisticsHNoDamageDirectReceived;
+        private System.Windows.Forms.Label labelStatisticsHMaxXpTankId;
+        private System.Windows.Forms.Label labelStatisticsHMaxXp;
+        private System.Windows.Forms.Label labelStatisticsHMaxFragsTankId;
+        private System.Windows.Forms.Label labelStatisticsHMaxFrags;
+        private System.Windows.Forms.Label labelStatisticsHMaxDamageTankId;
+        private System.Windows.Forms.Label labelStatisticsHMaxDamage;
+        private System.Windows.Forms.Label labelStatisticsHLosses;
+        private System.Windows.Forms.Label labelStatisticsHHitsPercents;
+        private System.Windows.Forms.Label labelStatisticsHHits;
+        private System.Windows.Forms.Label labelStatisticsHFrags;
+        private System.Windows.Forms.Label labelStatisticsHExplosionHitsReceived;
+        private System.Windows.Forms.Label labelStatisticsHExplosionHits;
+        private System.Windows.Forms.Label labelStatisticsHDroppedCapturePoints;
+        private System.Windows.Forms.Label labelStatisticsHDraws;
+        private System.Windows.Forms.Label labelStatisticsHDirectHitsReceived;
+        private System.Windows.Forms.Label labelStatisticsHDamageReceived;
+        private System.Windows.Forms.Label labelStatisticsHDamageDealt;
+        private System.Windows.Forms.Label labelStatisticsHCapturePoints;
+        private System.Windows.Forms.Label labelStatisticsHBattles;
+        private System.Windows.Forms.Label labelStatisticsHBattleAverageXp;
+        private System.Windows.Forms.Label labelStatisticsHAvgDamageBlocked;
+        private System.Windows.Forms.Label labelStatisticsHAvgDamageAssistedTrack;
+        private System.Windows.Forms.Label labelStatisticsHAvgDamageAssistedRadio;
+        private System.Windows.Forms.Label labelStatisticsHAvgDamageAssisted;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Label labelStatisticsRXp;
+        private System.Windows.Forms.Label labelStatisticsRWins;
+        private System.Windows.Forms.Label labelStatisticsRTankingFactor;
+        private System.Windows.Forms.Label labelStatisticsRSurvivedBattles;
+        private System.Windows.Forms.Label labelStatisticsRSpotted;
+        private System.Windows.Forms.Label labelStatisticsRShots;
+        private System.Windows.Forms.Label labelStatisticsRPiercingsReceived;
+        private System.Windows.Forms.Label labelStatisticsRPiercings;
+        private System.Windows.Forms.Label labelStatisticsRNoDamageDirectHitsReceived;
+        private System.Windows.Forms.Label labelStatisticsRLosses;
+        private System.Windows.Forms.Label labelStatisticsRHitsPercents;
+        private System.Windows.Forms.Label labelStatisticsRHits;
+        private System.Windows.Forms.Label labelStatisticsRFrags;
+        private System.Windows.Forms.Label labelStatisticsRExplosionHitsReceived;
+        private System.Windows.Forms.Label labelStatisticsRExplosionHits;
+        private System.Windows.Forms.Label labelStatisticsRDroppedCapturePoints;
+        private System.Windows.Forms.Label labelStatisticsRDraws;
+        private System.Windows.Forms.Label labelStatisticsRDirectHitsReceived;
+        private System.Windows.Forms.Label labelStatisticsRDamageReceived;
+        private System.Windows.Forms.Label labelStatisticsRDamageDealt;
+        private System.Windows.Forms.Label labelStatisticsRCapturePoints;
+        private System.Windows.Forms.Label labelStatisticsRBattles;
+        private System.Windows.Forms.Label labelStatisticsRBattleAvgXp;
+        private System.Windows.Forms.Label labelStatisticsRAvgDamageBlocked;
+        private System.Windows.Forms.Label labelStatisticsRAvgDamageAssistedTrack;
+        private System.Windows.Forms.Label labelStatisticsRAvgDamageAssistedRadio;
+        private System.Windows.Forms.Label labelStatisticsRAvgDamageAssisted;
     }
 }
