@@ -742,10 +742,31 @@ namespace WGHelper.Forms
             labelStatisticsAllPiercingReceived.Text = "Piercing received: " + playerStats.data.player.statistics.all.piercings_received.ToString();
             labelStatisticsAllShots.Text = "Shots: " + playerStats.data.player.statistics.all.shots.ToString();
             labelStatisticsAllSpotted.Text = "Spotted: " + playerStats.data.player.statistics.all.spotted.ToString();
-            labelStatisticsAllSurvivedBattles.Text = "Syrvived battles: " + playerStats.data.player.statistics.all.survived_battles.ToString();
+            labelStatisticsAllSurvivedBattles.Text = "Survived battles: " + playerStats.data.player.statistics.all.survived_battles.ToString();
             labelStatisticsAllTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.all.tanking_factor.ToString();
             labelStatisticsAllWins.Text = "Wins: " + playerStats.data.player.statistics.all.wins.ToString();
             labelStatisticsAllXp.Text = "XP: " + playerStats.data.player.statistics.all.xp.ToString();
+
+            double wins = playerStats.data.player.statistics.all.wins;
+            double battles = playerStats.data.player.statistics.all.battles;
+            double winsPercent = Math.Round(wins/battles*100, 2);
+            labelStatisticsAllWinsCoef.Text = "Wins precent: " + winsPercent.ToString() + "%";
+
+            double dealt = playerStats.data.player.statistics.all.damage_dealt;
+            double received = playerStats.data.player.statistics.all.damage_received;
+            labelStatisticsAllDamageCoef.Text = "Dealt/received: " + Math.Round(dealt / received, 2).ToString();
+
+            double hits = playerStats.data.player.statistics.all.hits;
+            double piercings = playerStats.data.player.statistics.all.piercings;
+            labelStatisticsAllPiercingsPercent.Text = "Piercings percent: " + Math.Round(piercings/hits*100, 2).ToString();
+
+            double frags = playerStats.data.player.statistics.all.frags;
+            double wasDesyroyed = battles - playerStats.data.player.statistics.all.survived_battles;
+            labelStatisticsAllFragsCoef.Text = "Frags coef: " + Math.Round(frags / wasDesyroyed, 2).ToString();
+
+            double capture = playerStats.data.player.statistics.all.capture_points;
+            double dropped = playerStats.data.player.statistics.all.dropped_capture_points;
+            labelStatisticsAllCaptureDefense.Text = "Captured/dropped: " + Math.Round(capture / dropped, 2).ToString();
         }
 
         void viewClanStatistics(PlayerStatsRootObject playerStats)
@@ -806,7 +827,7 @@ namespace WGHelper.Forms
             labelStatisticsCompanyPiercingsReceived.Text = "Piercing received: " + playerStats.data.player.statistics.company.piercings_received.ToString();
             labelStatisticsCompanyShots.Text = "Shots: " + playerStats.data.player.statistics.company.shots.ToString();
             labelStatisticsCompanySpotted.Text = "Spotted: " + playerStats.data.player.statistics.company.spotted.ToString();
-            labelStatisticsCompanySurvivedBattles.Text = "Syrvived battles: " + playerStats.data.player.statistics.company.survived_battles.ToString();
+            labelStatisticsCompanySurvivedBattles.Text = "Survived battles: " + playerStats.data.player.statistics.company.survived_battles.ToString();
             labelStatisticsCompanyTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.company.tanking_factor.ToString();
             labelStatisticsCompanyWins.Text = "Wins: " + playerStats.data.player.statistics.company.wins.ToString();
             labelStatisticsCompanyXp.Text = "XP: " + playerStats.data.player.statistics.company.xp.ToString();
