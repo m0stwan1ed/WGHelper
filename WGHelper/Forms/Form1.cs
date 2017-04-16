@@ -272,71 +272,78 @@ namespace WGHelper
                 //----------------------------------------------------------
 
                 //----------------Выведение данных в label по серверам и определение, есть ли сервер в сети
-                for (int i = 0; i < wotOnline.data.wot.Count; i++)                                                              
-                {                                                                                                               
-                    switch (wotOnline.data.wot[i].server)
+                try
+                {
+                    for (int i = 0; i < wotOnline.data.wot.Count; i++)
                     {
-                        case "RU1":
-                            {
-                                label_ru1Online.Text = wotOnline.data.wot[i].players_online.ToString();
-                                serverStatusWoT[0] = true;
-                                break;
-                            }
-                        case "RU2":
-                            {
-                                label_ru2Online.Text = wotOnline.data.wot[i].players_online.ToString();
-                                serverStatusWoT[1] = true;
-                                break;
-                            }
-                        case "RU3":
-                            {
-                                label_ru3Online.Text = wotOnline.data.wot[i].players_online.ToString();
-                                serverStatusWoT[2] = true;
-                                break;
-                            }
-                        case "RU4":
-                            {
-                                label_ru4Online.Text = wotOnline.data.wot[i].players_online.ToString();
-                                serverStatusWoT[3] = true;
-                                break;
-                            }
-                        case "RU5":
-                            {
-                                label_ru5Online.Text = wotOnline.data.wot[i].players_online.ToString();
-                                serverStatusWoT[4] = true;
-                                break;
-                            }
-                        case "RU6":
-                            {
-                                label_ru6Online.Text = wotOnline.data.wot[i].players_online.ToString();
-                                serverStatusWoT[5] = true;
-                                break;
-                            }
-                        case "RU7":
-                            {
-                                label_ru7Online.Text = wotOnline.data.wot[i].players_online.ToString();
-                                serverStatusWoT[6] = true;
-                                break;
-                            }
-                        case "RU8":
-                            {
-                                label_ru8Online.Text = wotOnline.data.wot[i].players_online.ToString();
-                                serverStatusWoT[7] = true;
-                                break;
-                            }
-                        case "RU9":
-                            {
-                                label_ru9Online.Text = wotOnline.data.wot[i].players_online.ToString();
-                                serverStatusWoT[8] = true;
-                                break;
-                            }
-                        case "RU10":
-                            {
-                                label_ru10Online.Text = wotOnline.data.wot[i].players_online.ToString();
-                                serverStatusWoT[9] = true;
-                                break;
-                            }
+                        switch (wotOnline.data.wot[i].server)
+                        {
+                            case "RU1":
+                                {
+                                    label_ru1Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                                    serverStatusWoT[0] = true;
+                                    break;
+                                }
+                            case "RU2":
+                                {
+                                    label_ru2Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                                    serverStatusWoT[1] = true;
+                                    break;
+                                }
+                            case "RU3":
+                                {
+                                    label_ru3Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                                    serverStatusWoT[2] = true;
+                                    break;
+                                }
+                            case "RU4":
+                                {
+                                    label_ru4Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                                    serverStatusWoT[3] = true;
+                                    break;
+                                }
+                            case "RU5":
+                                {
+                                    label_ru5Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                                    serverStatusWoT[4] = true;
+                                    break;
+                                }
+                            case "RU6":
+                                {
+                                    label_ru6Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                                    serverStatusWoT[5] = true;
+                                    break;
+                                }
+                            case "RU7":
+                                {
+                                    label_ru7Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                                    serverStatusWoT[6] = true;
+                                    break;
+                                }
+                            case "RU8":
+                                {
+                                    label_ru8Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                                    serverStatusWoT[7] = true;
+                                    break;
+                                }
+                            case "RU9":
+                                {
+                                    label_ru9Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                                    serverStatusWoT[8] = true;
+                                    break;
+                                }
+                            case "RU10":
+                                {
+                                    label_ru10Online.Text = wotOnline.data.wot[i].players_online.ToString();
+                                    serverStatusWoT[9] = true;
+                                    break;
+                                }
+                        }
                     }
+                }
+                catch(NullReferenceException)
+                {
+
                 }
                 //--------------------------------------------------------------------------------------------------
 

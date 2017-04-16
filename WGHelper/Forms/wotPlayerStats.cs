@@ -21,6 +21,7 @@ namespace WGHelper.Forms
         public wotPlayerStats()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
             settings = XDocument.Load("settings.xml");
             Thread getPlayersStatsThread;
             getPlayersStatsThread = new Thread(getPlayersStats);
@@ -643,8 +644,33 @@ namespace WGHelper.Forms
             
             PlayerStatsRootObject playerStats = JsonConvert.DeserializeObject<PlayerStatsRootObject>(answer);
 
-            labelNickname.Text = "Nickname: "+playerStats.data.player.nickname;
+            labelNickname.Text = "Nickname: " + playerStats.data.player.nickname;
+
+            try
+            {
+                labelClanId.Text = "Clan id: " + playerStats.data.player.clan_id.ToString();
+                pictureBoxClan.Image = Properties.Resources.clan_icon;
+            }
+            catch(NullReferenceException)
+            {
+                labelClanId.Text = "Clan id: no clan";
+                pictureBoxClan.Image = Properties.Resources.tank_icon;
+            }
+            
+
+            if (playerStats.data.player.@private.is_premium == true) pictureBoxIsPremium.Image = Properties.Resources.premium_icon;
+            else pictureBoxIsPremium.Image = Properties.Resources.standard_icon;
+
             labelClientLanguage.Text = "Client language: " + playerStats.data.player.client_language;
+
+            switch (playerStats.data.player.client_language)
+            {
+                case "uk":
+                    {
+                        pictureBoxClientLanguare.Image = Properties.Resources.flag_ukraine;
+                        break;
+                    }
+            }
             labelCreatedAt.Text = "Account created: " + playerStats.data.player.created_at.ToString();
             labelGlobalRating.Text = "Global rating: " + playerStats.data.player.global_rating.ToString();
             labelLogoutAt.Text = "Logout at: " + playerStats.data.player.logout_at.ToString();
@@ -655,11 +681,27 @@ namespace WGHelper.Forms
             labelFreeXP.Text = "Free XP:" + playerStats.data.player.@private.free_xp.ToString();
             labelGold.Text = "Gold: " + playerStats.data.player.@private.gold.ToString();
             labelIsBoundToPhone.Text = "Bounded to phone: " + playerStats.data.player.@private.is_bound_to_phone.ToString();
+
+            if (playerStats.data.player.@private.is_bound_to_phone == true) pictureBoxIsBounded.Image = Properties.Resources.yes_icon;
+            else pictureBoxIsBounded.Image = Properties.Resources.no_icon;
+
             labelIsPremium.Text = "Premium: " + playerStats.data.player.@private.is_premium.ToString();
+            pictureBoxPremium.Image = pictureBoxIsPremium.Image;
+
             labelPremiumExperiesAt.Text = "Experies at: " + playerStats.data.player.@private.premium_expires_at.ToString();
             //**************************************************
-            //labelRestrictionsChatBanTime.Text = playerStats.data.player.@private.restrictions.chat_ban_time.ToString();
-            //labelRestrictionsClanTime.Text = playerStats.data.player.@private.restrictions.clan_time.ToString();
+
+            try
+            {
+                labelRestrictionsChatBanTime.Text = "Chat ban time: " + playerStats.data.player.@private.restrictions.chat_ban_time.ToString();
+                pictureBoxChatBan.Image = Properties.Resources.no_icon;
+            }
+            catch(NullReferenceException)
+            {
+                pictureBoxChatBan.Image = Properties.Resources.yes_icon;
+                labelRestrictionsChatBanTime.Text = "Chat is not banned";
+            }
+            
             labelStatisticsFrags.Text = "Frags: " + playerStats.data.player.statistics.frags.Count.ToString();
             labelStatisticsTreesCut.Text = "Trees cut: " + playerStats.data.player.statistics.trees_cut.ToString();
             //**************************************************
@@ -682,11 +724,11 @@ namespace WGHelper.Forms
             labelStatisticsAllHitsPercents.Text = "Hits percents: " + playerStats.data.player.statistics.all.hits_percents.ToString();
             labelStatisticsAllLosses.Text = "Losses: " + playerStats.data.player.statistics.all.losses.ToString();
             labelStatisticsAllMaxDamage.Text = "Max damage: " + playerStats.data.player.statistics.all.max_damage.ToString();
-            labelStatisticsAllMaxDamageTankId.Text = "Max damage tank ID: " + playerStats.data.player.statistics.all.max_damage_tank_id.ToString();
+            //labelStatisticsAllMaxDamageTankId.Text = "Max damage tank ID: " + playerStats.data.player.statistics.all.max_damage_tank_id.ToString();
             labelStatisticsAllMaxFrags.Text = "Max frags: " + playerStats.data.player.statistics.all.max_frags.ToString();
-            labelStatisticsAllMaxFragsTankId.Text = "Max frags tank ID: " + playerStats.data.player.statistics.all.max_frags_tank_id.ToString();
+           // labelStatisticsAllMaxFragsTankId.Text = "Max frags tank ID: " + playerStats.data.player.statistics.all.max_frags_tank_id.ToString();
             labelStatisticsAllMaxXp.Text = "Max XP: " + playerStats.data.player.statistics.all.max_xp.ToString();
-            labelStatisticsAllMaxXpTankId.Text = "Max XP tank ID: " + playerStats.data.player.statistics.all.max_xp_tank_id.ToString();
+            //labelStatisticsAllMaxXpTankId.Text = "Max XP tank ID: " + playerStats.data.player.statistics.all.max_xp_tank_id.ToString();
             labelStatisticsAllNoDamageDirectHitsReceived.Text = "No damage direct hits received: " + playerStats.data.player.statistics.all.no_damage_direct_hits_received.ToString();
             labelStatisticsAllPiercing.Text = "Piercing: " + playerStats.data.player.statistics.all.piercings.ToString();
             labelStatisticsAllPiercingReceived.Text = "Piercing received: " + playerStats.data.player.statistics.all.piercings_received.ToString();
@@ -778,7 +820,7 @@ namespace WGHelper.Forms
             labelStatisticsFalloutLosses.Text = "Losses: " + playerStats.data.player.statistics.fallout.losses.ToString();
             labelStatisticsFalloutMaxDamage.Text = "Max damage: " + playerStats.data.player.statistics.fallout.max_damage.ToString();
             //labelStatisticsFalloutMaxDamageTankId.Text = "Max damage tank ID" + playerStats.data.player.statistics.fallout.max_damage_tank_id.ToString();
-            labelStatisticsFalloutMaxDamageWithAvatar.Text = "Max damage with avatar: " + playerStats.data.player.statistics.fallout.max_damage_with_avatar.ToString();
+            //labelStatisticsFalloutMaxDamageWithAvatar.Text = "Max damage with avatar: " + playerStats.data.player.statistics.fallout.max_damage_with_avatar.ToString();
             labelStatisticsFalloutMaxFrags.Text = "Max frags: " + playerStats.data.player.statistics.fallout.max_frags.ToString();
             labelStatisticsFalloutMaxWinPoints.Text = "Max win points: " + playerStats.data.player.statistics.fallout.max_win_points.ToString();
             labelStatisticsFalloutMaxXp.Text = "Max XP: " + playerStats.data.player.statistics.fallout.max_xp.ToString();
@@ -1072,6 +1114,29 @@ namespace WGHelper.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Battles")
+                tabControlSummary.Visible = true;
+            else tabControlSummary.Visible = false;
+
+            if (comboBox1.Text == "GlobalMap")
+                tabControlGlobalmap.Visible = true;
+            else tabControlGlobalmap.Visible = false;
+
+            if (comboBox1.Text == "TeamBattles")
+                tabControlTeamBattles.Visible = true;
+            else tabControlTeamBattles.Visible = false;
+
+            if (comboBox1.Text == "Stronghold")
+                tabControlStronghold.Visible = true;
+            else tabControlStronghold.Visible = false;
+
+            if (comboBox1.Text == "NotAvailable")
+                tabControlNotAvailable.Visible = true;
+            else tabControlNotAvailable.Visible = false;
         }
     }
 }
