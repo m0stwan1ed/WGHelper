@@ -18,18 +18,18 @@ namespace WGHelper.Forms
 {
     public partial class wotPlayerStats : Form
     {
-        public wotPlayerStats()
+        public wotPlayerStats() // Конструктор формы
         {
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
             settings = XDocument.Load("settings.xml");
             Thread getPlayersStatsThread;
-            getPlayersStatsThread = new Thread(getPlayersStats);
+            getPlayersStatsThread = new Thread(PlayersStatsThread);
             getPlayersStatsThread.IsBackground = true;
             getPlayersStatsThread.Start();
         }
 
-        public static string getBetween(string strSource, string strStart, string strEnd)
+        public static string getBetween(string strSource, string strStart, string strEnd) // Функция поиска подстроки в строке
         {
             int Start, End;
             if (strSource.Contains(strStart) && strSource.Contains(strEnd))
@@ -45,7 +45,7 @@ namespace WGHelper.Forms
         }
 
         XDocument settings;
-        //------------------------------------------------
+        //--------------------- Классы для десериализации информации о технике в игре ---------------------------
         public class Meta
         {
             public int count { get; set; }
@@ -62,7 +62,7 @@ namespace WGHelper.Forms
             public Meta meta { get; set; }
             public List<Datum> data { get; set; }
         }
-        //-----------------------------------------------
+        //--------------------- Классы для десериализации статистики игрока --------------------------
 
         public class Meta2
         {
@@ -589,16 +589,18 @@ namespace WGHelper.Forms
             public Data data { get; set; }
         }
 
-        //-----------------------------------------------
+        //------------------- Данные для отправки запросов ----------------------------
 
         string urlRequestPlayersStats = "https://api.worldoftanks.ru/wot/account/info/?";
         string applicationID = "146bc6b8d619f5030ed02cdb5ce759b4";
 
+        string urlRequestTanksList = "https://api.worldoftanks.ru/wot/encyclopedia/vehicles/?";
+        string urlRequestTanksListParameters = "fields=tank_id";
 
-        void getPlayersStats()
+        //--------------------------- Функции ----------------------------------------
+        TanksListRootObject getTanksList(string urlRequest, string applicationId, string parameters)
         {
-            
-            WebRequest requestTanksList = WebRequest.Create("https://api.worldoftanks.ru/wot/encyclopedia/vehicles/?application_id=146bc6b8d619f5030ed02cdb5ce759b4&fields=tank_id");
+            WebRequest requestTanksList = WebRequest.Create(urlRequestTanksList + "application_id=" + applicationID + "&" + urlRequestTanksListParameters);
             WebResponse responseTanksList = requestTanksList.GetResponse();
             Stream answerStream = responseTanksList.GetResponseStream();
             StreamReader srAnswer = new StreamReader(answerStream);
@@ -609,29 +611,27 @@ namespace WGHelper.Forms
             strTanksList = Regex.Replace(strTanksList, "\"[0-9]*\":", "");
 
             TanksListRootObject tanksList = JsonConvert.DeserializeObject<TanksListRootObject>(strTanksList);
-            
-            settings = XDocument.Load("settings.xml");
+            return tanksList;
+        }
 
-            string accountID = settings.Element("settings").Element("wg_open_id").Element("account_id").Value;
-            string accessToken = settings.Element("settings").Element("wg_open_id").Element("access_token").Value;
-            string parameters = "&extra=statistics.globalmap_absolute%2Cstatistics.globalmap_champion%2Cstatistics.globalmap_middle%2Cstatistics.fallout%2Cstatistics.random";
-
-            WebRequest requestPlayersStats = WebRequest.Create(urlRequestPlayersStats + "application_id=" + applicationID + "&account_id=" + accountID + "&access_token=" + accessToken + parameters);
+        PlayerStatsRootObject getPlayersStats(string urlRequest, string applicationID, string accountID, string accessToken, string parameters, TanksListRootObject tanksList)
+        {
+            WebRequest requestPlayersStats = WebRequest.Create(urlRequest + "application_id=" + applicationID + "&account_id=" + accountID + "&access_token=" + accessToken + parameters);
             WebResponse responsePlayersStats = requestPlayersStats.GetResponse();
-            answerStream = responsePlayersStats.GetResponseStream();
-            srAnswer = new StreamReader(answerStream);
+            Stream answerStream = responsePlayersStats.GetResponseStream();
+            StreamReader srAnswer = new StreamReader(answerStream);
             string answer = srAnswer.ReadToEnd();
 
             //-------------------------------------------------
 
-            answer = answer.Replace("{\""+accountID, "{\"player");
-            for(int i = 0; i<tanksList.data.Count; i++)
+            answer = answer.Replace("{\"" + accountID, "{\"player");
+            for (int i = 0; i < tanksList.data.Count; i++)
             {
                 string destroyed = "";
                 destroyed = getBetween(answer, "\"" + tanksList.data[i].tank_id.ToString() + "\":", ",");
-                if (destroyed!="")
+                if (destroyed != "")
                 {
-                    answer = answer.Replace("\"" + tanksList.data[i].tank_id.ToString() + "\":"+destroyed, "{\"tank_id\":" + tanksList.data[i].tank_id.ToString() + ", \"count\":" + destroyed  + "}");
+                    answer = answer.Replace("\"" + tanksList.data[i].tank_id.ToString() + "\":" + destroyed, "{\"tank_id\":" + tanksList.data[i].tank_id.ToString() + ", \"count\":" + destroyed + "}");
                 }
             }
 
@@ -641,9 +641,13 @@ namespace WGHelper.Forms
             answer = Regex.Replace(answer, "\"57377\":[0-9]*,", ""); //Костыль до патча 9.18 (26.04)
 
             //------------------------------------------------- 
-            
-            PlayerStatsRootObject playerStats = JsonConvert.DeserializeObject<PlayerStatsRootObject>(answer);
 
+            PlayerStatsRootObject playerStats = JsonConvert.DeserializeObject<PlayerStatsRootObject>(answer);
+            return playerStats;
+        }
+
+        void viewSummaryStatistics(PlayerStatsRootObject playerStats)
+        {
             labelNickname.Text = "Nickname: " + playerStats.data.player.nickname;
 
             try
@@ -651,12 +655,12 @@ namespace WGHelper.Forms
                 labelClanId.Text = "Clan id: " + playerStats.data.player.clan_id.ToString();
                 pictureBoxClan.Image = Properties.Resources.clan_icon;
             }
-            catch(NullReferenceException)
+            catch (NullReferenceException)
             {
                 labelClanId.Text = "Clan id: no clan";
                 pictureBoxClan.Image = Properties.Resources.tank_icon;
             }
-            
+
 
             if (playerStats.data.player.@private.is_premium == true) pictureBoxIsPremium.Image = Properties.Resources.premium_icon;
             else pictureBoxIsPremium.Image = Properties.Resources.standard_icon;
@@ -696,14 +700,18 @@ namespace WGHelper.Forms
                 labelRestrictionsChatBanTime.Text = "Chat ban time: " + playerStats.data.player.@private.restrictions.chat_ban_time.ToString();
                 pictureBoxChatBan.Image = Properties.Resources.no_icon;
             }
-            catch(NullReferenceException)
+            catch (NullReferenceException)
             {
                 pictureBoxChatBan.Image = Properties.Resources.yes_icon;
                 labelRestrictionsChatBanTime.Text = "Chat is not banned";
             }
-            
+
             labelStatisticsFrags.Text = "Frags: " + playerStats.data.player.statistics.frags.Count.ToString();
             labelStatisticsTreesCut.Text = "Trees cut: " + playerStats.data.player.statistics.trees_cut.ToString();
+        }
+
+        void viewAllStatistics(PlayerStatsRootObject playerStats)
+        {
             //**************************************************
             labelStatisticsAllAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.all.avg_damage_assisted.ToString();
             labelStatisticsAllAvgDamageAssistedRadio.Text = "Average damage assisted radio:" + playerStats.data.player.statistics.all.avg_damage_assisted_radio.ToString();
@@ -726,7 +734,7 @@ namespace WGHelper.Forms
             labelStatisticsAllMaxDamage.Text = "Max damage: " + playerStats.data.player.statistics.all.max_damage.ToString();
             //labelStatisticsAllMaxDamageTankId.Text = "Max damage tank ID: " + playerStats.data.player.statistics.all.max_damage_tank_id.ToString();
             labelStatisticsAllMaxFrags.Text = "Max frags: " + playerStats.data.player.statistics.all.max_frags.ToString();
-           // labelStatisticsAllMaxFragsTankId.Text = "Max frags tank ID: " + playerStats.data.player.statistics.all.max_frags_tank_id.ToString();
+            //labelStatisticsAllMaxFragsTankId.Text = "Max frags tank ID: " + playerStats.data.player.statistics.all.max_frags_tank_id.ToString();
             labelStatisticsAllMaxXp.Text = "Max XP: " + playerStats.data.player.statistics.all.max_xp.ToString();
             //labelStatisticsAllMaxXpTankId.Text = "Max XP tank ID: " + playerStats.data.player.statistics.all.max_xp_tank_id.ToString();
             labelStatisticsAllNoDamageDirectHitsReceived.Text = "No damage direct hits received: " + playerStats.data.player.statistics.all.no_damage_direct_hits_received.ToString();
@@ -738,6 +746,10 @@ namespace WGHelper.Forms
             labelStatisticsAllTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.all.tanking_factor.ToString();
             labelStatisticsAllWins.Text = "Wins: " + playerStats.data.player.statistics.all.wins.ToString();
             labelStatisticsAllXp.Text = "XP: " + playerStats.data.player.statistics.all.xp.ToString();
+        }
+
+        void viewClanStatistics(PlayerStatsRootObject playerStats)
+        {
             //*****************************************
             labelStatisticsClanAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.clan.avg_damage_assisted.ToString();
             labelStatisticsClanAvgDamageAssistedRadio.Text = "Average damage assisted radio:" + playerStats.data.player.statistics.clan.avg_damage_assisted_radio.ToString();
@@ -766,6 +778,10 @@ namespace WGHelper.Forms
             labelStatisticsClanTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.clan.tanking_factor.ToString();
             labelStatisticsClanWins.Text = "Wins: " + playerStats.data.player.statistics.clan.wins.ToString();
             labelStatisticsClanXp.Text = "XP: " + playerStats.data.player.statistics.clan.xp.ToString();
+        }
+
+        void viewCompanyStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsCompanyAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.company.avg_damage_assisted.ToString();
             labelStatisticsCompanyAvgDamageAssistedRadio.Text = "Average damage assisted radio:" + playerStats.data.player.statistics.company.avg_damage_assisted_radio.ToString();
@@ -794,6 +810,10 @@ namespace WGHelper.Forms
             labelStatisticsCompanyTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.company.tanking_factor.ToString();
             labelStatisticsCompanyWins.Text = "Wins: " + playerStats.data.player.statistics.company.wins.ToString();
             labelStatisticsCompanyXp.Text = "XP: " + playerStats.data.player.statistics.company.xp.ToString();
+        }
+
+        void viewFalloutStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsFalloutAvatarDamageDealt.Text = "Avatar damage dealt: " + playerStats.data.player.statistics.fallout.avatar_damage_dealt.ToString();
             labelStatisticsFalloutAvatarFrags.Text = "Avatar frags: " + playerStats.data.player.statistics.fallout.avatar_frags.ToString();
@@ -836,6 +856,10 @@ namespace WGHelper.Forms
             labelStatisticsFalloutWinPoints.Text = "Win points: " + playerStats.data.player.statistics.fallout.win_points.ToString();
             labelStatisticsFalloutWins.Text = "Wins: " + playerStats.data.player.statistics.fallout.wins.ToString();
             labelStatisticsFalloutXp.Text = "XP: " + playerStats.data.player.statistics.fallout.xp.ToString();
+        }
+
+        void viewGlobalmapAbsoluteStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsGAbsoluteAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.globalmap_absolute.avg_damage_assisted.ToString();
             labelStatisticsGAbsoluteAvgDamageAssistedRadio.Text = "Average damage assisded radio: " + playerStats.data.player.statistics.globalmap_absolute.avg_damage_assisted_radio.ToString();
@@ -864,6 +888,10 @@ namespace WGHelper.Forms
             labelStatisticsGAbsoluteTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.globalmap_absolute.tanking_factor.ToString();
             labelStatisticsGAbsoluteWins.Text = "Wins: " + playerStats.data.player.statistics.globalmap_absolute.wins.ToString();
             labelStatisticsGAbsoluteXp.Text = "XP: " + playerStats.data.player.statistics.globalmap_absolute.xp.ToString();
+        }
+
+        void viewGlobalmapChampionStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsGChampionAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.globalmap_champion.avg_damage_assisted.ToString();
             labelStatisticsGChampionAvgDamageAssistedRadio.Text = "Average damage assisded radio: " + playerStats.data.player.statistics.globalmap_champion.avg_damage_assisted_radio.ToString();
@@ -892,6 +920,10 @@ namespace WGHelper.Forms
             labelStatisticsGChampionTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.globalmap_champion.tanking_factor.ToString();
             labelStatisticsGChampionWins.Text = "Wins: " + playerStats.data.player.statistics.globalmap_champion.wins.ToString();
             labelStatisticsGChampionXp.Text = "XP: " + playerStats.data.player.statistics.globalmap_champion.xp.ToString();
+        }
+
+        void viewGlobalmapMiddleStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsGMiddleAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.globalmap_middle.avg_damage_assisted.ToString();
             labelStatisticsGMiddleAvgDamageAssistedRadio.Text = "Average damage assisded radio: " + playerStats.data.player.statistics.globalmap_middle.avg_damage_assisted_radio.ToString();
@@ -920,6 +952,10 @@ namespace WGHelper.Forms
             labelStatisticsGMiddleTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.globalmap_middle.tanking_factor.ToString();
             labelStatisticsGMiddleWins.Text = "Wins: " + playerStats.data.player.statistics.globalmap_middle.wins.ToString();
             labelStatisticsGMiddleXp.Text = "XP: " + playerStats.data.player.statistics.globalmap_middle.xp.ToString();
+        }
+
+        void viewHistoryStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsHAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.historical.avg_damage_assisted.ToString();
             labelStatisticsHAvgDamageAssistedRadio.Text = "Average damage assisted radio: " + playerStats.data.player.statistics.historical.avg_damage_assisted_radio.ToString();
@@ -953,6 +989,10 @@ namespace WGHelper.Forms
             labelStatisticsHTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.historical.tanking_factor.ToString();
             labelStatisticsHWins.Text = "Wins: " + playerStats.data.player.statistics.historical.wins.ToString();
             labelStatisticsHXp.Text = "Xp: " + playerStats.data.player.statistics.historical.xp.ToString();
+        }
+
+        void viewRandomStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsRAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.random.avg_damage_assisted.ToString();
             labelStatisticsRAvgDamageAssistedRadio.Text = "Average damage assisted radio: " + playerStats.data.player.statistics.random.avg_damage_assisted_radio.ToString();
@@ -981,6 +1021,10 @@ namespace WGHelper.Forms
             labelStatisticsRTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.random.tanking_factor.ToString();
             labelStatisticsRWins.Text = "Wins: " + playerStats.data.player.statistics.random.wins.ToString();
             labelStatisticsRXp.Text = "Xp: " + playerStats.data.player.statistics.random.xp.ToString();
+        }
+
+        void viewRegularTeamStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsRegTAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.regular_team.avg_damage_assisted.ToString();
             labelStatisticsRegTAvgDamageAssistedRadio.Text = "Average damage assisted radio: " + playerStats.data.player.statistics.regular_team.avg_damage_assisted_radio.ToString();
@@ -1015,6 +1059,10 @@ namespace WGHelper.Forms
             labelStatisticsRegTTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.regular_team.tanking_factor.ToString();
             labelStatisticsRegTWins.Text = "Wins: " + playerStats.data.player.statistics.regular_team.wins.ToString();
             labelStatisticsRegTXp.Text = "Xp: " + playerStats.data.player.statistics.regular_team.xp.ToString();
+        }
+
+        void viewStrongholdDefenseStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsSDBattleAvgXp.Text = "Battle average Xp: " + playerStats.data.player.statistics.stronghold_defense.battle_avg_xp.ToString();
             labelStatisticsSDBattles.Text = "Battles: " + playerStats.data.player.statistics.stronghold_defense.battles.ToString();
@@ -1045,6 +1093,10 @@ namespace WGHelper.Forms
             labelStatisticsSDTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.stronghold_defense.tanking_factor.ToString();
             labelStatisticsSDWins.Text = "Wins: " + playerStats.data.player.statistics.stronghold_defense.wins.ToString();
             labelStatisticsSDXp.Text = "Xp: " + playerStats.data.player.statistics.stronghold_defense.xp.ToString();
+        }
+
+        void viewStrongholdSkirmishStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsSSBattleAvgXp.Text = "Battle average xp: " + playerStats.data.player.statistics.stronghold_skirmish.battle_avg_xp.ToString();
             labelStatisticsSSBattles.Text = "Battles: " + playerStats.data.player.statistics.stronghold_skirmish.battles.ToString();
@@ -1075,6 +1127,10 @@ namespace WGHelper.Forms
             labelStatisticsSSTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.stronghold_skirmish.tanking_factor.ToString();
             labelStatisticsSSWins.Text = "Wins: " + playerStats.data.player.statistics.stronghold_skirmish.wins.ToString();
             labelStatisticsSSXp.Text = "Xp: " + playerStats.data.player.statistics.stronghold_skirmish.xp.ToString();
+        }
+
+        void viewTeamStatistics(PlayerStatsRootObject playerStats)
+        {
             //****************************************
             labelStatisticsTeamAvgDamageAssisted.Text = "Average damage assisted: " + playerStats.data.player.statistics.team.avg_damage_assisted.ToString();
             labelStatisticsTeamAvgDamageAssistedRadio.Text = "Average damage assisted radio: " + playerStats.data.player.statistics.team.avg_damage_assisted_radio.ToString();
@@ -1108,15 +1164,42 @@ namespace WGHelper.Forms
             labelStatisticsTeamTankingFactor.Text = "Tanking factor: " + playerStats.data.player.statistics.team.tanking_factor.ToString();
             labelStatisticsTeamWins.Text = "Wins: " + playerStats.data.player.statistics.team.wins.ToString();
             labelStatisticsTeamXp.Text = "Xp: " + playerStats.data.player.statistics.team.xp.ToString();
-            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        void PlayersStatsThread()
+        {
+            TanksListRootObject tanksList = getTanksList(urlRequestTanksList, applicationID, urlRequestTanksListParameters); // Получить от сервера список танков в игре
+            
+            settings = XDocument.Load("settings.xml"); // Импорт настроек
+
+            string accountID = settings.Element("settings").Element("wg_open_id").Element("account_id").Value; // АйДи игрока
+            string accessToken = settings.Element("settings").Element("wg_open_id").Element("access_token").Value; // Ключ доступа к данным
+            string parameters = "&extra=statistics.globalmap_absolute%2Cstatistics.globalmap_champion%2Cstatistics.globalmap_middle%2Cstatistics.fallout%2Cstatistics.random"; // Параметры запроса к серверу
+
+            PlayerStatsRootObject playerStats = getPlayersStats(urlRequestPlayersStats, applicationID, accountID, accessToken, parameters, tanksList); // Получить от сервера статистику игрока
+
+            viewSummaryStatistics(playerStats);                 // Вывести общюю статистику 
+            viewAllStatistics(playerStats);                     // Вывести основную статистику
+            viewClanStatistics(playerStats);                    // Вывести клановую статистику
+            viewCompanyStatistics(playerStats);                 // Вывести ротную статистику
+            viewFalloutStatistics(playerStats);                 // Вывести статистику "Бой до последнего"
+            viewGlobalmapAbsoluteStatistics(playerStats);       // Вывести статистику глобальной карты абсолютного формата
+            viewGlobalmapChampionStatistics(playerStats);       // Вывести статистику глобальной карты чемпионского формата
+            viewGlobalmapMiddleStatistics(playerStats);         // Вывести статистику глобальной карты среднего формата
+            viewHistoryStatistics(playerStats);                 // Вывести статистику исторических боев
+            viewRandomStatistics(playerStats);                  // Вывести статистику случайных боев
+            viewRegularTeamStatistics(playerStats);             // Вывести статистику командных боев ладдера
+            viewStrongholdDefenseStatistics(playerStats);       // Вывести статистику обороны укрепрайона
+            viewStrongholdSkirmishStatistics(playerStats);      // Вывести статистику вылазок
+            viewTeamStatistics(playerStats);                    // Вывести статистику командных боев
+        }
+
+        private void button1_Click(object sender, EventArgs e) // Функция при нажатии на кнопку
         {
             this.Dispose();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) // При выборе типа статистики видимым становится нужный табКонтрол
         {
             if (comboBox1.Text == "Battles")
                 tabControlSummary.Visible = true;
