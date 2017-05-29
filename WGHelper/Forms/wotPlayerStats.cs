@@ -863,6 +863,7 @@ namespace WGHelper.Forms
             //labelStatisticsFalloutMaxDamageTankId.Text = "Max damage tank ID" + playerStats.data.player.statistics.fallout.max_damage_tank_id.ToString();
             //labelStatisticsFalloutMaxDamageWithAvatar.Text = "Max damage with avatar: " + playerStats.data.player.statistics.fallout.max_damage_with_avatar.ToString();
             labelStatisticsFalloutMaxFrags.Text = "Max frags: " + playerStats.data.player.statistics.fallout.max_frags.ToString();
+            //labelStatisticsFalloutMaxFragsTankId.Text = "Max frags tank id: " + playerStats.data.player.statistics.fallout.max_frags_tank_id.ToString();
             labelStatisticsFalloutMaxWinPoints.Text = "Max win points: " + playerStats.data.player.statistics.fallout.max_win_points.ToString();
             labelStatisticsFalloutMaxXp.Text = "Max XP: " + playerStats.data.player.statistics.fallout.max_xp.ToString();
             //labelStatisticsFalloutMaxXpTankId.Text = "Max XP tank ID:" + playerStats.data.player.statistics.fallout.max_xp_tank_id.ToString();
@@ -1004,6 +1005,7 @@ namespace WGHelper.Forms
             //labelStatisticsHMaxXpTankId.Text = "Max Xp tank id: " + playerStats.data.player.statistics.historical.max_xp_tank_id.ToString();
             labelStatisticsHNoDamageDirectReceived.Text = "No damage direct received: " + playerStats.data.player.statistics.historical.no_damage_direct_hits_received.ToString();
             labelStatisticsHPiercings.Text = "Piercings: " + playerStats.data.player.statistics.historical.piercings.ToString();
+            labelStatisticsHPiercingsReceived.Text = "Piercings: " + playerStats.data.player.statistics.historical.piercings_received.ToString();
             labelStatisticsHShots.Text = "Shots: " + playerStats.data.player.statistics.historical.shots.ToString();
             labelStatisticsHSpotted.Text = "Spotted: " + playerStats.data.player.statistics.historical.spotted.ToString();
             labelStatisticsHSurvivedBattles.Text = "Survived battles: " + playerStats.data.player.statistics.historical.survived_battles.ToString();
@@ -1241,6 +1243,11 @@ namespace WGHelper.Forms
             if (comboBox1.Text == "NotAvailable")
                 tabControlNotAvailable.Visible = true;
             else tabControlNotAvailable.Visible = false;
+        }
+
+        private void wotPlayerStats_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
