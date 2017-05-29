@@ -675,10 +675,21 @@ namespace WGHelper.Forms
                         break;
                     }
             }
-            labelCreatedAt.Text = "Account created: " + playerStats.data.player.created_at.ToString();
+
+            System.DateTime dtDateTime;
+            dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(Convert.ToDouble(playerStats.data.player.created_at.ToString())).ToLocalTime();
+            labelCreatedAt.Text = "Account created: " + dtDateTime.Day.ToString() + "." + dtDateTime.Month.ToString() + "." + dtDateTime.Year.ToString() + " " + dtDateTime.Hour.ToString() + ":" + dtDateTime.Minute.ToString() + ":" + dtDateTime.Second.ToString();
+
             labelGlobalRating.Text = "Global rating: " + playerStats.data.player.global_rating.ToString();
-            labelLogoutAt.Text = "Logout at: " + playerStats.data.player.logout_at.ToString();
-            labelUpdatedAt.Text = "Last update: " + playerStats.data.player.updated_at.ToString();
+
+            dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(Convert.ToDouble(playerStats.data.player.logout_at.ToString())).ToLocalTime();
+            labelLogoutAt.Text = "Logout at: " + dtDateTime.Day.ToString() + "." + dtDateTime.Month.ToString() + "." + dtDateTime.Year.ToString() + " " + dtDateTime.Hour.ToString() + ":" + dtDateTime.Minute.ToString() + ":" + dtDateTime.Second.ToString();
+
+            dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(Convert.ToDouble(playerStats.data.player.updated_at.ToString())).ToLocalTime();
+            labelUpdatedAt.Text = "Last update: " + dtDateTime.Day.ToString() + "." + dtDateTime.Month.ToString() + "." + dtDateTime.Year.ToString() + " " + dtDateTime.Hour.ToString() + ":" + dtDateTime.Minute.ToString() + ":" + dtDateTime.Second.ToString();
             //**************************************************
             labelBattleLifeTime.Text = "Battle life time: " + playerStats.data.player.@private.battle_life_time.ToString();
             labelCredits.Text = "Credits: " + playerStats.data.player.@private.credits.ToString();
@@ -692,7 +703,9 @@ namespace WGHelper.Forms
             labelIsPremium.Text = "Premium: " + playerStats.data.player.@private.is_premium.ToString();
             pictureBoxPremium.Image = pictureBoxIsPremium.Image;
 
-            labelPremiumExperiesAt.Text = "Experies at: " + playerStats.data.player.@private.premium_expires_at.ToString();
+            dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(Convert.ToDouble(playerStats.data.player.@private.premium_expires_at.ToString())).ToLocalTime();
+            labelPremiumExperiesAt.Text = "Experies at: " + dtDateTime.Day.ToString() + "." + dtDateTime.Month.ToString() + "." + dtDateTime.Year.ToString() + " " + dtDateTime.Hour.ToString() + ":" + dtDateTime.Minute.ToString() + ":" + dtDateTime.Second.ToString();
             //**************************************************
 
             try
