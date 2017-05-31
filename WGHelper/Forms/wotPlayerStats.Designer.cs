@@ -132,6 +132,17 @@
             this.labelStatisticsCompanyLosses = new System.Windows.Forms.Label();
             this.tabControlGlobalmap = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.labelGAbsoluteCaptureCoef = new System.Windows.Forms.Label();
+            this.labelGAbsoluteCaptureDefense = new System.Windows.Forms.Label();
+            this.labelGAbsoluteFragsCoef = new System.Windows.Forms.Label();
+            this.labelGAbsoluteFragsDestroys = new System.Windows.Forms.Label();
+            this.labelGAbsolutePiercingsPercent = new System.Windows.Forms.Label();
+            this.labelGAbsoluteHitsPenetrations = new System.Windows.Forms.Label();
+            this.labelGAbsoluteDamageCoef = new System.Windows.Forms.Label();
+            this.labelGAbsoluteDamage = new System.Windows.Forms.Label();
+            this.labelGAbsoluteWinsCoef = new System.Windows.Forms.Label();
+            this.labelGAbsoluteWinsLosses = new System.Windows.Forms.Label();
+            this.labelGAbsoluteSummary = new System.Windows.Forms.Label();
             this.labelStatisticsGAbsoluteExplosionHitsReceived = new System.Windows.Forms.Label();
             this.labelStatisticsGAbsoluteExplosionHits = new System.Windows.Forms.Label();
             this.labelStatisticsGAbsoluteXp = new System.Windows.Forms.Label();
@@ -160,6 +171,17 @@
             this.labelStatisticsGAbsoluteAvgDamageAssistedRadio = new System.Windows.Forms.Label();
             this.labelStatisticsGAbsoluteAvgDamageAssisted = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.labelGChampionCapturePercent = new System.Windows.Forms.Label();
+            this.labelGChampionCaptureDefense = new System.Windows.Forms.Label();
+            this.labelGChampionFragsCoef = new System.Windows.Forms.Label();
+            this.labelGChampionFragsDestroys = new System.Windows.Forms.Label();
+            this.labelGChampionPiercingsPercent = new System.Windows.Forms.Label();
+            this.labelGChampionHitsPenetrations = new System.Windows.Forms.Label();
+            this.labelGChampionDamageCoef = new System.Windows.Forms.Label();
+            this.labelGChampionDamage = new System.Windows.Forms.Label();
+            this.labelGChampionWinsCoef = new System.Windows.Forms.Label();
+            this.labelGChampionWinsLosses = new System.Windows.Forms.Label();
+            this.labelGChampionSummary = new System.Windows.Forms.Label();
             this.labelStatisticsGChampionExplosionHitsReceived = new System.Windows.Forms.Label();
             this.labelStatisticsGChampionExplosionHits = new System.Windows.Forms.Label();
             this.labelStatisticsGChampionXp = new System.Windows.Forms.Label();
@@ -188,6 +210,17 @@
             this.labelStatisticsGChampionAvgDamageAssistedRadio = new System.Windows.Forms.Label();
             this.labelStatisticsGChampionAvgDamageAssisted = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.labelGMiddleCapturePercents = new System.Windows.Forms.Label();
+            this.labelGMiddleCaptureDefense = new System.Windows.Forms.Label();
+            this.labelGMiddleFragsCoef = new System.Windows.Forms.Label();
+            this.labelGMiddleFragsDestroys = new System.Windows.Forms.Label();
+            this.labelGMiddlePiercingsPercent = new System.Windows.Forms.Label();
+            this.labelGMiddleHitsPercents = new System.Windows.Forms.Label();
+            this.labelGMiddleDamageCoef = new System.Windows.Forms.Label();
+            this.labelGMiddleDamage = new System.Windows.Forms.Label();
+            this.labelGMiddleWinsCoef = new System.Windows.Forms.Label();
+            this.labelGMiddleWinsLosses = new System.Windows.Forms.Label();
+            this.labelGMiddleSummary = new System.Windows.Forms.Label();
             this.labelStatisticsGMiddleExplosionHitsReceived = new System.Windows.Forms.Label();
             this.labelStatisticsGMiddleExplosionHits = new System.Windows.Forms.Label();
             this.labelStatisticsGMiddleXp = new System.Windows.Forms.Label();
@@ -419,6 +452,19 @@
             this.labelStatisticsRegTWins = new System.Windows.Forms.Label();
             this.labelStatisticsRegTXp = new System.Windows.Forms.Label();
             this.tabPageHistoricalStatistics = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.labelHCaptureCoef = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labelHFragsCoef = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.labelHPiercingsPercent = new System.Windows.Forms.Label();
+            this.labelStatisticsHPiercingsReceived = new System.Windows.Forms.Label();
+            this.labelHHitsPenetrations = new System.Windows.Forms.Label();
+            this.labelHDamageCoef = new System.Windows.Forms.Label();
+            this.labelHDamage = new System.Windows.Forms.Label();
+            this.labelHWinsCoef = new System.Windows.Forms.Label();
+            this.labelHWinsLosses = new System.Windows.Forms.Label();
+            this.labelHSummary = new System.Windows.Forms.Label();
             this.labelStatisticsHXp = new System.Windows.Forms.Label();
             this.labelStatisticsHWins = new System.Windows.Forms.Label();
             this.labelStatisticsHTankingFactor = new System.Windows.Forms.Label();
@@ -452,6 +498,19 @@
             this.labelStatisticsHAvgDamageAssistedRadio = new System.Windows.Forms.Label();
             this.labelStatisticsHAvgDamageAssisted = new System.Windows.Forms.Label();
             this.tabPageFalloutStatistics = new System.Windows.Forms.TabPage();
+            this.labelStatisticsFalloutMaxFragsTankId = new System.Windows.Forms.Label();
+            this.labelFalloutRecords = new System.Windows.Forms.Label();
+            this.labelFalloutCaptureCoef = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelFalloutFragsCoef = new System.Windows.Forms.Label();
+            this.labelFalloutFragsDestroys = new System.Windows.Forms.Label();
+            this.labelFalloutPiercingsPercent = new System.Windows.Forms.Label();
+            this.labelFalloutHitsPenetrations = new System.Windows.Forms.Label();
+            this.labelFalloutDamageCoef = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelFalloutWinsCoef = new System.Windows.Forms.Label();
+            this.labelFalloutWinsLosses = new System.Windows.Forms.Label();
+            this.labelFalloutSummary = new System.Windows.Forms.Label();
             this.labelStatisticsFalloutXp = new System.Windows.Forms.Label();
             this.labelStatisticsFalloutWins = new System.Windows.Forms.Label();
             this.labelStatisticsFalloutWinPoints = new System.Windows.Forms.Label();
@@ -496,10 +555,58 @@
             this.tabControlNotAvailable = new System.Windows.Forms.TabControl();
             this.tabControlTeamBattles = new System.Windows.Forms.TabControl();
             this.tabPageRegularTeam = new System.Windows.Forms.TabPage();
+            this.labelRegTRecords = new System.Windows.Forms.Label();
+            this.labelRegTCapturePercent = new System.Windows.Forms.Label();
+            this.labelRegTCaptureDefense = new System.Windows.Forms.Label();
+            this.labelRegTFragsCoef = new System.Windows.Forms.Label();
+            this.labelRegTFragsDestroys = new System.Windows.Forms.Label();
+            this.labelRegTPiercingsPercent = new System.Windows.Forms.Label();
+            this.labelRegTHitsPenetrations = new System.Windows.Forms.Label();
+            this.labelRegTDamageCoef = new System.Windows.Forms.Label();
+            this.label3RegTDamage = new System.Windows.Forms.Label();
+            this.labelRegularTWinsCoef = new System.Windows.Forms.Label();
+            this.labelRegTWinsLosses = new System.Windows.Forms.Label();
+            this.labelRegTSummary = new System.Windows.Forms.Label();
             this.tabPageTeam = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelTeamCapturePercent = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelTeamFragsCorf = new System.Windows.Forms.Label();
+            this.labelTeamFragsDestroys = new System.Windows.Forms.Label();
+            this.labelTeamPiercingsPercent = new System.Windows.Forms.Label();
+            this.labelTeamHitsPenetrations = new System.Windows.Forms.Label();
+            this.labelTeamDamageCoef = new System.Windows.Forms.Label();
+            this.labelTeamDamage = new System.Windows.Forms.Label();
+            this.labelTeamWinsCoef = new System.Windows.Forms.Label();
+            this.labelTeamWinsLooses = new System.Windows.Forms.Label();
+            this.labelTeamSummary = new System.Windows.Forms.Label();
             this.tabControlStronghold = new System.Windows.Forms.TabControl();
             this.tabPageStrongholdDefense = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelSDCaptureCoef = new System.Windows.Forms.Label();
+            this.labelSDCaptureDefense = new System.Windows.Forms.Label();
+            this.labelSDFragsCoef = new System.Windows.Forms.Label();
+            this.labelSDFragsDestroys = new System.Windows.Forms.Label();
+            this.labelSDPiercingsPercent = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelSDDamageCoef = new System.Windows.Forms.Label();
+            this.labelSDDamage = new System.Windows.Forms.Label();
+            this.labelSDWinsCoef = new System.Windows.Forms.Label();
+            this.labelSDWinsLosses = new System.Windows.Forms.Label();
+            this.labelSDSummary = new System.Windows.Forms.Label();
             this.tabPageStrongholdSkirmish = new System.Windows.Forms.TabPage();
+            this.labelSSRecords = new System.Windows.Forms.Label();
+            this.labelSSCaptureCoef = new System.Windows.Forms.Label();
+            this.labelSSCaptureDefense = new System.Windows.Forms.Label();
+            this.labelSSFragsCoef = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelSSPiercingsPercent = new System.Windows.Forms.Label();
+            this.labelSSHitsPercents = new System.Windows.Forms.Label();
+            this.labelSSDamageCoef = new System.Windows.Forms.Label();
+            this.labelSSDamage = new System.Windows.Forms.Label();
+            this.labelSSWinsCoef = new System.Windows.Forms.Label();
+            this.labelSSWinsLosses = new System.Windows.Forms.Label();
+            this.labelSSSummary = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelClanId = new System.Windows.Forms.Label();
             this.pictureBoxClan = new System.Windows.Forms.PictureBox();
@@ -519,113 +626,6 @@
             this.pictureBoxCreated = new System.Windows.Forms.PictureBox();
             this.pictureBoxClientLanguare = new System.Windows.Forms.PictureBox();
             this.pictureBoxIsPremium = new System.Windows.Forms.PictureBox();
-            this.labelGAbsoluteSummary = new System.Windows.Forms.Label();
-            this.labelGAbsoluteWinsLosses = new System.Windows.Forms.Label();
-            this.labelGAbsoluteWinsCoef = new System.Windows.Forms.Label();
-            this.labelGAbsoluteDamage = new System.Windows.Forms.Label();
-            this.labelGAbsoluteDamageCoef = new System.Windows.Forms.Label();
-            this.labelGAbsoluteHitsPenetrations = new System.Windows.Forms.Label();
-            this.labelGAbsolutePiercingsPercent = new System.Windows.Forms.Label();
-            this.labelGAbsoluteFragsDestroys = new System.Windows.Forms.Label();
-            this.labelGAbsoluteFragsCoef = new System.Windows.Forms.Label();
-            this.labelGAbsoluteCaptureDefense = new System.Windows.Forms.Label();
-            this.labelGAbsoluteCaptureCoef = new System.Windows.Forms.Label();
-            this.labelGChampionSummary = new System.Windows.Forms.Label();
-            this.labelGChampionWinsLosses = new System.Windows.Forms.Label();
-            this.labelGChampionWinsCoef = new System.Windows.Forms.Label();
-            this.labelGChampionDamage = new System.Windows.Forms.Label();
-            this.labelGChampionDamageCoef = new System.Windows.Forms.Label();
-            this.labelGChampionHitsPenetrations = new System.Windows.Forms.Label();
-            this.labelGChampionPiercingsPercent = new System.Windows.Forms.Label();
-            this.labelGChampionFragsDestroys = new System.Windows.Forms.Label();
-            this.labelGChampionFragsCoef = new System.Windows.Forms.Label();
-            this.labelGChampionCaptureDefense = new System.Windows.Forms.Label();
-            this.labelGChampionCapturePercent = new System.Windows.Forms.Label();
-            this.labelGMiddleSummary = new System.Windows.Forms.Label();
-            this.labelGMiddleWinsLosses = new System.Windows.Forms.Label();
-            this.labelGMiddleWinsCoef = new System.Windows.Forms.Label();
-            this.labelGMiddleDamage = new System.Windows.Forms.Label();
-            this.labelGMiddleDamageCoef = new System.Windows.Forms.Label();
-            this.labelGMiddleHitsPercents = new System.Windows.Forms.Label();
-            this.labelGMiddlePiercingsPercent = new System.Windows.Forms.Label();
-            this.labelGMiddleFragsDestroys = new System.Windows.Forms.Label();
-            this.labelGMiddleFragsCoef = new System.Windows.Forms.Label();
-            this.labelGMiddleCaptureDefense = new System.Windows.Forms.Label();
-            this.labelGMiddleCapturePercents = new System.Windows.Forms.Label();
-            this.labelRegTSummary = new System.Windows.Forms.Label();
-            this.labelRegTWinsLosses = new System.Windows.Forms.Label();
-            this.labelRegularTWinsCoef = new System.Windows.Forms.Label();
-            this.label3RegTDamage = new System.Windows.Forms.Label();
-            this.labelRegTDamageCoef = new System.Windows.Forms.Label();
-            this.labelRegTHitsPenetrations = new System.Windows.Forms.Label();
-            this.labelRegTPiercingsPercent = new System.Windows.Forms.Label();
-            this.labelRegTFragsDestroys = new System.Windows.Forms.Label();
-            this.labelRegTFragsCoef = new System.Windows.Forms.Label();
-            this.labelRegTCaptureDefense = new System.Windows.Forms.Label();
-            this.labelRegTCapturePercent = new System.Windows.Forms.Label();
-            this.labelRegTRecords = new System.Windows.Forms.Label();
-            this.labelTeamSummary = new System.Windows.Forms.Label();
-            this.labelTeamWinsLooses = new System.Windows.Forms.Label();
-            this.labelTeamWinsCoef = new System.Windows.Forms.Label();
-            this.labelTeamDamage = new System.Windows.Forms.Label();
-            this.labelTeamDamageCoef = new System.Windows.Forms.Label();
-            this.labelTeamHitsPenetrations = new System.Windows.Forms.Label();
-            this.labelTeamPiercingsPercent = new System.Windows.Forms.Label();
-            this.labelTeamFragsDestroys = new System.Windows.Forms.Label();
-            this.labelTeamFragsCorf = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelTeamCapturePercent = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelSDSummary = new System.Windows.Forms.Label();
-            this.labelSDWinsLosses = new System.Windows.Forms.Label();
-            this.labelSDWinsCoef = new System.Windows.Forms.Label();
-            this.labelSDDamage = new System.Windows.Forms.Label();
-            this.labelSDDamageCoef = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelSDPiercingsPercent = new System.Windows.Forms.Label();
-            this.labelSDFragsDestroys = new System.Windows.Forms.Label();
-            this.labelSDFragsCoef = new System.Windows.Forms.Label();
-            this.labelSDCaptureDefense = new System.Windows.Forms.Label();
-            this.labelSDCaptureCoef = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelSSSummary = new System.Windows.Forms.Label();
-            this.labelSSWinsLosses = new System.Windows.Forms.Label();
-            this.labelSSWinsCoef = new System.Windows.Forms.Label();
-            this.labelSSDamage = new System.Windows.Forms.Label();
-            this.labelSSDamageCoef = new System.Windows.Forms.Label();
-            this.labelSSHitsPercents = new System.Windows.Forms.Label();
-            this.labelSSPiercingsPercent = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelSSFragsCoef = new System.Windows.Forms.Label();
-            this.labelSSCaptureDefense = new System.Windows.Forms.Label();
-            this.labelSSCaptureCoef = new System.Windows.Forms.Label();
-            this.labelSSRecords = new System.Windows.Forms.Label();
-            this.labelFalloutSummary = new System.Windows.Forms.Label();
-            this.labelFalloutWinsLosses = new System.Windows.Forms.Label();
-            this.labelFalloutWinsCoef = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelFalloutDamageCoef = new System.Windows.Forms.Label();
-            this.labelFalloutHitsPenetrations = new System.Windows.Forms.Label();
-            this.labelFalloutPiercingsPercent = new System.Windows.Forms.Label();
-            this.labelFalloutFragsDestroys = new System.Windows.Forms.Label();
-            this.labelFalloutFragsCoef = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.labelFalloutCaptureCoef = new System.Windows.Forms.Label();
-            this.labelFalloutRecords = new System.Windows.Forms.Label();
-            this.labelStatisticsFalloutMaxFragsTankId = new System.Windows.Forms.Label();
-            this.labelHSummary = new System.Windows.Forms.Label();
-            this.labelHWinsLosses = new System.Windows.Forms.Label();
-            this.labelHWinsCoef = new System.Windows.Forms.Label();
-            this.labelHDamage = new System.Windows.Forms.Label();
-            this.labelHDamageCoef = new System.Windows.Forms.Label();
-            this.labelHHitsPenetrations = new System.Windows.Forms.Label();
-            this.labelStatisticsHPiercingsReceived = new System.Windows.Forms.Label();
-            this.labelHPiercingsPercent = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelHFragsCoef = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.labelHCaptureCoef = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.tabControlGlobalmap.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -669,7 +669,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -1637,10 +1637,115 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(612, 497);
+            this.tabPage5.Size = new System.Drawing.Size(439, 371);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "GlobalmapAbsolute";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // labelGAbsoluteCaptureCoef
+            // 
+            this.labelGAbsoluteCaptureCoef.AutoSize = true;
+            this.labelGAbsoluteCaptureCoef.Location = new System.Drawing.Point(301, 301);
+            this.labelGAbsoluteCaptureCoef.Name = "labelGAbsoluteCaptureCoef";
+            this.labelGAbsoluteCaptureCoef.Size = new System.Drawing.Size(115, 13);
+            this.labelGAbsoluteCaptureCoef.TabIndex = 37;
+            this.labelGAbsoluteCaptureCoef.Text = "GAbsoluteCaptureCoef";
+            // 
+            // labelGAbsoluteCaptureDefense
+            // 
+            this.labelGAbsoluteCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGAbsoluteCaptureDefense.Location = new System.Drawing.Point(6, 288);
+            this.labelGAbsoluteCaptureDefense.Name = "labelGAbsoluteCaptureDefense";
+            this.labelGAbsoluteCaptureDefense.Size = new System.Drawing.Size(427, 13);
+            this.labelGAbsoluteCaptureDefense.TabIndex = 36;
+            this.labelGAbsoluteCaptureDefense.Text = "Capture/Defense";
+            this.labelGAbsoluteCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGAbsoluteFragsCoef
+            // 
+            this.labelGAbsoluteFragsCoef.AutoSize = true;
+            this.labelGAbsoluteFragsCoef.Location = new System.Drawing.Point(301, 270);
+            this.labelGAbsoluteFragsCoef.Name = "labelGAbsoluteFragsCoef";
+            this.labelGAbsoluteFragsCoef.Size = new System.Drawing.Size(104, 13);
+            this.labelGAbsoluteFragsCoef.TabIndex = 35;
+            this.labelGAbsoluteFragsCoef.Text = "GAbsoluteFragsCoef";
+            // 
+            // labelGAbsoluteFragsDestroys
+            // 
+            this.labelGAbsoluteFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGAbsoluteFragsDestroys.Location = new System.Drawing.Point(6, 257);
+            this.labelGAbsoluteFragsDestroys.Name = "labelGAbsoluteFragsDestroys";
+            this.labelGAbsoluteFragsDestroys.Size = new System.Drawing.Size(427, 13);
+            this.labelGAbsoluteFragsDestroys.TabIndex = 34;
+            this.labelGAbsoluteFragsDestroys.Text = "Frags/Destroys";
+            this.labelGAbsoluteFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGAbsolutePiercingsPercent
+            // 
+            this.labelGAbsolutePiercingsPercent.AutoSize = true;
+            this.labelGAbsolutePiercingsPercent.Location = new System.Drawing.Point(214, 226);
+            this.labelGAbsolutePiercingsPercent.Name = "labelGAbsolutePiercingsPercent";
+            this.labelGAbsolutePiercingsPercent.Size = new System.Drawing.Size(136, 13);
+            this.labelGAbsolutePiercingsPercent.TabIndex = 33;
+            this.labelGAbsolutePiercingsPercent.Text = "GAbsolutePiercingsPercent";
+            // 
+            // labelGAbsoluteHitsPenetrations
+            // 
+            this.labelGAbsoluteHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGAbsoluteHitsPenetrations.Location = new System.Drawing.Point(6, 161);
+            this.labelGAbsoluteHitsPenetrations.Name = "labelGAbsoluteHitsPenetrations";
+            this.labelGAbsoluteHitsPenetrations.Size = new System.Drawing.Size(427, 13);
+            this.labelGAbsoluteHitsPenetrations.TabIndex = 32;
+            this.labelGAbsoluteHitsPenetrations.Text = "Hits/Penetrations";
+            this.labelGAbsoluteHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGAbsoluteDamageCoef
+            // 
+            this.labelGAbsoluteDamageCoef.AutoSize = true;
+            this.labelGAbsoluteDamageCoef.Location = new System.Drawing.Point(147, 143);
+            this.labelGAbsoluteDamageCoef.Name = "labelGAbsoluteDamageCoef";
+            this.labelGAbsoluteDamageCoef.Size = new System.Drawing.Size(118, 13);
+            this.labelGAbsoluteDamageCoef.TabIndex = 31;
+            this.labelGAbsoluteDamageCoef.Text = "GAbsoluteDamageCoef";
+            // 
+            // labelGAbsoluteDamage
+            // 
+            this.labelGAbsoluteDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGAbsoluteDamage.Location = new System.Drawing.Point(6, 117);
+            this.labelGAbsoluteDamage.Name = "labelGAbsoluteDamage";
+            this.labelGAbsoluteDamage.Size = new System.Drawing.Size(427, 13);
+            this.labelGAbsoluteDamage.TabIndex = 30;
+            this.labelGAbsoluteDamage.Text = "Damage";
+            this.labelGAbsoluteDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGAbsoluteWinsCoef
+            // 
+            this.labelGAbsoluteWinsCoef.AutoSize = true;
+            this.labelGAbsoluteWinsCoef.Location = new System.Drawing.Point(214, 87);
+            this.labelGAbsoluteWinsCoef.Name = "labelGAbsoluteWinsCoef";
+            this.labelGAbsoluteWinsCoef.Size = new System.Drawing.Size(102, 13);
+            this.labelGAbsoluteWinsCoef.TabIndex = 29;
+            this.labelGAbsoluteWinsCoef.Text = "GAbsoluteWinsCoef";
+            // 
+            // labelGAbsoluteWinsLosses
+            // 
+            this.labelGAbsoluteWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGAbsoluteWinsLosses.Location = new System.Drawing.Point(6, 74);
+            this.labelGAbsoluteWinsLosses.Name = "labelGAbsoluteWinsLosses";
+            this.labelGAbsoluteWinsLosses.Size = new System.Drawing.Size(427, 13);
+            this.labelGAbsoluteWinsLosses.TabIndex = 28;
+            this.labelGAbsoluteWinsLosses.Text = "Wins/Losses";
+            this.labelGAbsoluteWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGAbsoluteSummary
+            // 
+            this.labelGAbsoluteSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGAbsoluteSummary.Location = new System.Drawing.Point(6, 3);
+            this.labelGAbsoluteSummary.Name = "labelGAbsoluteSummary";
+            this.labelGAbsoluteSummary.Size = new System.Drawing.Size(427, 13);
+            this.labelGAbsoluteSummary.TabIndex = 27;
+            this.labelGAbsoluteSummary.Text = "Summary";
+            this.labelGAbsoluteSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelStatisticsGAbsoluteExplosionHitsReceived
             // 
@@ -1929,10 +2034,115 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(612, 497);
+            this.tabPage6.Size = new System.Drawing.Size(439, 371);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "GlobalmapChampion";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // labelGChampionCapturePercent
+            // 
+            this.labelGChampionCapturePercent.AutoSize = true;
+            this.labelGChampionCapturePercent.Location = new System.Drawing.Point(301, 301);
+            this.labelGChampionCapturePercent.Name = "labelGChampionCapturePercent";
+            this.labelGChampionCapturePercent.Size = new System.Drawing.Size(136, 13);
+            this.labelGChampionCapturePercent.TabIndex = 45;
+            this.labelGChampionCapturePercent.Text = "GChampionCapturePercent";
+            // 
+            // labelGChampionCaptureDefense
+            // 
+            this.labelGChampionCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGChampionCaptureDefense.Location = new System.Drawing.Point(6, 288);
+            this.labelGChampionCaptureDefense.Name = "labelGChampionCaptureDefense";
+            this.labelGChampionCaptureDefense.Size = new System.Drawing.Size(427, 13);
+            this.labelGChampionCaptureDefense.TabIndex = 45;
+            this.labelGChampionCaptureDefense.Text = "Capture/Defense";
+            this.labelGChampionCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGChampionFragsCoef
+            // 
+            this.labelGChampionFragsCoef.AutoSize = true;
+            this.labelGChampionFragsCoef.Location = new System.Drawing.Point(301, 270);
+            this.labelGChampionFragsCoef.Name = "labelGChampionFragsCoef";
+            this.labelGChampionFragsCoef.Size = new System.Drawing.Size(110, 13);
+            this.labelGChampionFragsCoef.TabIndex = 62;
+            this.labelGChampionFragsCoef.Text = "GChampionFragsCoef";
+            // 
+            // labelGChampionFragsDestroys
+            // 
+            this.labelGChampionFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGChampionFragsDestroys.Location = new System.Drawing.Point(6, 257);
+            this.labelGChampionFragsDestroys.Name = "labelGChampionFragsDestroys";
+            this.labelGChampionFragsDestroys.Size = new System.Drawing.Size(427, 13);
+            this.labelGChampionFragsDestroys.TabIndex = 61;
+            this.labelGChampionFragsDestroys.Text = "Frags/Destroys";
+            this.labelGChampionFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGChampionPiercingsPercent
+            // 
+            this.labelGChampionPiercingsPercent.AutoSize = true;
+            this.labelGChampionPiercingsPercent.Location = new System.Drawing.Point(214, 226);
+            this.labelGChampionPiercingsPercent.Name = "labelGChampionPiercingsPercent";
+            this.labelGChampionPiercingsPercent.Size = new System.Drawing.Size(142, 13);
+            this.labelGChampionPiercingsPercent.TabIndex = 60;
+            this.labelGChampionPiercingsPercent.Text = "GChampionPiercingsPercent";
+            // 
+            // labelGChampionHitsPenetrations
+            // 
+            this.labelGChampionHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGChampionHitsPenetrations.Location = new System.Drawing.Point(6, 161);
+            this.labelGChampionHitsPenetrations.Name = "labelGChampionHitsPenetrations";
+            this.labelGChampionHitsPenetrations.Size = new System.Drawing.Size(427, 13);
+            this.labelGChampionHitsPenetrations.TabIndex = 59;
+            this.labelGChampionHitsPenetrations.Text = "Hits/Penetrations";
+            this.labelGChampionHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGChampionDamageCoef
+            // 
+            this.labelGChampionDamageCoef.AutoSize = true;
+            this.labelGChampionDamageCoef.Location = new System.Drawing.Point(147, 143);
+            this.labelGChampionDamageCoef.Name = "labelGChampionDamageCoef";
+            this.labelGChampionDamageCoef.Size = new System.Drawing.Size(124, 13);
+            this.labelGChampionDamageCoef.TabIndex = 58;
+            this.labelGChampionDamageCoef.Text = "GChampionDamageCoef";
+            // 
+            // labelGChampionDamage
+            // 
+            this.labelGChampionDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGChampionDamage.Location = new System.Drawing.Point(6, 117);
+            this.labelGChampionDamage.Name = "labelGChampionDamage";
+            this.labelGChampionDamage.Size = new System.Drawing.Size(427, 13);
+            this.labelGChampionDamage.TabIndex = 57;
+            this.labelGChampionDamage.Text = "Damage";
+            this.labelGChampionDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGChampionWinsCoef
+            // 
+            this.labelGChampionWinsCoef.AutoSize = true;
+            this.labelGChampionWinsCoef.Location = new System.Drawing.Point(214, 87);
+            this.labelGChampionWinsCoef.Name = "labelGChampionWinsCoef";
+            this.labelGChampionWinsCoef.Size = new System.Drawing.Size(108, 13);
+            this.labelGChampionWinsCoef.TabIndex = 56;
+            this.labelGChampionWinsCoef.Text = "GChampionWinsCoef";
+            // 
+            // labelGChampionWinsLosses
+            // 
+            this.labelGChampionWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGChampionWinsLosses.Location = new System.Drawing.Point(6, 74);
+            this.labelGChampionWinsLosses.Name = "labelGChampionWinsLosses";
+            this.labelGChampionWinsLosses.Size = new System.Drawing.Size(427, 13);
+            this.labelGChampionWinsLosses.TabIndex = 55;
+            this.labelGChampionWinsLosses.Text = "Wins/Losses";
+            this.labelGChampionWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGChampionSummary
+            // 
+            this.labelGChampionSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGChampionSummary.Location = new System.Drawing.Point(6, 3);
+            this.labelGChampionSummary.Name = "labelGChampionSummary";
+            this.labelGChampionSummary.Size = new System.Drawing.Size(427, 13);
+            this.labelGChampionSummary.TabIndex = 54;
+            this.labelGChampionSummary.Text = "Summary";
+            this.labelGChampionSummary.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // labelStatisticsGChampionExplosionHitsReceived
             // 
@@ -2225,6 +2435,111 @@
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "GlobalmapMiddle";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // labelGMiddleCapturePercents
+            // 
+            this.labelGMiddleCapturePercents.AutoSize = true;
+            this.labelGMiddleCapturePercents.Location = new System.Drawing.Point(301, 301);
+            this.labelGMiddleCapturePercents.Name = "labelGMiddleCapturePercents";
+            this.labelGMiddleCapturePercents.Size = new System.Drawing.Size(125, 13);
+            this.labelGMiddleCapturePercents.TabIndex = 45;
+            this.labelGMiddleCapturePercents.Text = "GMiddleCapturePercents";
+            // 
+            // labelGMiddleCaptureDefense
+            // 
+            this.labelGMiddleCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGMiddleCaptureDefense.Location = new System.Drawing.Point(6, 288);
+            this.labelGMiddleCaptureDefense.Name = "labelGMiddleCaptureDefense";
+            this.labelGMiddleCaptureDefense.Size = new System.Drawing.Size(427, 13);
+            this.labelGMiddleCaptureDefense.TabIndex = 45;
+            this.labelGMiddleCaptureDefense.Text = "Capture/Defense";
+            this.labelGMiddleCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGMiddleFragsCoef
+            // 
+            this.labelGMiddleFragsCoef.AutoSize = true;
+            this.labelGMiddleFragsCoef.Location = new System.Drawing.Point(301, 270);
+            this.labelGMiddleFragsCoef.Name = "labelGMiddleFragsCoef";
+            this.labelGMiddleFragsCoef.Size = new System.Drawing.Size(94, 13);
+            this.labelGMiddleFragsCoef.TabIndex = 45;
+            this.labelGMiddleFragsCoef.Text = "GMiddleFragsCoef";
+            // 
+            // labelGMiddleFragsDestroys
+            // 
+            this.labelGMiddleFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGMiddleFragsDestroys.Location = new System.Drawing.Point(6, 257);
+            this.labelGMiddleFragsDestroys.Name = "labelGMiddleFragsDestroys";
+            this.labelGMiddleFragsDestroys.Size = new System.Drawing.Size(427, 13);
+            this.labelGMiddleFragsDestroys.TabIndex = 45;
+            this.labelGMiddleFragsDestroys.Text = "Frags/Destroys";
+            this.labelGMiddleFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGMiddlePiercingsPercent
+            // 
+            this.labelGMiddlePiercingsPercent.AutoSize = true;
+            this.labelGMiddlePiercingsPercent.Location = new System.Drawing.Point(214, 226);
+            this.labelGMiddlePiercingsPercent.Name = "labelGMiddlePiercingsPercent";
+            this.labelGMiddlePiercingsPercent.Size = new System.Drawing.Size(126, 13);
+            this.labelGMiddlePiercingsPercent.TabIndex = 45;
+            this.labelGMiddlePiercingsPercent.Text = "GMiddlePiercingsPercent";
+            // 
+            // labelGMiddleHitsPercents
+            // 
+            this.labelGMiddleHitsPercents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGMiddleHitsPercents.Location = new System.Drawing.Point(6, 161);
+            this.labelGMiddleHitsPercents.Name = "labelGMiddleHitsPercents";
+            this.labelGMiddleHitsPercents.Size = new System.Drawing.Size(427, 13);
+            this.labelGMiddleHitsPercents.TabIndex = 45;
+            this.labelGMiddleHitsPercents.Text = "Hits/Penetrations";
+            this.labelGMiddleHitsPercents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGMiddleDamageCoef
+            // 
+            this.labelGMiddleDamageCoef.AutoSize = true;
+            this.labelGMiddleDamageCoef.Location = new System.Drawing.Point(147, 143);
+            this.labelGMiddleDamageCoef.Name = "labelGMiddleDamageCoef";
+            this.labelGMiddleDamageCoef.Size = new System.Drawing.Size(108, 13);
+            this.labelGMiddleDamageCoef.TabIndex = 45;
+            this.labelGMiddleDamageCoef.Text = "GMiddleDamageCoef";
+            // 
+            // labelGMiddleDamage
+            // 
+            this.labelGMiddleDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGMiddleDamage.Location = new System.Drawing.Point(6, 117);
+            this.labelGMiddleDamage.Name = "labelGMiddleDamage";
+            this.labelGMiddleDamage.Size = new System.Drawing.Size(427, 13);
+            this.labelGMiddleDamage.TabIndex = 45;
+            this.labelGMiddleDamage.Text = "Damage";
+            this.labelGMiddleDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGMiddleWinsCoef
+            // 
+            this.labelGMiddleWinsCoef.AutoSize = true;
+            this.labelGMiddleWinsCoef.Location = new System.Drawing.Point(214, 87);
+            this.labelGMiddleWinsCoef.Name = "labelGMiddleWinsCoef";
+            this.labelGMiddleWinsCoef.Size = new System.Drawing.Size(92, 13);
+            this.labelGMiddleWinsCoef.TabIndex = 45;
+            this.labelGMiddleWinsCoef.Text = "GMiddleWinsCoef";
+            // 
+            // labelGMiddleWinsLosses
+            // 
+            this.labelGMiddleWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGMiddleWinsLosses.Location = new System.Drawing.Point(6, 74);
+            this.labelGMiddleWinsLosses.Name = "labelGMiddleWinsLosses";
+            this.labelGMiddleWinsLosses.Size = new System.Drawing.Size(427, 13);
+            this.labelGMiddleWinsLosses.TabIndex = 45;
+            this.labelGMiddleWinsLosses.Text = "Wins/Losses";
+            this.labelGMiddleWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGMiddleSummary
+            // 
+            this.labelGMiddleSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelGMiddleSummary.Location = new System.Drawing.Point(6, 3);
+            this.labelGMiddleSummary.Name = "labelGMiddleSummary";
+            this.labelGMiddleSummary.Size = new System.Drawing.Size(427, 13);
+            this.labelGMiddleSummary.TabIndex = 45;
+            this.labelGMiddleSummary.Text = "Summary";
+            this.labelGMiddleSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelStatisticsGMiddleExplosionHitsReceived
             // 
@@ -4540,10 +4855,134 @@
             this.tabPageHistoricalStatistics.Location = new System.Drawing.Point(4, 22);
             this.tabPageHistoricalStatistics.Name = "tabPageHistoricalStatistics";
             this.tabPageHistoricalStatistics.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageHistoricalStatistics.Size = new System.Drawing.Size(439, 371);
+            this.tabPageHistoricalStatistics.Size = new System.Drawing.Size(439, 400);
             this.tabPageHistoricalStatistics.TabIndex = 5;
             this.tabPageHistoricalStatistics.Text = "Historical";
             this.tabPageHistoricalStatistics.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(6, 319);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(427, 13);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "Records";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelHCaptureCoef
+            // 
+            this.labelHCaptureCoef.AutoSize = true;
+            this.labelHCaptureCoef.Location = new System.Drawing.Point(301, 301);
+            this.labelHCaptureCoef.Name = "labelHCaptureCoef";
+            this.labelHCaptureCoef.Size = new System.Drawing.Size(74, 13);
+            this.labelHCaptureCoef.TabIndex = 45;
+            this.labelHCaptureCoef.Text = "HCaptureCoef";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(6, 288);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(427, 13);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "Capture/Defense";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelHFragsCoef
+            // 
+            this.labelHFragsCoef.AutoSize = true;
+            this.labelHFragsCoef.Location = new System.Drawing.Point(301, 270);
+            this.labelHFragsCoef.Name = "labelHFragsCoef";
+            this.labelHFragsCoef.Size = new System.Drawing.Size(63, 13);
+            this.labelHFragsCoef.TabIndex = 45;
+            this.labelHFragsCoef.Text = "HFragsCoef";
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(6, 257);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(427, 13);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "Frags/Destroys";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelHPiercingsPercent
+            // 
+            this.labelHPiercingsPercent.AutoSize = true;
+            this.labelHPiercingsPercent.Location = new System.Drawing.Point(214, 226);
+            this.labelHPiercingsPercent.Name = "labelHPiercingsPercent";
+            this.labelHPiercingsPercent.Size = new System.Drawing.Size(95, 13);
+            this.labelHPiercingsPercent.TabIndex = 45;
+            this.labelHPiercingsPercent.Text = "HPiercingsPercent";
+            // 
+            // labelStatisticsHPiercingsReceived
+            // 
+            this.labelStatisticsHPiercingsReceived.AutoSize = true;
+            this.labelStatisticsHPiercingsReceived.Location = new System.Drawing.Point(214, 187);
+            this.labelStatisticsHPiercingsReceived.Name = "labelStatisticsHPiercingsReceived";
+            this.labelStatisticsHPiercingsReceived.Size = new System.Drawing.Size(104, 13);
+            this.labelStatisticsHPiercingsReceived.TabIndex = 46;
+            this.labelStatisticsHPiercingsReceived.Text = "HPiercingsReceived";
+            // 
+            // labelHHitsPenetrations
+            // 
+            this.labelHHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHHitsPenetrations.Location = new System.Drawing.Point(6, 161);
+            this.labelHHitsPenetrations.Name = "labelHHitsPenetrations";
+            this.labelHHitsPenetrations.Size = new System.Drawing.Size(427, 13);
+            this.labelHHitsPenetrations.TabIndex = 45;
+            this.labelHHitsPenetrations.Text = "Hits/Penetrations";
+            this.labelHHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelHDamageCoef
+            // 
+            this.labelHDamageCoef.AutoSize = true;
+            this.labelHDamageCoef.Location = new System.Drawing.Point(147, 143);
+            this.labelHDamageCoef.Name = "labelHDamageCoef";
+            this.labelHDamageCoef.Size = new System.Drawing.Size(77, 13);
+            this.labelHDamageCoef.TabIndex = 45;
+            this.labelHDamageCoef.Text = "HDamageCoef";
+            // 
+            // labelHDamage
+            // 
+            this.labelHDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHDamage.Location = new System.Drawing.Point(6, 117);
+            this.labelHDamage.Name = "labelHDamage";
+            this.labelHDamage.Size = new System.Drawing.Size(427, 13);
+            this.labelHDamage.TabIndex = 45;
+            this.labelHDamage.Text = "Damage";
+            this.labelHDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelHWinsCoef
+            // 
+            this.labelHWinsCoef.AutoSize = true;
+            this.labelHWinsCoef.Location = new System.Drawing.Point(214, 87);
+            this.labelHWinsCoef.Name = "labelHWinsCoef";
+            this.labelHWinsCoef.Size = new System.Drawing.Size(61, 13);
+            this.labelHWinsCoef.TabIndex = 45;
+            this.labelHWinsCoef.Text = "HWinsCoef";
+            // 
+            // labelHWinsLosses
+            // 
+            this.labelHWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHWinsLosses.Location = new System.Drawing.Point(6, 74);
+            this.labelHWinsLosses.Name = "labelHWinsLosses";
+            this.labelHWinsLosses.Size = new System.Drawing.Size(427, 13);
+            this.labelHWinsLosses.TabIndex = 45;
+            this.labelHWinsLosses.Text = "Wins/Losses";
+            this.labelHWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelHSummary
+            // 
+            this.labelHSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHSummary.Location = new System.Drawing.Point(6, 3);
+            this.labelHSummary.Name = "labelHSummary";
+            this.labelHSummary.Size = new System.Drawing.Size(427, 13);
+            this.labelHSummary.TabIndex = 45;
+            this.labelHSummary.Text = "Summary";
+            this.labelHSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelStatisticsHXp
             // 
@@ -4897,6 +5336,130 @@
             this.tabPageFalloutStatistics.TabIndex = 3;
             this.tabPageFalloutStatistics.Text = "Fallout";
             this.tabPageFalloutStatistics.UseVisualStyleBackColor = true;
+            // 
+            // labelStatisticsFalloutMaxFragsTankId
+            // 
+            this.labelStatisticsFalloutMaxFragsTankId.AutoSize = true;
+            this.labelStatisticsFalloutMaxFragsTankId.Location = new System.Drawing.Point(147, 345);
+            this.labelStatisticsFalloutMaxFragsTankId.Name = "labelStatisticsFalloutMaxFragsTankId";
+            this.labelStatisticsFalloutMaxFragsTankId.Size = new System.Drawing.Size(118, 13);
+            this.labelStatisticsFalloutMaxFragsTankId.TabIndex = 46;
+            this.labelStatisticsFalloutMaxFragsTankId.Text = "FalloutMaxFragsTankId";
+            // 
+            // labelFalloutRecords
+            // 
+            this.labelFalloutRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFalloutRecords.Location = new System.Drawing.Point(6, 319);
+            this.labelFalloutRecords.Name = "labelFalloutRecords";
+            this.labelFalloutRecords.Size = new System.Drawing.Size(427, 13);
+            this.labelFalloutRecords.TabIndex = 45;
+            this.labelFalloutRecords.Text = "Records";
+            this.labelFalloutRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFalloutCaptureCoef
+            // 
+            this.labelFalloutCaptureCoef.AutoSize = true;
+            this.labelFalloutCaptureCoef.Location = new System.Drawing.Point(301, 301);
+            this.labelFalloutCaptureCoef.Name = "labelFalloutCaptureCoef";
+            this.labelFalloutCaptureCoef.Size = new System.Drawing.Size(97, 13);
+            this.labelFalloutCaptureCoef.TabIndex = 45;
+            this.labelFalloutCaptureCoef.Text = "FalloutCaptureCoef";
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(6, 288);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(427, 13);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Capture/Defense";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFalloutFragsCoef
+            // 
+            this.labelFalloutFragsCoef.AutoSize = true;
+            this.labelFalloutFragsCoef.Location = new System.Drawing.Point(301, 270);
+            this.labelFalloutFragsCoef.Name = "labelFalloutFragsCoef";
+            this.labelFalloutFragsCoef.Size = new System.Drawing.Size(86, 13);
+            this.labelFalloutFragsCoef.TabIndex = 45;
+            this.labelFalloutFragsCoef.Text = "FalloutFragsCoef";
+            // 
+            // labelFalloutFragsDestroys
+            // 
+            this.labelFalloutFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFalloutFragsDestroys.Location = new System.Drawing.Point(6, 257);
+            this.labelFalloutFragsDestroys.Name = "labelFalloutFragsDestroys";
+            this.labelFalloutFragsDestroys.Size = new System.Drawing.Size(427, 13);
+            this.labelFalloutFragsDestroys.TabIndex = 45;
+            this.labelFalloutFragsDestroys.Text = "Frags/Destroys";
+            this.labelFalloutFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFalloutPiercingsPercent
+            // 
+            this.labelFalloutPiercingsPercent.AutoSize = true;
+            this.labelFalloutPiercingsPercent.Location = new System.Drawing.Point(214, 226);
+            this.labelFalloutPiercingsPercent.Name = "labelFalloutPiercingsPercent";
+            this.labelFalloutPiercingsPercent.Size = new System.Drawing.Size(118, 13);
+            this.labelFalloutPiercingsPercent.TabIndex = 45;
+            this.labelFalloutPiercingsPercent.Text = "FalloutPiercingsPercent";
+            // 
+            // labelFalloutHitsPenetrations
+            // 
+            this.labelFalloutHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFalloutHitsPenetrations.Location = new System.Drawing.Point(6, 161);
+            this.labelFalloutHitsPenetrations.Name = "labelFalloutHitsPenetrations";
+            this.labelFalloutHitsPenetrations.Size = new System.Drawing.Size(427, 13);
+            this.labelFalloutHitsPenetrations.TabIndex = 45;
+            this.labelFalloutHitsPenetrations.Text = "Hits/Penetrations";
+            this.labelFalloutHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFalloutDamageCoef
+            // 
+            this.labelFalloutDamageCoef.AutoSize = true;
+            this.labelFalloutDamageCoef.Location = new System.Drawing.Point(147, 143);
+            this.labelFalloutDamageCoef.Name = "labelFalloutDamageCoef";
+            this.labelFalloutDamageCoef.Size = new System.Drawing.Size(100, 13);
+            this.labelFalloutDamageCoef.TabIndex = 45;
+            this.labelFalloutDamageCoef.Text = "FalloutDamageCoef";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(6, 117);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(427, 13);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Damage";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFalloutWinsCoef
+            // 
+            this.labelFalloutWinsCoef.AutoSize = true;
+            this.labelFalloutWinsCoef.Location = new System.Drawing.Point(214, 87);
+            this.labelFalloutWinsCoef.Name = "labelFalloutWinsCoef";
+            this.labelFalloutWinsCoef.Size = new System.Drawing.Size(84, 13);
+            this.labelFalloutWinsCoef.TabIndex = 45;
+            this.labelFalloutWinsCoef.Text = "FalloutWinsCoef";
+            // 
+            // labelFalloutWinsLosses
+            // 
+            this.labelFalloutWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFalloutWinsLosses.Location = new System.Drawing.Point(6, 74);
+            this.labelFalloutWinsLosses.Name = "labelFalloutWinsLosses";
+            this.labelFalloutWinsLosses.Size = new System.Drawing.Size(427, 13);
+            this.labelFalloutWinsLosses.TabIndex = 45;
+            this.labelFalloutWinsLosses.Text = "Wins/Losses";
+            this.labelFalloutWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFalloutSummary
+            // 
+            this.labelFalloutSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFalloutSummary.Location = new System.Drawing.Point(6, 3);
+            this.labelFalloutSummary.Name = "labelFalloutSummary";
+            this.labelFalloutSummary.Size = new System.Drawing.Size(427, 13);
+            this.labelFalloutSummary.TabIndex = 45;
+            this.labelFalloutSummary.Text = "Summary";
+            this.labelFalloutSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelStatisticsFalloutXp
             // 
@@ -5339,10 +5902,125 @@
             this.tabPageRegularTeam.Location = new System.Drawing.Point(4, 22);
             this.tabPageRegularTeam.Name = "tabPageRegularTeam";
             this.tabPageRegularTeam.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRegularTeam.Size = new System.Drawing.Size(612, 497);
+            this.tabPageRegularTeam.Size = new System.Drawing.Size(439, 371);
             this.tabPageRegularTeam.TabIndex = 0;
             this.tabPageRegularTeam.Text = "RegularTeam";
             this.tabPageRegularTeam.UseVisualStyleBackColor = true;
+            // 
+            // labelRegTRecords
+            // 
+            this.labelRegTRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRegTRecords.Location = new System.Drawing.Point(6, 319);
+            this.labelRegTRecords.Name = "labelRegTRecords";
+            this.labelRegTRecords.Size = new System.Drawing.Size(427, 13);
+            this.labelRegTRecords.TabIndex = 45;
+            this.labelRegTRecords.Text = "Records";
+            this.labelRegTRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelRegTCapturePercent
+            // 
+            this.labelRegTCapturePercent.AutoSize = true;
+            this.labelRegTCapturePercent.Location = new System.Drawing.Point(301, 301);
+            this.labelRegTCapturePercent.Name = "labelRegTCapturePercent";
+            this.labelRegTCapturePercent.Size = new System.Drawing.Size(108, 13);
+            this.labelRegTCapturePercent.TabIndex = 45;
+            this.labelRegTCapturePercent.Text = "RegTCapturePercent";
+            // 
+            // labelRegTCaptureDefense
+            // 
+            this.labelRegTCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRegTCaptureDefense.Location = new System.Drawing.Point(6, 288);
+            this.labelRegTCaptureDefense.Name = "labelRegTCaptureDefense";
+            this.labelRegTCaptureDefense.Size = new System.Drawing.Size(427, 13);
+            this.labelRegTCaptureDefense.TabIndex = 45;
+            this.labelRegTCaptureDefense.Text = "Capture/Defense";
+            this.labelRegTCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelRegTFragsCoef
+            // 
+            this.labelRegTFragsCoef.AutoSize = true;
+            this.labelRegTFragsCoef.Location = new System.Drawing.Point(301, 270);
+            this.labelRegTFragsCoef.Name = "labelRegTFragsCoef";
+            this.labelRegTFragsCoef.Size = new System.Drawing.Size(82, 13);
+            this.labelRegTFragsCoef.TabIndex = 45;
+            this.labelRegTFragsCoef.Text = "RegTFragsCoef";
+            // 
+            // labelRegTFragsDestroys
+            // 
+            this.labelRegTFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRegTFragsDestroys.Location = new System.Drawing.Point(6, 257);
+            this.labelRegTFragsDestroys.Name = "labelRegTFragsDestroys";
+            this.labelRegTFragsDestroys.Size = new System.Drawing.Size(427, 13);
+            this.labelRegTFragsDestroys.TabIndex = 45;
+            this.labelRegTFragsDestroys.Text = "Frags/Destroys";
+            this.labelRegTFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelRegTPiercingsPercent
+            // 
+            this.labelRegTPiercingsPercent.AutoSize = true;
+            this.labelRegTPiercingsPercent.Location = new System.Drawing.Point(214, 226);
+            this.labelRegTPiercingsPercent.Name = "labelRegTPiercingsPercent";
+            this.labelRegTPiercingsPercent.Size = new System.Drawing.Size(114, 13);
+            this.labelRegTPiercingsPercent.TabIndex = 45;
+            this.labelRegTPiercingsPercent.Text = "RegTPiercingsPercent";
+            // 
+            // labelRegTHitsPenetrations
+            // 
+            this.labelRegTHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRegTHitsPenetrations.Location = new System.Drawing.Point(6, 161);
+            this.labelRegTHitsPenetrations.Name = "labelRegTHitsPenetrations";
+            this.labelRegTHitsPenetrations.Size = new System.Drawing.Size(427, 13);
+            this.labelRegTHitsPenetrations.TabIndex = 45;
+            this.labelRegTHitsPenetrations.Text = "Hits/Penetrations";
+            this.labelRegTHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelRegTDamageCoef
+            // 
+            this.labelRegTDamageCoef.AutoSize = true;
+            this.labelRegTDamageCoef.Location = new System.Drawing.Point(147, 143);
+            this.labelRegTDamageCoef.Name = "labelRegTDamageCoef";
+            this.labelRegTDamageCoef.Size = new System.Drawing.Size(96, 13);
+            this.labelRegTDamageCoef.TabIndex = 45;
+            this.labelRegTDamageCoef.Text = "RegTDamageCoef";
+            // 
+            // label3RegTDamage
+            // 
+            this.label3RegTDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3RegTDamage.Location = new System.Drawing.Point(6, 117);
+            this.label3RegTDamage.Name = "label3RegTDamage";
+            this.label3RegTDamage.Size = new System.Drawing.Size(427, 13);
+            this.label3RegTDamage.TabIndex = 45;
+            this.label3RegTDamage.Text = "Damage";
+            this.label3RegTDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelRegularTWinsCoef
+            // 
+            this.labelRegularTWinsCoef.AutoSize = true;
+            this.labelRegularTWinsCoef.Location = new System.Drawing.Point(214, 87);
+            this.labelRegularTWinsCoef.Name = "labelRegularTWinsCoef";
+            this.labelRegularTWinsCoef.Size = new System.Drawing.Size(80, 13);
+            this.labelRegularTWinsCoef.TabIndex = 45;
+            this.labelRegularTWinsCoef.Text = "RegTWinsCoef";
+            // 
+            // labelRegTWinsLosses
+            // 
+            this.labelRegTWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRegTWinsLosses.Location = new System.Drawing.Point(6, 74);
+            this.labelRegTWinsLosses.Name = "labelRegTWinsLosses";
+            this.labelRegTWinsLosses.Size = new System.Drawing.Size(427, 13);
+            this.labelRegTWinsLosses.TabIndex = 45;
+            this.labelRegTWinsLosses.Text = "Wins/Losses";
+            this.labelRegTWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelRegTSummary
+            // 
+            this.labelRegTSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRegTSummary.Location = new System.Drawing.Point(6, 3);
+            this.labelRegTSummary.Name = "labelRegTSummary";
+            this.labelRegTSummary.Size = new System.Drawing.Size(427, 13);
+            this.labelRegTSummary.TabIndex = 45;
+            this.labelRegTSummary.Text = "Summary";
+            this.labelRegTSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPageTeam
             // 
@@ -5399,6 +6077,121 @@
             this.tabPageTeam.TabIndex = 1;
             this.tabPageTeam.Text = "Team";
             this.tabPageTeam.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(6, 319);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(427, 13);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "Records";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTeamCapturePercent
+            // 
+            this.labelTeamCapturePercent.AutoSize = true;
+            this.labelTeamCapturePercent.Location = new System.Drawing.Point(301, 301);
+            this.labelTeamCapturePercent.Name = "labelTeamCapturePercent";
+            this.labelTeamCapturePercent.Size = new System.Drawing.Size(108, 13);
+            this.labelTeamCapturePercent.TabIndex = 45;
+            this.labelTeamCapturePercent.Text = "TeamCapturePercent";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(6, 288);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(427, 13);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Capture/Defense";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTeamFragsCorf
+            // 
+            this.labelTeamFragsCorf.AutoSize = true;
+            this.labelTeamFragsCorf.Location = new System.Drawing.Point(301, 270);
+            this.labelTeamFragsCorf.Name = "labelTeamFragsCorf";
+            this.labelTeamFragsCorf.Size = new System.Drawing.Size(79, 13);
+            this.labelTeamFragsCorf.TabIndex = 45;
+            this.labelTeamFragsCorf.Text = "TeamFragsCorf";
+            // 
+            // labelTeamFragsDestroys
+            // 
+            this.labelTeamFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTeamFragsDestroys.Location = new System.Drawing.Point(6, 257);
+            this.labelTeamFragsDestroys.Name = "labelTeamFragsDestroys";
+            this.labelTeamFragsDestroys.Size = new System.Drawing.Size(427, 13);
+            this.labelTeamFragsDestroys.TabIndex = 45;
+            this.labelTeamFragsDestroys.Text = "Frags/Destroys";
+            this.labelTeamFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTeamPiercingsPercent
+            // 
+            this.labelTeamPiercingsPercent.AutoSize = true;
+            this.labelTeamPiercingsPercent.Location = new System.Drawing.Point(214, 226);
+            this.labelTeamPiercingsPercent.Name = "labelTeamPiercingsPercent";
+            this.labelTeamPiercingsPercent.Size = new System.Drawing.Size(114, 13);
+            this.labelTeamPiercingsPercent.TabIndex = 45;
+            this.labelTeamPiercingsPercent.Text = "TeamPiercingsPercent";
+            // 
+            // labelTeamHitsPenetrations
+            // 
+            this.labelTeamHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTeamHitsPenetrations.Location = new System.Drawing.Point(6, 161);
+            this.labelTeamHitsPenetrations.Name = "labelTeamHitsPenetrations";
+            this.labelTeamHitsPenetrations.Size = new System.Drawing.Size(427, 13);
+            this.labelTeamHitsPenetrations.TabIndex = 45;
+            this.labelTeamHitsPenetrations.Text = "Hits/Penetrations";
+            this.labelTeamHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTeamDamageCoef
+            // 
+            this.labelTeamDamageCoef.AutoSize = true;
+            this.labelTeamDamageCoef.Location = new System.Drawing.Point(147, 143);
+            this.labelTeamDamageCoef.Name = "labelTeamDamageCoef";
+            this.labelTeamDamageCoef.Size = new System.Drawing.Size(96, 13);
+            this.labelTeamDamageCoef.TabIndex = 45;
+            this.labelTeamDamageCoef.Text = "TeamDamageCoef";
+            // 
+            // labelTeamDamage
+            // 
+            this.labelTeamDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTeamDamage.Location = new System.Drawing.Point(6, 117);
+            this.labelTeamDamage.Name = "labelTeamDamage";
+            this.labelTeamDamage.Size = new System.Drawing.Size(427, 13);
+            this.labelTeamDamage.TabIndex = 45;
+            this.labelTeamDamage.Text = "Damage";
+            this.labelTeamDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTeamWinsCoef
+            // 
+            this.labelTeamWinsCoef.AutoSize = true;
+            this.labelTeamWinsCoef.Location = new System.Drawing.Point(214, 87);
+            this.labelTeamWinsCoef.Name = "labelTeamWinsCoef";
+            this.labelTeamWinsCoef.Size = new System.Drawing.Size(80, 13);
+            this.labelTeamWinsCoef.TabIndex = 45;
+            this.labelTeamWinsCoef.Text = "TeamWinsCoef";
+            // 
+            // labelTeamWinsLooses
+            // 
+            this.labelTeamWinsLooses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTeamWinsLooses.Location = new System.Drawing.Point(6, 74);
+            this.labelTeamWinsLooses.Name = "labelTeamWinsLooses";
+            this.labelTeamWinsLooses.Size = new System.Drawing.Size(427, 13);
+            this.labelTeamWinsLooses.TabIndex = 45;
+            this.labelTeamWinsLooses.Text = "Wins/Losses";
+            this.labelTeamWinsLooses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTeamSummary
+            // 
+            this.labelTeamSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTeamSummary.Location = new System.Drawing.Point(6, 3);
+            this.labelTeamSummary.Name = "labelTeamSummary";
+            this.labelTeamSummary.Size = new System.Drawing.Size(427, 13);
+            this.labelTeamSummary.TabIndex = 45;
+            this.labelTeamSummary.Text = "Summary";
+            this.labelTeamSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabControlStronghold
             // 
@@ -5457,10 +6250,125 @@
             this.tabPageStrongholdDefense.Location = new System.Drawing.Point(4, 22);
             this.tabPageStrongholdDefense.Name = "tabPageStrongholdDefense";
             this.tabPageStrongholdDefense.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStrongholdDefense.Size = new System.Drawing.Size(612, 499);
+            this.tabPageStrongholdDefense.Size = new System.Drawing.Size(439, 371);
             this.tabPageStrongholdDefense.TabIndex = 0;
             this.tabPageStrongholdDefense.Text = "StrongholdDefense";
             this.tabPageStrongholdDefense.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(6, 319);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(427, 13);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Records";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSDCaptureCoef
+            // 
+            this.labelSDCaptureCoef.AutoSize = true;
+            this.labelSDCaptureCoef.Location = new System.Drawing.Point(301, 301);
+            this.labelSDCaptureCoef.Name = "labelSDCaptureCoef";
+            this.labelSDCaptureCoef.Size = new System.Drawing.Size(81, 13);
+            this.labelSDCaptureCoef.TabIndex = 45;
+            this.labelSDCaptureCoef.Text = "SDCaptureCoef";
+            // 
+            // labelSDCaptureDefense
+            // 
+            this.labelSDCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSDCaptureDefense.Location = new System.Drawing.Point(6, 288);
+            this.labelSDCaptureDefense.Name = "labelSDCaptureDefense";
+            this.labelSDCaptureDefense.Size = new System.Drawing.Size(427, 13);
+            this.labelSDCaptureDefense.TabIndex = 45;
+            this.labelSDCaptureDefense.Text = "Capture/Defense";
+            this.labelSDCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSDFragsCoef
+            // 
+            this.labelSDFragsCoef.AutoSize = true;
+            this.labelSDFragsCoef.Location = new System.Drawing.Point(301, 270);
+            this.labelSDFragsCoef.Name = "labelSDFragsCoef";
+            this.labelSDFragsCoef.Size = new System.Drawing.Size(70, 13);
+            this.labelSDFragsCoef.TabIndex = 45;
+            this.labelSDFragsCoef.Text = "SDFragsCoef";
+            // 
+            // labelSDFragsDestroys
+            // 
+            this.labelSDFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSDFragsDestroys.Location = new System.Drawing.Point(6, 257);
+            this.labelSDFragsDestroys.Name = "labelSDFragsDestroys";
+            this.labelSDFragsDestroys.Size = new System.Drawing.Size(427, 13);
+            this.labelSDFragsDestroys.TabIndex = 45;
+            this.labelSDFragsDestroys.Text = "Frags/Destroys";
+            this.labelSDFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSDPiercingsPercent
+            // 
+            this.labelSDPiercingsPercent.AutoSize = true;
+            this.labelSDPiercingsPercent.Location = new System.Drawing.Point(214, 226);
+            this.labelSDPiercingsPercent.Name = "labelSDPiercingsPercent";
+            this.labelSDPiercingsPercent.Size = new System.Drawing.Size(102, 13);
+            this.labelSDPiercingsPercent.TabIndex = 45;
+            this.labelSDPiercingsPercent.Text = "SDPiercingsPercent";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(6, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(427, 13);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Hits/Penetrations";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSDDamageCoef
+            // 
+            this.labelSDDamageCoef.AutoSize = true;
+            this.labelSDDamageCoef.Location = new System.Drawing.Point(147, 143);
+            this.labelSDDamageCoef.Name = "labelSDDamageCoef";
+            this.labelSDDamageCoef.Size = new System.Drawing.Size(84, 13);
+            this.labelSDDamageCoef.TabIndex = 45;
+            this.labelSDDamageCoef.Text = "SDDamageCoef";
+            // 
+            // labelSDDamage
+            // 
+            this.labelSDDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSDDamage.Location = new System.Drawing.Point(6, 117);
+            this.labelSDDamage.Name = "labelSDDamage";
+            this.labelSDDamage.Size = new System.Drawing.Size(427, 13);
+            this.labelSDDamage.TabIndex = 45;
+            this.labelSDDamage.Text = "Damage";
+            this.labelSDDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSDWinsCoef
+            // 
+            this.labelSDWinsCoef.AutoSize = true;
+            this.labelSDWinsCoef.Location = new System.Drawing.Point(214, 87);
+            this.labelSDWinsCoef.Name = "labelSDWinsCoef";
+            this.labelSDWinsCoef.Size = new System.Drawing.Size(68, 13);
+            this.labelSDWinsCoef.TabIndex = 45;
+            this.labelSDWinsCoef.Text = "SDWinsCoef";
+            // 
+            // labelSDWinsLosses
+            // 
+            this.labelSDWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSDWinsLosses.Location = new System.Drawing.Point(6, 74);
+            this.labelSDWinsLosses.Name = "labelSDWinsLosses";
+            this.labelSDWinsLosses.Size = new System.Drawing.Size(427, 13);
+            this.labelSDWinsLosses.TabIndex = 45;
+            this.labelSDWinsLosses.Text = "Wins/Losses";
+            this.labelSDWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSDSummary
+            // 
+            this.labelSDSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSDSummary.Location = new System.Drawing.Point(6, 3);
+            this.labelSDSummary.Name = "labelSDSummary";
+            this.labelSDSummary.Size = new System.Drawing.Size(427, 13);
+            this.labelSDSummary.TabIndex = 45;
+            this.labelSDSummary.Text = "Summary";
+            this.labelSDSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPageStrongholdSkirmish
             // 
@@ -5513,6 +6421,121 @@
             this.tabPageStrongholdSkirmish.TabIndex = 1;
             this.tabPageStrongholdSkirmish.Text = "StrongholdSkirmish";
             this.tabPageStrongholdSkirmish.UseVisualStyleBackColor = true;
+            // 
+            // labelSSRecords
+            // 
+            this.labelSSRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSSRecords.Location = new System.Drawing.Point(6, 319);
+            this.labelSSRecords.Name = "labelSSRecords";
+            this.labelSSRecords.Size = new System.Drawing.Size(427, 13);
+            this.labelSSRecords.TabIndex = 45;
+            this.labelSSRecords.Text = "Records";
+            this.labelSSRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSSCaptureCoef
+            // 
+            this.labelSSCaptureCoef.AutoSize = true;
+            this.labelSSCaptureCoef.Location = new System.Drawing.Point(301, 301);
+            this.labelSSCaptureCoef.Name = "labelSSCaptureCoef";
+            this.labelSSCaptureCoef.Size = new System.Drawing.Size(80, 13);
+            this.labelSSCaptureCoef.TabIndex = 45;
+            this.labelSSCaptureCoef.Text = "SSCaptureCoef";
+            // 
+            // labelSSCaptureDefense
+            // 
+            this.labelSSCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSSCaptureDefense.Location = new System.Drawing.Point(6, 288);
+            this.labelSSCaptureDefense.Name = "labelSSCaptureDefense";
+            this.labelSSCaptureDefense.Size = new System.Drawing.Size(427, 13);
+            this.labelSSCaptureDefense.TabIndex = 45;
+            this.labelSSCaptureDefense.Text = "Capture/Defense";
+            this.labelSSCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSSFragsCoef
+            // 
+            this.labelSSFragsCoef.AutoSize = true;
+            this.labelSSFragsCoef.Location = new System.Drawing.Point(301, 270);
+            this.labelSSFragsCoef.Name = "labelSSFragsCoef";
+            this.labelSSFragsCoef.Size = new System.Drawing.Size(69, 13);
+            this.labelSSFragsCoef.TabIndex = 45;
+            this.labelSSFragsCoef.Text = "SSFragsCoef";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(6, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(427, 13);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "Frags/Destroys";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSSPiercingsPercent
+            // 
+            this.labelSSPiercingsPercent.AutoSize = true;
+            this.labelSSPiercingsPercent.Location = new System.Drawing.Point(214, 226);
+            this.labelSSPiercingsPercent.Name = "labelSSPiercingsPercent";
+            this.labelSSPiercingsPercent.Size = new System.Drawing.Size(101, 13);
+            this.labelSSPiercingsPercent.TabIndex = 45;
+            this.labelSSPiercingsPercent.Text = "SSPiercingsPercent";
+            // 
+            // labelSSHitsPercents
+            // 
+            this.labelSSHitsPercents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSSHitsPercents.Location = new System.Drawing.Point(6, 161);
+            this.labelSSHitsPercents.Name = "labelSSHitsPercents";
+            this.labelSSHitsPercents.Size = new System.Drawing.Size(427, 13);
+            this.labelSSHitsPercents.TabIndex = 45;
+            this.labelSSHitsPercents.Text = "Hits/Penetrations";
+            this.labelSSHitsPercents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSSDamageCoef
+            // 
+            this.labelSSDamageCoef.AutoSize = true;
+            this.labelSSDamageCoef.Location = new System.Drawing.Point(147, 143);
+            this.labelSSDamageCoef.Name = "labelSSDamageCoef";
+            this.labelSSDamageCoef.Size = new System.Drawing.Size(83, 13);
+            this.labelSSDamageCoef.TabIndex = 45;
+            this.labelSSDamageCoef.Text = "SSDamageCoef";
+            // 
+            // labelSSDamage
+            // 
+            this.labelSSDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSSDamage.Location = new System.Drawing.Point(6, 117);
+            this.labelSSDamage.Name = "labelSSDamage";
+            this.labelSSDamage.Size = new System.Drawing.Size(427, 13);
+            this.labelSSDamage.TabIndex = 45;
+            this.labelSSDamage.Text = "Damage";
+            this.labelSSDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSSWinsCoef
+            // 
+            this.labelSSWinsCoef.AutoSize = true;
+            this.labelSSWinsCoef.Location = new System.Drawing.Point(214, 87);
+            this.labelSSWinsCoef.Name = "labelSSWinsCoef";
+            this.labelSSWinsCoef.Size = new System.Drawing.Size(67, 13);
+            this.labelSSWinsCoef.TabIndex = 45;
+            this.labelSSWinsCoef.Text = "SSWinsCoef";
+            // 
+            // labelSSWinsLosses
+            // 
+            this.labelSSWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSSWinsLosses.Location = new System.Drawing.Point(6, 74);
+            this.labelSSWinsLosses.Name = "labelSSWinsLosses";
+            this.labelSSWinsLosses.Size = new System.Drawing.Size(427, 13);
+            this.labelSSWinsLosses.TabIndex = 45;
+            this.labelSSWinsLosses.Text = "Wins/Losses";
+            this.labelSSWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSSSummary
+            // 
+            this.labelSSSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSSSummary.Location = new System.Drawing.Point(6, 3);
+            this.labelSSSummary.Name = "labelSSSummary";
+            this.labelSSSummary.Size = new System.Drawing.Size(427, 13);
+            this.labelSSSummary.TabIndex = 45;
+            this.labelSSSummary.Text = "Summary";
+            this.labelSSSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBox1
             // 
@@ -5685,1029 +6708,6 @@
             this.pictureBoxIsPremium.TabIndex = 22;
             this.pictureBoxIsPremium.TabStop = false;
             // 
-            // labelGAbsoluteSummary
-            // 
-            this.labelGAbsoluteSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGAbsoluteSummary.Location = new System.Drawing.Point(6, 3);
-            this.labelGAbsoluteSummary.Name = "labelGAbsoluteSummary";
-            this.labelGAbsoluteSummary.Size = new System.Drawing.Size(427, 13);
-            this.labelGAbsoluteSummary.TabIndex = 27;
-            this.labelGAbsoluteSummary.Text = "Summary";
-            this.labelGAbsoluteSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGAbsoluteWinsLosses
-            // 
-            this.labelGAbsoluteWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGAbsoluteWinsLosses.Location = new System.Drawing.Point(6, 74);
-            this.labelGAbsoluteWinsLosses.Name = "labelGAbsoluteWinsLosses";
-            this.labelGAbsoluteWinsLosses.Size = new System.Drawing.Size(427, 13);
-            this.labelGAbsoluteWinsLosses.TabIndex = 28;
-            this.labelGAbsoluteWinsLosses.Text = "Wins/Losses";
-            this.labelGAbsoluteWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGAbsoluteWinsCoef
-            // 
-            this.labelGAbsoluteWinsCoef.AutoSize = true;
-            this.labelGAbsoluteWinsCoef.Location = new System.Drawing.Point(214, 87);
-            this.labelGAbsoluteWinsCoef.Name = "labelGAbsoluteWinsCoef";
-            this.labelGAbsoluteWinsCoef.Size = new System.Drawing.Size(102, 13);
-            this.labelGAbsoluteWinsCoef.TabIndex = 29;
-            this.labelGAbsoluteWinsCoef.Text = "GAbsoluteWinsCoef";
-            // 
-            // labelGAbsoluteDamage
-            // 
-            this.labelGAbsoluteDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGAbsoluteDamage.Location = new System.Drawing.Point(6, 117);
-            this.labelGAbsoluteDamage.Name = "labelGAbsoluteDamage";
-            this.labelGAbsoluteDamage.Size = new System.Drawing.Size(427, 13);
-            this.labelGAbsoluteDamage.TabIndex = 30;
-            this.labelGAbsoluteDamage.Text = "Damage";
-            this.labelGAbsoluteDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGAbsoluteDamageCoef
-            // 
-            this.labelGAbsoluteDamageCoef.AutoSize = true;
-            this.labelGAbsoluteDamageCoef.Location = new System.Drawing.Point(147, 143);
-            this.labelGAbsoluteDamageCoef.Name = "labelGAbsoluteDamageCoef";
-            this.labelGAbsoluteDamageCoef.Size = new System.Drawing.Size(118, 13);
-            this.labelGAbsoluteDamageCoef.TabIndex = 31;
-            this.labelGAbsoluteDamageCoef.Text = "GAbsoluteDamageCoef";
-            // 
-            // labelGAbsoluteHitsPenetrations
-            // 
-            this.labelGAbsoluteHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGAbsoluteHitsPenetrations.Location = new System.Drawing.Point(6, 161);
-            this.labelGAbsoluteHitsPenetrations.Name = "labelGAbsoluteHitsPenetrations";
-            this.labelGAbsoluteHitsPenetrations.Size = new System.Drawing.Size(427, 13);
-            this.labelGAbsoluteHitsPenetrations.TabIndex = 32;
-            this.labelGAbsoluteHitsPenetrations.Text = "Hits/Penetrations";
-            this.labelGAbsoluteHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGAbsolutePiercingsPercent
-            // 
-            this.labelGAbsolutePiercingsPercent.AutoSize = true;
-            this.labelGAbsolutePiercingsPercent.Location = new System.Drawing.Point(214, 226);
-            this.labelGAbsolutePiercingsPercent.Name = "labelGAbsolutePiercingsPercent";
-            this.labelGAbsolutePiercingsPercent.Size = new System.Drawing.Size(136, 13);
-            this.labelGAbsolutePiercingsPercent.TabIndex = 33;
-            this.labelGAbsolutePiercingsPercent.Text = "GAbsolutePiercingsPercent";
-            // 
-            // labelGAbsoluteFragsDestroys
-            // 
-            this.labelGAbsoluteFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGAbsoluteFragsDestroys.Location = new System.Drawing.Point(6, 257);
-            this.labelGAbsoluteFragsDestroys.Name = "labelGAbsoluteFragsDestroys";
-            this.labelGAbsoluteFragsDestroys.Size = new System.Drawing.Size(427, 13);
-            this.labelGAbsoluteFragsDestroys.TabIndex = 34;
-            this.labelGAbsoluteFragsDestroys.Text = "Frags/Destroys";
-            this.labelGAbsoluteFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGAbsoluteFragsCoef
-            // 
-            this.labelGAbsoluteFragsCoef.AutoSize = true;
-            this.labelGAbsoluteFragsCoef.Location = new System.Drawing.Point(301, 270);
-            this.labelGAbsoluteFragsCoef.Name = "labelGAbsoluteFragsCoef";
-            this.labelGAbsoluteFragsCoef.Size = new System.Drawing.Size(104, 13);
-            this.labelGAbsoluteFragsCoef.TabIndex = 35;
-            this.labelGAbsoluteFragsCoef.Text = "GAbsoluteFragsCoef";
-            // 
-            // labelGAbsoluteCaptureDefense
-            // 
-            this.labelGAbsoluteCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGAbsoluteCaptureDefense.Location = new System.Drawing.Point(6, 288);
-            this.labelGAbsoluteCaptureDefense.Name = "labelGAbsoluteCaptureDefense";
-            this.labelGAbsoluteCaptureDefense.Size = new System.Drawing.Size(427, 13);
-            this.labelGAbsoluteCaptureDefense.TabIndex = 36;
-            this.labelGAbsoluteCaptureDefense.Text = "Capture/Defense";
-            this.labelGAbsoluteCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGAbsoluteCaptureCoef
-            // 
-            this.labelGAbsoluteCaptureCoef.AutoSize = true;
-            this.labelGAbsoluteCaptureCoef.Location = new System.Drawing.Point(301, 301);
-            this.labelGAbsoluteCaptureCoef.Name = "labelGAbsoluteCaptureCoef";
-            this.labelGAbsoluteCaptureCoef.Size = new System.Drawing.Size(115, 13);
-            this.labelGAbsoluteCaptureCoef.TabIndex = 37;
-            this.labelGAbsoluteCaptureCoef.Text = "GAbsoluteCaptureCoef";
-            // 
-            // labelGChampionSummary
-            // 
-            this.labelGChampionSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGChampionSummary.Location = new System.Drawing.Point(6, 3);
-            this.labelGChampionSummary.Name = "labelGChampionSummary";
-            this.labelGChampionSummary.Size = new System.Drawing.Size(427, 13);
-            this.labelGChampionSummary.TabIndex = 54;
-            this.labelGChampionSummary.Text = "Summary";
-            this.labelGChampionSummary.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // labelGChampionWinsLosses
-            // 
-            this.labelGChampionWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGChampionWinsLosses.Location = new System.Drawing.Point(6, 74);
-            this.labelGChampionWinsLosses.Name = "labelGChampionWinsLosses";
-            this.labelGChampionWinsLosses.Size = new System.Drawing.Size(427, 13);
-            this.labelGChampionWinsLosses.TabIndex = 55;
-            this.labelGChampionWinsLosses.Text = "Wins/Losses";
-            this.labelGChampionWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGChampionWinsCoef
-            // 
-            this.labelGChampionWinsCoef.AutoSize = true;
-            this.labelGChampionWinsCoef.Location = new System.Drawing.Point(214, 87);
-            this.labelGChampionWinsCoef.Name = "labelGChampionWinsCoef";
-            this.labelGChampionWinsCoef.Size = new System.Drawing.Size(108, 13);
-            this.labelGChampionWinsCoef.TabIndex = 56;
-            this.labelGChampionWinsCoef.Text = "GChampionWinsCoef";
-            // 
-            // labelGChampionDamage
-            // 
-            this.labelGChampionDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGChampionDamage.Location = new System.Drawing.Point(6, 117);
-            this.labelGChampionDamage.Name = "labelGChampionDamage";
-            this.labelGChampionDamage.Size = new System.Drawing.Size(427, 13);
-            this.labelGChampionDamage.TabIndex = 57;
-            this.labelGChampionDamage.Text = "Damage";
-            this.labelGChampionDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGChampionDamageCoef
-            // 
-            this.labelGChampionDamageCoef.AutoSize = true;
-            this.labelGChampionDamageCoef.Location = new System.Drawing.Point(147, 143);
-            this.labelGChampionDamageCoef.Name = "labelGChampionDamageCoef";
-            this.labelGChampionDamageCoef.Size = new System.Drawing.Size(124, 13);
-            this.labelGChampionDamageCoef.TabIndex = 58;
-            this.labelGChampionDamageCoef.Text = "GChampionDamageCoef";
-            // 
-            // labelGChampionHitsPenetrations
-            // 
-            this.labelGChampionHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGChampionHitsPenetrations.Location = new System.Drawing.Point(6, 161);
-            this.labelGChampionHitsPenetrations.Name = "labelGChampionHitsPenetrations";
-            this.labelGChampionHitsPenetrations.Size = new System.Drawing.Size(427, 13);
-            this.labelGChampionHitsPenetrations.TabIndex = 59;
-            this.labelGChampionHitsPenetrations.Text = "Hits/Penetrations";
-            this.labelGChampionHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGChampionPiercingsPercent
-            // 
-            this.labelGChampionPiercingsPercent.AutoSize = true;
-            this.labelGChampionPiercingsPercent.Location = new System.Drawing.Point(214, 226);
-            this.labelGChampionPiercingsPercent.Name = "labelGChampionPiercingsPercent";
-            this.labelGChampionPiercingsPercent.Size = new System.Drawing.Size(142, 13);
-            this.labelGChampionPiercingsPercent.TabIndex = 60;
-            this.labelGChampionPiercingsPercent.Text = "GChampionPiercingsPercent";
-            // 
-            // labelGChampionFragsDestroys
-            // 
-            this.labelGChampionFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGChampionFragsDestroys.Location = new System.Drawing.Point(6, 257);
-            this.labelGChampionFragsDestroys.Name = "labelGChampionFragsDestroys";
-            this.labelGChampionFragsDestroys.Size = new System.Drawing.Size(427, 13);
-            this.labelGChampionFragsDestroys.TabIndex = 61;
-            this.labelGChampionFragsDestroys.Text = "Frags/Destroys";
-            this.labelGChampionFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGChampionFragsCoef
-            // 
-            this.labelGChampionFragsCoef.AutoSize = true;
-            this.labelGChampionFragsCoef.Location = new System.Drawing.Point(301, 270);
-            this.labelGChampionFragsCoef.Name = "labelGChampionFragsCoef";
-            this.labelGChampionFragsCoef.Size = new System.Drawing.Size(110, 13);
-            this.labelGChampionFragsCoef.TabIndex = 62;
-            this.labelGChampionFragsCoef.Text = "GChampionFragsCoef";
-            // 
-            // labelGChampionCaptureDefense
-            // 
-            this.labelGChampionCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGChampionCaptureDefense.Location = new System.Drawing.Point(6, 288);
-            this.labelGChampionCaptureDefense.Name = "labelGChampionCaptureDefense";
-            this.labelGChampionCaptureDefense.Size = new System.Drawing.Size(427, 13);
-            this.labelGChampionCaptureDefense.TabIndex = 45;
-            this.labelGChampionCaptureDefense.Text = "Capture/Defense";
-            this.labelGChampionCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGChampionCapturePercent
-            // 
-            this.labelGChampionCapturePercent.AutoSize = true;
-            this.labelGChampionCapturePercent.Location = new System.Drawing.Point(301, 301);
-            this.labelGChampionCapturePercent.Name = "labelGChampionCapturePercent";
-            this.labelGChampionCapturePercent.Size = new System.Drawing.Size(136, 13);
-            this.labelGChampionCapturePercent.TabIndex = 45;
-            this.labelGChampionCapturePercent.Text = "GChampionCapturePercent";
-            // 
-            // labelGMiddleSummary
-            // 
-            this.labelGMiddleSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGMiddleSummary.Location = new System.Drawing.Point(6, 3);
-            this.labelGMiddleSummary.Name = "labelGMiddleSummary";
-            this.labelGMiddleSummary.Size = new System.Drawing.Size(427, 13);
-            this.labelGMiddleSummary.TabIndex = 45;
-            this.labelGMiddleSummary.Text = "Summary";
-            this.labelGMiddleSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGMiddleWinsLosses
-            // 
-            this.labelGMiddleWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGMiddleWinsLosses.Location = new System.Drawing.Point(6, 74);
-            this.labelGMiddleWinsLosses.Name = "labelGMiddleWinsLosses";
-            this.labelGMiddleWinsLosses.Size = new System.Drawing.Size(427, 13);
-            this.labelGMiddleWinsLosses.TabIndex = 45;
-            this.labelGMiddleWinsLosses.Text = "Wins/Losses";
-            this.labelGMiddleWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGMiddleWinsCoef
-            // 
-            this.labelGMiddleWinsCoef.AutoSize = true;
-            this.labelGMiddleWinsCoef.Location = new System.Drawing.Point(214, 87);
-            this.labelGMiddleWinsCoef.Name = "labelGMiddleWinsCoef";
-            this.labelGMiddleWinsCoef.Size = new System.Drawing.Size(92, 13);
-            this.labelGMiddleWinsCoef.TabIndex = 45;
-            this.labelGMiddleWinsCoef.Text = "GMiddleWinsCoef";
-            // 
-            // labelGMiddleDamage
-            // 
-            this.labelGMiddleDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGMiddleDamage.Location = new System.Drawing.Point(6, 117);
-            this.labelGMiddleDamage.Name = "labelGMiddleDamage";
-            this.labelGMiddleDamage.Size = new System.Drawing.Size(427, 13);
-            this.labelGMiddleDamage.TabIndex = 45;
-            this.labelGMiddleDamage.Text = "Damage";
-            this.labelGMiddleDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGMiddleDamageCoef
-            // 
-            this.labelGMiddleDamageCoef.AutoSize = true;
-            this.labelGMiddleDamageCoef.Location = new System.Drawing.Point(147, 143);
-            this.labelGMiddleDamageCoef.Name = "labelGMiddleDamageCoef";
-            this.labelGMiddleDamageCoef.Size = new System.Drawing.Size(108, 13);
-            this.labelGMiddleDamageCoef.TabIndex = 45;
-            this.labelGMiddleDamageCoef.Text = "GMiddleDamageCoef";
-            // 
-            // labelGMiddleHitsPercents
-            // 
-            this.labelGMiddleHitsPercents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGMiddleHitsPercents.Location = new System.Drawing.Point(6, 161);
-            this.labelGMiddleHitsPercents.Name = "labelGMiddleHitsPercents";
-            this.labelGMiddleHitsPercents.Size = new System.Drawing.Size(427, 13);
-            this.labelGMiddleHitsPercents.TabIndex = 45;
-            this.labelGMiddleHitsPercents.Text = "Hits/Penetrations";
-            this.labelGMiddleHitsPercents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGMiddlePiercingsPercent
-            // 
-            this.labelGMiddlePiercingsPercent.AutoSize = true;
-            this.labelGMiddlePiercingsPercent.Location = new System.Drawing.Point(214, 226);
-            this.labelGMiddlePiercingsPercent.Name = "labelGMiddlePiercingsPercent";
-            this.labelGMiddlePiercingsPercent.Size = new System.Drawing.Size(126, 13);
-            this.labelGMiddlePiercingsPercent.TabIndex = 45;
-            this.labelGMiddlePiercingsPercent.Text = "GMiddlePiercingsPercent";
-            // 
-            // labelGMiddleFragsDestroys
-            // 
-            this.labelGMiddleFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGMiddleFragsDestroys.Location = new System.Drawing.Point(6, 257);
-            this.labelGMiddleFragsDestroys.Name = "labelGMiddleFragsDestroys";
-            this.labelGMiddleFragsDestroys.Size = new System.Drawing.Size(427, 13);
-            this.labelGMiddleFragsDestroys.TabIndex = 45;
-            this.labelGMiddleFragsDestroys.Text = "Frags/Destroys";
-            this.labelGMiddleFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGMiddleFragsCoef
-            // 
-            this.labelGMiddleFragsCoef.AutoSize = true;
-            this.labelGMiddleFragsCoef.Location = new System.Drawing.Point(301, 270);
-            this.labelGMiddleFragsCoef.Name = "labelGMiddleFragsCoef";
-            this.labelGMiddleFragsCoef.Size = new System.Drawing.Size(94, 13);
-            this.labelGMiddleFragsCoef.TabIndex = 45;
-            this.labelGMiddleFragsCoef.Text = "GMiddleFragsCoef";
-            // 
-            // labelGMiddleCaptureDefense
-            // 
-            this.labelGMiddleCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGMiddleCaptureDefense.Location = new System.Drawing.Point(6, 288);
-            this.labelGMiddleCaptureDefense.Name = "labelGMiddleCaptureDefense";
-            this.labelGMiddleCaptureDefense.Size = new System.Drawing.Size(427, 13);
-            this.labelGMiddleCaptureDefense.TabIndex = 45;
-            this.labelGMiddleCaptureDefense.Text = "Capture/Defense";
-            this.labelGMiddleCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelGMiddleCapturePercents
-            // 
-            this.labelGMiddleCapturePercents.AutoSize = true;
-            this.labelGMiddleCapturePercents.Location = new System.Drawing.Point(301, 301);
-            this.labelGMiddleCapturePercents.Name = "labelGMiddleCapturePercents";
-            this.labelGMiddleCapturePercents.Size = new System.Drawing.Size(125, 13);
-            this.labelGMiddleCapturePercents.TabIndex = 45;
-            this.labelGMiddleCapturePercents.Text = "GMiddleCapturePercents";
-            // 
-            // labelRegTSummary
-            // 
-            this.labelRegTSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRegTSummary.Location = new System.Drawing.Point(6, 3);
-            this.labelRegTSummary.Name = "labelRegTSummary";
-            this.labelRegTSummary.Size = new System.Drawing.Size(427, 13);
-            this.labelRegTSummary.TabIndex = 45;
-            this.labelRegTSummary.Text = "Summary";
-            this.labelRegTSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelRegTWinsLosses
-            // 
-            this.labelRegTWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRegTWinsLosses.Location = new System.Drawing.Point(6, 74);
-            this.labelRegTWinsLosses.Name = "labelRegTWinsLosses";
-            this.labelRegTWinsLosses.Size = new System.Drawing.Size(427, 13);
-            this.labelRegTWinsLosses.TabIndex = 45;
-            this.labelRegTWinsLosses.Text = "Wins/Losses";
-            this.labelRegTWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelRegularTWinsCoef
-            // 
-            this.labelRegularTWinsCoef.AutoSize = true;
-            this.labelRegularTWinsCoef.Location = new System.Drawing.Point(214, 87);
-            this.labelRegularTWinsCoef.Name = "labelRegularTWinsCoef";
-            this.labelRegularTWinsCoef.Size = new System.Drawing.Size(80, 13);
-            this.labelRegularTWinsCoef.TabIndex = 45;
-            this.labelRegularTWinsCoef.Text = "RegTWinsCoef";
-            // 
-            // label3RegTDamage
-            // 
-            this.label3RegTDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3RegTDamage.Location = new System.Drawing.Point(6, 117);
-            this.label3RegTDamage.Name = "label3RegTDamage";
-            this.label3RegTDamage.Size = new System.Drawing.Size(427, 13);
-            this.label3RegTDamage.TabIndex = 45;
-            this.label3RegTDamage.Text = "Damage";
-            this.label3RegTDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelRegTDamageCoef
-            // 
-            this.labelRegTDamageCoef.AutoSize = true;
-            this.labelRegTDamageCoef.Location = new System.Drawing.Point(147, 143);
-            this.labelRegTDamageCoef.Name = "labelRegTDamageCoef";
-            this.labelRegTDamageCoef.Size = new System.Drawing.Size(96, 13);
-            this.labelRegTDamageCoef.TabIndex = 45;
-            this.labelRegTDamageCoef.Text = "RegTDamageCoef";
-            // 
-            // labelRegTHitsPenetrations
-            // 
-            this.labelRegTHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRegTHitsPenetrations.Location = new System.Drawing.Point(6, 161);
-            this.labelRegTHitsPenetrations.Name = "labelRegTHitsPenetrations";
-            this.labelRegTHitsPenetrations.Size = new System.Drawing.Size(427, 13);
-            this.labelRegTHitsPenetrations.TabIndex = 45;
-            this.labelRegTHitsPenetrations.Text = "Hits/Penetrations";
-            this.labelRegTHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelRegTPiercingsPercent
-            // 
-            this.labelRegTPiercingsPercent.AutoSize = true;
-            this.labelRegTPiercingsPercent.Location = new System.Drawing.Point(214, 226);
-            this.labelRegTPiercingsPercent.Name = "labelRegTPiercingsPercent";
-            this.labelRegTPiercingsPercent.Size = new System.Drawing.Size(114, 13);
-            this.labelRegTPiercingsPercent.TabIndex = 45;
-            this.labelRegTPiercingsPercent.Text = "RegTPiercingsPercent";
-            // 
-            // labelRegTFragsDestroys
-            // 
-            this.labelRegTFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRegTFragsDestroys.Location = new System.Drawing.Point(6, 257);
-            this.labelRegTFragsDestroys.Name = "labelRegTFragsDestroys";
-            this.labelRegTFragsDestroys.Size = new System.Drawing.Size(427, 13);
-            this.labelRegTFragsDestroys.TabIndex = 45;
-            this.labelRegTFragsDestroys.Text = "Frags/Destroys";
-            this.labelRegTFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelRegTFragsCoef
-            // 
-            this.labelRegTFragsCoef.AutoSize = true;
-            this.labelRegTFragsCoef.Location = new System.Drawing.Point(301, 270);
-            this.labelRegTFragsCoef.Name = "labelRegTFragsCoef";
-            this.labelRegTFragsCoef.Size = new System.Drawing.Size(82, 13);
-            this.labelRegTFragsCoef.TabIndex = 45;
-            this.labelRegTFragsCoef.Text = "RegTFragsCoef";
-            // 
-            // labelRegTCaptureDefense
-            // 
-            this.labelRegTCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRegTCaptureDefense.Location = new System.Drawing.Point(6, 288);
-            this.labelRegTCaptureDefense.Name = "labelRegTCaptureDefense";
-            this.labelRegTCaptureDefense.Size = new System.Drawing.Size(427, 13);
-            this.labelRegTCaptureDefense.TabIndex = 45;
-            this.labelRegTCaptureDefense.Text = "Capture/Defense";
-            this.labelRegTCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelRegTCapturePercent
-            // 
-            this.labelRegTCapturePercent.AutoSize = true;
-            this.labelRegTCapturePercent.Location = new System.Drawing.Point(301, 301);
-            this.labelRegTCapturePercent.Name = "labelRegTCapturePercent";
-            this.labelRegTCapturePercent.Size = new System.Drawing.Size(108, 13);
-            this.labelRegTCapturePercent.TabIndex = 45;
-            this.labelRegTCapturePercent.Text = "RegTCapturePercent";
-            // 
-            // labelRegTRecords
-            // 
-            this.labelRegTRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRegTRecords.Location = new System.Drawing.Point(6, 319);
-            this.labelRegTRecords.Name = "labelRegTRecords";
-            this.labelRegTRecords.Size = new System.Drawing.Size(427, 13);
-            this.labelRegTRecords.TabIndex = 45;
-            this.labelRegTRecords.Text = "Records";
-            this.labelRegTRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTeamSummary
-            // 
-            this.labelTeamSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTeamSummary.Location = new System.Drawing.Point(6, 3);
-            this.labelTeamSummary.Name = "labelTeamSummary";
-            this.labelTeamSummary.Size = new System.Drawing.Size(427, 13);
-            this.labelTeamSummary.TabIndex = 45;
-            this.labelTeamSummary.Text = "Summary";
-            this.labelTeamSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTeamWinsLooses
-            // 
-            this.labelTeamWinsLooses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTeamWinsLooses.Location = new System.Drawing.Point(6, 74);
-            this.labelTeamWinsLooses.Name = "labelTeamWinsLooses";
-            this.labelTeamWinsLooses.Size = new System.Drawing.Size(427, 13);
-            this.labelTeamWinsLooses.TabIndex = 45;
-            this.labelTeamWinsLooses.Text = "Wins/Losses";
-            this.labelTeamWinsLooses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTeamWinsCoef
-            // 
-            this.labelTeamWinsCoef.AutoSize = true;
-            this.labelTeamWinsCoef.Location = new System.Drawing.Point(214, 87);
-            this.labelTeamWinsCoef.Name = "labelTeamWinsCoef";
-            this.labelTeamWinsCoef.Size = new System.Drawing.Size(80, 13);
-            this.labelTeamWinsCoef.TabIndex = 45;
-            this.labelTeamWinsCoef.Text = "TeamWinsCoef";
-            // 
-            // labelTeamDamage
-            // 
-            this.labelTeamDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTeamDamage.Location = new System.Drawing.Point(6, 117);
-            this.labelTeamDamage.Name = "labelTeamDamage";
-            this.labelTeamDamage.Size = new System.Drawing.Size(427, 13);
-            this.labelTeamDamage.TabIndex = 45;
-            this.labelTeamDamage.Text = "Damage";
-            this.labelTeamDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTeamDamageCoef
-            // 
-            this.labelTeamDamageCoef.AutoSize = true;
-            this.labelTeamDamageCoef.Location = new System.Drawing.Point(147, 143);
-            this.labelTeamDamageCoef.Name = "labelTeamDamageCoef";
-            this.labelTeamDamageCoef.Size = new System.Drawing.Size(96, 13);
-            this.labelTeamDamageCoef.TabIndex = 45;
-            this.labelTeamDamageCoef.Text = "TeamDamageCoef";
-            // 
-            // labelTeamHitsPenetrations
-            // 
-            this.labelTeamHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTeamHitsPenetrations.Location = new System.Drawing.Point(6, 161);
-            this.labelTeamHitsPenetrations.Name = "labelTeamHitsPenetrations";
-            this.labelTeamHitsPenetrations.Size = new System.Drawing.Size(427, 13);
-            this.labelTeamHitsPenetrations.TabIndex = 45;
-            this.labelTeamHitsPenetrations.Text = "Hits/Penetrations";
-            this.labelTeamHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTeamPiercingsPercent
-            // 
-            this.labelTeamPiercingsPercent.AutoSize = true;
-            this.labelTeamPiercingsPercent.Location = new System.Drawing.Point(214, 226);
-            this.labelTeamPiercingsPercent.Name = "labelTeamPiercingsPercent";
-            this.labelTeamPiercingsPercent.Size = new System.Drawing.Size(114, 13);
-            this.labelTeamPiercingsPercent.TabIndex = 45;
-            this.labelTeamPiercingsPercent.Text = "TeamPiercingsPercent";
-            // 
-            // labelTeamFragsDestroys
-            // 
-            this.labelTeamFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTeamFragsDestroys.Location = new System.Drawing.Point(6, 257);
-            this.labelTeamFragsDestroys.Name = "labelTeamFragsDestroys";
-            this.labelTeamFragsDestroys.Size = new System.Drawing.Size(427, 13);
-            this.labelTeamFragsDestroys.TabIndex = 45;
-            this.labelTeamFragsDestroys.Text = "Frags/Destroys";
-            this.labelTeamFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTeamFragsCorf
-            // 
-            this.labelTeamFragsCorf.AutoSize = true;
-            this.labelTeamFragsCorf.Location = new System.Drawing.Point(301, 270);
-            this.labelTeamFragsCorf.Name = "labelTeamFragsCorf";
-            this.labelTeamFragsCorf.Size = new System.Drawing.Size(79, 13);
-            this.labelTeamFragsCorf.TabIndex = 45;
-            this.labelTeamFragsCorf.Text = "TeamFragsCorf";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(6, 288);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(427, 13);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "Capture/Defense";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTeamCapturePercent
-            // 
-            this.labelTeamCapturePercent.AutoSize = true;
-            this.labelTeamCapturePercent.Location = new System.Drawing.Point(301, 301);
-            this.labelTeamCapturePercent.Name = "labelTeamCapturePercent";
-            this.labelTeamCapturePercent.Size = new System.Drawing.Size(108, 13);
-            this.labelTeamCapturePercent.TabIndex = 45;
-            this.labelTeamCapturePercent.Text = "TeamCapturePercent";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(6, 319);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(427, 13);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "Records";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSDSummary
-            // 
-            this.labelSDSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSDSummary.Location = new System.Drawing.Point(6, 3);
-            this.labelSDSummary.Name = "labelSDSummary";
-            this.labelSDSummary.Size = new System.Drawing.Size(427, 13);
-            this.labelSDSummary.TabIndex = 45;
-            this.labelSDSummary.Text = "Summary";
-            this.labelSDSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSDWinsLosses
-            // 
-            this.labelSDWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSDWinsLosses.Location = new System.Drawing.Point(6, 74);
-            this.labelSDWinsLosses.Name = "labelSDWinsLosses";
-            this.labelSDWinsLosses.Size = new System.Drawing.Size(427, 13);
-            this.labelSDWinsLosses.TabIndex = 45;
-            this.labelSDWinsLosses.Text = "Wins/Losses";
-            this.labelSDWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSDWinsCoef
-            // 
-            this.labelSDWinsCoef.AutoSize = true;
-            this.labelSDWinsCoef.Location = new System.Drawing.Point(214, 87);
-            this.labelSDWinsCoef.Name = "labelSDWinsCoef";
-            this.labelSDWinsCoef.Size = new System.Drawing.Size(68, 13);
-            this.labelSDWinsCoef.TabIndex = 45;
-            this.labelSDWinsCoef.Text = "SDWinsCoef";
-            // 
-            // labelSDDamage
-            // 
-            this.labelSDDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSDDamage.Location = new System.Drawing.Point(6, 117);
-            this.labelSDDamage.Name = "labelSDDamage";
-            this.labelSDDamage.Size = new System.Drawing.Size(427, 13);
-            this.labelSDDamage.TabIndex = 45;
-            this.labelSDDamage.Text = "Damage";
-            this.labelSDDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSDDamageCoef
-            // 
-            this.labelSDDamageCoef.AutoSize = true;
-            this.labelSDDamageCoef.Location = new System.Drawing.Point(147, 143);
-            this.labelSDDamageCoef.Name = "labelSDDamageCoef";
-            this.labelSDDamageCoef.Size = new System.Drawing.Size(84, 13);
-            this.labelSDDamageCoef.TabIndex = 45;
-            this.labelSDDamageCoef.Text = "SDDamageCoef";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(6, 161);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(427, 13);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "Hits/Penetrations";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSDPiercingsPercent
-            // 
-            this.labelSDPiercingsPercent.AutoSize = true;
-            this.labelSDPiercingsPercent.Location = new System.Drawing.Point(214, 226);
-            this.labelSDPiercingsPercent.Name = "labelSDPiercingsPercent";
-            this.labelSDPiercingsPercent.Size = new System.Drawing.Size(102, 13);
-            this.labelSDPiercingsPercent.TabIndex = 45;
-            this.labelSDPiercingsPercent.Text = "SDPiercingsPercent";
-            // 
-            // labelSDFragsDestroys
-            // 
-            this.labelSDFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSDFragsDestroys.Location = new System.Drawing.Point(6, 257);
-            this.labelSDFragsDestroys.Name = "labelSDFragsDestroys";
-            this.labelSDFragsDestroys.Size = new System.Drawing.Size(427, 13);
-            this.labelSDFragsDestroys.TabIndex = 45;
-            this.labelSDFragsDestroys.Text = "Frags/Destroys";
-            this.labelSDFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSDFragsCoef
-            // 
-            this.labelSDFragsCoef.AutoSize = true;
-            this.labelSDFragsCoef.Location = new System.Drawing.Point(301, 270);
-            this.labelSDFragsCoef.Name = "labelSDFragsCoef";
-            this.labelSDFragsCoef.Size = new System.Drawing.Size(70, 13);
-            this.labelSDFragsCoef.TabIndex = 45;
-            this.labelSDFragsCoef.Text = "SDFragsCoef";
-            // 
-            // labelSDCaptureDefense
-            // 
-            this.labelSDCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSDCaptureDefense.Location = new System.Drawing.Point(6, 288);
-            this.labelSDCaptureDefense.Name = "labelSDCaptureDefense";
-            this.labelSDCaptureDefense.Size = new System.Drawing.Size(427, 13);
-            this.labelSDCaptureDefense.TabIndex = 45;
-            this.labelSDCaptureDefense.Text = "Capture/Defense";
-            this.labelSDCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSDCaptureCoef
-            // 
-            this.labelSDCaptureCoef.AutoSize = true;
-            this.labelSDCaptureCoef.Location = new System.Drawing.Point(301, 301);
-            this.labelSDCaptureCoef.Name = "labelSDCaptureCoef";
-            this.labelSDCaptureCoef.Size = new System.Drawing.Size(81, 13);
-            this.labelSDCaptureCoef.TabIndex = 45;
-            this.labelSDCaptureCoef.Text = "SDCaptureCoef";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(6, 319);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(427, 13);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Records";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSSSummary
-            // 
-            this.labelSSSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSSSummary.Location = new System.Drawing.Point(6, 3);
-            this.labelSSSummary.Name = "labelSSSummary";
-            this.labelSSSummary.Size = new System.Drawing.Size(427, 13);
-            this.labelSSSummary.TabIndex = 45;
-            this.labelSSSummary.Text = "Summary";
-            this.labelSSSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSSWinsLosses
-            // 
-            this.labelSSWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSSWinsLosses.Location = new System.Drawing.Point(6, 74);
-            this.labelSSWinsLosses.Name = "labelSSWinsLosses";
-            this.labelSSWinsLosses.Size = new System.Drawing.Size(427, 13);
-            this.labelSSWinsLosses.TabIndex = 45;
-            this.labelSSWinsLosses.Text = "Wins/Losses";
-            this.labelSSWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSSWinsCoef
-            // 
-            this.labelSSWinsCoef.AutoSize = true;
-            this.labelSSWinsCoef.Location = new System.Drawing.Point(214, 87);
-            this.labelSSWinsCoef.Name = "labelSSWinsCoef";
-            this.labelSSWinsCoef.Size = new System.Drawing.Size(67, 13);
-            this.labelSSWinsCoef.TabIndex = 45;
-            this.labelSSWinsCoef.Text = "SSWinsCoef";
-            // 
-            // labelSSDamage
-            // 
-            this.labelSSDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSSDamage.Location = new System.Drawing.Point(6, 117);
-            this.labelSSDamage.Name = "labelSSDamage";
-            this.labelSSDamage.Size = new System.Drawing.Size(427, 13);
-            this.labelSSDamage.TabIndex = 45;
-            this.labelSSDamage.Text = "Damage";
-            this.labelSSDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSSDamageCoef
-            // 
-            this.labelSSDamageCoef.AutoSize = true;
-            this.labelSSDamageCoef.Location = new System.Drawing.Point(147, 143);
-            this.labelSSDamageCoef.Name = "labelSSDamageCoef";
-            this.labelSSDamageCoef.Size = new System.Drawing.Size(83, 13);
-            this.labelSSDamageCoef.TabIndex = 45;
-            this.labelSSDamageCoef.Text = "SSDamageCoef";
-            // 
-            // labelSSHitsPercents
-            // 
-            this.labelSSHitsPercents.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSSHitsPercents.Location = new System.Drawing.Point(6, 161);
-            this.labelSSHitsPercents.Name = "labelSSHitsPercents";
-            this.labelSSHitsPercents.Size = new System.Drawing.Size(427, 13);
-            this.labelSSHitsPercents.TabIndex = 45;
-            this.labelSSHitsPercents.Text = "Hits/Penetrations";
-            this.labelSSHitsPercents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSSPiercingsPercent
-            // 
-            this.labelSSPiercingsPercent.AutoSize = true;
-            this.labelSSPiercingsPercent.Location = new System.Drawing.Point(214, 226);
-            this.labelSSPiercingsPercent.Name = "labelSSPiercingsPercent";
-            this.labelSSPiercingsPercent.Size = new System.Drawing.Size(101, 13);
-            this.labelSSPiercingsPercent.TabIndex = 45;
-            this.labelSSPiercingsPercent.Text = "SSPiercingsPercent";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(6, 257);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(427, 13);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Frags/Destroys";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSSFragsCoef
-            // 
-            this.labelSSFragsCoef.AutoSize = true;
-            this.labelSSFragsCoef.Location = new System.Drawing.Point(301, 270);
-            this.labelSSFragsCoef.Name = "labelSSFragsCoef";
-            this.labelSSFragsCoef.Size = new System.Drawing.Size(69, 13);
-            this.labelSSFragsCoef.TabIndex = 45;
-            this.labelSSFragsCoef.Text = "SSFragsCoef";
-            // 
-            // labelSSCaptureDefense
-            // 
-            this.labelSSCaptureDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSSCaptureDefense.Location = new System.Drawing.Point(6, 288);
-            this.labelSSCaptureDefense.Name = "labelSSCaptureDefense";
-            this.labelSSCaptureDefense.Size = new System.Drawing.Size(427, 13);
-            this.labelSSCaptureDefense.TabIndex = 45;
-            this.labelSSCaptureDefense.Text = "Capture/Defense";
-            this.labelSSCaptureDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelSSCaptureCoef
-            // 
-            this.labelSSCaptureCoef.AutoSize = true;
-            this.labelSSCaptureCoef.Location = new System.Drawing.Point(301, 301);
-            this.labelSSCaptureCoef.Name = "labelSSCaptureCoef";
-            this.labelSSCaptureCoef.Size = new System.Drawing.Size(80, 13);
-            this.labelSSCaptureCoef.TabIndex = 45;
-            this.labelSSCaptureCoef.Text = "SSCaptureCoef";
-            // 
-            // labelSSRecords
-            // 
-            this.labelSSRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSSRecords.Location = new System.Drawing.Point(6, 319);
-            this.labelSSRecords.Name = "labelSSRecords";
-            this.labelSSRecords.Size = new System.Drawing.Size(427, 13);
-            this.labelSSRecords.TabIndex = 45;
-            this.labelSSRecords.Text = "Records";
-            this.labelSSRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelFalloutSummary
-            // 
-            this.labelFalloutSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFalloutSummary.Location = new System.Drawing.Point(6, 3);
-            this.labelFalloutSummary.Name = "labelFalloutSummary";
-            this.labelFalloutSummary.Size = new System.Drawing.Size(427, 13);
-            this.labelFalloutSummary.TabIndex = 45;
-            this.labelFalloutSummary.Text = "Summary";
-            this.labelFalloutSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelFalloutWinsLosses
-            // 
-            this.labelFalloutWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFalloutWinsLosses.Location = new System.Drawing.Point(6, 74);
-            this.labelFalloutWinsLosses.Name = "labelFalloutWinsLosses";
-            this.labelFalloutWinsLosses.Size = new System.Drawing.Size(427, 13);
-            this.labelFalloutWinsLosses.TabIndex = 45;
-            this.labelFalloutWinsLosses.Text = "Wins/Losses";
-            this.labelFalloutWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelFalloutWinsCoef
-            // 
-            this.labelFalloutWinsCoef.AutoSize = true;
-            this.labelFalloutWinsCoef.Location = new System.Drawing.Point(214, 87);
-            this.labelFalloutWinsCoef.Name = "labelFalloutWinsCoef";
-            this.labelFalloutWinsCoef.Size = new System.Drawing.Size(84, 13);
-            this.labelFalloutWinsCoef.TabIndex = 45;
-            this.labelFalloutWinsCoef.Text = "FalloutWinsCoef";
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(6, 117);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(427, 13);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Damage";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelFalloutDamageCoef
-            // 
-            this.labelFalloutDamageCoef.AutoSize = true;
-            this.labelFalloutDamageCoef.Location = new System.Drawing.Point(147, 143);
-            this.labelFalloutDamageCoef.Name = "labelFalloutDamageCoef";
-            this.labelFalloutDamageCoef.Size = new System.Drawing.Size(100, 13);
-            this.labelFalloutDamageCoef.TabIndex = 45;
-            this.labelFalloutDamageCoef.Text = "FalloutDamageCoef";
-            // 
-            // labelFalloutHitsPenetrations
-            // 
-            this.labelFalloutHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFalloutHitsPenetrations.Location = new System.Drawing.Point(6, 161);
-            this.labelFalloutHitsPenetrations.Name = "labelFalloutHitsPenetrations";
-            this.labelFalloutHitsPenetrations.Size = new System.Drawing.Size(427, 13);
-            this.labelFalloutHitsPenetrations.TabIndex = 45;
-            this.labelFalloutHitsPenetrations.Text = "Hits/Penetrations";
-            this.labelFalloutHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelFalloutPiercingsPercent
-            // 
-            this.labelFalloutPiercingsPercent.AutoSize = true;
-            this.labelFalloutPiercingsPercent.Location = new System.Drawing.Point(214, 226);
-            this.labelFalloutPiercingsPercent.Name = "labelFalloutPiercingsPercent";
-            this.labelFalloutPiercingsPercent.Size = new System.Drawing.Size(118, 13);
-            this.labelFalloutPiercingsPercent.TabIndex = 45;
-            this.labelFalloutPiercingsPercent.Text = "FalloutPiercingsPercent";
-            // 
-            // labelFalloutFragsDestroys
-            // 
-            this.labelFalloutFragsDestroys.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFalloutFragsDestroys.Location = new System.Drawing.Point(6, 257);
-            this.labelFalloutFragsDestroys.Name = "labelFalloutFragsDestroys";
-            this.labelFalloutFragsDestroys.Size = new System.Drawing.Size(427, 13);
-            this.labelFalloutFragsDestroys.TabIndex = 45;
-            this.labelFalloutFragsDestroys.Text = "Frags/Destroys";
-            this.labelFalloutFragsDestroys.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelFalloutFragsCoef
-            // 
-            this.labelFalloutFragsCoef.AutoSize = true;
-            this.labelFalloutFragsCoef.Location = new System.Drawing.Point(301, 270);
-            this.labelFalloutFragsCoef.Name = "labelFalloutFragsCoef";
-            this.labelFalloutFragsCoef.Size = new System.Drawing.Size(86, 13);
-            this.labelFalloutFragsCoef.TabIndex = 45;
-            this.labelFalloutFragsCoef.Text = "FalloutFragsCoef";
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(6, 288);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(427, 13);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "Capture/Defense";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelFalloutCaptureCoef
-            // 
-            this.labelFalloutCaptureCoef.AutoSize = true;
-            this.labelFalloutCaptureCoef.Location = new System.Drawing.Point(301, 301);
-            this.labelFalloutCaptureCoef.Name = "labelFalloutCaptureCoef";
-            this.labelFalloutCaptureCoef.Size = new System.Drawing.Size(97, 13);
-            this.labelFalloutCaptureCoef.TabIndex = 45;
-            this.labelFalloutCaptureCoef.Text = "FalloutCaptureCoef";
-            // 
-            // labelFalloutRecords
-            // 
-            this.labelFalloutRecords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFalloutRecords.Location = new System.Drawing.Point(6, 319);
-            this.labelFalloutRecords.Name = "labelFalloutRecords";
-            this.labelFalloutRecords.Size = new System.Drawing.Size(427, 13);
-            this.labelFalloutRecords.TabIndex = 45;
-            this.labelFalloutRecords.Text = "Records";
-            this.labelFalloutRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelStatisticsFalloutMaxFragsTankId
-            // 
-            this.labelStatisticsFalloutMaxFragsTankId.AutoSize = true;
-            this.labelStatisticsFalloutMaxFragsTankId.Location = new System.Drawing.Point(147, 345);
-            this.labelStatisticsFalloutMaxFragsTankId.Name = "labelStatisticsFalloutMaxFragsTankId";
-            this.labelStatisticsFalloutMaxFragsTankId.Size = new System.Drawing.Size(118, 13);
-            this.labelStatisticsFalloutMaxFragsTankId.TabIndex = 46;
-            this.labelStatisticsFalloutMaxFragsTankId.Text = "FalloutMaxFragsTankId";
-            // 
-            // labelHSummary
-            // 
-            this.labelHSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHSummary.Location = new System.Drawing.Point(6, 3);
-            this.labelHSummary.Name = "labelHSummary";
-            this.labelHSummary.Size = new System.Drawing.Size(427, 13);
-            this.labelHSummary.TabIndex = 45;
-            this.labelHSummary.Text = "Summary";
-            this.labelHSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelHWinsLosses
-            // 
-            this.labelHWinsLosses.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHWinsLosses.Location = new System.Drawing.Point(6, 74);
-            this.labelHWinsLosses.Name = "labelHWinsLosses";
-            this.labelHWinsLosses.Size = new System.Drawing.Size(427, 13);
-            this.labelHWinsLosses.TabIndex = 45;
-            this.labelHWinsLosses.Text = "Wins/Losses";
-            this.labelHWinsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelHWinsCoef
-            // 
-            this.labelHWinsCoef.AutoSize = true;
-            this.labelHWinsCoef.Location = new System.Drawing.Point(214, 87);
-            this.labelHWinsCoef.Name = "labelHWinsCoef";
-            this.labelHWinsCoef.Size = new System.Drawing.Size(61, 13);
-            this.labelHWinsCoef.TabIndex = 45;
-            this.labelHWinsCoef.Text = "HWinsCoef";
-            // 
-            // labelHDamage
-            // 
-            this.labelHDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHDamage.Location = new System.Drawing.Point(6, 117);
-            this.labelHDamage.Name = "labelHDamage";
-            this.labelHDamage.Size = new System.Drawing.Size(427, 13);
-            this.labelHDamage.TabIndex = 45;
-            this.labelHDamage.Text = "Damage";
-            this.labelHDamage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelHDamageCoef
-            // 
-            this.labelHDamageCoef.AutoSize = true;
-            this.labelHDamageCoef.Location = new System.Drawing.Point(147, 143);
-            this.labelHDamageCoef.Name = "labelHDamageCoef";
-            this.labelHDamageCoef.Size = new System.Drawing.Size(77, 13);
-            this.labelHDamageCoef.TabIndex = 45;
-            this.labelHDamageCoef.Text = "HDamageCoef";
-            // 
-            // labelHHitsPenetrations
-            // 
-            this.labelHHitsPenetrations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHHitsPenetrations.Location = new System.Drawing.Point(6, 161);
-            this.labelHHitsPenetrations.Name = "labelHHitsPenetrations";
-            this.labelHHitsPenetrations.Size = new System.Drawing.Size(427, 13);
-            this.labelHHitsPenetrations.TabIndex = 45;
-            this.labelHHitsPenetrations.Text = "Hits/Penetrations";
-            this.labelHHitsPenetrations.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelStatisticsHPiercingsReceived
-            // 
-            this.labelStatisticsHPiercingsReceived.AutoSize = true;
-            this.labelStatisticsHPiercingsReceived.Location = new System.Drawing.Point(214, 187);
-            this.labelStatisticsHPiercingsReceived.Name = "labelStatisticsHPiercingsReceived";
-            this.labelStatisticsHPiercingsReceived.Size = new System.Drawing.Size(104, 13);
-            this.labelStatisticsHPiercingsReceived.TabIndex = 46;
-            this.labelStatisticsHPiercingsReceived.Text = "HPiercingsReceived";
-            // 
-            // labelHPiercingsPercent
-            // 
-            this.labelHPiercingsPercent.AutoSize = true;
-            this.labelHPiercingsPercent.Location = new System.Drawing.Point(214, 226);
-            this.labelHPiercingsPercent.Name = "labelHPiercingsPercent";
-            this.labelHPiercingsPercent.Size = new System.Drawing.Size(95, 13);
-            this.labelHPiercingsPercent.TabIndex = 45;
-            this.labelHPiercingsPercent.Text = "HPiercingsPercent";
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(6, 257);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(427, 13);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "Frags/Destroys";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelHFragsCoef
-            // 
-            this.labelHFragsCoef.AutoSize = true;
-            this.labelHFragsCoef.Location = new System.Drawing.Point(301, 270);
-            this.labelHFragsCoef.Name = "labelHFragsCoef";
-            this.labelHFragsCoef.Size = new System.Drawing.Size(63, 13);
-            this.labelHFragsCoef.TabIndex = 45;
-            this.labelHFragsCoef.Text = "HFragsCoef";
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(6, 288);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(427, 13);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "Capture/Defense";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelHCaptureCoef
-            // 
-            this.labelHCaptureCoef.AutoSize = true;
-            this.labelHCaptureCoef.Location = new System.Drawing.Point(301, 301);
-            this.labelHCaptureCoef.Name = "labelHCaptureCoef";
-            this.labelHCaptureCoef.Size = new System.Drawing.Size(74, 13);
-            this.labelHCaptureCoef.TabIndex = 45;
-            this.labelHCaptureCoef.Text = "HCaptureCoef";
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(6, 319);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(427, 13);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "Records";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // wotPlayerStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6760,7 +6760,7 @@
             this.MinimizeBox = false;
             this.Name = "wotPlayerStats";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "wotPlayerStats";
+            this.Text = "Statistics";
             this.Load += new System.EventHandler(this.wotPlayerStats_Load);
             this.tabControlGlobalmap.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);

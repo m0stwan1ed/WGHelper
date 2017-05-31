@@ -113,11 +113,11 @@
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.authorizationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.worldOfTanksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualUpdateWoTOnlineCooldown_timer = new System.Windows.Forms.Timer(this.components);
             this.manualUpdateWoTPingCooldown_timer = new System.Windows.Forms.Timer(this.components);
-            this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.worldOfTanksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage_WoT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Premium)).BeginInit();
@@ -498,9 +498,9 @@
             this.label_nickname.AutoSize = true;
             this.label_nickname.Location = new System.Drawing.Point(37, 200);
             this.label_nickname.Name = "label_nickname";
-            this.label_nickname.Size = new System.Drawing.Size(81, 13);
+            this.label_nickname.Size = new System.Drawing.Size(85, 13);
             this.label_nickname.TabIndex = 59;
-            this.label_nickname.Text = "No Authirization";
+            this.label_nickname.Text = "No Authorization";
             // 
             // button_RetryPing
             // 
@@ -508,7 +508,7 @@
             this.button_RetryPing.Name = "button_RetryPing";
             this.button_RetryPing.Size = new System.Drawing.Size(84, 23);
             this.button_RetryPing.TabIndex = 58;
-            this.button_RetryPing.Text = "button_RetryPing";
+            this.button_RetryPing.Text = "Retry";
             this.button_RetryPing.UseVisualStyleBackColor = true;
             this.button_RetryPing.Click += new System.EventHandler(this.button_RetryPing_Click);
             // 
@@ -694,7 +694,7 @@
             this.button_Retry.Name = "button_Retry";
             this.button_Retry.Size = new System.Drawing.Size(84, 23);
             this.button_Retry.TabIndex = 36;
-            this.button_Retry.Text = "button_Retry";
+            this.button_Retry.Text = "Retry";
             this.button_Retry.UseVisualStyleBackColor = true;
             this.button_Retry.Click += new System.EventHandler(this.button_Retry_Click);
             // 
@@ -929,6 +929,21 @@
             this.logoutToolStripMenuItem.Text = "Log-out";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
+            // statisticsToolStripMenuItem
+            // 
+            this.statisticsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.worldOfTanksToolStripMenuItem});
+            this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
+            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.statisticsToolStripMenuItem.Text = "Statistics";
+            // 
+            // worldOfTanksToolStripMenuItem
+            // 
+            this.worldOfTanksToolStripMenuItem.Name = "worldOfTanksToolStripMenuItem";
+            this.worldOfTanksToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.worldOfTanksToolStripMenuItem.Text = "World of Tanks";
+            this.worldOfTanksToolStripMenuItem.Click += new System.EventHandler(this.worldOfTanksToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -945,21 +960,6 @@
             // 
             this.manualUpdateWoTPingCooldown_timer.Interval = 5100;
             this.manualUpdateWoTPingCooldown_timer.Tick += new System.EventHandler(this.manualUpdateWoTPingCooldown_timer_Tick);
-            // 
-            // statisticsToolStripMenuItem
-            // 
-            this.statisticsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.worldOfTanksToolStripMenuItem});
-            this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
-            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.statisticsToolStripMenuItem.Text = "Statistics";
-            // 
-            // worldOfTanksToolStripMenuItem
-            // 
-            this.worldOfTanksToolStripMenuItem.Name = "worldOfTanksToolStripMenuItem";
-            this.worldOfTanksToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.worldOfTanksToolStripMenuItem.Text = "World of Tanks";
-            this.worldOfTanksToolStripMenuItem.Click += new System.EventHandler(this.worldOfTanksToolStripMenuItem_Click);
             // 
             // Form1
             // 
