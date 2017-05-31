@@ -44,7 +44,7 @@
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 0;
-            this.buttonBack.Text = "buttonBack";
+            this.buttonBack.Text = "Back";
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
@@ -75,7 +75,7 @@
             this.buttonSetWoTFolder.Name = "buttonSetWoTFolder";
             this.buttonSetWoTFolder.Size = new System.Drawing.Size(120, 23);
             this.buttonSetWoTFolder.TabIndex = 3;
-            this.buttonSetWoTFolder.Text = "buttonSetWoTFolder";
+            this.buttonSetWoTFolder.Text = "Set path";
             this.buttonSetWoTFolder.UseVisualStyleBackColor = true;
             this.buttonSetWoTFolder.Click += new System.EventHandler(this.buttonSetWoTFolder_Click);
             // 
