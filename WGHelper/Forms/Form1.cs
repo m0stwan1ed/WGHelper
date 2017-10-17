@@ -374,7 +374,7 @@ namespace WGHelper
                 //--------------------------------------------------------------------------------------------------
                 
                 int wotTotalOnline = 0;                                                                     //Подсчет общего онлайна на серверах WoT
-                for (int i = 0; i < wotOnline.data.wot.Count; i++)
+                if(wotOnline.data.wot != null)for (int i = 0; i < wotOnline.data.wot.Count; i++)
                 {
                     wotTotalOnline += Convert.ToInt32(wotOnline.data.wot[i].players_online);
                 }
