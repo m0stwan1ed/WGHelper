@@ -19,7 +19,7 @@ Aplikacja pobiera dane z serwera za pomocą publicznego API firmy [Wargaming.net
 ### Użyte biblioteki
 
 - [NewtonSoft.JSON] - biblioteka dla serializacji oraz deserializacji plików JSON
-- [Awesomium] - biblioteka dla podłączenia przeglądarki Chromium [Awesomium(Old page)]
+- [Awesomium SDK] - biblioteka dla podłączenia przeglądarki Chromium [Awesomium(Old page)]
 
 ### Linki
 - Strona internetowa firmy  - [wargaming.com]
@@ -32,5 +32,5 @@ Aplikacja pobiera dane z serwera za pomocą publicznego API firmy [Wargaming.net
 [worldoftanks.ru]: <https://worldoftanks.ru>
 [WargamingAPI]: <https://developers.wargaming.net>
 [NewtonSoft.JSON]: <https://www.newtonsoft.com/json>
-[Awesomium]: <https://awesomium.com>
+[Awesomium SDK]: <https://awesomium.com>
 [Awesomium(Old page)]: <https://web.archive.org/web/20170608212207/http://www.awesomium.com:80/>
